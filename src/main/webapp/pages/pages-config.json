@@ -1,6 +1,18 @@
 [ {
+  "name" : "Business",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Common",
   "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Dashboard",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Licensee",
+  "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Login",
@@ -8,6 +20,14 @@
   "params" : [ ]
 }, {
   "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Register",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Search",
   "type" : "PAGE",
   "params" : [ ]
 }, {

@@ -15,6 +15,39 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_Business" : {
+    "_id" : "wm-goToPage_Business-wm.NavigationVariable-1491300290737",
+    "name" : "goToPage_Business",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Business",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Dashboard" : {
+    "_id" : "wm-goToPage_Dashboard-wm.NavigationVariable-1491300371736",
+    "name" : "goToPage_Dashboard",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Dashboard",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Licensee" : {
+    "_id" : "wm-goToPage_Licensee-wm.NavigationVariable-1491300275196",
+    "name" : "goToPage_Licensee",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Licensee",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -22,6 +55,28 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_Register" : {
+    "_id" : "wm-goToPage_Register-wm.NavigationVariable-1491300322537",
+    "name" : "goToPage_Register",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Register",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Search" : {
+    "_id" : "wm-goToPage_Search-wm.NavigationVariable-1491300301882",
+    "name" : "goToPage_Search",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Search",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
