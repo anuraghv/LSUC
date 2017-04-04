@@ -3,6 +3,10 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "BusinessList",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Common",
   "type" : "PARTIAL",
   "params" : [ ]
@@ -13,6 +17,13 @@
 }, {
   "name" : "Licensee",
   "type" : "PAGE",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "LicenseeList",
+  "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Login",
@@ -22,6 +33,13 @@
   "name" : "Main",
   "type" : "PAGE",
   "params" : [ ]
+}, {
+  "name" : "Person",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
 }, {
   "name" : "Register",
   "type" : "PAGE",

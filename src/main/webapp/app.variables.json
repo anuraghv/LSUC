@@ -26,6 +26,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_BusinessList" : {
+    "_id" : "wm-goToPage_BusinessList-wm.NavigationVariable-1491301986270",
+    "name" : "goToPage_BusinessList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "BusinessList",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Dashboard" : {
     "_id" : "wm-goToPage_Dashboard-wm.NavigationVariable-1491300371736",
     "name" : "goToPage_Dashboard",
@@ -48,6 +59,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_LicenseeList" : {
+    "_id" : "wm-goToPage_LicenseeList-wm.NavigationVariable-1491301897159",
+    "name" : "goToPage_LicenseeList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "LicenseeList",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -55,6 +77,17 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_Person" : {
+    "_id" : "wm-goToPage_Person-wm.NavigationVariable-1491301263640",
+    "name" : "goToPage_Person",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Person",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
   },
   "goToPage_Register" : {
     "_id" : "wm-goToPage_Register-wm.NavigationVariable-1491300322537",

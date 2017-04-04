@@ -1,4 +1,4 @@
-Application.$controller("LicenseePageController", ["$scope", function ($scope) {
+Application.$controller("PersonPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,25 +15,3 @@ Application.$controller("LicenseePageController", ["$scope", function ($scope) {
     };
 
 }]);
-
-
-Application.$controller("licenseeFilterController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("grid1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("liveform1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
