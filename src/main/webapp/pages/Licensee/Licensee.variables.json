@@ -1,37 +1,14 @@
 {
-  "findLicenseeByID" : {
-    "_id" : "wm-findLicenseeByID-wm.ServiceVariable-1491367490411",
-    "name" : "findLicenseeByID",
-    "owner" : "Page",
-    "category" : "wm.ServiceVariable",
-    "dataBinding" : [ {
-      "target" : "id",
-      "value" : "bind:pageParams.id",
-      "type" : "integer"
-    } ],
-    "type" : "com.lsuc.lsuc.Licensee",
-    "service" : "LSUC",
-    "operation" : "getLicensee",
-    "operationId" : "LicenseeController_getLicensee",
-    "operationType" : "get",
-    "serviceType" : "DataService",
-    "dataSet" : [ ],
-    "isList" : false,
-    "maxResults" : 20,
-    "designMaxResults" : 10,
-    "startUpdate" : true,
-    "autoUpdate" : false,
-    "inFlightBehavior" : "executeLast",
-    "transformationRequired" : false,
-    "saveInPhonegap" : false,
-    "controller" : "Licensee"
-  },
   "LSUCLicenseeData" : {
     "_id" : "wm-LSUCLicenseeData-wm.LiveVariable-1491302415168",
     "name" : "LSUCLicenseeData",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "pk",
+      "value" : "bind:pageParams.id",
+      "type" : "number"
+    } ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "Licensee",
@@ -40,7 +17,7 @@
     "maxResults" : 20,
     "designMaxResults" : 10,
     "inFlightBehavior" : "executeLast",
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
@@ -1278,7 +1255,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "LICENSEE",
     "tableType" : "TABLE",
     "properties" : [ "admissionroute", "citizenship", "feecategory", "geographicarea", "legacyclassstatus", "licencetype", "person" ],

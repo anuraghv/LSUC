@@ -31,7 +31,7 @@ Application.$controller("grid1Controller", ["$scope",
 	}
 ]);
 
-Application.$controller("liveform1Controller", ["$scope",
+Application.$controller("licenseeLiveFormController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

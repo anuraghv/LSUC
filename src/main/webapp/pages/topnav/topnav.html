@@ -1,11 +1,14 @@
 <wm-partial data-ng-controller="topnavPageController" name="topnav" type="topnav">
-    <wm-navbar>
+    <wm-navbar name="navbar1">
         <wm-nav name="leftTopLinks" type="navbar" class="navbar-left">
             <wm-nav-item name="list_home">
-                <wm-anchor caption="Home" name="homeLink" iconclass="wi wi-home" on-click="Variables.goToPage_Main.invoke()"></wm-anchor>
+                <wm-anchor caption="Dashboard" name="homeLink" iconclass="wi wi-home" on-click="Variables.goToPage_Main.invoke()"></wm-anchor>
             </wm-nav-item>
             <wm-nav-item name="list_services">
-                <wm-anchor caption="Order" name="orderLink" iconclass="wi wi-list"></wm-anchor>
+                <wm-anchor caption="Licensees" name="licenseesLink" iconclass="wi wi-list"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item5">
+                <wm-anchor name="businessLink" iconclass="wi wi-file" caption="Businesses"></wm-anchor>
             </wm-nav-item>
         </wm-nav>
         <wm-nav name="rightTopLinks" type="navbar" class="navbar-right">
