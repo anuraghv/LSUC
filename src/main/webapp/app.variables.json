@@ -53,10 +53,18 @@
     "name" : "goToPage_Licensee",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Licensee",
+      "type" : "string"
+    } ],
     "operation" : "gotoPage",
     "pageName" : "Licensee",
-    "dataSet" : [ ],
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.licenseeTable.selecteditem.pk"
+    } ],
     "pageTransitions" : "none"
   },
   "goToPage_LicenseeList" : {

@@ -1,4 +1,31 @@
 {
+  "findLicenseeByID" : {
+    "_id" : "wm-findLicenseeByID-wm.ServiceVariable-1491367490411",
+    "name" : "findLicenseeByID",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:pageParams.id",
+      "type" : "integer"
+    } ],
+    "type" : "com.lsuc.lsuc.Licensee",
+    "service" : "LSUC",
+    "operation" : "getLicensee",
+    "operationId" : "LicenseeController_getLicensee",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Licensee"
+  },
   "LSUCLicenseeData" : {
     "_id" : "wm-LSUCLicenseeData-wm.LiveVariable-1491302415168",
     "name" : "LSUCLicenseeData",
@@ -13,8 +40,8 @@
     "maxResults" : 20,
     "designMaxResults" : 10,
     "inFlightBehavior" : "executeLast",
-    "startUpdate" : true,
-    "autoUpdate" : true,
+    "startUpdate" : false,
+    "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
     "ignoreCase" : true,
@@ -1298,6 +1325,7 @@
       "watchOn" : "LSUCPersonData",
       "package" : "com.lsuc.lsuc.Licensee"
     } ],
+    "filterFields" : { },
     "package" : "com.lsuc.lsuc.Licensee"
   }
 }
