@@ -1,6 +1,14 @@
 [ {
+  "name" : "Addresses",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
   "name" : "Business",
   "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "BusinessInformation",
+  "type" : "PARTIAL",
   "params" : [ ]
 }, {
   "name" : "BusinessList",
@@ -14,6 +22,24 @@
   "name" : "Dashboard",
   "type" : "PAGE",
   "params" : [ ]
+}, {
+  "name" : "Email",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "Language",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "License",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
 }, {
   "name" : "Licensee",
   "type" : "PAGE",
@@ -41,13 +67,34 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "Phone",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "Register",
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "Role",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "Search",
   "type" : "PAGE",
   "params" : [ ]
+}, {
+  "name" : "SocialMedia",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
 }, {
   "name" : "footer",
   "type" : "FOOTER",

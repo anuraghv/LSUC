@@ -32,7 +32,9 @@
                 <wm-filter-action key="clear" display-name="Reset" show="true" class="btn-secondary" iconclass="wi wi-cancel" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
             <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.gridListViewSwitch.datavalue == 'List'" on-select="Variables.goToPage_Licensee.invoke()">
-                <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" hyperlink="#/Licensee" class="" data-ng-class=""></wm-anchor>
+                </wm-grid-column>
                 <wm-grid-column binding="licencetype.licenseetype.code" caption="Licence Type" type="string" widget-type="label" edit-widget-type="text" searchable="false" show="true" readonly="false">
                     <wm-label caption="{{row.getProperty('licencetype.licenseetype.code')}} {{row.getProperty('licencetype.shortNameEnglish')}}" class="" data-ng-class=""></wm-label>
                 </wm-grid-column>

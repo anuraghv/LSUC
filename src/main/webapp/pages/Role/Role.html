@@ -1,0 +1,23 @@
+<wm-partial data-ng-controller="RolePageController" name="partial1">
+    <wm-livegrid name="roleLivegrid">
+        <wm-grid gridfirstrowselect="true" editmode="form" title="" dataset="bind:Variables.LSUCPersonroleData.dataSet" navigation="Basic" name="roleGrid">
+            <wm-grid-column binding="role.shortNameEnglish" caption="Role" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Role" readonly="true"></wm-grid-column>
+            <wm-grid-column binding="role.roleCategoryFk" caption="Role Category" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" related-entity-name="Role" readonly="true"></wm-grid-column>
+            <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+            <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+            <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+        </wm-grid>
+        <wm-liveform novalidate="false" errormessage="" title="Role Info" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonroleData.dataSet" captionalign="left" captionposition="top" name="roleLiveForm">
+            <wm-layoutgrid columns="2" name="layoutgrid9">
+                <wm-gridrow name="gridrow35_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn77">
+                        <wm-form-field name="role" displayname="Role" required="false" show="true" generator="assigned" primary-key="false" key="role" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn78"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-livegrid>
+</wm-partial>
