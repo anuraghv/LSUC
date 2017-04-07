@@ -1,4 +1,4 @@
-Application.$controller("AddressesPageController", ["$scope", function ($scope) {
+Application.$controller("AddLicenseePageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,15 +15,3 @@ Application.$controller("AddressesPageController", ["$scope", function ($scope) 
     };
 
 }]);
-
-
-
-
-
-
-Application.$controller("grid2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

@@ -15,6 +15,17 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_AddLicensee" : {
+    "_id" : "wm-goToPage_AddLicensee-wm.NavigationVariable-1491544442176",
+    "name" : "goToPage_AddLicensee",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AddLicensee",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Business" : {
     "_id" : "wm-goToPage_Business-wm.NavigationVariable-1491300290737",
     "name" : "goToPage_Business",
@@ -91,9 +102,28 @@
     "name" : "goToPage_Person",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Person",
+      "type" : "string"
+    } ],
     "operation" : "gotoPage",
     "pageName" : "Person",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.personGrid.selecteditem.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Persons" : {
+    "_id" : "wm-goToPage_Persons-wm.NavigationVariable-1491545633866",
+    "name" : "goToPage_Persons",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Persons",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },

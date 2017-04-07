@@ -364,7 +364,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "PERSONEMAILCONTACT",
     "tableType" : "TABLE",
     "properties" : [ "emailpurpose", "person" ],

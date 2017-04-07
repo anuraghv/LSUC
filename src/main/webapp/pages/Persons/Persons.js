@@ -1,4 +1,4 @@
-Application.$controller("AddressesPageController", ["$scope", function ($scope) {
+Application.$controller("PersonsPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -17,11 +17,14 @@ Application.$controller("AddressesPageController", ["$scope", function ($scope) 
 }]);
 
 
+Application.$controller("personsFilterController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 
-
-
-
-Application.$controller("grid2Controller", ["$scope",
+Application.$controller("personGridController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
