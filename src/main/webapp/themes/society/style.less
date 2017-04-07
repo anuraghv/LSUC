@@ -1,8 +1,8 @@
-/*START - default Theme*/
+/*START - Society Theme*/
 
 .wm-app {
 
-  @import url("../../../components/bootstrap/less/bootstrap.less");
+  @import url("../../components/bootstrap/less/bootstrap.less");
   @import url("variables.less");
 
   font-size: @font-size-base;
@@ -11,32 +11,32 @@
   background-color: @body-bg;
 
   //Header
-  @wm-header-border-color: darken(@wm-header-bg-color, 25%);
-  @wm-header-text-color: #fff;
-  @wm-header-bg-color: darken(@navbar-default-bg, 20%);
+  @wm-header-border-color: transparent;
+  @wm-header-text-color: @brand-primary;
+  @wm-header-bg-color: #fff;
   @wm-header-height: auto;
 
   //left panel
-  @wm-left-panel-bg: #fff;
+  @wm-left-panel-bg: #3d3c3c;
   @wm-left-panel-list-border: 1px transparent solid;
   @wm-left-panel-border-color: #CFDBE2;
-  @wm-left-panel-link-color: @text-color;
-  @wm-left-panel-link-hover-bg: @brand-primary;
-  @wm-left-panel-link-active-bg: @brand-primary;
+  @wm-left-panel-link-color: #b3b3b3;
+  @wm-left-panel-link-hover-bg: #424141;
+  @wm-left-panel-link-active-bg: transparent;
   @wm-left-panel-link-hover-text-color: #fff;
   @wm-left-panel-link-hover-border-color: transparent;
   @wm-left-panel-dropdown-menu-bg: @wm-left-panel-bg;
 
   //right panel
   @wm-right-panel-border-color: #CFDBE2;
-  @wm-right-panel-bg: @wm-left-panel-bg;
+  @wm-right-panel-bg: #3d3c3c;
   @wm-right-panel-btn-color: #515253;
   @wm-right-panel-list-border: 1px #e6e5e5 solid;
 
   //Footer
   @wm-footer-border-color: #ccc;
   @wm-footer-text-color: #515253;
-  @wm-footer-bg-color: #F5F7FA;
+  @wm-footer-bg-color: @body-bg;
   @wm-footer-height: auto;
 
   //Table
@@ -45,15 +45,15 @@
 
   //Tabset
   @nav-tabs-color-hover : #000;
-  @nav-tabs-color: @btn-default-bg;
-  @nav-tabs-bg: @btn-default-bg;
+  @nav-tabs-color : #555;
+  @nav-tabs-bg: #f5f5f5;
 
   //Buttons
   @btn-group-active-btn-bg: #fff;
 
   //modal dialogs
-  @modal-header-bg: #eaeaea;
-  @modal-header-color: @text-color;
+  @modal-header-bg: @navbar-default-bg;
+  @modal-header-color: @navbar-default-color;
 
   @form-border-color: #d1d1d1;
   @wm-calendar-header-color: #adadad;
@@ -64,7 +64,7 @@
   @wm-checked-color: @brand-primary;
 
   @pagination-basic-bg: #ddd;
-  @wm-btn-secondary-bg: #f3f3f3;
+  @wm-heading-color: #657b2c;
   /*Box Shadow effect*/
   .box-shadow (@x:0px, @y:2px, @blur:5px, @color:#DBDBDB) {
     box-shadow: @arguments;
@@ -111,13 +111,11 @@
   }
   .h1,.h2,.h3,.h4,.h5,.h6 {
     width: 100%;
+    color: @wm-heading-color;
   }
   .btn-secondary {
-    background-color: @wm-btn-secondary-bg;
+    background-color: #f3f3f3;
     color: @text-color;
-    &:hover {
-      color: @text-color;
-    }
   }
   .input-group-btn {
     .btn[disabled] {
@@ -138,8 +136,8 @@
   }
 
   .close {
-     border: 0;
-     background-color: transparent;
+    border: 0;
+    background-color: transparent;
   }
 
   //stylings for tile widget
@@ -163,34 +161,50 @@
     background-color: @nav-tabs-bg;
     > li {
       > a, .app-menu a {
-        color: @navbar-default-color;
+        color: @nav-tabs-color;
         text-transform: none;
-        background-color: @nav-tabs-bg;
+        background-color: transparent;
         border-bottom-color: transparent;
         border-radius: 0;
         box-shadow: none;
         margin-right: 0;
         border-color: transparent;
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        box-shadow: 0 1px 5px rgba(255,255,255,.1);
+        &:after {
+          content: "";
+          height: 2px;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          -webkit-transition: all;
+          -o-transition: all;
+          transition: all;
+          -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          -o-transform: scale(0);
+          transform: scale(0);
+        }
         &:hover, &:focus {
+          outline: none;
+          color: @brand-primary;
+          background-color: transparent;
           border-color: transparent;
-          border-right: 1px solid rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 5px rgba(255,255,255,.1);
+          border-bottom-color: transparent;
         }
       }
       &.active {
         > a, .app-menu a {
-          font-weight: bold;
           border-color: transparent;
           color: @nav-tabs-color;
           background-color: @nav-tabs-active-link-hover-bg;
           &:after {
-             -webkit-transform: scale(1);
-             -ms-transform: scale(1);
-             -o-transform: scale(1);
-             transform: scale(1);
-             background: #fff;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            background: #fff;
           }
           &:hover, &:focus {
             outline: none;
@@ -208,11 +222,11 @@
     }
   }
 
-/***App Message********/
+  /***App Message********/
   .app-message .close {
     top: initial;
   }
-/***Tabs Widget: Styling for the tabs widget comes here********/
+  /***Tabs Widget: Styling for the tabs widget comes here********/
   .list-group-item-separator {
     margin-bottom: 2px;
     border-radius: 2px;
@@ -243,10 +257,10 @@
   }
 
   .btn-group {
-     .btn {
-        box-shadow: none;
-        border-color: transparent;
-     }
+    .btn {
+      box-shadow: none;
+      border-color: transparent;
+    }
   }
 
   .btn-default {
@@ -279,22 +293,22 @@
     &.btn-info {
       color: @brand-info;
       &:hover, &:focus {
-         background-color: @btn-info-bg;
-         color: @btn-info-color;
+        background-color: @btn-info-bg;
+        color: @btn-info-color;
       }
     }
     &.btn-warning {
       color: @brand-warning;
       &:hover, &:focus {
-         background-color: @btn-warning-bg;
-         color: @btn-warning-color;
+        background-color: @btn-warning-bg;
+        color: @btn-warning-color;
       }
     }
     &.btn-danger {
       color: @brand-danger;
       &:hover, &:focus {
-         background-color: @btn-danger-bg;
-         color: @btn-danger-color;
+        background-color: @btn-danger-bg;
+        color: @btn-danger-color;
       }
     }
   }
@@ -304,21 +318,18 @@
     background-color: @modal-header-bg;
     border-bottom-color: @modal-header-border-color;
     color: @modal-header-color;
-    font-weight: bold;
     .modal-title {
-      color: inherit;
-      font-weight: inherit;
-
+      color: @modal-header-color;
     }
   }
 
   /*****login modal form***/
   .app-login-dialog {
     .app-dialog-body {
-        .app-form {
-            border: 0;
-            margin-bottom: 0;
-        }
+      .app-form {
+        border: 0;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -337,7 +348,7 @@
     border-radius: 0;
     height: 1.7em;
     .progress-bar {
-        line-height: 2em;
+      line-height: 2em;
     }
   }
 
@@ -373,7 +384,8 @@
     }
 
     .input-group-addon {
-       font-size: 1.1em;
+      color: @input-color;
+      font-size: 1.1em;
     }
 
     .app-mobile-header {
@@ -472,7 +484,7 @@
   //Left & Right Panels
   .app-left-panel, .app-right-panel {
     .nav {
-      li.app-nav-item {
+      li {
         //for overriding the pills default color
         &.active {
           > a {
@@ -558,9 +570,9 @@
       }
       &.open {
         a {
-           &:hover, &:focus {
-              background-color: @wm-left-panel-link-hover-bg;
-           }
+          &:hover, &:focus {
+            background-color: @wm-left-panel-link-hover-bg;
+          }
         }
       }
     }
@@ -604,12 +616,19 @@
       color: @text-color;
     }
   }
+  .panel {
+    &.panel-default {
+      padding: 0 1em;
+      > .panel-heading {
+        padding-right: 0;
+        padding-left: 0;
+        border-color: @panel-inner-border;
+      }
+    }
+  }
   /******************************************************************************************************************************************/
   /***************************************************Widgets styling************************************************************************/
   /******************************************************************************************************************************************/
-  .app-wizard .app-wizard-steps .app-wizard-step.active a {
-    background-color: @nav-tabs-bg;
-  }
   .form-group {
     &.live-field.active {
       .control-label {
@@ -636,8 +655,10 @@
     }
   }
 
-  .input-group-addon {
-      color: @component-active-color;
+  .input-group-btn {
+    .btn {
+      background-color: @input-group-addon-bg;
+    }
   }
   //**** form elements*****/
 
@@ -795,13 +816,13 @@
     }
 
     input {
-       &:focus.ng-valid {
-         border: 2px solid @form-border-color;
-       }
+      &:focus.ng-valid {
+        border: 2px solid @form-border-color;
+      }
     }
 
     .form-control-static {
-       font-weight: normal;
+      font-weight: normal;
       font-family: @font-family-sans-serif;
       color: @input-color-placeholder;
     }
@@ -836,7 +857,7 @@
   /******grid styles*******/
   .app-grid {
     .form-search {
-       padding: 1.5em;
+      padding: 1.5em;
     }
     .table {
       thead {
@@ -849,15 +870,15 @@
           }
           .sort-buttons-container {
             .sort-button {
-             //display: none;
-             .up {
-               border-width: 0 0.333em 0.333em;
-               bottom: -2px;
-             }
-             .down {
-               border-width: 0.333em 0.333em 0;
-               top: 0.250em;
-             }
+              //display: none;
+              .up {
+                border-width: 0 0.333em 0.333em;
+                bottom: -2px;
+              }
+              .down {
+                border-width: 0.333em 0.333em 0;
+                top: 0.250em;
+              }
             }
           }
         }
@@ -874,7 +895,7 @@
       }
       th, td, tr {
         &.info, &.info:hover {
-           background-color: @wm-grid-selection-bg;
+          background-color: @wm-grid-selection-bg;
         }
       }
     }
@@ -895,15 +916,15 @@
     }
 
     .panel-heading, .panel-footer {
-        .app-datagrid-actions {
-          vertical-align: middle;
-        }
+      .app-datagrid-actions {
+        vertical-align: middle;
+      }
     }
 
     .app-datagrid {
       .app-datagrid-cell {
         &.cell-editing:not(.checkbox-widget) {
-           padding: @padding-small-vertical @padding-small-horizontal;
+          padding: @padding-small-vertical @padding-small-horizontal;
         }
       }
       .form-search {
@@ -934,72 +955,72 @@
           padding: 6px 0;
         }
       }
-       .pagination-prev, .pagination-next, .pagination-first, .pagination-last{
-          a {
-            padding: 3px 7px;
+      .pagination-prev, .pagination-next, .pagination-first, .pagination-last{
+        a {
+          padding: 3px 7px;
+        }
+      }
+      li {
+        font-size: 1.08em;
+        a {
+          color: @pagination-color;
+          background-color: @pagination-basic-bg;
+          border: 0;
+          border-radius: 50%;
+          padding: 8px 0;
+          margin: 0 2px;
+          width: 27pt;
+          height: 27pt;
+        }
+        &.active {
+          a, a:hover, a:focus {
+            color: @pagination-active-color;
+            background-color: @pagination-active-bg;
+            border: 0;
           }
-       }
-       li {
-           font-size: 1.08em;
-           a {
-             color: @pagination-color;
-             background-color: @pagination-basic-bg;
-             border: 0;
-             border-radius: 50%;
-             padding: 8px 0;
-             margin: 0 2px;
-             width: 27pt;
-             height: 27pt;
-           }
-           &.active {
-             a, a:hover, a:focus {
-               color: @pagination-active-color;
-               background-color: @pagination-active-bg;
-               border: 0;
-             }
-             &:hover {
-               a, a:hover, a:focus {
-                 background-color: @brand-primary;
-                 color: @pagination-active-color;
-               }
-             }
-           }
-           &:hover, &:focus {
-             a, a:hover, a:focus {
-                color: inherit;
-                background-color: rgba(0, 0, 0, 0.3);
-                border: 0;
-             }
-           }
-           &.disabled {
-              a {
-                background-color: @pagination-basic-bg;
-                color: @pagination-disabled-color;
-              }
-           }
-       }
+          &:hover {
+            a, a:hover, a:focus {
+              background-color: @brand-primary;
+              color: @pagination-active-color;
+            }
+          }
+        }
+        &:hover, &:focus {
+          a, a:hover, a:focus {
+            color: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 0;
+          }
+        }
+        &.disabled {
+          a {
+            background-color: @pagination-basic-bg;
+            color: @pagination-disabled-color;
+          }
+        }
+      }
     }
     .pagination {
-        li {
-           &.pagecount {
-              a {
-                 background-color: @pagination-active-bg;
-                 border-color: @pagination-active-bg;
-                 input {
-                    color: @pagination-active-color;
-                    text-align: center;
-                 }
-              }
-           }
+      li {
+        &.pagecount {
+          a {
+            background-color: @pagination-active-bg;
+            border-color: @pagination-active-bg;
+            input {
+              color: @pagination-active-color;
+              text-align: center;
+            }
+          }
         }
+      }
     }
     .pager {
-       li {
-         a {
-            margin: 0 .5em 0 0;
-            padding: @padding-base-vertical @padding-base-horizontal;
-         }
-       }
+      li {
+        a {
+          margin: 0 .5em 0 0;
+          padding: @padding-base-vertical @padding-base-horizontal;
+        }
+      }
     }
   }
   //carousel styling: removing the left and right background image
@@ -1012,17 +1033,16 @@
   /*** pagination***/
   .pagination {
     li {
-     > a, > span {
-       padding: @padding-base-vertical @padding-base-horizontal;
-       color: @brand-primary;
-     }
+      > a, > span {
+        padding: @padding-base-vertical @padding-base-horizontal;
+        color: @brand-primary;
+      }
     }
   }
-/****accordion classes****/
+  /****accordion classes****/
   .app-accordion {
     .app-accordion-panel.panel {
       box-shadow: none;
-      background-color: @component-active-color;
       .panel-heading {
         color: @text-color;
         background-color: transparent;
@@ -1030,13 +1050,13 @@
         padding: @panel-heading-padding;
         margin: inherit;
         .panel-icon {
-           margin-top: 0;
+          margin-top: 0;
         }
         .panel-title {
-           .heading {
-              line-height: inherit;
-              font-size: 1em;
-           }
+          .heading {
+            line-height: inherit;
+            font-size: 1em;
+          }
         }
         .panel-actions {
           right: 1em;
@@ -1108,9 +1128,9 @@
 
   .panel-group {
     .panel-heading + .panel-collapse {
-       > .panel-body {
-         border-top: 0;
-       }
+      > .panel-body {
+        border-top: 0;
+      }
     }
   }
 
@@ -1122,45 +1142,45 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     margin-bottom: 1em;
     .panel-heading {
-        .panel-title {
-            .heading {
-                font-size: 1.125em;
-            }
-            .description {
-                font-size: .75em;
-                color: inherit;
-                font-style: normal;
-                margin-top: 5px;
-                opacity: .7;
-            }
+      .panel-title {
+        .heading {
+          font-size: 1.125em;
         }
-        .panel-actions {
-            .panel-action {
-                top: -0.2em;
-                a {
-                  &:focus, &:hover {
-                    text-decoration: none;
-                    color: @dropdown-link-hover-color;
-                  }
-                }
-                .app-anchor{
-                  color: @text-color !important;
-                  font-size: 1.15em;
-                  padding: 6px;
-                  width: 30px;
-                  height: 30px;
-                  &:hover, &:focus {
-                    background-color: rgba(158,158,158,.2);
-                    border-radius: 50%;
-                    transition: color .5s ease, background .5s ease;
-                    -webkit-transition: color .5s ease, background .5s ease;
-                    -moz-transition: color .5s ease, background .5s ease;
-                    -ms-transition: color .5s ease, background .5s ease;
-                    -o-transition: color .5s ease, background .5s ease;
-                  }
-                }
-            }
+        .description {
+          font-size: .75em;
+          color: inherit;
+          font-style: normal;
+          margin-top: 5px;
+          opacity: .7;
         }
+      }
+      .panel-actions {
+        .panel-action {
+          top: -0.2em;
+          a {
+            &:focus, &:hover {
+              text-decoration: none;
+              color: @dropdown-link-hover-color;
+            }
+          }
+          .app-anchor{
+            color: @text-color !important;
+            font-size: 1.15em;
+            padding: 6px;
+            width: 30px;
+            height: 30px;
+            &:hover, &:focus {
+              background-color: rgba(158,158,158,.2);
+              border-radius: 50%;
+              transition: color .5s ease, background .5s ease;
+              -webkit-transition: color .5s ease, background .5s ease;
+              -moz-transition: color .5s ease, background .5s ease;
+              -ms-transition: color .5s ease, background .5s ease;
+              -o-transition: color .5s ease, background .5s ease;
+            }
+          }
+        }
+      }
     }
   }
   .app-livelist, .app-grid {
@@ -1181,39 +1201,39 @@
   }
   .app-card {
     .app-card-header {
-       background-color: transparent;
-       .card-heading {
-          font-size: 1.155em;
-       }
+      background-color: transparent;
+      .card-heading {
+        font-size: 1.155em;
+      }
 
-       .app-card-avatar {
-          height: 18pt;
-          width: 18pt;
-          .app-icon {
-             font-size: 18pt;
-             padding: 5px 0;
-          }
-       }
-       .app-card-header-text {
-          padding-left: 1em;
-       }
-       .app-card-avatar, .app-card-header-text{
-          padding-top: 0;
-       }
+      .app-card-avatar {
+        height: 18pt;
+        width: 18pt;
+        .app-icon {
+          font-size: 18pt;
+          padding: 5px 0;
+        }
+      }
+      .app-card-header-text {
+        padding-left: 1em;
+      }
+      .app-card-avatar, .app-card-header-text{
+        padding-top: 0;
+      }
     }
 
     .card-title {
-        font-size: 1.87em;
-        font-weight: normal;
-        color: rgba(0,0,0,0.87);
+      font-size: 1.87em;
+      font-weight: normal;
+      color: rgba(0,0,0,0.87);
     }
     .card-text {
-        font-size: 1.1em;
-        line-height: 1.6em;
+      font-size: 1.1em;
+      line-height: 1.6em;
     }
 
     .app-card-actions {
-       padding: .5em;
+      padding: .5em;
     }
   }
 
@@ -1233,10 +1253,10 @@
     -o-transition: all .3s;
     transition: all .3s;
     li {
-        a {
-            font-size: 1.1em;
-            padding: 10px 15px;
-        }
+      a {
+        font-size: 1.1em;
+        padding: 10px 15px;
+      }
     }
   }
 
@@ -1251,11 +1271,11 @@
 
   /*Date, DateTime & Dropdown widgets*/
   .app-calendar, .app-date, .app-datetime, .app-timeinput {
-     //setting the margin for the group button so that it shows up over the input
+    //setting the margin for the group button so that it shows up over the input
     .input-group-btn:last-child {
-        > .btn, .btn-group {
-          margin-left: 0;
-        }
+      > .btn, .btn-group {
+        margin-left: 0;
+      }
     }
     //setting the base font color for the popup content
     .dropdown-menu {
@@ -1273,9 +1293,9 @@
             padding: 1em;
             text-transform: uppercase;
             &:hover, &:focus, &:active, &:active:hover, &:active:focus {
-               color: @link-color;
-               background-color: transparent;
-               border-color: transparent;
+              color: @link-color;
+              background-color: transparent;
+              border-color: transparent;
             }
           }
           .uib-left {
@@ -1349,17 +1369,17 @@
     }
 
     thead {
-       background-color: #fff;
-       tr:nth-child(2) {
-         background-color: @wm-datepicker-header-bg;
-         th {
-             &:first-child {
-                padding: 10px 0 10px 10px;
-             }
-             &:last-child {
-                padding: 10px 10px 10px 0;
-             }
-         }
+      background-color: #fff;
+      tr:nth-child(2) {
+        background-color: @wm-datepicker-header-bg;
+        th {
+          &:first-child {
+            padding: 10px 0 10px 10px;
+          }
+          &:last-child {
+            padding: 10px 10px 10px 0;
+          }
+        }
       }
     }
 
@@ -1378,56 +1398,56 @@
     }
 
     tbody {
-        tr {
-           td {
-              &:first-child {
-                 padding-left: 20px;
-              }
-              &:last-child {
-                 padding-right: 20px;
-              }
-           }
-           &:first-child {
-             td {
-                padding-top: 15px;
-             }
-           }
+      tr {
+        td {
+          &:first-child {
+            padding-left: 20px;
+          }
           &:last-child {
-            td {
-              padding-bottom: 15px;
-            }
+            padding-right: 20px;
           }
         }
-        .btn-default {
-           &.active, &:focus {
-              background-color: @component-active-bg;
-              color: @component-active-color;
-              &:hover {
-                background-color: @component-active-bg;
-              }
-              .text-info {
-                 color: @component-active-color;
-              }
-           }
-           &:hover {
-              background-color: @wm-datepicker-btn-hover-bg;
-              border-color: transparent;
-              color: @text-color;
-           }
+        &:first-child {
+          td {
+            padding-top: 15px;
+          }
         }
-        .btn-sm {
-          font-size: .9em;
+        &:last-child {
+          td {
+            padding-bottom: 15px;
+          }
         }
+      }
+      .btn-default {
+        &.active, &:focus {
+          background-color: @component-active-bg;
+          color: @component-active-color;
+          &:hover {
+            background-color: @component-active-bg;
+          }
+          .text-info {
+            color: @component-active-color;
+          }
+        }
+        &:hover {
+          background-color: @wm-datepicker-btn-hover-bg;
+          border-color: transparent;
+          color: @text-color;
+        }
+      }
+      .btn-sm {
+        font-size: .9em;
+      }
     }
 
     .btn-group {
       box-shadow: none;
       .btn , & + .btn {
-         background-color: transparent;
-         border-color: transparent;
-         color: @brand-primary;
-         font-size: 1.1em;
-         margin: 0 5px;
+        background-color: transparent;
+        border-color: transparent;
+        color: @brand-primary;
+        font-size: 1.1em;
+        margin: 0 5px;
       }
     }
   }
@@ -1436,9 +1456,9 @@
   .app-timeinput, .app-datetime {
     tbody {
       .am-pm .btn {
-          border: 2px solid @input-border;
-          padding: 7px 12px;
-          margin-left: 4px;
+        border: 2px solid @input-border;
+        padding: 7px 12px;
+        margin-left: 4px;
       }
       .btn-link {
         width: 100%;
@@ -1502,9 +1522,9 @@
       font-size: 1.52em;
     }
   }
-/*********************************************************************************************************************************************/
-/****************************************************Advanced editors******************************************************************************/
-/*********************************************************************************************************************************************/
+  /*********************************************************************************************************************************************/
+  /****************************************************Advanced editors******************************************************************************/
+  /*********************************************************************************************************************************************/
   //Spinner
   .app-spinner  {
     .spinner-message {
@@ -1570,13 +1590,13 @@
     }
   }
 
-/***color picker class: adding the default size and padding to the addon*******/
+  /***color picker class: adding the default size and padding to the addon*******/
   .app-colorpicker {
     &.input-group {
       width: 13em;
     }
   }
-/***popover class: removing the radius*******/
+  /***popover class: removing the radius*******/
   .popover {
     padding: 0;
     border-radius: @border-radius-base;
@@ -1599,6 +1619,6 @@
 
   /***Slider widget styling*******************/
   input[type='range'] {
-     color: @brand-primary;
+    color: @brand-primary;
   }
 }

@@ -105,7 +105,10 @@
 }, {
   "name" : "Search",
   "type" : "PAGE",
-  "params" : [ ]
+  "params" : [ {
+    "name" : "q",
+    "type" : "string"
+  } ]
 }, {
   "name" : "SocialMedia",
   "type" : "PARTIAL",

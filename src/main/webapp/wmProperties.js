@@ -1,5 +1,5 @@
 var _WM_APP_PROPERTIES = {
-  "activeTheme" : "mineral-blue",
+  "activeTheme" : "Leave_App_Theme",
   "dateFormat" : "",
   "defaultLanguage" : "en",
   "displayName" : "LSUC",

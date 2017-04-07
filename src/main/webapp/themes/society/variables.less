@@ -14,7 +14,7 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         #0e79d4;
+@brand-primary:         #03516f;
 @brand-success:         #7accbe;
 @brand-info:            #8dcadf;
 @brand-warning:         #ffc870;
@@ -38,7 +38,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #e2e6e7;
+@body-bg:               #fff;
 //** Global text color on `<body>`.
 @text-color:            #555555;
 
@@ -60,7 +60,7 @@
 @font-family-monospace:   'Open Sans', 'Arial', sans-serif;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          13px;
+@font-size-base:          12px;
 @font-size-large:         ceil((@font-size-base * 1.2)); // ~18px
 @font-size-small:         11px; // ~12px
 
@@ -156,8 +156,8 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #fff;
-@btn-default-bg:                 #3d525d;
+@btn-default-color:              @text-color;
+@btn-default-bg:                 #fff;
 @btn-default-border:             transparent;
 
 @btn-primary-color:              #fff;
@@ -229,12 +229,12 @@
 @form-group-margin-bottom:       0;
 
 @legend-color:                   @gray-dark;
-@legend-border-color:            #fff;
+@legend-border-color:            #e5e5e5;
 
 //** Background color for textual input addons
-@input-group-addon-bg:           @btn-default-bg;
+@input-group-addon-bg:           #eaeaea;
 //** Border color for textual input addons
-@input-group-addon-border-color: @btn-default-border;
+@input-group-addon-border-color: @input-border;
 
 //** Disabled cursor for form controls and buttons.
 @cursor-disabled:                not-allowed;
@@ -434,7 +434,7 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          18px;
-@nav-link-hover-bg:                         rgba(0,0,0,.2);
+@nav-link-hover-bg:                         rgba(0,0,0,.1);
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
@@ -610,7 +610,7 @@
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             @body-bg;
+@modal-content-bg:                             #fff;
 //** Modal content border color
 @modal-content-border-color:                   rgba(0,0,0,.2);
 //** Modal content border color **for IE8**
@@ -621,7 +621,7 @@
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      .5;
 //** Modal header border color
-@modal-header-border-color:   rgba(0,0,0,0.1);
+@modal-header-border-color:   transparent;
 //** Modal footer border color
 @modal-footer-border-color:   @modal-header-border-color;
 
@@ -716,7 +716,7 @@
 //
 //##
 
-@panel-bg:                    #f4f2f3;
+@panel-bg:                    #fff;
 @panel-body-padding:          0.5em 1em;
 @panel-heading-padding:       @panel-body-padding;
 @panel-footer-padding:        1.5em;

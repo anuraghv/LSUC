@@ -138,17 +138,6 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
-  "goToPage_Search" : {
-    "_id" : "wm-goToPage_Search-wm.NavigationVariable-1491300301882",
-    "name" : "goToPage_Search",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Search",
-    "dataSet" : [ ],
-    "pageTransitions" : "none"
-  },
   "goToPage_test" : {
     "_id" : "wm-goToPage_test-wm.NavigationVariable-1491538562284",
     "name" : "goToPage_test",

@@ -1,12 +1,24 @@
 <wm-partial data-ng-controller="headerPageController" name="header" type="header">
     <wm-layoutgrid name="headerlayout">
         <wm-gridrow name="headerrow">
-            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="7">
-                <wm-picture picturesource="resources/images/logos/logo.png" name="AppLogo" marginleft="5"></wm-picture>
-                <wm-label caption="LSUC" class="application-name" name="AppName" fontsize="20"></wm-label>
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="7" padding="unset unset unset 1em">
+                <wm-picture picturesource="resources/images/imagelists/logo.png" name="AppLogo" margin="1em unset unset unset" height="40"></wm-picture>
             </wm-gridcolumn>
-            <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="5" paddingunit="em"  paddingtop="1" paddingright="1">
-                <wm-search name="siteSearch" dataset="Home, Services, Products, About US, Contact"></wm-search>
+            <wm-gridcolumn name="headerright" horizontalalign="right" columnwidth="3" padding="1em 1em unset unset">
+                <wm-search name="siteSearch" on-submit="Variables.goToPage_Search.invoke()"></wm-search>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn3" horizontalalign="right">
+                <wm-nav type="pills" name="nav1" horizontalalign="right" class="list-inline">
+                    <wm-nav-item name="nav_item5">
+                        <wm-popover popoverwidth="240" popoverheight="360" name="popover1" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action"></wm-popover>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item2">
+                        <wm-anchor caption="" name="anchor2" iconclass="wi wi-gear fa-2x" class="app-header-action"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item4">
+                        <wm-menu caption="" autoclose="outsideClick" name="menu1" iconclass="wi wi-file fa-2x" type="anchor" menuclass="app-header-action"></wm-menu>
+                    </wm-nav-item>
+                </wm-nav>
             </wm-gridcolumn>
         </wm-gridrow>
     </wm-layoutgrid>

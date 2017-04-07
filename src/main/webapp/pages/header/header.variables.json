@@ -1,0 +1,21 @@
+{
+  "goToPage_Search" : {
+    "_id" : "wm-goToPage_Search-wm.NavigationVariable-1491300301882",
+    "name" : "goToPage_Search",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Search",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "Search",
+    "dataSet" : [ {
+      "type" : "string",
+      "target" : "q",
+      "value" : "bind:Widgets.siteSearch.query"
+    } ],
+    "pageTransitions" : "none"
+  }
+}
