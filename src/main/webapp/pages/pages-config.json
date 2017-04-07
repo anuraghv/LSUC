@@ -106,6 +106,10 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "User",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "footer",
   "type" : "FOOTER",
   "params" : [ ]

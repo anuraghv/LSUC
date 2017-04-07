@@ -130,6 +130,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_User" : {
+    "_id" : "wm-goToPage_User-wm.NavigationVariable-1491540836475",
+    "name" : "goToPage_User",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "User",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",
