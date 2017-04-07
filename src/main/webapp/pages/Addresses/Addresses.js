@@ -15,3 +15,17 @@ Application.$controller("AddressesPageController", ["$scope", function ($scope) 
     };
 
 }]);
+
+Application.$controller("addressGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("addressLiveFormController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
