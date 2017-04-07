@@ -1,4 +1,4 @@
-Application.$controller("AddressesPageController", ["$scope", function ($scope) {
+Application.$controller("ContactsPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -17,21 +17,42 @@ Application.$controller("AddressesPageController", ["$scope", function ($scope) 
 }]);
 
 
-Application.$controller("addressGridController", ["$scope",
+Application.$controller("phoneGridController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("addressLiveFormController", ["$scope",
+Application.$controller("phoneLiveformController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("grid2Controller", ["$scope",
+Application.$controller("emailGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("emailLiveFormController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("socialGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("socialLiveFormController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

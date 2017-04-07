@@ -1,0 +1,121 @@
+<wm-partial data-ng-controller="ContactsPageController" name="partial1">
+    <wm-livegrid name="phoneLiveGrid">
+        <wm-grid gridfirstrowselect="true" editmode="form" title="Phone" dataset="bind:Variables.LSUCPersonphonecontactData.dataSet" navigation="Basic" name="phoneGrid">
+            <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+            <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+            <wm-grid-column binding="isPreferred" caption="Is Preferred" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+            <wm-grid-column binding="contactNumber" caption="Contact Number" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+            <wm-grid-column binding="extension" caption="Extension" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+            <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+            <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+            <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+        </wm-grid>
+        <wm-liveform novalidate="false" errormessage="" title="Phone Info" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonphonecontactData.dataSet" captionalign="left" captionposition="top" name="phoneLiveform">
+            <wm-layoutgrid columns="3" name="layoutgrid6">
+                <wm-gridrow name="gridrow31">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn59">
+                        <wm-form-field name="phonetype" displayname="Phonetype" show="true" primary-key="false" generator="assigned" key="phonetype" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                        displayexpression="shortNameEnglish"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn60">
+                        <wm-form-field name="phonepurpose" displayname="Phonepurpose" show="true" primary-key="false" generator="assigned" key="phonepurpose" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                        displayexpression="shortNameEnglish"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn61">
+                        <wm-form-field name="isPreferred" displayname="Is Preferred" show="true" primary-key="false" generator="assigned" key="isPreferred" type="character" readonly="false" required="false" widget="text" maxchars="1" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow32">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn62">
+                        <wm-form-field name="contactNumber" displayname="Contact Number" show="true" primary-key="false" generator="assigned" key="contactNumber" type="string" readonly="false" required="false" widget="text" maxchars="40" inputtype="text"
+                        placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn63">
+                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false" widget="text"
+                        maxchars="1" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn64">
+                        <wm-form-field name="extension" displayname="Extension" show="true" primary-key="false" generator="assigned" key="extension" type="string" readonly="false" required="false" widget="text" maxchars="10" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn2" columnwidth="4">
+                        <wm-form-field name="pk" displayname="Pk" show="true" primary-key="true" generator="assigned" key="pk" type="integer" readonly="false" required="true" step="0" widget="number"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-livegrid>
+    <wm-livegrid name="emailLivegrid">
+        <wm-grid gridfirstrowselect="true" editmode="form" title="Email" dataset="bind:Variables.LSUCPersonemailcontactData.dataSet" navigation="Basic" name="emailGrid">
+            <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+            <wm-grid-column binding="emailAddress" caption="Email Address" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+            <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+            <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+            <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+        </wm-grid>
+        <wm-liveform novalidate="false" errormessage="" title="Email Info" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonemailcontactData.dataSet" captionalign="left" captionposition="top" name="emailLiveForm">
+            <wm-layoutgrid columns="3" name="layoutgrid7">
+                <wm-gridrow name="gridrow33">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn65">
+                        <wm-form-field name="emailAddress" displayname="Email Address" required="false" show="true" generator="assigned" primary-key="false" key="emailAddress" type="string" is-related="false" maxchars="254" pc-display="true" mobile-display="true"
+                        widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn66">
+                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" required="false" show="true" generator="assigned" primary-key="false" key="isDisplayedOnDirectory" type="character" is-related="false" maxchars="1"
+                        pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn67">
+                        <wm-form-field name="isPreferred" displayname="Is Preferred" required="false" show="true" generator="assigned" primary-key="false" key="isPreferred" type="character" is-related="false" maxchars="1" pc-display="true" mobile-display="true"
+                        widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow34">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn68">
+                        <wm-form-field name="emailpurpose" displayname="Emailpurpose" required="false" show="true" generator="assigned" primary-key="false" key="emailpurpose" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn69"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-livegrid>
+    <wm-livegrid name="sociallivegrid">
+        <wm-grid gridfirstrowselect="true" editmode="form" title="Social Media" dataset="bind:Variables.LSUCPersonsocialmediacontactData.dataSet" navigation="Basic" name="socialGrid">
+            <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+            <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+            <wm-grid-column binding="socialMedia" caption="Social Media" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+            <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+            <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+            <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+        </wm-grid>
+        <wm-liveform novalidate="false" errormessage="" title="Social Media Info" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonsocialmediacontactData.dataSet" captionalign="left" captionposition="top" name="socialLiveForm">
+            <wm-layoutgrid columns="3" name="layoutgrid8">
+                <wm-gridrow name="gridrow35">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn70">
+                        <wm-form-field name="socialmediatype" displayname="Socialmediatype" required="false" show="true" generator="assigned" primary-key="false" key="socialmediatype" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn71">
+                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" required="false" show="true" generator="assigned" primary-key="false" key="isDisplayedOnDirectory" type="character" is-related="false" maxchars="1"
+                        pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn72">
+                        <wm-form-field name="socialMedia" displayname="URL" required="false" show="true" generator="assigned" primary-key="false" key="socialMedia" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow36">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn73"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn74">
+                        <wm-form-field name="socialmediapurpose" displayname="Socialmediapurpose" required="false" show="true" generator="assigned" primary-key="false" key="socialmediapurpose" type="list" is-related="true" pc-display="true" mobile-display="true"
+                        widget="select"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-livegrid>
+</wm-partial>

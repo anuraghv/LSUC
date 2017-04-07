@@ -1,4 +1,4 @@
-Application.$controller("AddressesPageController", ["$scope", function ($scope) {
+Application.$controller("testPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -17,21 +17,7 @@ Application.$controller("AddressesPageController", ["$scope", function ($scope) 
 }]);
 
 
-Application.$controller("addressGridController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("addressLiveFormController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("grid2Controller", ["$scope",
+Application.$controller("livefilter1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
