@@ -1,17 +1,1 @@
-<wm-partial data-ng-controller="AddressesPageController" name="partial1">
-    <wm-grid editmode="inline" title="Personaddress List" dataset="bind:Variables.LSUCPersonaddressData.dataSet" navigation="Basic" name="grid2" gridclass="table-striped">
-        <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" required="true"></wm-grid-column>
-        <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
-        <wm-grid-column binding="addressLine1" caption="Address Line1" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="addressLine2" caption="Address Line2" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="addressLine3" caption="Address Line3" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="addressLine4" caption="Address Line4" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="addressLine5" caption="Address Line5" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="addressLine6" caption="Address Line6" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="city" caption="City" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-column binding="postalCode" caption="Postal Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-        <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
-        <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
-        <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
-    </wm-grid>
-</wm-partial>
+<wm-partial data-ng-controller="AddressesPageController" name="partial1"></wm-partial>

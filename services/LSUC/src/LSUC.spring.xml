@@ -60,7 +60,7 @@
                 ${LSUC.schemaName}
                 </prop>
                 <prop key="hibernate.show_sql">
-                    false
+                    true
                 </prop>
                 <prop key="hibernate.globally_quoted_identifiers">
                     false

@@ -881,7 +881,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 2,
+    "bindCount" : 4,
     "tableName" : "PERSONADDRESS",
     "tableType" : "TABLE",
     "properties" : [ "addresstype", "country", "geographicarea", "person", "province" ],

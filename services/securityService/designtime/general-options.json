@@ -10,7 +10,7 @@
     "enforceXssSecurity" : false,
     "policyFile" : "wm-xss-policies.xml",
     "xssFilterStrategy" : "NONE",
-    "policyType" : null
+    "policyType" : "IMPORT"
   },
   "csrfConfig" : {
     "enforceCsrfSecurity" : false,

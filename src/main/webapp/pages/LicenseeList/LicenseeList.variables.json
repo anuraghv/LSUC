@@ -10,7 +10,7 @@
     "type" : "Licensee",
     "isList" : true,
     "saveInPhonegap" : false,
-    "maxResults" : 20,
+    "maxResults" : 10,
     "designMaxResults" : 10,
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
@@ -1251,7 +1251,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 3,
+    "bindCount" : 4,
     "tableName" : "LICENSEE",
     "tableType" : "TABLE",
     "properties" : [ "admissionroute", "citizenship", "feecategory", "geographicarea", "legacyclassstatus", "licencetype", "person" ],

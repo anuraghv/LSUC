@@ -7,7 +7,7 @@
             <wm-container name="container2" horizontalalign="right">
                 <wm-switch datavalue="List" name="gridListViewSwitch" dataset="List, Card" width="120"></wm-switch>
             </wm-container>
-            <wm-livefilter title="Filter Licensee" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="false" margin="unset unset 0px unset">
+            <wm-livefilter title="Filter Licensee" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="true" margin="unset unset 0px unset">
                 <wm-layoutgrid columns="2" name="layoutgrid1">
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn columnwidth="3" name="gridcolumn1">
@@ -19,7 +19,7 @@
                             is-primary-key="false" generator="assigned" show="true" key="licencetype" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn6">
-                            <wm-filter-field name="person" field="person" related-field="Person" widget="text" is-range="false" lookup-type="Person" lookup-field="firstName" show="true" is-related="true" related-entity-name="Person" type="integer" is-primary-key="false"
+                            <wm-filter-field name="person" field="person" related-field="Person" widget="text" is-range="false" lookup-type="Person" lookup-field="firstName" show="true" is-related="true" related-entity-name="Person" type="string" is-primary-key="false"
                             generator="assigned" matchmode="anywhere" inputtype="text" displayname="Name" key="person" placeholder="Enter value"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn7">
@@ -27,13 +27,19 @@
                             type="integer" is-primary-key="false" generator="assigned" show="true" key="geographicarea" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="3">
+                            <wm-filter-field name="legacyclassstatus" field="legacyclassstatus" related-field="Legacyclassstatus" widget="select" is-range="false" lookup-type="Legacyclassstatus" lookup-field="shortNameEnglish" show="true" is-related="true"
+                            related-entity-name="Legacyclassstatus" type="string" is-primary-key="false" generator="assigned" matchmode="start" displayname="Class Status" key="legacyclassstatus" placeholder="Enter value" datafield="key" displayfield="value"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" title="Filter" action="filter()" disabled="false" type="button"></wm-filter-action>
                 <wm-filter-action key="clear" display-name="Reset" show="true" class="btn-secondary" iconclass="wi wi-cancel" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
-            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.gridListViewSwitch.datavalue == 'List'" on-click="Variables.goToPage_Licensee.invoke()">
+            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.gridListViewSwitch.datavalue == 'List'">
                 <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
-                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" class="" data-ng-class=""></wm-anchor>
+                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.goToPage_Licensee.invoke()" class="" data-ng-class=""></wm-anchor>
                 </wm-grid-column>
                 <wm-grid-column binding="licencetype.licenseetype.code" caption="Licence Type" type="string" widget-type="label" edit-widget-type="text" searchable="false" show="true" readonly="false">
                     <wm-label caption="{{row.getProperty('licencetype.licenseetype.code')}} {{row.getProperty('licencetype.shortNameEnglish')}}" class="" data-ng-class=""></wm-label>
