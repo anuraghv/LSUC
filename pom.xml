@@ -239,11 +239,15 @@
     </profiles>
     <repositories>
         <repository>
-   <id>terracotta-releases</id>
-   <url>http://www.terracotta.org/download/reflector/releases</url>
-   <releases><enabled>true</enabled></releases>
-   <snapshots><enabled>false</enabled></snapshots>
-</repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>terracotta-releases</id>
+            <url>http://www.terracotta.org/download/reflector/releases</url>
+        </repository>
         <repository>
             <snapshots>
                 <enabled>false</enabled>
@@ -282,14 +286,14 @@
     </pluginRepositories>
     <dependencies>
         <dependency>
-           <groupId>net.sf.ehcache</groupId>
-           <artifactId>ehcache-core</artifactId>
-           <version>2.4.3</version>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>2.4.3</version>
         </dependency>
         <dependency>
-          <groupId>org.hibernate</groupId>
-          <artifactId>hibernate-ehcache</artifactId>
-          <version>4.3.11.Final</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>4.3.11.Final</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
