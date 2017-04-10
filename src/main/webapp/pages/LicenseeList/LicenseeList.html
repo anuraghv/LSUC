@@ -7,7 +7,7 @@
             <wm-container name="container2" horizontalalign="right">
                 <wm-switch datavalue="List" name="gridListViewSwitch" dataset="List, Card" width="120"></wm-switch>
             </wm-container>
-            <wm-livefilter title="Filter Licensee" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="true" margin="unset unset 0px unset">
+            <wm-livefilter title="Filter Licensee" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="false" margin="unset unset 0px unset">
                 <wm-layoutgrid columns="2" name="layoutgrid1">
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn columnwidth="3" name="gridcolumn1">
@@ -19,7 +19,7 @@
                             is-primary-key="false" generator="assigned" show="true" key="licencetype" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn6">
-                            <wm-filter-field name="person" field="person" related-field="Person" widget="text" is-range="false" lookup-type="Person" lookup-field="firstName" show="true" is-related="true" related-entity-name="Person" type="string" is-primary-key="false"
+                            <wm-filter-field name="person" field="person" related-field="Person" widget="text" is-range="false" lookup-type="Person" lookup-field="firstName" show="true" is-related="true" related-entity-name="Person" type="integer" is-primary-key="false"
                             generator="assigned" matchmode="anywhere" inputtype="text" displayname="Name" key="person" placeholder="Enter value"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn7">
@@ -30,7 +30,7 @@
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn name="gridcolumn1" columnwidth="3">
                             <wm-filter-field name="legacyclassstatus" field="legacyclassstatus" related-field="Legacyclassstatus" widget="select" is-range="false" lookup-type="Legacyclassstatus" lookup-field="shortNameEnglish" show="true" is-related="true"
-                            related-entity-name="Legacyclassstatus" type="string" is-primary-key="false" generator="assigned" matchmode="start" displayname="Class Status" key="legacyclassstatus" placeholder="Enter value" datafield="key" displayfield="value"></wm-filter-field>
+                            related-entity-name="Legacyclassstatus" type="integer" is-primary-key="false" generator="assigned" matchmode="start" displayname="Class Status" key="legacyclassstatus" placeholder="Enter value" datafield="key" displayfield="value"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>

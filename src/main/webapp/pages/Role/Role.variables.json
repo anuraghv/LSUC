@@ -342,7 +342,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 3,
     "tableName" : "PERSONROLE",
     "tableType" : "TABLE",
     "properties" : [ "person", "role" ],
