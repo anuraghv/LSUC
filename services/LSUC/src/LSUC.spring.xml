@@ -60,7 +60,7 @@
                 ${LSUC.schemaName}
                 </prop>
                 <prop key="hibernate.show_sql">
-                    true
+                    false
                 </prop>
                 <prop key="hibernate.globally_quoted_identifiers">
                     false
@@ -73,12 +73,6 @@
                 </prop>
                 <prop key="hibernate.schema_update.unique_constraint_strategy">
                     skip
-                </prop>
-                <prop key="hibernate.cache.use_second_level_cache">
-                   true
-               </prop>
-               <prop key="hibernate.cache.region.factory_class">
-                   org.hibernate.cache.ehcache.EhCacheRegionFactory
                 </prop>
             </props>
         </property>

@@ -94,7 +94,7 @@
           "notNull" : true,
           "length" : 255,
           "precision" : 10,
-          "generator" : "assigned",
+          "generator" : "identity",
           "isRelated" : false,
           "scale" : 0
         }, {
@@ -332,7 +332,7 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 10,
-        "generator" : "assigned",
+        "generator" : "identity",
         "isRelated" : false,
         "scale" : 0
       } ],
@@ -342,7 +342,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 12,
+    "bindCount" : 13,
     "tableName" : "PERSONROLE",
     "tableType" : "TABLE",
     "properties" : [ "person", "role" ],

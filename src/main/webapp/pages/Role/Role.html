@@ -1,5 +1,5 @@
 <wm-partial data-ng-controller="RolePageController" name="partial1">
-    <wm-chips name="chips1" dataset="bind:Variables.LSUCRoleData.dataSet" datafield="All Fields" displayfield="shortNameEnglish" datavalue="bind:Variables.LSUCPersonroleData.dataSet.data[$i].role"></wm-chips>
+    <wm-chips name="chips1" dataset="bind:Variables.LSUCRoleData.dataSet" datafield="pk" displayfield="shortNameEnglish" datavalue="bind:Variables.LSUCPersonroleData.dataSet.data[$i].role.pk" on-beforeadd="chips1Beforeadd($event, $scope)" on-change="chips1Change($event, $scope, newVal, oldVal)"></wm-chips>
     <wm-grid editmode="quickedit" title="Personrole List" dataset="bind:Variables.LSUCPersonroleData.dataSet" navigation="None" name="grid2">
         <wm-grid-column binding="role.pk" caption="Role Pk" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Role" readonly="false">
             <wm-label caption="{{row.role.shortNameEnglish}}" class="" data-ng-class=""></wm-label>

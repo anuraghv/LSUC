@@ -308,7 +308,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -465,7 +465,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSSOCIALMEDIACONTACT",
@@ -536,7 +536,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -843,7 +843,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEEPHOTOIDCARD",
@@ -948,7 +948,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -1105,7 +1105,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONEMAILCONTACT",
@@ -3091,7 +3091,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -3298,7 +3298,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONPHONECONTACT",
@@ -4698,7 +4698,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -4955,7 +4955,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESS",
@@ -7002,7 +7002,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -7109,7 +7109,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSBUSINESS",
@@ -8709,7 +8709,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -8841,7 +8841,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEEPRACTICEINELIGIBILITYSUBREASON",
@@ -9517,7 +9517,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -9624,7 +9624,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEEPERSONLANGUAGEPURPOSE",
@@ -10057,7 +10057,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -10239,7 +10239,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSPHONECONTACT",
@@ -10604,7 +10604,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -10711,7 +10711,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEEINSURANCE",
@@ -10782,7 +10782,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -10939,7 +10939,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONSOCIALMEDIACONTACT",
@@ -11818,7 +11818,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -11925,7 +11925,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKUSERPREFERENCE",
@@ -12626,7 +12626,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -12733,7 +12733,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONPERSON",
@@ -12804,7 +12804,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -12911,7 +12911,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONLANGUAGECOMMUNICATIONCHANNEL",
@@ -13957,7 +13957,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -14064,7 +14064,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSPERSONRELATIONSHIP",
@@ -14118,7 +14118,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -14731,7 +14731,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEE",
@@ -14989,7 +14989,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -15371,7 +15371,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSADDRESS",
@@ -15476,7 +15476,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -15583,7 +15583,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKUSER",
@@ -15948,7 +15948,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -16199,7 +16199,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSON",
@@ -17130,7 +17130,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -17237,7 +17237,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSPERSON",
@@ -17308,7 +17308,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -17415,7 +17415,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONOTHERNAME",
@@ -17469,7 +17469,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -17626,7 +17626,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKORGANIZATIONALUNIT",
@@ -18050,7 +18050,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -18182,7 +18182,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKBUSINESSEMAILCONTACT",
@@ -18841,7 +18841,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -19223,7 +19223,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKORGANIZATIONALUNITADDRESS",
@@ -19328,7 +19328,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -19460,7 +19460,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEEPRACTICEINELIGIBILITYREASON",
@@ -19867,7 +19867,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -20099,7 +20099,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEEINSURANCEPOLICY",
@@ -20962,7 +20962,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -21069,7 +21069,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONNAMEOTHERLANGUAGE",
@@ -21123,7 +21123,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -21205,7 +21205,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONROLE",
@@ -21259,7 +21259,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -21341,7 +21341,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONLANGUAGE",
@@ -21429,7 +21429,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -21586,7 +21586,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKLICENSEECLASSPRACTICEGROUP",
@@ -21951,7 +21951,7 @@
       },
       "fieldName" : "pk",
       "foreignKey" : false,
-      "generatorType" : "assigned",
+      "generatorType" : "identity",
       "generatorValue" : null,
       "javaType" : "integer",
       "length" : 255,
@@ -22333,7 +22333,7 @@
       "columns" : [ "PK" ],
       "composite" : false,
       "generator" : {
-        "generatorType" : "assigned",
+        "generatorType" : "identity",
         "generatorValue" : null
       },
       "name" : "XPKPERSONADDRESS",

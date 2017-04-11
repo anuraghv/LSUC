@@ -11,6 +11,8 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -36,6 +38,7 @@ public class Businesssocialmediacontact implements Serializable {
     private Socialmediatype socialmediatype;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
     public Integer getPk() {
         return this.pk;
