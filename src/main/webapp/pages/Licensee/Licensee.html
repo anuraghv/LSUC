@@ -7,7 +7,7 @@
             <wm-layoutgrid name="layoutgrid1">
                 <wm-gridrow name="gridrow1">
                     <wm-gridcolumn columnwidth="5" name="gridcolumn1">
-                        <wm-liveform novalidate="false" errormessage="" title="Person Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.LSUCPersonData.dataSet" captionalign="left" captionposition="top" name="personInfoLiveForm" formdata="bind:Variables.LSUCPersonData.firstRecord"
+                        <wm-liveform novalidate="false" errormessage="" title="Person Info" iconclass="wi wi-user" defaultmode="View" dataset="bind:Variables.LSUCPersonData.dataSet" captionalign="left" captionposition="left" name="personInfoLiveForm" formdata="bind:Variables.LSUCPersonData.firstRecord"
                         margin="unset 1em unset unset">
                             <wm-layoutgrid columns="2" name="layoutgrid4">
                                 <wm-gridrow name="gridrow17">
@@ -67,19 +67,19 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="7" name="gridcolumn2">
                         <wm-accordion name="accordion1" closeothers="false">
-                            <wm-accordionpane name="accordionpane1" content="Addresses" title="Addresses">
+                            <wm-accordionpane name="accordionpane1" content="Addresses" title="Addresses" iconclass="wi wi-location-on" subheading="Licensee Addresses">
                                 <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                             </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane2" title="Contacts" content="Contacts">
+                            <wm-accordionpane name="accordionpane2" title="Contact" content="Contacts" iconclass="wi wi-contacts">
                                 <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                             </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane3" title="Education">
+                            <wm-accordionpane name="accordionpane3" title="Education" iconclass="wi wi-graduation-cap">
                                 <wm-label padding="unset 0.5em" name="label1" class="h1" caption="No Education Table in Schema"></wm-label>
                             </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane4" title="Role" content="Role">
+                            <wm-accordionpane name="accordionpane4" title="Role" content="Role" iconclass="wi wi-people-outline">
                                 <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                             </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane5" title="License" content="License">
+                            <wm-accordionpane name="accordionpane5" title="License" content="License" iconclass="wi wi-card-membership">
                                 <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                             </wm-accordionpane>
                             <wm-accordionpane name="accordionpane6" title="Personal Relationship">

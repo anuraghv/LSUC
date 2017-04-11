@@ -408,7 +408,7 @@
     "liveSource" : "LSUC",
     "ignoreCase" : true,
     "matchMode" : "start",
-    "orderBy" : "pk asc",
+    "orderBy" : "isPreferred desc",
     "propertiesMap" : {
       "columns" : [ {
         "fieldName" : "person",

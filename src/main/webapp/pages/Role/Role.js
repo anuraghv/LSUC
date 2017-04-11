@@ -16,15 +16,7 @@ Application.$controller("RolePageController", ["$scope", function ($scope) {
 
 }]);
 
-
-Application.$controller("roleGridController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("roleLiveFormController", ["$scope",
+Application.$controller("grid2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
