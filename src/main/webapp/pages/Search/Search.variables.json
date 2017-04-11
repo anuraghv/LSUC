@@ -573,7 +573,11 @@
     "name" : "LSUCLicenseeData",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "licenseeNumber",
+      "value" : "bind:pageParams.q",
+      "type" : "string"
+    } ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "Licensee",
