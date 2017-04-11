@@ -12,19 +12,7 @@ Application.$controller("SearchPageController", ["$scope", function($scope) {
          * e.g. to get value of text widget named 'username' use following script
          * '$scope.Widgets.username.datavalue'
          */
-        // var valueObj = {
-        //         'value': $scope.pageParams.q
-        //     },
-        //     fields = ['licenseeNumber', 'pk', 'archiveBoxNumber'],
-        //     filterFields = {};
-        // _.forEach(fields, function(field) {
-        //     filterFields[field] = valueObj
-        // });
-        // debugger
-        // $scope.Variables.LSUCLicenseeData.listRecords({
-        //     'logicalOp': 'OR',
-        //     'filterFields': filterFields
-        // });
+
     };
 
 

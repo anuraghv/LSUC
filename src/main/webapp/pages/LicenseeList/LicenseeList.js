@@ -1,8 +1,8 @@
-Application.$controller("LicenseeListPageController", ["$scope", function ($scope) {
+Application.$controller("LicenseeListPageController", ["$scope", function($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function () {
+    $scope.onPageReady = function() {
         /*
          * variables can be accessed through '$scope.Variables' property here
          * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
@@ -14,19 +14,37 @@ Application.$controller("LicenseeListPageController", ["$scope", function ($scop
          */
     };
 
+
+    $scope.listBtnClick = function($event, $isolateScope) {
+        debugger
+        $scope.Widgets.cardBtn.disabled = false;
+        $isolateScope.disabled = true;
+        $scope.Widgets.licenseeTable.show = true;
+        $scope.Widgets.licenseeLiveList.show = false;
+    };
+
+
+    $scope.cardBtnClick = function($event, $isolateScope) {
+        debugger
+        $scope.Widgets.listBtn.disabled = false;
+        $isolateScope.disabled = true;
+        $scope.Widgets.licenseeTable.show = false;
+        $scope.Widgets.licenseeLiveList.show = true;
+    };
+
 }]);
 
 
 Application.$controller("licenseeFilterController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
 
 Application.$controller("licenseeTableController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
