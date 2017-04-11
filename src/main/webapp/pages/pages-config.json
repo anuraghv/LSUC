@@ -121,6 +121,10 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "alerts",
+  "type" : "POPOVER",
+  "params" : [ ]
+}, {
   "name" : "footer",
   "type" : "FOOTER",
   "params" : [ ]
@@ -135,6 +139,10 @@
 }, {
   "name" : "rightnav",
   "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "settings",
+  "type" : "POPOVER",
   "params" : [ ]
 }, {
   "name" : "test",

@@ -1,0 +1,23 @@
+<wm-partial data-ng-controller="alertsPageController" type="popover"> 
+    <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="1,2,3"> 
+        <wm-listtemplate layout="blank"> 
+            <wm-layoutgrid> 
+                <wm-gridrow> 
+                    <wm-gridcolumn columnwidth="3"> 
+                        <wm-picture height="4em" shape="circle" picturesource="http://dev.wavemaker.com/example/comedians/harpomarx.jpg"></wm-picture> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="6"> 
+                        <wm-label class="h4" width="100%" caption="Harpo Marx"></wm-label> 
+                        <wm-label class="p" width="100%" caption="Content"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="3" horizontalalign="right"> 
+                        <wm-buttongroup> 
+                            <wm-button iconclass="glyphicon glyphicon-ok" class="btn-transparent"></wm-button> 
+                            <wm-button iconclass="glyphicon glyphicon-remove" class="btn-transparent"></wm-button> 
+                        </wm-buttongroup> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+        </wm-listtemplate> 
+    </wm-livelist> 
+</wm-partial>

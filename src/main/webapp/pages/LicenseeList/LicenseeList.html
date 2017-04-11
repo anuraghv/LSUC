@@ -5,19 +5,19 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-layoutgrid name="layoutgrid2">
                 <wm-gridrow name="gridrow4">
-                    <wm-gridcolumn columnwidth="8" name="gridcolumn12">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn12">
                         <wm-breadcrumb dataset="Home, Licensees" name="breadcrumb1"></wm-breadcrumb>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn15" horizontalalign="right">
-                        <wm-button class="btn-default" caption="New Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()"></wm-button>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right">
+                        <wm-button class="btn-primary" caption="New Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus"></wm-button>
                         <wm-buttongroup name="buttongroup1">
-                            <wm-button class="btn-default" type="button" caption="List" name="listBtn" on-click="listBtnClick($event, $scope)" iconclass="wi wi-view-list"></wm-button>
-                            <wm-button class="btn-default" type="button" caption="Card" name="cardBtn" on-click="cardBtnClick($event, $scope)" iconclass="wi wi-view-comfy"></wm-button>
+                            <wm-button type="button" caption="List" name="listBtn" on-click="listBtnClick($event, $scope)" iconclass="wi wi-view-list fa-2x" class="btn-default"></wm-button>
+                            <wm-button type="button" caption="Card" name="cardBtn" on-click="cardBtnClick($event, $scope)" iconclass="wi wi-view-comfy fa-2x" class="btn-default"></wm-button>
                         </wm-buttongroup>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
-            <wm-livefilter title="Filter Licensee" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="false" margin="unset unset 0px unset">
+            <wm-livefilter title="Filter Criteria" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="true" subheading="Search the Licensee">
                 <wm-layoutgrid columns="2" name="layoutgrid1">
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn columnwidth="3" name="gridcolumn1">
@@ -46,23 +46,9 @@
                             <wm-filter-field name="person.mailingLabel.postalCode" field="person.mailinglabel.postalCode" displayname="Postal Code" show="true" type="string" matchmode="anywhere" widget="text" inputtype="text" is-range="false" key="person.mailinglabel.postalCode"
                             placeholder="Enter value"></wm-filter-field>
                         </wm-gridcolumn>
-                        <wm-gridcolumn name="gridcolumn1" columnwidth="4">
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="6">
                             <wm-filter-field name="licenseDate" field="licenseDate" related-field="License Date" widget="date" is-range="true" show="true" type="date" is-primary-key="false" generator="assigned" matchmode="start" displayname="License Date"
-                            key="licenseDate" placeholder="Select Min date" max-placeholder="Select Max date"></wm-filter-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
-                    <wm-gridrow name="gridrow3">
-                        <wm-gridcolumn name="gridcolumn1" columnwidth="3">
-                            <wm-filter-field name="custom" field="custom" displayname="Address Line 1" show="true" type="string" disabled="true" widget="text" inputtype="text" is-range="false" key="custom" placeholder="Enter value" matchmode="start"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn name="gridcolumn2" columnwidth="3">
-                            <wm-filter-field name="custom1" field="custom1" displayname="Phone Number" show="true" type="string" disabled="true" widget="text" inputtype="text" is-range="false" key="custom1" placeholder="Enter value" matchmode="start"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn name="gridcolumn3" columnwidth="3">
-                            <wm-filter-field name="custom2" field="custom2" displayname="Email" show="true" type="string" disabled="true" widget="text" inputtype="text" is-range="false" key="custom2" placeholder="Enter value" matchmode="start"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn name="gridcolumn3" columnwidth="3">
-                            <wm-filter-field name="custom3" field="custom3" displayname="Profile Status" show="true" type="string" disabled="true" widget="text" inputtype="text" is-range="false" key="custom3" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                            key="licenseDate" placeholder="Select Min date" max-placeholder="Select Max date" margin="unset 25% unset unset"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
@@ -71,7 +57,7 @@
             </wm-livefilter>
             <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="true">
                 <wm-grid-column binding="customField" caption="" type="string" widget-type="icon" width="40px" edit-widget-type="text" searchable="false" show="true" readonly="false">
-                    <wm-icon caption="{{row.getProperty('customField')}}" iconclass="fa fa-user" iconposition="left" class="" data-ng-class=""></wm-icon>
+                    <wm-icon caption="" iconclass="fa fa-user fa-2x" iconposition="left" class="" data-ng-class=""></wm-icon>
                 </wm-grid-column>
                 <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
                     <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.goToPage_Licensee.invoke()" class="" data-ng-class=""></wm-anchor>
@@ -88,23 +74,29 @@
                 <wm-grid-column binding="licencetype.shortNameEnglish" caption="License Type Short Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Licencetype"></wm-grid-column>
                 <wm-grid-column binding="geographicarea.shortNameEnglish" caption="City" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Geographicarea"></wm-grid-column>
             </wm-grid>
-            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="Basic" name="licenseeLiveList" show="false">
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="false" on-click="Variables.goToPage_Licensee.invoke()">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card" class="gray">
                         <wm-card-content horizontalalign="center" name="card_content1">
-                            <wm-label class="h4 text-muted" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].licenseeNumber" whitespace="nowrap" name="label5" textalign="center"></wm-label>
-                            <wm-label name="Name" class="h4 text-center" margin="unset unset 0em unset" caption="bind:Variables.LSUCLicenseeData.dataSet.person.firstName" whitespace="nowrap"></wm-label>
-                            <wm-label name="JobTitle" class="p text-muted  text-center" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].licencetype.licenseetype.shortNameEnglish" whitespace="nowrap"></wm-label>
+                            <wm-icon name="icon1" class="pull-left" iconclass="bind:(item.licencetype.code === &quot;P1&quot; )?&quot;wi wi-user fa-3x&quot;:&quot;fa fa-user fa-3x&quot;"></wm-icon>
+                            <wm-label class="h2 text-muted" caption="bind:Widgets.licenseeFilter.result[$i].licenseeNumber" whitespace="nowrap" name="label5" textalign="center" margin="0px unset unset unset"></wm-label>
+                            <wm-label name="Name" class="h4 text-center" margin="unset unset 0em unset" caption="bind:Widgets.licenseeFilter.result[$i].person.firstName +&quot; &quot;+Widgets.licenseeFilter.result[$i].person.middleName +&quot; &quot;+Widgets.licenseeFilter.result[$i].person.lastName"
+                            whitespace="nowrap"></wm-label>
+                            <wm-label name="licenseType" class="p text-muted  text-center" caption="bind:Widgets.licenseeFilter.result[$i].licencetype.licenseetype.shortNameEnglish" whitespace="nowrap"></wm-label>
                         </wm-card-content>
-                        <wm-card-footer horizontalalign="center" name="card_footer1">
-                            <wm-container name="container7" class="media-left" horizontalalign="right" bordercolor="#9d9d9d" borderstyle="solid" borderwidth="0px 1px 0px 0px">
-                                <wm-label padding="unset 0.5em" name="label10" caption="City" width="100%"></wm-label>
-                                <wm-label padding="unset 0.5em" name="label11" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].geographicarea.shortNameEnglish" textalign="right"></wm-label>
-                            </wm-container>
-                            <wm-container name="container8" class="media-right" horizontalalign="left">
-                                <wm-label padding="unset 0.5em" name="label12" caption="Status" width="100%"></wm-label>
-                                <wm-label padding="unset 0.5em" name="label13" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.code" textalign="left"></wm-label>
-                            </wm-container>
+                        <wm-card-footer name="card_footer1">
+                            <wm-layoutgrid name="layoutgrid3">
+                                <wm-gridrow name="gridrow4_1">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn11" horizontalalign="right" padding="unset 1em unset unset">
+                                        <wm-label name="label10" caption="City" width="100%"></wm-label>
+                                        <wm-label name="label11" caption="bind:Widgets.licenseeFilter.result[$i].geographicarea.shortNameEnglish" textalign="right"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn12_1" padding="unset unset unset 1em">
+                                        <wm-label name="label12" caption="Status" width="100%"></wm-label>
+                                        <wm-label name="label13" caption="bind:Widgets.licenseeFilter.result[$i].legacyclassstatus.shortNameEnglish" textalign="left"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
                         </wm-card-footer>
                     </wm-card>
                 </wm-listtemplate>

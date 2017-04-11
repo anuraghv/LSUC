@@ -1,19 +1,19 @@
 <wm-partial data-ng-controller="headerPageController" name="header" type="header">
     <wm-layoutgrid name="headerlayout">
         <wm-gridrow name="headerrow">
-            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="7" padding="unset unset unset 1em">
-                <wm-picture picturesource="resources/images/imagelists/logo.png" name="AppLogo" margin="1em unset unset unset" height="40"></wm-picture>
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="6" padding="unset unset unset 1em">
+                <wm-picture picturesource="resources/images/imagelists/logo.png" name="AppLogo" margin="1em unset unset unset" height="40" class="app-logo"></wm-picture>
             </wm-gridcolumn>
             <wm-gridcolumn name="headerright" horizontalalign="right" columnwidth="3" padding="1em 1em unset unset">
                 <wm-search name="siteSearch" on-submit="Variables.goToPage_Search.invoke()"></wm-search>
             </wm-gridcolumn>
-            <wm-gridcolumn columnwidth="2" name="gridcolumn3" horizontalalign="right">
-                <wm-nav type="pills" name="nav1" horizontalalign="right" class="list-inline">
+            <wm-gridcolumn columnwidth="3" name="gridcolumn3" horizontalalign="right">
+                <wm-nav type="pills" name="nav1" horizontalalign="right" class="app-header-actions list-inline">
                     <wm-nav-item name="nav_item5">
-                        <wm-popover popoverwidth="240" popoverheight="360" name="popover1" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action"></wm-popover>
+                        <wm-popover popoverwidth="240" popoverheight="360" name="popover1" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="10" content="alerts"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item2">
-                        <wm-anchor caption="" name="anchor2" iconclass="wi wi-gear fa-2x" class="app-header-action"></wm-anchor>
+                        <wm-popover popoverwidth="240" popoverheight="360" name="popover1" iconclass="wi wi-gear fa-2x" caption="" class="app-header-action" content="settings"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item4">
                         <wm-menu caption="" autoclose="outsideClick" name="menu1" iconclass="wi wi-file fa-2x" type="anchor" menuclass="app-header-action"></wm-menu>

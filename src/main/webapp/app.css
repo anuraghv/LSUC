@@ -1,12 +1,22 @@
-/*@media only screen and (max-width: 480px) and (min-width: 299px) {
-    .app-header-action .app-icon {
+@media only screen and (max-width: 480px) and (min-width: 299px) {
+    .app-header-actions .app-header-action .app-icon {
         font-size: 1em;
     }
     .app-header-action {
         padding: 0 !important;
     }
-}*/
-
+    .app-logo {
+        height: 30px !important;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+    .app-header-actions .app-header-action .app-icon {
+        font-size: 1em;
+    }
+    .app-header-action {
+        padding: 0 !important;
+    }
+}
 .app-card.gray {
     background-color: rgba(0, 0, 0, 0.05);
 }

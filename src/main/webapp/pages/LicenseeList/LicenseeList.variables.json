@@ -964,7 +964,7 @@
           "notNull" : true,
           "length" : 255,
           "precision" : 10,
-          "generator" : "assigned",
+          "generator" : "identity",
           "isRelated" : false,
           "scale" : 0
         }, {
@@ -1049,7 +1049,7 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 10,
-        "generator" : "assigned",
+        "generator" : "identity",
         "isRelated" : false,
         "scale" : 0
       }, {
@@ -1251,7 +1251,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 4,
+    "bindCount" : 5,
     "tableName" : "LICENSEE",
     "tableType" : "TABLE",
     "properties" : [ "admissionroute", "citizenship", "feecategory", "geographicarea", "legacyclassstatus", "licencetype", "person" ],
