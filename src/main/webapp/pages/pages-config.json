@@ -66,6 +66,10 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "LicenseeProfile",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]
@@ -80,6 +84,10 @@
     "name" : "id",
     "type" : "integer"
   } ]
+}, {
+  "name" : "PersonHistory",
+  "type" : "PAGE",
+  "params" : [ ]
 }, {
   "name" : "Persons",
   "type" : "PAGE",

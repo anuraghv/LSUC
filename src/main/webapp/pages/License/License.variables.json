@@ -968,7 +968,7 @@
           "notNull" : true,
           "length" : 255,
           "precision" : 10,
-          "generator" : "assigned",
+          "generator" : "identity",
           "isRelated" : false,
           "scale" : 0
         }, {
@@ -1053,7 +1053,7 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 10,
-        "generator" : "assigned",
+        "generator" : "identity",
         "isRelated" : false,
         "scale" : 0
       }, {

@@ -1,10 +1,13 @@
 <wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="leftnav">
     <wm-nav name="leftnavigation" type="pills" layout="stacked">
         <wm-nav-item name="list_dashboard">
-            <wm-anchor caption="Licensee List" name="licenseeLink" iconclass="wi wi-bar-graph" on-click="Variables.goToPage_LicenseeList.invoke()"></wm-anchor>
+            <wm-anchor caption="License" name="licenseeLink" iconclass="wi wi-bar-graph" on-click="Variables.goToPage_Licensee.invoke()"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_order">
-            <wm-anchor caption="Business List" name="businessLink" iconclass="wi wi-file" on-click="Variables.goToPage_BusinessList.invoke()"></wm-anchor>
+            <wm-anchor caption="Personal Info" name="businessLink" iconclass="wi wi-file" on-click="Variables.goToPage_LicenseeProfile.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item3">
+            <wm-anchor name="anchor3" iconclass="wi wi-file" caption="History"></wm-anchor>
         </wm-nav-item>
     </wm-nav>
 </wm-partial>

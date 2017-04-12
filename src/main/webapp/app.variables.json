@@ -89,6 +89,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_LicenseeProfile" : {
+    "_id" : "wm-goToPage_LicenseeProfile-wm.NavigationVariable-1491979523640",
+    "name" : "goToPage_LicenseeProfile",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "LicenseeProfile",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -114,6 +125,17 @@
       "target" : "id",
       "value" : "bind:Widgets.personGrid.selecteditem.pk"
     } ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_PersonHistory" : {
+    "_id" : "wm-goToPage_PersonHistory-wm.NavigationVariable-1491981181989",
+    "name" : "goToPage_PersonHistory",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "PersonHistory",
+    "dataSet" : [ ],
     "pageTransitions" : "none"
   },
   "goToPage_Persons" : {
