@@ -3,63 +3,188 @@
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-livegrid formlayout="dialog" name="livegrid1">
-                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Business List" dataset="bind:Variables.LSUCBusinessData.dataSet" navigation="Basic" name="grid1">
+            <wm-livegrid formlayout="dialog" name="livegrid2">
+                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Licensee List" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="Basic" name="grid2">
                     <wm-grid-column binding="pk" caption="Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
-                    <wm-grid-column binding="businessNumber" caption="Business Number" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="businessName" caption="Business Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="numberOfEmployees" caption="Number Of Employees" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-grid-column>
-                    <wm-grid-column binding="isActive" caption="Is Active" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
-                    <wm-grid-column binding="isBusinessNameSameAsOwner" caption="Is Business Name Same As Owner" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
-                    <wm-grid-column binding="alsoKnownAs" caption="Also Known As" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="businesslegaltype.pk" caption="Businesslegaltype Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" related-entity-name="Businesslegaltype"></wm-grid-column>
-                    <wm-grid-column binding="businesslegaltype.code" caption="Businesslegaltype Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Businesslegaltype" readonly="true"></wm-grid-column>
-                    <wm-grid-column binding="businesslegaltype.shortNameEnglish" caption="Name English" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Businesslegaltype" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="licenseeNumber" caption="Licensee Number" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="licenseDate" caption="License Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-grid-column>
+                    <wm-grid-column binding="reAdmissionDate" caption="Re Admission Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-grid-column>
+                    <wm-grid-column binding="appointedToQcDate" caption="Appointed To Qc Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-grid-column>
+                    <wm-grid-column binding="hasAuthorizedToReleaseContactInfo" caption="Has Authorized To Release Contact Info" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+                    <wm-grid-column binding="isInDiscipline" caption="Is In Discipline" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+                    <wm-grid-column binding="hasInsurance" caption="Has Insurance" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+                    <wm-grid-column binding="suspensionPeriod" caption="Suspension Period" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short"></wm-grid-column>
+                    <wm-grid-column binding="barCode" caption="Bar Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
                     <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
                     <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
                     <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
                 </wm-grid>
-                <wm-liveform novalidate="false" errormessage="" title="Business Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.LSUCBusinessData.dataSet" captionalign="left" captionposition="top" name="liveform1">
+                <wm-liveform novalidate="false" errormessage="" title="Licensee Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="liveform2">
                     <wm-layoutgrid columns="3" name="layoutgrid2">
-                        <wm-gridrow name="gridrow5">
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn5">
-                                <wm-form-field name="businessNumber" displayname="Business Number" required="false" show="true" generator="assigned" primary-key="false" key="businessNumber" type="string" is-related="false" maxchars="10" pc-display="true"
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10">
+                                <wm-form-field name="licenseeNumber" displayname="Licensee Number" required="false" show="true" generator="assigned" primary-key="false" key="licenseeNumber" type="string" is-related="false" maxchars="20" pc-display="true"
                                 mobile-display="true" widget="text"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn6">
-                                <wm-form-field name="businessName" displayname="Business Name" required="false" show="true" generator="assigned" primary-key="false" key="businessName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
-                                widget="text"></wm-form-field>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11">
+                                <wm-form-field name="licenseDate" displayname="License Date" required="false" show="true" generator="assigned" primary-key="false" key="licenseDate" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn7">
-                                <wm-form-field name="numberOfEmployees" displayname="Number Of Employees" required="false" show="true" generator="assigned" primary-key="false" key="numberOfEmployees" type="integer" is-related="false" step="0" pc-display="true"
-                                mobile-display="true" widget="number"></wm-form-field>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn12">
+                                <wm-form-field name="reAdmissionDate" displayname="Re Admission Date" required="false" show="true" generator="assigned" primary-key="false" key="reAdmissionDate" type="date" is-related="false" pc-display="true" mobile-display="true"
+                                widget="date"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn13">
+                                <wm-form-field name="appointedToQcDate" displayname="Appointed To Qc Date" required="false" show="true" generator="assigned" primary-key="false" key="appointedToQcDate" type="date" is-related="false" pc-display="true" mobile-display="true"
+                                widget="date"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn14">
+                                <wm-form-field name="hasAuthorizedToReleaseContactInfo" displayname="Has Authorized To Release Contact Info" required="false" show="true" generator="assigned" primary-key="false" key="hasAuthorizedToReleaseContactInfo" type="character"
+                                is-related="false" maxchars="1" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn15">
+                                <wm-form-field name="isInDiscipline" displayname="Is In Discipline" required="false" show="true" generator="assigned" primary-key="false" key="isInDiscipline" type="character" is-related="false" maxchars="1" pc-display="true"
+                                mobile-display="true" widget="text"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                         <wm-gridrow name="gridrow6">
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn8">
-                                <wm-form-field name="isActive" displayname="Is Active" required="false" show="true" generator="assigned" primary-key="false" key="isActive" type="character" is-related="false" maxchars="1" pc-display="true" mobile-display="true"
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn16">
+                                <wm-form-field name="hasInsurance" displayname="Has Insurance" required="false" show="true" generator="assigned" primary-key="false" key="hasInsurance" type="character" is-related="false" maxchars="1" pc-display="true" mobile-display="true"
                                 widget="text"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn9">
-                                <wm-form-field name="isBusinessNameSameAsOwner" displayname="Is Business Name Same As Owner" required="false" show="true" generator="assigned" primary-key="false" key="isBusinessNameSameAsOwner" type="character" is-related="false"
-                                maxchars="1" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn17">
+                                <wm-form-field name="suspensionPeriod" displayname="Suspension Period" required="false" show="true" generator="assigned" primary-key="false" key="suspensionPeriod" type="short" is-related="false" step="0" pc-display="true"
+                                mobile-display="true" widget="number"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn10">
-                                <wm-form-field name="alsoKnownAs" displayname="Also Known As" required="false" show="true" generator="assigned" primary-key="false" key="alsoKnownAs" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn18">
+                                <wm-form-field name="barCode" displayname="Bar Code" required="false" show="true" generator="assigned" primary-key="false" key="barCode" type="string" is-related="false" maxchars="20" pc-display="true" mobile-display="true"
                                 widget="text"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                         <wm-gridrow name="gridrow7">
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn11">
-                                <wm-form-field name="businesslegaltype" displayname="Businesslegaltype" required="false" show="true" generator="assigned" primary-key="false" key="businesslegaltype" type="list" is-related="true" pc-display="true" mobile-display="true"
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn19">
+                                <wm-form-field name="archiveBoxNumber" displayname="Archive Box Number" required="false" show="true" generator="assigned" primary-key="false" key="archiveBoxNumber" type="string" is-related="false" maxchars="50" pc-display="true"
+                                mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn20">
+                                <wm-form-field name="numberOfFileFolders" displayname="Number Of File Folders" required="false" show="true" generator="assigned" primary-key="false" key="numberOfFileFolders" type="string" is-related="false" maxchars="50" pc-display="true"
+                                mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn21">
+                                <wm-form-field name="fileLocationFk" displayname="File Location Fk" required="false" show="true" generator="assigned" primary-key="false" key="fileLocationFk" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true"
+                                widget="number"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow8">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn22">
+                                <wm-form-field name="useAlternateZonesForReferral" displayname="Use Alternate Zones For Referral" required="false" show="true" generator="assigned" primary-key="false" key="useAlternateZonesForReferral" type="character" is-related="false"
+                                maxchars="1" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn23">
+                                <wm-form-field name="referralStatusFk" displayname="Referral Status Fk" required="false" show="true" generator="assigned" primary-key="false" key="referralStatusFk" type="integer" is-related="false" step="0" pc-display="true"
+                                mobile-display="true" widget="number"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn24">
+                                <wm-form-field name="isLegacyClassStatusException" displayname="Is Legacy Class Status Exception" required="false" show="true" generator="assigned" primary-key="false" key="isLegacyClassStatusException" type="character" is-related="false"
+                                maxchars="1" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow9">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn25">
+                                <wm-form-field name="isExemptFromCpd" displayname="Is Exempt From Cpd" required="false" show="true" generator="assigned" primary-key="false" key="isExemptFromCpd" type="character" is-related="false" maxchars="1" pc-display="true"
+                                mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn26">
+                                <wm-form-field name="admissionroute" displayname="Admissionroute" required="false" show="true" generator="assigned" primary-key="false" key="admissionroute" type="list" is-related="true" pc-display="true" mobile-display="true"
                                 widget="select"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn12">
-                                <wm-form-field name="businessstatus" displayname="Businessstatus" required="false" show="true" generator="assigned" primary-key="false" key="businessstatus" type="list" is-related="true" pc-display="true" mobile-display="true"
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn27">
+                                <wm-form-field name="citizenship" displayname="Citizenship" required="false" show="true" generator="assigned" primary-key="false" key="citizenship" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow10">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn28">
+                                <wm-form-field name="feecategory" displayname="Feecategory" required="false" show="true" generator="assigned" primary-key="false" key="feecategory" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn29">
+                                <wm-form-field name="geographicarea" displayname="Geographicarea" required="false" show="true" generator="assigned" primary-key="false" key="geographicarea" type="list" is-related="true" pc-display="true" mobile-display="true"
                                 widget="select"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn13">
-                                <wm-form-field name="businesstype" displayname="Businesstype" required="false" show="true" generator="assigned" primary-key="false" key="businesstype" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn30">
+                                <wm-form-field name="legacyclassstatus" displayname="Legacyclassstatus" required="false" show="true" generator="assigned" primary-key="false" key="legacyclassstatus" type="list" is-related="true" pc-display="true" mobile-display="true"
+                                widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow11">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn31">
+                                <wm-form-field name="licencetype" displayname="Licencetype" required="false" show="true" generator="assigned" primary-key="false" key="licencetype" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn32">
+                                <wm-form-field name="person" displayname="Person" required="false" show="true" generator="assigned" primary-key="false" key="person" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn33"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="pk" displayname="Pk" required="true" show="false" generator="identity" primary-key="true" key="pk" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+            <wm-livegrid formlayout="dialog" name="livegrid2_1">
+                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Person List" dataset="bind:Variables.LSUCPersonData.dataSet" navigation="Basic" name="grid2_1">
+                    <wm-grid-column binding="pk" caption="Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="firstName" caption="First Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="lastName" caption="Last Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="middleNames" caption="Middle Names" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="commonlyReferredToName" caption="Commonly Referred To Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="mailingName" caption="Mailing Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="birthDate" caption="Birth Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-grid-column>
+                    <wm-grid-column binding="gender.pk" caption="Gender Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" related-entity-name="Gender"></wm-grid-column>
+                    <wm-grid-column binding="gender.code" caption="Gender Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Gender" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="gender.shortNameEnglish" caption="Name English" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Gender" readonly="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                    <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                    <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" errormessage="" title="Person Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonData.dataSet" captionalign="left" captionposition="top" name="liveform2_1">
+                    <wm-layoutgrid columns="3" name="layoutgrid2_1">
+                        <wm-gridrow name="gridrow9_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn25_1">
+                                <wm-form-field name="firstName" displayname="First Name" required="false" show="true" generator="assigned" primary-key="false" key="firstName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn26_1">
+                                <wm-form-field name="lastName" displayname="Last Name" required="false" show="true" generator="assigned" primary-key="false" key="lastName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn27_1">
+                                <wm-form-field name="middleNames" displayname="Middle Names" required="false" show="true" generator="assigned" primary-key="false" key="middleNames" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow10_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn28_1">
+                                <wm-form-field name="commonlyReferredToName" displayname="Commonly Referred To Name" required="false" show="true" generator="assigned" primary-key="false" key="commonlyReferredToName" type="string" is-related="false" maxchars="100"
+                                pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn29_1">
+                                <wm-form-field name="mailingName" displayname="Mailing Name" required="false" show="true" generator="assigned" primary-key="false" key="mailingName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn30_1">
+                                <wm-form-field name="birthDate" displayname="Birth Date" required="false" show="true" generator="assigned" primary-key="false" key="birthDate" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow11_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn31_1">
+                                <wm-form-field name="gender" displayname="Gender" required="false" show="true" generator="assigned" primary-key="false" key="gender" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn32_1">
+                                <wm-form-field name="prefix" displayname="Prefix" required="false" show="true" generator="assigned" primary-key="false" key="prefix" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn33_1">
+                                <wm-form-field name="suffix" displayname="Suffix" required="false" show="true" generator="assigned" primary-key="false" key="suffix" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                     </wm-layoutgrid>

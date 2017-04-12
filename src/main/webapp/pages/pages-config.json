@@ -88,6 +88,13 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "PersonalRelationShip",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "Persons",
   "type" : "PAGE",
   "params" : [ ]
