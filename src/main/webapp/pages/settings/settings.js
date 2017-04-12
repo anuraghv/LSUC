@@ -20,4 +20,13 @@ Application.$controller("settingsPageController", ["$scope", function($scope) {
         WM.element('#wm-app-content').removeClass('text-style-' + oldVal).addClass('text-style-' + newVal);
     };
 
+
+    $scope.contrastSwitchChange = function($event, $isolateScope, newVal, oldVal) {
+        if (newVal === 'Dark') {
+            WM.element('head').append('<link id="dark-theme" rel="stylesheet" type="text/css" href="themes/neon/style.css">');
+        } else {
+            WM.element('#dark-theme').remove();
+        }
+    };
+
 }]);

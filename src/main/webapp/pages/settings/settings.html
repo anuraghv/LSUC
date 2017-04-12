@@ -15,7 +15,7 @@
                 </wm-gridcolumn>
                 <wm-gridcolumn columnwidth="6" name="gridcolumn4">
                     <wm-composite name="composite1">
-                        <wm-switch datavalue="Light" name="contrastSwitch" dataset="Light, Dark" class="btn-group-sm"></wm-switch>
+                        <wm-switch datavalue="Light" name="contrastSwitch" dataset="Light, Dark" class="btn-group-sm" on-change="contrastSwitchChange($event, $scope, newVal, oldVal)"></wm-switch>
                     </wm-composite>
                 </wm-gridcolumn>
             </wm-gridrow>
