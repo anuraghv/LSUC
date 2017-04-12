@@ -1,7 +1,7 @@
 {
-  "goToPage_LicenseeInfo" : {
+  "gridgoToPage_LicenseeInfo" : {
     "_id" : "wm-goToPage_LicenseeInfo-wm.NavigationVariable-1491988086104",
-    "name" : "goToPage_LicenseeInfo",
+    "name" : "gridgoToPage_LicenseeInfo",
     "owner" : "Page",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ {
@@ -14,6 +14,24 @@
       "type" : "integer",
       "target" : "id",
       "value" : "bind:Widgets.licenseeTable.selecteditem.person.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "listgoToPage_LicenseeInfo" : {
+    "_id" : "wm-listgoToPage_LicenseeInfo-wm.NavigationVariable-1491991215309",
+    "name" : "listgoToPage_LicenseeInfo",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Licensee",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.licenseeLiveList.selecteditem.person.pk"
     } ],
     "pageTransitions" : "none"
   },

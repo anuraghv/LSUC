@@ -60,7 +60,7 @@
                     <wm-icon caption="" iconclass="fa fa-user fa-2x" iconposition="left" class="" data-ng-class=""></wm-icon>
                 </wm-grid-column>
                 <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
-                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.goToPage_LicenseeInfo.invoke()" class="" data-ng-class=""></wm-anchor>
+                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.gridgoToPage_LicenseeInfo.invoke()" class="" data-ng-class=""></wm-anchor>
                 </wm-grid-column>
                 <wm-grid-column binding="licencetype.licenseetype.code" caption="Licence Type" type="string" widget-type="label" edit-widget-type="text" searchable="false" show="true" readonly="false">
                     <wm-label caption="{{row.getProperty('licencetype.licenseetype.code')}} {{row.getProperty('licencetype.shortNameEnglish')}}" class="" data-ng-class=""></wm-label>
@@ -74,7 +74,7 @@
                 <wm-grid-column binding="licencetype.shortNameEnglish" caption="License Type Short Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Licencetype"></wm-grid-column>
                 <wm-grid-column binding="geographicarea.shortNameEnglish" caption="City" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Geographicarea"></wm-grid-column>
             </wm-grid>
-            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="true" on-click="Variables.goToPage_Licensee.invoke()">
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="true" on-click="Variables.listgoToPage_LicenseeInfo.invoke()">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card" class="gray">
                         <wm-card-content horizontalalign="center" name="card_content1">

@@ -1250,6 +1250,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "pk" ]
     },
+    "bindCount" : 1,
     "tableName" : "LICENSEE",
     "tableType" : "TABLE",
     "properties" : [ "admissionroute", "citizenship", "feecategory", "geographicarea", "legacyclassstatus", "licencetype", "person" ],
