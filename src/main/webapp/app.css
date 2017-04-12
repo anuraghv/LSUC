@@ -20,3 +20,14 @@
 .gray {
     background-color: rgba(0, 0, 0, 0.05);
 }
+/***text size specific function***/
+
+.text-style-S {
+    font-size: 1em;
+}
+.text-style-M {
+    font-size: 1.5em;
+}
+.text-style-L {
+    font-size: 2em;
+}
