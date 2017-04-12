@@ -21,34 +21,34 @@
                 <wm-layoutgrid columns="2" name="layoutgrid1">
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn columnwidth="3" name="gridcolumn1">
-                            <wm-filter-field name="licenseeNumber" field="licenseeNumber" displayname="Licensee Number" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="licenseeNumber" placeholder="Enter value"
-                            matchmode="start"></wm-filter-field>
+                            <wm-filter-field name="licenseeNumber" field="licenseeNumber" displayname="Licensee Number" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="licenseeNumber"
+                            placeholder="Enter value" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn2">
-                            <wm-filter-field name="licencetype" field="licencetype" displayname="Licence Type" widget="select" lookup-type="Licencetype" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Licencetype" is-range="false" type="integer" is-primary-key="false"
-                            generator="assigned" show="true" key="licencetype" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
+                            <wm-filter-field name="licencetype" field="licencetype" displayname="Licence Type" widget="select" lookup-type="Licencetype" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Licencetype" is-range="false" type="integer"
+                            is-primary-key="false" generator="assigned" show="true" key="licencetype" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn6">
-                            <wm-filter-field name="person" field="person" related-field="Person" widget="text" is-range="false" lookup-type="Person" lookup-field="firstName" show="true" is-related="true" related-entity-name="Person" type="integer" is-primary-key="false" generator="assigned"
-                            matchmode="anywhere" inputtype="text" displayname="Name" key="person" placeholder="Enter value"></wm-filter-field>
+                            <wm-filter-field name="person" field="person" related-field="Person" widget="text" is-range="false" lookup-type="Person" lookup-field="firstName" show="true" is-related="true" related-entity-name="Person" type="integer" is-primary-key="false"
+                            generator="assigned" matchmode="anywhere" inputtype="text" displayname="Name" key="person" placeholder="Enter value"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn7">
-                            <wm-filter-field name="geographicarea" field="geographicarea" displayname="Area" widget="select" lookup-type="Geographicarea" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Geographicarea" is-range="false" type="integer" is-primary-key="false"
-                            generator="assigned" show="true" key="geographicarea" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
+                            <wm-filter-field name="geographicarea" field="geographicarea" displayname="Area" widget="select" lookup-type="Geographicarea" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Geographicarea" is-range="false"
+                            type="integer" is-primary-key="false" generator="assigned" show="true" key="geographicarea" placeholder="Enter value" datafield="key" displayfield="value" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn name="gridcolumn1" columnwidth="3">
-                            <wm-filter-field name="legacyclassstatus" field="legacyclassstatus" related-field="Legacyclassstatus" widget="select" is-range="false" lookup-type="Legacyclassstatus" lookup-field="shortNameEnglish" show="true" is-related="true" related-entity-name="Legacyclassstatus"
-                            type="integer" is-primary-key="false" generator="assigned" matchmode="start" displayname="Class Status" key="legacyclassstatus" placeholder="Enter value" datafield="key" displayfield="value"></wm-filter-field>
+                            <wm-filter-field name="legacyclassstatus" field="legacyclassstatus" related-field="Legacyclassstatus" widget="select" is-range="false" lookup-type="Legacyclassstatus" lookup-field="shortNameEnglish" show="true" is-related="true"
+                            related-entity-name="Legacyclassstatus" type="integer" is-primary-key="false" generator="assigned" matchmode="start" displayname="Class Status" key="legacyclassstatus" placeholder="Enter value" datafield="key" displayfield="value"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn name="gridcolumn1" columnwidth="3">
                             <wm-filter-field name="person.mailingLabel.postalCode" field="person.mailinglabel.postalCode" displayname="Postal Code" show="true" type="string" matchmode="anywhere" widget="text" inputtype="text" is-range="false" key="person.mailinglabel.postalCode"
                             placeholder="Enter value"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn name="gridcolumn1" columnwidth="6">
-                            <wm-filter-field name="licenseDate" field="licenseDate" related-field="License Date" widget="date" is-range="true" show="true" type="date" is-primary-key="false" generator="assigned" matchmode="start" displayname="License Date" key="licenseDate" placeholder="Select Min date"
-                            max-placeholder="Select Max date" margin="unset 25% unset unset"></wm-filter-field>
+                            <wm-filter-field name="licenseDate" field="licenseDate" related-field="License Date" widget="date" is-range="true" show="true" type="date" is-primary-key="false" generator="assigned" matchmode="start" displayname="License Date"
+                            key="licenseDate" placeholder="Select Min date" max-placeholder="Select Max date" margin="unset 25% unset unset"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
@@ -74,7 +74,7 @@
                 <wm-grid-column binding="licencetype.shortNameEnglish" caption="License Type Short Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Licencetype"></wm-grid-column>
                 <wm-grid-column binding="geographicarea.shortNameEnglish" caption="City" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Geographicarea"></wm-grid-column>
             </wm-grid>
-            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="false" on-click="Variables.goToPage_Licensee.invoke()">
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="true" on-click="Variables.goToPage_Licensee.invoke()">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card" class="gray">
                         <wm-card-content horizontalalign="center" name="card_content1">

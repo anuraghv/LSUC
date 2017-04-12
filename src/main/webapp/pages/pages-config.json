@@ -1,4 +1,8 @@
 [ {
+  "name" : "AddBusiness",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "AddLicensee",
   "type" : "PAGE",
   "params" : [ ]

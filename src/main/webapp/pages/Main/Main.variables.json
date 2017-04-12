@@ -1,4 +1,22 @@
 {
+  "goToPage_LicenseeInfo" : {
+    "_id" : "wm-goToPage_LicenseeInfo-wm.NavigationVariable-1491988799070",
+    "name" : "goToPage_LicenseeInfo",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Licensee",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.searchLicensee.datavalue.person.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
   "Licensee" : {
     "_id" : "wm-Licensee-wm.LiveVariable-1491976399222",
     "name" : "Licensee",

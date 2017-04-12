@@ -15,6 +15,17 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_AddBusiness" : {
+    "_id" : "wm-goToPage_AddBusiness-wm.NavigationVariable-1491988702597",
+    "name" : "goToPage_AddBusiness",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AddBusiness",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_AddLicensee" : {
     "_id" : "wm-goToPage_AddLicensee-wm.NavigationVariable-1491544442176",
     "name" : "goToPage_AddLicensee",

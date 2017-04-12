@@ -4,15 +4,20 @@
     <wm-content name="content">
         <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
             <wm-layoutgrid name="layoutgrid12">
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn3"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                        <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="button2" iconclass="fa fa-user-plus" on-click="Variables.goToPage_AddLicensee.invoke()"></wm-button>
+                        <wm-button class="btn-primary" caption="Add Business" type="button" margin="unset 0.5em" name="button1" iconclass="wi wi-business" on-click="Variables.goToPage_AddBusiness.invoke()"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
                 <wm-gridrow name="gridrow14">
                     <wm-gridcolumn columnwidth="8" name="gridcolumn36">
-                        <wm-button class="btn-primary" caption="Add Business" type="button" margin="unset 0.5em" name="button1"></wm-button>
-                        <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="button2"></wm-button>
-                        <wm-container name="container1" width="80%" display="inline-block" backgroundcolor="#e9e9e9" padding="3em">
+                        <wm-container name="container1" width="80%" display="inline-block" padding="3em" class="gray">
                             <wm-label padding="unset 0.5em" name="label23" class="h2" caption="Search Licensee"></wm-label>
                             <wm-label padding="unset 0.5em" name="label24" caption="Type the licensee number or licensee name"></wm-label>
-                            <wm-search name="search1" dataset="bind:Variables.Licensee.dataSet" searchkey="licenseeNumber,person.firstName,person.lastName" displaylabel="bind:$[data[$i].licenseeNumber] + &quot; - [ &quot; + $[data[$i].person.firstName] + &quot; &quot; + $[data[$i].person.lastName] + &quot;]&quot;"
-                            datafield="All Fields"></wm-search>
+                            <wm-search name="searchLicensee" dataset="bind:Variables.Licensee.dataSet" searchkey="licenseeNumber,person.firstName,person.lastName" displaylabel="bind:$[data[$i].licenseeNumber] + &quot; - [ &quot; + $[data[$i].person.firstName] + &quot; &quot; + $[data[$i].person.lastName] + &quot;]&quot;"
+                            datafield="All Fields" on-select="Variables.goToPage_LicenseeInfo.invoke()"></wm-search>
                         </wm-container>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn37" horizontalalign="right"></wm-gridcolumn>
