@@ -1,4 +1,22 @@
 {
+  "goToPage_LicenseeInfo" : {
+    "_id" : "wm-goToPage_LicenseeInfo-wm.NavigationVariable-1491988086104",
+    "name" : "goToPage_LicenseeInfo",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Licensee",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.licenseeTable.selecteditem.person.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
   "LSUCLicenseeData" : {
     "_id" : "wm-LSUCLicenseeData-wm.LiveVariable-1491300853617",
     "name" : "LSUCLicenseeData",

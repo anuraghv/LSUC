@@ -1,10 +1,30 @@
-<wm-page data-ng-controller="PersonHistoryPageController" pagetitle="Person History"> 
-    <wm-header content="header"></wm-header> 
-    <wm-top-nav content="topnav"></wm-top-nav> 
-    <wm-content> 
-        <wm-left-panel columnwidth="2" content="leftnav"></wm-left-panel> 
-        <wm-page-content columnwidth="10"> 
-        </wm-page-content> 
-    </wm-content> 
-    <wm-footer content="footer"></wm-footer> 
+<wm-page data-ng-controller="PersonHistoryPageController" pagetitle="Person History" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-breadcrumb dataset="Home, Licensees, Licensee, History" name="breadcrumb1"></wm-breadcrumb>
+            <wm-livelist template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" datafield="All Fields" dataset="bind:Variables.personHistory.dataSet" navigation="None" name="meetingLivelist" padding="2em 0.5em unset 0.5em" class="timeline-inverse">
+                <wm-listtemplate layout="inline" name="listtemplate5">
+                    <wm-layoutgrid name="meetingLayoutGrid">
+                        <wm-gridrow name="gridrow7_1">
+                            <wm-gridcolumn columnwidth="5" name="gridcolumn5" class="column-left col-xs-5">
+                                <wm-label class="p" caption="bind:Variables.personHistory.dataSet[$i].days" fontunit="em" name="Schedule"></wm-label>
+                                <wm-label class="p text-primary" caption="bind:Variables.personHistory.dataSet[$i].time" fontunit="em" name="Date"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="2" name="meetingColumnOne" class="col-xs-2 icon-column" horizontalalign="center">
+                                <wm-icon name="icon3" class="{{item.icon_class}}" iconclass="bind:Variables.personHistory.dataSet[$i].icon" iconsize="1.2em"></wm-icon>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="5" name="meetingColumnTwo" class="panel col-xs-5 column-right" padding="1em">
+                                <wm-label class="h4 media-heading" name="Header" caption="bind:Variables.personHistory.dataSet[$i].heading" fontunit="px"></wm-label>
+                                <wm-label class="p" caption="bind:Variables.personHistory.dataSet[$i].comment" fontunit="em" name="meetingDescription"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>

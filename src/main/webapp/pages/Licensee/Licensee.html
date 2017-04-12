@@ -5,92 +5,101 @@
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensees, Licensee" name="breadcrumb1"></wm-breadcrumb>
-            <wm-layoutgrid name="layoutgrid1">
-                <wm-gridrow name="gridrow1">
-                    <wm-gridcolumn columnwidth="5" name="gridcolumn1">
-                        <wm-liveform novalidate="false" errormessage="" title="Person Info" iconclass="wi wi-user" defaultmode="View" dataset="bind:Variables.LSUCPersonData.dataSet" captionalign="left" captionposition="left" name="personInfoLiveForm" formdata="bind:Variables.LSUCPersonData.firstRecord"
-                        margin="unset 1em unset unset">
-                            <wm-layoutgrid columns="2" name="layoutgrid4">
-                                <wm-gridrow name="gridrow17">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn33">
-                                        <wm-form-field name="firstName" displayname="First Name" show="true" primary-key="false" generator="assigned" key="firstName" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text"
-                                        placeholder="Enter value"></wm-form-field>
-                                    </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn34">
-                                        <wm-form-field name="mailingName" displayname="Mailing Name" show="true" primary-key="false" generator="assigned" key="mailingName" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text"
-                                        placeholder="Enter value"></wm-form-field>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                                <wm-gridrow name="gridrow18">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn35">
-                                        <wm-form-field name="middleNames" displayname="Middle Names" show="true" primary-key="false" generator="assigned" key="middleNames" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text"
-                                        placeholder="Enter value"></wm-form-field>
-                                    </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn36">
-                                        <wm-form-field name="prefix" displayname="Prefix" show="true" primary-key="false" generator="assigned" key="prefix" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
-                                        displayexpression="shortNameEnglish"></wm-form-field>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                                <wm-gridrow name="gridrow19">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn37">
-                                        <wm-form-field name="lastName" displayname="Last Name" show="true" primary-key="false" generator="assigned" key="lastName" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text"
-                                        placeholder="Enter value"></wm-form-field>
-                                    </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn38">
-                                        <wm-form-field name="gender" displayname="Gender" show="true" primary-key="false" generator="assigned" key="gender" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
-                                        displayexpression="shortNameEnglish"></wm-form-field>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                                <wm-gridrow name="gridrow20">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn39">
-                                        <wm-form-field name="commonlyReferredToName" displayname="Commonly Referred To Name" show="true" primary-key="false" generator="assigned" key="commonlyReferredToName" type="string" readonly="false" required="false"
-                                        widget="text" maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                                <wm-gridrow name="gridrow21">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn41">
-                                        <wm-form-field name="suffix" displayname="Suffix" show="true" primary-key="false" generator="assigned" key="suffix" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
-                                        displayexpression="shortNameEnglish"></wm-form-field>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                                <wm-gridrow name="gridrow22">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn43">
-                                        <wm-form-field name="birthDate" displayname="Birth Date" show="true" primary-key="false" generator="assigned" key="birthDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
-                                    </wm-gridcolumn>
-                                    <wm-gridcolumn name="gridcolumn1" columnwidth="6">
-                                        <wm-form-field name="pk" displayname="Pk" show="true" primary-key="true" generator="assigned" key="pk" type="integer" readonly="false" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                            </wm-layoutgrid>
-                            <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
-                            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
-                        </wm-liveform>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="7" name="gridcolumn2">
-                        <wm-accordion name="accordion1" closeothers="false">
-                            <wm-accordionpane name="accordionpane1" content="Addresses" title="Addresses" iconclass="wi wi-location-on" subheading="Licensee Addresses">
-                                <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                            </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane2" title="Contact" content="Contacts" iconclass="wi wi-contacts">
-                                <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                            </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane3" title="Education" iconclass="wi wi-graduation-cap">
-                                <wm-label padding="unset 0.5em" name="label1" class="h1" caption="No Education Table in Schema"></wm-label>
-                            </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane4" title="Role" content="Role" iconclass="wi wi-people-outline">
-                                <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                            </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane5" title="License" content="License" iconclass="wi wi-card-membership">
-                                <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                            </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane6" title="Personal Relationship">
-                                <wm-label padding="unset 0.5em" name="label2" caption="PersonRelationShip Table is missing from Schema" class="h1"></wm-label>
-                            </wm-accordionpane>
-                            <wm-accordionpane name="accordionpane7" title="Business Relationship" content="BusinessInformation"></wm-accordionpane>
-                        </wm-accordion>
-                    </wm-gridcolumn>
-                </wm-gridrow>
-            </wm-layoutgrid>
+            <wm-tile name="statTile" class="bg-primary">
+                <wm-layoutgrid height="100%" name="layoutgrid2">
+                    <wm-gridrow height="100%" name="gridrow10">
+                        <wm-gridcolumn columnwidth="3" horizontalalign="center" padding="2em unset unset unset" name="gridcolumn13">
+                            <wm-icon iconsize="3em" name="tileIcon" iconclass="wi wi-bar-chart"></wm-icon>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="9" padding="2em unset unset unset" horizontalalign="center" name="gridcolumn14">
+                            <wm-label name="tileTitle" caption="title" class="p" fontsize="1.5" fontunit="em"></wm-label>
+                            <wm-label name="tileStatLabel" caption="00" fontsize="3" fontunit="em" class="p"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-tile>
+            <wm-livegrid name="licenseLivegrid">
+                <wm-grid gridfirstrowselect="true" editmode="form" title="" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="Basic" name="licenseGrid">
+                    <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+                    <wm-grid-column binding="licenseeNumber" caption="Licensee Number" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="licenseDate" caption="License Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-grid-column>
+                    <wm-grid-column binding="geographicarea.shortNameEnglish" caption="Geographic Area" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Geographicarea" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="legacyclassstatus.shortNameEnglish" caption="Class" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Legacyclassstatus" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="licencetype.shortNameEnglish" caption="Type" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Licencetype" readonly="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                    <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                    <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" errormessage="" title="Licensee Info" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseLiveForm" show="bind:Widgets.licenseLiveForm.isUpdateMode">
+                    <wm-layoutgrid columns="3" name="layoutgrid8_1">
+                        <wm-gridrow name="gridrow26_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn51_1">
+                                <wm-form-field name="licenseeNumber" displayname="Licensee Number" show="true" primary-key="false" generator="assigned" key="licenseeNumber" type="string" readonly="false" required="false" widget="text" maxchars="20" inputtype="text"
+                                placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn52_1">
+                                <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn53_1">
+                                <wm-form-field name="licencetype" displayname="Licencetype" show="true" primary-key="false" generator="assigned" key="licencetype" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                displayexpression="shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow27_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn54_1">
+                                <wm-form-field name="geographicarea" displayname="Geographicarea" show="true" primary-key="false" generator="assigned" key="geographicarea" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                displayexpression="shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn55_1">
+                                <wm-form-field name="admissionroute" displayname="Admissionroute" show="true" primary-key="false" generator="assigned" key="admissionroute" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                displayexpression="shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow28_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn57_1">
+                                <wm-form-field name="barCode" displayname="Bar Code" show="true" primary-key="false" generator="assigned" key="barCode" type="string" readonly="false" required="false" widget="text" maxchars="20" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow29_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn60_1">
+                                <wm-form-field name="reAdmissionDate" displayname="Re Admission Date" show="true" primary-key="false" generator="assigned" key="reAdmissionDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                outputformat="yyyy-MM-dd"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow30_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn63_1">
+                                <wm-form-field name="isInDiscipline" displayname="Is In Discipline" show="true" primary-key="false" generator="assigned" key="isInDiscipline" type="character" readonly="false" required="false" widget="text" maxchars="1" inputtype="text"
+                                placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow31_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn66_1">
+                                <wm-form-field name="isLegacyClassStatusException" displayname="Is Legacy Class Status Exception" show="true" primary-key="false" generator="assigned" key="isLegacyClassStatusException" type="character" readonly="false" required="false"
+                                widget="text" maxchars="1" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow32_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn69_1">
+                                <wm-form-field name="citizenship" displayname="Citizenship" show="true" primary-key="false" generator="assigned" key="citizenship" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                displayexpression="shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow33_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn72_1">
+                                <wm-form-field name="legacyclassstatus" displayname="Legacyclassstatus" show="true" primary-key="false" generator="assigned" key="legacyclassstatus" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow34_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn75">
+                                <wm-form-field name="pk" displayname="Pk" show="true" primary-key="true" generator="assigned" key="pk" type="integer" readonly="false" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

@@ -21,3 +21,11 @@ Application.$controller("LicenseeProfilePageController", ["$scope", function ($s
 
 }]);
 
+
+
+Application.$controller("personInfoLiveFormController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
