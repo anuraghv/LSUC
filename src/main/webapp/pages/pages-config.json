@@ -152,6 +152,10 @@
   "type" : "LEFTNAV",
   "params" : [ ]
 }, {
+  "name" : "personProfile",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
   "name" : "rightnav",
   "type" : "RIGHTNAV",
   "params" : [ ]

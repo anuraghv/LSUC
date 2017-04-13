@@ -5,6 +5,8 @@
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensees, Licensee, History" name="breadcrumb1"></wm-breadcrumb>
+            <wm-label padding="unset 0.5em" name="label5" class="h2" caption="History"></wm-label>
+            <wm-container content="personProfile" name="container1"></wm-container>
             <wm-livelist template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" datafield="All Fields" dataset="bind:Variables.personHistory.dataSet" navigation="None" name="meetingLivelist" padding="2em 0.5em unset 0.5em" class="timeline-inverse">
                 <wm-listtemplate layout="inline" name="listtemplate5">
                     <wm-layoutgrid name="meetingLayoutGrid">
