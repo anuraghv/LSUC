@@ -55,25 +55,6 @@
                 <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" title="Filter" action="filter()" disabled="false" type="button"></wm-filter-action>
                 <wm-filter-action key="clear" display-name="Reset" show="true" class="btn-secondary" iconclass="wi wi-cancel" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
-            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="true">
-                <wm-grid-column binding="customField" caption="" type="string" widget-type="icon" width="40px" edit-widget-type="text" searchable="false" show="true" readonly="false">
-                    <wm-icon caption="" iconclass="fa fa-user fa-2x" iconposition="left" class="" data-ng-class=""></wm-icon>
-                </wm-grid-column>
-                <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
-                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.gridgoToPage_LicenseeInfo.invoke()" class="" data-ng-class=""></wm-anchor>
-                </wm-grid-column>
-                <wm-grid-column binding="licencetype.licenseetype.code" caption="Licence Type" type="string" widget-type="label" edit-widget-type="text" searchable="false" show="true" readonly="false">
-                    <wm-label caption="{{row.getProperty('licencetype.licenseetype.code')}} {{row.getProperty('licencetype.shortNameEnglish')}}" class="" data-ng-class=""></wm-label>
-                </wm-grid-column>
-                <wm-grid-column binding="Name" caption="Name" type="string" widget-type="label" readonly="true" edit-widget-type="text" searchable="false" show="true">
-                    <wm-label caption="{{row.getProperty('person.firstName')}} {{row.getProperty('person.lastName')}}" class="" data-ng-class=""></wm-label>
-                </wm-grid-column>
-                <wm-grid-column binding="legacyclassstatus.shortNameEnglish" caption="Class" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Legacyclassstatus"></wm-grid-column>
-                <wm-grid-column binding="person.firstName" caption="First Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Person"></wm-grid-column>
-                <wm-grid-column binding="person.lastName" caption="Last Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Person"></wm-grid-column>
-                <wm-grid-column binding="licencetype.shortNameEnglish" caption="License Type Short Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Licencetype"></wm-grid-column>
-                <wm-grid-column binding="geographicarea.shortNameEnglish" caption="City" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Geographicarea"></wm-grid-column>
-            </wm-grid>
             <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-4 md-6 lg-6" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="true" on-click="Variables.listgoToPage_LicenseeInfo.invoke()">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card" class="gray">
@@ -101,6 +82,25 @@
                     </wm-card>
                 </wm-listtemplate>
             </wm-livelist>
+            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="false">
+                <wm-grid-column binding="customField" caption="" type="string" widget-type="icon" width="40px" edit-widget-type="text" searchable="false" show="true" readonly="false">
+                    <wm-icon caption="" iconclass="fa fa-user fa-2x" iconposition="left" class="" data-ng-class=""></wm-icon>
+                </wm-grid-column>
+                <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.gridgoToPage_LicenseeInfo.invoke()" class="" data-ng-class=""></wm-anchor>
+                </wm-grid-column>
+                <wm-grid-column binding="licencetype.licenseetype.code" caption="Licence Type" type="string" widget-type="label" edit-widget-type="text" searchable="false" show="true" readonly="false">
+                    <wm-label caption="{{row.getProperty('licencetype.licenseetype.code')}} {{row.getProperty('licencetype.shortNameEnglish')}}" class="" data-ng-class=""></wm-label>
+                </wm-grid-column>
+                <wm-grid-column binding="Name" caption="Name" type="string" widget-type="label" readonly="true" edit-widget-type="text" searchable="false" show="true">
+                    <wm-label caption="{{row.getProperty('person.firstName')}} {{row.getProperty('person.lastName')}}" class="" data-ng-class=""></wm-label>
+                </wm-grid-column>
+                <wm-grid-column binding="legacyclassstatus.shortNameEnglish" caption="Class" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Legacyclassstatus"></wm-grid-column>
+                <wm-grid-column binding="person.firstName" caption="First Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Person"></wm-grid-column>
+                <wm-grid-column binding="person.lastName" caption="Last Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Person"></wm-grid-column>
+                <wm-grid-column binding="licencetype.shortNameEnglish" caption="License Type Short Name" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Licencetype"></wm-grid-column>
+                <wm-grid-column binding="geographicarea.shortNameEnglish" caption="City" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Geographicarea"></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

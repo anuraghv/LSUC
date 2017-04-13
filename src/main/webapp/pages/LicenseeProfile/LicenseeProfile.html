@@ -11,7 +11,7 @@
                     <wm-layoutgrid name="layoutgrid6">
                         <wm-gridrow name="gridrow10">
                             <wm-gridcolumn colwidth="6" columnwidth="2" class="col-xs-6" name="gridcolumn43_1">
-                                <wm-picture name="Picture" width="120" shape="circle" height="120"></wm-picture>
+                                <wm-picture name="Picture" width="120" shape="circle" height="120" picturesource="resources/images/imagelists/user.png" backgroundcolor="#e8e8e8"></wm-picture>
                             </wm-gridcolumn>
                             <wm-gridcolumn colwidth="6" columnwidth="5" padding="unset 1.25em" class="col-xs-6" name="gridcolumn44">
                                 <wm-label name="ID" caption="bind:Variables.LSUCPersonData.firstRecord.suffix.shortNameEnglish+' '+Variables.LSUCPersonData.firstRecord.firstName+' '+
@@ -53,8 +53,8 @@ Variables.LSUCPersonData.firstRecord.lastName" margin="unset unset 0px unset" wh
             </wm-card>
             <wm-layoutgrid name="layoutgrid21">
                 <wm-gridrow name="gridrow39_3">
-                    <wm-gridcolumn columnwidth="6" name="gridcolumn67_2" padding="unset 1em">
-                        <wm-panel collapsible="false" showheader="true" name="panel1" title="Contact Details" iconclass="wi wi-user" content="Contacts">
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn67_2" padding="unset 1em">
+                        <wm-panel collapsible="false" showheader="true" name="panel1" title="Contact Details" iconclass="wi wi-contact-phone" content="Contacts">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-panel>
                         <wm-panel collapsible="false" showheader="true" name="panel3" title="Mailing Label" iconclass="wi wi-briefcase">
@@ -71,8 +71,8 @@ Variables.LSUCPersonData.firstRecord.lastName" margin="unset unset 0px unset" wh
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-panel>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="6" name="gridcolumn68" padding="unset 1em">
-                        <wm-panel collapsible="false" showheader="true" name="panel4" iconclass="wi wi-telephone" title="Role" content="Role">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn68" padding="unset 1em">
+                        <wm-panel collapsible="false" showheader="true" name="panel4" iconclass="fa fa-users" title="Role" content="Role">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-panel>
                         <wm-panel collapsible="false" showheader="true" name="panel5" iconclass="wi wi-apps" title="Personal Relationship" height="18em" content="PersonalRelationShip">
