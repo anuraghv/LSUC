@@ -52,3 +52,6 @@ a.app-header-action .badge {
     right: 2px;
     z-index: 2;
 }
+.panel .app-datagrid {
+    margin-bottom: 1em;
+}

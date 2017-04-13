@@ -10,32 +10,12 @@
             <wm-layoutgrid name="layoutgrid21">
                 <wm-gridrow name="gridrow39_3">
                     <wm-gridcolumn columnwidth="8" name="gridcolumn67_2" padding="unset 1em">
-                        <wm-panel collapsible="false" showheader="true" name="panel1" title="Contact Details" iconclass="wi wi-contact-phone" content="Contacts">
+                        <wm-container content="Contacts" name="container2">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                        </wm-panel>
-                        <wm-panel collapsible="false" showheader="true" name="panel3" title="Mailing Label" iconclass="wi wi-briefcase">
-                            <wm-layoutgrid name="layoutgrid15">
-                                <wm-gridrow name="gridrow40">
-                                    <wm-gridcolumn columnwidth="12" horizontalalign="left" name="gridcolumn53" padding=".5em unset">
-                                        <wm-label caption="2014-Present" paddingunit="em" width="100%" name="label45" class="text-uppercase"></wm-label>
-                                        <wm-label caption="Co-founder of AcmeCompany and CEO of GreatCompany" paddingunit="em" width="100%" name="label46"></wm-label>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                            </wm-layoutgrid>
-                        </wm-panel>
-                        <wm-panel collapsible="false" showheader="true" title="Addresses" iconclass="wi wi-location-pin" name="panel8" content="Addresses">
+                        </wm-container>
+                        <wm-container content="Addresses">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                        </wm-panel>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn68" padding="unset 1em">
-                        <wm-panel collapsible="false" showheader="true" name="panel4" iconclass="fa fa-users" title="Role" content="Role">
-                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                        </wm-panel>
-                        <wm-panel collapsible="false" showheader="true" name="panel5" iconclass="wi wi-apps" title="Personal Relationship" height="18em" content="PersonalRelationShip">
-                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
-                        </wm-panel>
-                        <wm-panel subheading="subheading" iconclass="wi wi-account-circle" autoclose="outsideClick" name="panel6" title="Business Relationship" content="BusinessInformation"></wm-panel>
-                        <wm-panel subheading="subheading" iconclass="wi wi-account-circle" autoclose="outsideClick" name="panel7" title="Language" content="Language"></wm-panel>
+                        </wm-container>
                         <wm-panel collapsible="false" showheader="true" name="panel2" iconclass="wi wi-school" title="Education" height="18em">
                             <wm-layoutgrid name="layoutgrid12">
                                 <wm-gridrow name="gridrow13">
@@ -54,6 +34,26 @@
                                     <wm-gridcolumn columnwidth="12" horizontalalign="left" name="gridcolumn46" padding=".5em unset">
                                         <wm-label caption="Diploma, Programming" paddingunit="em" width="100%" name="label27"></wm-label>
                                         <wm-label caption="Penn State University" paddingunit="em" width="100%" name="label28" class="text-uppercase"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn68" padding="unset 1em">
+                        <wm-container content="Role">
+                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
+                        </wm-container>
+                        <wm-container content="BusinessInformation"></wm-container>
+                        <wm-container content="PersonalRelationShip">
+                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
+                        </wm-container>
+                        <wm-panel subheading="subheading" iconclass="wi wi-account-circle" autoclose="outsideClick" name="panel7" title="Language" content="Language"></wm-panel>
+                        <wm-panel collapsible="false" showheader="true" name="panel3" title="Mailing Label" iconclass="wi wi-briefcase">
+                            <wm-layoutgrid name="layoutgrid15">
+                                <wm-gridrow name="gridrow40">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="left" name="gridcolumn53" padding=".5em unset">
+                                        <wm-label caption="2014-Present" paddingunit="em" width="100%" name="label45" class="text-uppercase"></wm-label>
+                                        <wm-label caption="Co-founder of AcmeCompany and CEO of GreatCompany" paddingunit="em" width="100%" name="label46"></wm-label>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>

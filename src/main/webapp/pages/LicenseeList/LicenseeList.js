@@ -16,7 +16,6 @@ Application.$controller("LicenseeListPageController", ["$scope", function($scope
 
 
     $scope.listBtnClick = function($event, $isolateScope) {
-        debugger
         $scope.Widgets.cardBtn.disabled = false;
         $isolateScope.disabled = true;
         $scope.Widgets.licenseeTable.show = true;
@@ -25,7 +24,6 @@ Application.$controller("LicenseeListPageController", ["$scope", function($scope
 
 
     $scope.cardBtnClick = function($event, $isolateScope) {
-        debugger
         $scope.Widgets.listBtn.disabled = false;
         $isolateScope.disabled = true;
         $scope.Widgets.licenseeTable.show = false;
