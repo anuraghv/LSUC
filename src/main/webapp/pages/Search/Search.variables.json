@@ -1,22 +1,28 @@
 {
+  "goToPage_LicenseeInfo" : {
+    "_id" : "wm-goToPage_LicenseeInfo-wm.NavigationVariable-1492084372838",
+    "name" : "goToPage_LicenseeInfo",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Licensee",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.licenseeSearchList.selecteditem.person.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
   "LSUCBusinessData" : {
     "_id" : "wm-LSUCBusinessData-wm.LiveVariable-1491564287284",
     "name" : "LSUCBusinessData",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ {
-      "target" : "businessNumber",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    }, {
-      "target" : "businessName",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    }, {
-      "target" : "alsoKnownAs",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    } ],
+    "dataBinding" : [ ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "Business",
@@ -24,9 +30,8 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "onBeforeUpdate" : "LSUCBusinessDataonBeforeUpdate($event, $scope)",
     "inFlightBehavior" : "executeLast",
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
@@ -460,7 +465,7 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 10,
-        "generator" : "assigned",
+        "generator" : "identity",
         "isRelated" : false,
         "scale" : 0
       }, {
@@ -542,7 +547,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 4,
     "tableName" : "BUSINESS",
     "tableType" : "TABLE",
     "properties" : [ "businesslegaltype", "businessstatus", "businesstype" ],
@@ -575,7 +580,7 @@
     "category" : "wm.LiveVariable",
     "dataBinding" : [ {
       "target" : "licenseeNumber",
-      "value" : "bind:pageParams.q",
+      "value" : "bind:Widgets.searchtext.query",
       "type" : "string"
     } ],
     "operation" : "read",
@@ -585,9 +590,8 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "onBeforeUpdate" : "LSUCLicenseeDataonBeforeUpdate($event, $scope)",
     "inFlightBehavior" : "executeLast",
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
@@ -1538,7 +1542,7 @@
           "notNull" : true,
           "length" : 255,
           "precision" : 10,
-          "generator" : "assigned",
+          "generator" : "identity",
           "isRelated" : false,
           "scale" : 0
         }, {
@@ -1623,7 +1627,7 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 10,
-        "generator" : "assigned",
+        "generator" : "identity",
         "isRelated" : false,
         "scale" : 0
       }, {
@@ -1825,7 +1829,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 4,
     "tableName" : "LICENSEE",
     "tableType" : "TABLE",
     "properties" : [ "admissionroute", "citizenship", "feecategory", "geographicarea", "legacyclassstatus", "licencetype", "person" ],
@@ -1880,27 +1884,7 @@
     "name" : "LSUCPersonData",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ {
-      "target" : "firstName",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    }, {
-      "target" : "lastName",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    }, {
-      "target" : "middleNames",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    }, {
-      "target" : "commonlyReferredToName",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    }, {
-      "target" : "mailingName",
-      "value" : "bind:pageParams.q",
-      "type" : "string"
-    } ],
+    "dataBinding" : [ ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "Person",
@@ -1908,9 +1892,8 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "onBeforeUpdate" : "LSUCPersonDataonBeforeUpdate($event, $scope)",
     "inFlightBehavior" : "executeLast",
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
@@ -2344,7 +2327,7 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 10,
-        "generator" : "assigned",
+        "generator" : "identity",
         "isRelated" : false,
         "scale" : 0
       }, {

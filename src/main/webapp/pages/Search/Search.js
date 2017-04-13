@@ -15,24 +15,39 @@ Application.$controller("SearchPageController", ["$scope", function($scope) {
 
     };
 
+    function doSearch() {
+        var q = $scope.Widgets.searchtext.datavalue;
 
-    $scope.LSUCLicenseeDataonBeforeUpdate = function(variable, inputData) {
-        variable.options = {
-            'logicalOp': 'OR'
-        };
+        function qs(fields) {
+            var obj = {};
+            _.forEach(fields, function(field) {
+                obj[field] = {
+                    value: q
+                }
+            });
+            return obj;
+        }
+
+        $scope.Variables.LSUCPersonData.listRecords({
+            'logicalOp': 'OR',
+            filterFields: qs(['firstName', 'lastName', 'middleNames', 'commonlyReferredToName', 'mailingName'])
+        });
+        $scope.Variables.LSUCBusinessData.listRecords({
+            'logicalOp': 'OR',
+            filterFields: qs(['businessNumber', 'businessName', 'alsoKnownAs'])
+        });
+        $scope.Variables.LSUCLicenseeData.listRecords({
+            'logicalOp': 'OR',
+            filterFields: qs(['licenseeNumber', "person.firstName", "person.lastName", 'person.commonlyReferredToName'])
+        });
+    }
+
+    $scope.searchtextBlur = function($event, $isolateScope) {
+        doSearch();
     };
 
-    $scope.LSUCPersonDataonBeforeUpdate = function(variable, inputData) {
-        variable.listRecords({
-            'logicalOp': 'OR'
-        });
-    };
-
-
-    $scope.LSUCBusinessDataonBeforeUpdate = function(variable, inputData) {
-        variable.listRecords({
-            'logicalOp': 'OR'
-        });
+    $scope.searchButtonClick = function($event, $isolateScope) {
+        doSearch();
     };
 
 }]);

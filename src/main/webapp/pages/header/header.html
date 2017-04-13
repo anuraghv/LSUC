@@ -4,19 +4,19 @@
             <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="6" padding="unset unset unset 1em">
                 <wm-picture picturesource="resources/images/imagelists/logo.png" name="AppLogo" margin="1em unset unset unset" height="40" class="app-logo"></wm-picture>
             </wm-gridcolumn>
-            <wm-gridcolumn name="headerright" horizontalalign="right" columnwidth="3" padding="1em 1em unset unset">
-                <wm-search name="siteSearch" on-submit="Variables.goToPage_Search.invoke()" placeholder="Search Licensee and Business"></wm-search>
-            </wm-gridcolumn>
-            <wm-gridcolumn columnwidth="3" name="gridcolumn3" horizontalalign="right">
-                <wm-nav type="pills" name="nav1" horizontalalign="right" class="app-header-actions list-inline">
+            <wm-gridcolumn columnwidth="6" name="gridcolumn3" horizontalalign="right">
+                <wm-nav type="pills" name="nav1" class="app-header-actions">
+                    <wm-nav-item name="nav_item4_1">
+                        <wm-anchor name="searchLink" iconclass="wi wi-search fa-2x" class="app-header-action" caption="" on-click="Variables.goToPage_Search.invoke()"></wm-anchor>
+                    </wm-nav-item>
                     <wm-nav-item name="nav_item5">
-                        <wm-popover popoverwidth="240" popoverheight="360" name="popover1" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="10" content="alerts"></wm-popover>
+                        <wm-popover popoverwidth="240" popoverheight="360" name="alertsInfo" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="10" content="alerts"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item2">
-                        <wm-popover popoverwidth="240" name="popover1" iconclass="wi wi-gear fa-2x" caption="" class="app-header-action" content="settings"></wm-popover>
+                        <wm-popover popoverwidth="240" name="settings" iconclass="wi wi-gear fa-2x" caption="" class="app-header-action" content="settings"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item4">
-                        <wm-menu caption="" autoclose="outsideClick" name="menu1" iconclass="wi wi-file fa-2x" type="anchor" menuclass="app-header-action" menuposition="down,left"></wm-menu>
+                        <wm-menu caption="" autoclose="outsideClick" name="userActions" iconclass="wi wi-user fa-2x" type="anchor" menuclass="app-header-action" menuposition="down,left"></wm-menu>
                     </wm-nav-item>
                 </wm-nav>
             </wm-gridcolumn>

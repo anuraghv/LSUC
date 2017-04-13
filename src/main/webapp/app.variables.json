@@ -187,6 +187,24 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_Search" : {
+    "_id" : "wm-goToPage_Search-wm.NavigationVariable-1492072253333",
+    "name" : "goToPage_Search",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Search",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "string",
+      "target" : "q",
+      "value" : "bind:Widgets.searchtext.datavalue"
+    } ],
+    "pageTransitions" : "none"
+  },
   "goToPage_test" : {
     "_id" : "wm-goToPage_test-wm.NavigationVariable-1491538562284",
     "name" : "goToPage_test",

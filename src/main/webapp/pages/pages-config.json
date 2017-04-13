@@ -123,10 +123,7 @@
 }, {
   "name" : "Search",
   "type" : "PAGE",
-  "params" : [ {
-    "name" : "q",
-    "type" : "string"
-  } ]
+  "params" : [ ]
 }, {
   "name" : "SocialMedia",
   "type" : "PARTIAL",

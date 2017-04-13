@@ -5,7 +5,51 @@
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensees, Licensee" name="breadcrumb1"></wm-breadcrumb>
-            <wm-tile name="statTile" class="gray"></wm-tile>
+            <wm-card margin="unset 1em" name="card1">
+                <wm-card-content horizontalalign="center" name="card_content1">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow name="gridrow10">
+                            <wm-gridcolumn colwidth="6" columnwidth="2" class="col-xs-6" name="gridcolumn13">
+                                <wm-picture width="120" shape="circle" height="120" picturesource="resources/images/imagelists/user.png" backgroundcolor="#e8e8e8" name="picture1"></wm-picture>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn colwidth="6" columnwidth="5" padding="unset 1.25em" class="col-xs-6" name="gridcolumn14">
+                                <wm-label caption="bind:Variables.LSUCPersonData.firstRecord.suffix.shortNameEnglish+' '+Variables.LSUCPersonData.firstRecord.firstName+' '+
+Variables.LSUCPersonData.firstRecord.lastName" margin="unset unset 0px unset" whitespace="nowrap" fontsize="24" name="label1"></wm-label>
+                                <wm-label caption="bind:Variables.LSUCPersonData.firstRecord.suffix.shortNameEnglish" class="text-muted" margin="0px unset" whitespace="nowrap" name="label2"></wm-label>
+                                <wm-label caption="bind:Variables.LSUCPersonData.firstRecord.gender.shortNameEnglish" class="h5" margin="0px unset unset unset" whitespace="nowrap" name="label3"></wm-label>
+                                <wm-label caption="bind:'DOB: '+ (Variables.LSUCPersonData.firstRecord.birthDate | toDate: 'dd MMM  yyyy')" class="p text-muted" margin="unset unset 0px unset" whitespace="nowrap" name="label4"></wm-label>
+                                <wm-label caption="Location" class="text-muted p" whitespace="nowrap" name="label5"></wm-label>
+                                <wm-anchor caption="" class="h5" hyperlink="tel:" margin="0px unset" whitespace="nowrap" name="anchor1"></wm-anchor>
+                                <wm-anchor class="p text-muted" hyperlink="mailto://" caption="" whitespace="nowrap" name="anchor2"></wm-anchor>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="5" name="gridcolumn15">
+                                <wm-label padding="unset 0.5em" caption="In French" class="p text-muted" name="label6"></wm-label>
+                                <wm-label padding="unset 0.5em" color="#ff3838" name="label7"></wm-label>
+                                <wm-label padding="unset 0.5em" class="p text-muted" caption="In Spanish" name="label8"></wm-label>
+                                <wm-label padding="unset 0.5em" color="#f21818" name="label9"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-card-content>
+                <wm-card-footer horizontalalign="center" name="card_footer1">
+                    <wm-layoutgrid name="layoutgrid3">
+                        <wm-gridrow name="gridrow11">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn16">
+                                <wm-label padding="unset 0.5em" width="100%" caption="Alias" name="label10"></wm-label>
+                                <wm-label padding="unset 0.5em" caption="bind:Variables.LSUCPersonData.firstRecord.commonlyReferredToName" name="label11"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn17">
+                                <wm-label padding="unset 0.5em" width="100%" caption="Mailing Name" name="label12"></wm-label>
+                                <wm-label padding="unset 0.5em" caption="bind:Variables.LSUCPersonData.dataSet.data[$i].mailingName" name="label13"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn18">
+                                <wm-label padding="unset 0.5em" width="100%" caption="Previous Name" name="label14"></wm-label>
+                                <wm-label padding="unset 0.5em" color="#ea3131" name="label15"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-card-footer>
+            </wm-card>
             <wm-livegrid name="licenseLivegrid">
                 <wm-grid gridfirstrowselect="true" editmode="form" title="" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="Basic" name="licenseGrid">
                     <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>

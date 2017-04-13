@@ -34,3 +34,21 @@
 .wm-app .app-page-content {
     background-color: #efefef;
 }
+/******header special classes*****/
+
+.app-header-actions {
+    display: inline-block;
+}
+a.app-header-action .badge {
+    top: 1em;
+    right: 0;
+    font-size: 10px;
+    background-color: red;
+    border-radius: 1em;
+}
+.icon-fixed {
+    float: right;
+    position: absolute;
+    right: 2px;
+    z-index: 2;
+}

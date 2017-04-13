@@ -1,5 +1,5 @@
 <wm-partial data-ng-controller="RolePageController" name="partial1">
-    <wm-grid editmode="quickedit" title="" dataset="bind:Variables.LSUCPersonroleData.dataSet" navigation="None" name="grid2" gridclass="table-striped">
+    <wm-grid editmode="quickedit" title="" dataset="bind:Variables.LSUCPersonroleData.dataSet" navigation="None" name="roleGrid" gridclass="table-striped" showheader="false">
         <wm-grid-column binding="role.shortNameEnglish" caption="Role" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Role"></wm-grid-column>
         <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
         <wm-grid-action key="addNewRow" display-name="Add Role" show="true" class="btn-primary" iconclass="wi wi-plus" title="Add Role" action="addNewRow()" shortcutkey="" disabled="false"></wm-grid-action>
