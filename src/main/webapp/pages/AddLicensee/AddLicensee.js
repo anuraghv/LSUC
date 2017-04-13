@@ -1,8 +1,8 @@
-Application.$controller("AddLicenseePageController", ["$scope", function ($scope) {
+Application.$controller("AddLicenseePageController", ["$scope", function($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function () {
+    $scope.onPageReady = function() {
         /*
          * variables can be accessed through '$scope.Variables' property here
          * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
@@ -14,26 +14,32 @@ Application.$controller("AddLicenseePageController", ["$scope", function ($scope
          */
     };
 
+
+    $scope.personLiveFormBeforeservicecall = function($event, $operation, $data) {
+        $data.addresses = [$scope.Widgets.addresses.dataoutput];
+        $data.licensees = [$scope.Widgets.licensees.dataoutput]
+    };
+
 }]);
 
 
 Application.$controller("personLiveFormController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
 
-Application.$controller("liveform2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+Application.$controller("addressesController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
 
-Application.$controller("liveform3Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+Application.$controller("licenseesController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
