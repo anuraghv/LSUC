@@ -28,8 +28,7 @@
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow16">
-                        <wm-gridcolumn columnwidth="4" name="gridcolumn31" padding="1em unset unset unset"></wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="4" name="gridcolumn32"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn31" padding="1em unset unset unset"></wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow15">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn29_1">
@@ -128,7 +127,19 @@
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow13">
-                                        <wm-gridcolumn columnwidth="12" name="gridcolumn25_1"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn25_1">
+                                            <wm-liveform novalidate="false" errormessage="" title="" iconclass="" defaultmode="Edit" dataset="bind:Variables.LSUCPersonroleData.dataSet" captionalign="left" captionposition="top" name="personroles">
+                                                <wm-layoutgrid columns="1" name="layoutgrid5">
+                                                    <wm-gridrow name="gridrow17_1">
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn33_1">
+                                                            <wm-form-field name="role" displayname="Role" show="true" primary-key="false" generator="assigned" key="role" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                                            displayexpression="shortNameEnglish"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                            </wm-liveform>
+                                        </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
                                 <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>

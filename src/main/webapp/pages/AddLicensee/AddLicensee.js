@@ -19,6 +19,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
         debugger;
         $data.addresses = [$scope.Widgets.addresses.dataoutput];
         $data.licensees = [$scope.Widgets.licensees.dataoutput];
+        $data.personroles = [$scope.Widgets.personroles.dataoutput];
         $data.licensees[0].licenseeclasspracticegroups = [$scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput];
     };
 
@@ -52,6 +53,13 @@ Application.$controller("licenseesController", ["$scope",
 ]);
 
 Application.$controller("licenseeclasprctcegrpLiveFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("personrolesController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
