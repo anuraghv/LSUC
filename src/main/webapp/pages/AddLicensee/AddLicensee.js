@@ -16,8 +16,15 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
 
 
     $scope.personLiveFormBeforeservicecall = function($event, $operation, $data) {
+        debugger;
         $data.addresses = [$scope.Widgets.addresses.dataoutput];
-        $data.licensees = [$scope.Widgets.licensees.dataoutput]
+        $data.licensees = [$scope.Widgets.licensees.dataoutput];
+        $data.licensees[0].licenseeclasspracticegroups = [$scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput];
+    };
+
+
+    $scope.personLiveFormSuccess = function($event, $operation, $data) {
+        debugger;
     };
 
 }]);
@@ -38,6 +45,13 @@ Application.$controller("addressesController", ["$scope",
 ]);
 
 Application.$controller("licenseesController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("licenseeclasprctcegrpLiveFormController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
