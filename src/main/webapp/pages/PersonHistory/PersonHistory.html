@@ -26,59 +26,6 @@
                     </wm-layoutgrid>
                 </wm-listtemplate>
             </wm-livelist>
-            <wm-livegrid formlayout="dialog" name="livegrid1">
-                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Person_aud List" dataset="bind:Variables.LSUCPersonAudData.dataSet" navigation="Basic" name="grid1">
-                    <wm-grid-column binding="pk" caption="Pk" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
-                    <wm-grid-column binding="revtype" caption="Revtype" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short"></wm-grid-column>
-                    <wm-grid-column binding="commonlyReferredToName" caption="Commonly Referred To Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="firstName" caption="First Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="lastName" caption="Last Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="mailingName" caption="Mailing Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
-                    <wm-grid-column binding="revinfo.rev" caption="Revinfo Rev" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" related-entity-name="Revinfo"></wm-grid-column>
-                    <wm-grid-column binding="revinfo.revtstmp" caption="Revinfo Revtstmp" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_integer" related-entity-name="Revinfo" readonly="true"></wm-grid-column>
-                    <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
-                    <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
-                    <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
-                </wm-grid>
-                <wm-liveform novalidate="false" errormessage="" title="Person_aud Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonAudData.dataSet" captionalign="left" captionposition="top" name="liveform1">
-                    <wm-layoutgrid columns="3" name="layoutgrid2">
-                        <wm-gridrow name="gridrow3">
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn7">
-                                <wm-form-field name="pk" displayname="Pk" required="true" show="true" generator="assigned" primary-key="true" key="pk" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn8">
-                                <wm-form-field name="revtype" displayname="Revtype" required="false" show="true" generator="assigned" primary-key="false" key="revtype" type="short" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn9">
-                                <wm-form-field name="commonlyReferredToName" displayname="Commonly Referred To Name" required="false" show="true" generator="assigned" primary-key="false" key="commonlyReferredToName" type="string" is-related="false" maxchars="100"
-                                pc-display="true" mobile-display="true" widget="text"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow name="gridrow4">
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn10">
-                                <wm-form-field name="firstName" displayname="First Name" required="false" show="true" generator="assigned" primary-key="false" key="firstName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
-                                widget="text"></wm-form-field>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn11">
-                                <wm-form-field name="lastName" displayname="Last Name" required="false" show="true" generator="assigned" primary-key="false" key="lastName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
-                                widget="text"></wm-form-field>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn12">
-                                <wm-form-field name="mailingName" displayname="Mailing Name" required="false" show="true" generator="assigned" primary-key="false" key="mailingName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
-                                widget="text"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow name="gridrow5">
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn13">
-                                <wm-form-field name="revinfo" displayname="Revinfo" required="true" show="true" generator="assigned" primary-key="true" key="revinfo" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="4" name="gridcolumn14"></wm-gridcolumn>
-                        </wm-gridrow>
-                    </wm-layoutgrid>
-                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
-                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
-                </wm-liveform>
-            </wm-livegrid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

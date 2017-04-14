@@ -6,10 +6,10 @@
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensees , Licensee, Personal Information" name="breadcrumb1"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label16" class="h2" caption="Personal Details"></wm-label>
-            <wm-container name="container1" content="personProfile"></wm-container>
             <wm-layoutgrid name="layoutgrid21">
                 <wm-gridrow name="gridrow39_3">
                     <wm-gridcolumn columnwidth="8" name="gridcolumn67_2" padding="unset 1em">
+                        <wm-container name="container1" content="personProfile"></wm-container>
                         <wm-container content="Contacts" name="container2">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-container>
@@ -39,7 +39,6 @@
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
-            <wm-accordion name="accordion1" closeothers="false"></wm-accordion>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
