@@ -7315,14 +7315,13 @@ button.wm-app .close {
 }
 .wm-app .app-left-panel .nav li.app-nav-item.active > a,
 .wm-app .app-right-panel .nav li.app-nav-item.active > a {
-    color: #03516f;
+    color: #fff;
     background-color: #03516f;
 }
 .wm-app .app-left-panel .nav li.app-nav-item.active > a:hover,
 .wm-app .app-right-panel .nav li.app-nav-item.active > a:hover,
 .wm-app .app-left-panel .nav li.app-nav-item.active > a:focus,
 .wm-app .app-right-panel .nav li.app-nav-item.active > a:focus {
-    color: #03516f;
     background-color: #03516f;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a,
@@ -7353,30 +7352,6 @@ button.wm-app .close {
 .wm-app .app-left-panel .nav li.app-nav-item .app-popover a.active,
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a.active {
     background-color: #03516f;
-    color: #03516f;
-}
-.wm-app .app-left-panel .nav li.app-nav-item a.active:hover,
-.wm-app .app-right-panel .nav li.app-nav-item a.active:hover,
-.wm-app .app-left-panel .nav li.app-nav-item .btn.active:hover,
-.wm-app .app-right-panel .nav li.app-nav-item .btn.active:hover,
-.wm-app .app-left-panel .nav li.app-nav-item .dropdown a.active:hover,
-.wm-app .app-right-panel .nav li.app-nav-item .dropdown a.active:hover,
-.wm-app .app-left-panel .nav li.app-nav-item .dropdown a.dropdown-toggle.active:hover,
-.wm-app .app-right-panel .nav li.app-nav-item .dropdown a.dropdown-toggle.active:hover,
-.wm-app .app-left-panel .nav li.app-nav-item .app-popover a.active:hover,
-.wm-app .app-right-panel .nav li.app-nav-item .app-popover a.active:hover,
-.wm-app .app-left-panel .nav li.app-nav-item a.active:focus,
-.wm-app .app-right-panel .nav li.app-nav-item a.active:focus,
-.wm-app .app-left-panel .nav li.app-nav-item .btn.active:focus,
-.wm-app .app-right-panel .nav li.app-nav-item .btn.active:focus,
-.wm-app .app-left-panel .nav li.app-nav-item .dropdown a.active:focus,
-.wm-app .app-right-panel .nav li.app-nav-item .dropdown a.active:focus,
-.wm-app .app-left-panel .nav li.app-nav-item .dropdown a.dropdown-toggle.active:focus,
-.wm-app .app-right-panel .nav li.app-nav-item .dropdown a.dropdown-toggle.active:focus,
-.wm-app .app-left-panel .nav li.app-nav-item .app-popover a.active:focus,
-.wm-app .app-right-panel .nav li.app-nav-item .app-popover a.active:focus {
-    background-color: #424141;
-    color: #03516f;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a:hover,
 .wm-app .app-right-panel .nav li.app-nav-item a:hover,
@@ -7390,7 +7365,7 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #424141;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .wm-app .app-left-panel .nav li.app-nav-item a .app-icon,
 .wm-app .app-right-panel .nav li.app-nav-item a .app-icon,
@@ -7416,18 +7391,6 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a .badge {
     top: 1.2em !important;
     padding: 4px 6px;
-}
-.wm-app .app-left-panel .nav li.app-nav-item.active a,
-.wm-app .app-right-panel .nav li.app-nav-item.active a {
-    background-color: #03516f;
-    color: #fff;
-}
-.wm-app .app-left-panel .nav li.app-nav-item.active a:hover,
-.wm-app .app-right-panel .nav li.app-nav-item.active a:hover,
-.wm-app .app-left-panel .nav li.app-nav-item.active a:focus,
-.wm-app .app-right-panel .nav li.app-nav-item.active a:focus {
-    background-color: #424141;
-    color: #fff;
 }
 .wm-app .app-left-panel .nav li.app-nav-item > .dropdown.open > .dropdown-menu,
 .wm-app .app-right-panel .nav li.app-nav-item > .dropdown.open > .dropdown-menu {
@@ -7458,7 +7421,7 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav.open a:hover,
 .wm-app .app-left-panel .nav.open a:focus,
 .wm-app .app-right-panel .nav.open a:focus {
-    background-color: #424141;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .wm-app .app-left-panel .app-nav .app-nav-item > .dropdown > a,
 .wm-app .app-right-panel .app-nav .app-nav-item > .dropdown > a {
