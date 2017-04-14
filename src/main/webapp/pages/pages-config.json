@@ -16,11 +16,10 @@
 }, {
   "name" : "Business",
   "type" : "PAGE",
-  "params" : [ ]
-}, {
-  "name" : "BusinessInformation",
-  "type" : "PARTIAL",
-  "params" : [ ]
+  "params" : [ {
+    "name" : "businessId",
+    "type" : "string"
+  } ]
 }, {
   "name" : "BusinessList",
   "type" : "PAGE",

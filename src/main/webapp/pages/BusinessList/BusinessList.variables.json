@@ -1,4 +1,22 @@
 {
+  "goToPage_Business" : {
+    "_id" : "wm-goToPage_Business-wm.NavigationVariable-1492171419468",
+    "name" : "goToPage_Business",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Business",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "string",
+      "target" : "businessId",
+      "value" : "bind:Widgets.businessTable.selecteditem.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
   "LSUCBusinessData" : {
     "_id" : "wm-LSUCBusinessData-wm.LiveVariable-1491302994130",
     "name" : "LSUCBusinessData",

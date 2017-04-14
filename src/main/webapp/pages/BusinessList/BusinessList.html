@@ -16,33 +16,32 @@
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
-            <wm-livefilter title="Filter Business" dataset="bind:Variables.LSUCBusinessData.dataSet" captionalign="left" captionposition="top" name="businessFilter" collapsible="true" expanded="false">
+            <wm-livefilter title="Filter Business" dataset="bind:Variables.LSUCBusinessData.dataSet" captionalign="left" captionposition="top" name="businessFilter" collapsible="true" expanded="true">
                 <wm-layoutgrid columns="2" name="layoutgrid2">
                     <wm-gridrow name="gridrow5">
                         <wm-gridcolumn columnwidth="3" name="gridcolumn8">
-                            <wm-filter-field name="businessNumber" field="businessNumber" displayname="Business Number" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="businessNumber"
-                            placeholder="Enter value" matchmode="start"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="3" name="gridcolumn9">
-                            <wm-filter-field name="businesstype" field="businesstype" displayname="Business Type" widget="select" lookup-type="Businesstype" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Businesstype" is-range="false"
-                            type="string" is-primary-key="false" generator="assigned" show="true" key="businesstype" placeholder="Enter value" matchmode="start" datafield="key" displayfield="value"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="3" name="gridcolumn7">
-                            <wm-filter-field name="businessName" field="businessName" displayname="Name" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="businessName" placeholder="Enter value"
+                            <wm-filter-field name="businessNumber" field="businessNumber" displayname="Business Number" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="businessNumber" placeholder="Enter value"
                             matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn9">
+                            <wm-filter-field name="businesstype" field="businesstype" displayname="Business Type" widget="select" lookup-type="Businesstype" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Businesstype" is-range="false" type="integer" is-primary-key="false"
+                            generator="assigned" show="true" key="businesstype" placeholder="Enter value" matchmode="start" datafield="key" displayfield="value"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn7">
+                            <wm-filter-field name="businessName" field="businessName" displayname="Name" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="businessName" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn11">
-                            <wm-filter-field name="businessstatus" field="businessstatus" displayname="Status" widget="select" lookup-type="Businessstatus" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Businessstatus" is-range="false"
-                            type="string" is-primary-key="false" generator="assigned" show="true" inputtype="number" key="businessstatus" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                            <wm-filter-field name="numberOfEmployees" field="numberOfEmployees" related-field="Number Of Employees" widget="number" is-range="true" show="true" type="integer" is-primary-key="false" generator="assigned" matchmode="start" inputtype="number" displayname="No. of Employees"
+                            key="numberOfEmployees" placeholder="Enter Min value" max-placeholder="Enter Max value"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow6">
                         <wm-gridcolumn columnwidth="3" name="gridcolumn10">
-                            <wm-filter-field name="numberOfEmployees" field="numberOfEmployees" related-field="Number Of Employees" widget="number" is-range="true" show="true" type="integer" is-primary-key="false" generator="assigned" matchmode="start" inputtype="number"
-                            displayname="No. of Employees" key="numberOfEmployees" placeholder="Enter Min value" max-placeholder="Enter Max value"></wm-filter-field>
+                            <wm-filter-field name="custom" field="custom" displayname="City" show="true" type="string" widget="text" inputtype="search" is-range="false" key="custom" placeholder="Enter value" disabled="true" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn name="gridcolumn2" columnwidth="3">
-                            <wm-filter-field name="custom" field="custom" displayname="City" show="true" type="string" widget="text" inputtype="search" is-range="false" key="custom" placeholder="Enter value" disabled="true" matchmode="start"></wm-filter-field>
+                            <wm-filter-field name="isActive" field="isActive" related-field="Is Active" widget="checkbox" is-range="false" show="true" type="character" is-primary-key="false" generator="assigned" matchmode="start" displayname="Active" key="isActive" placeholder="Select value"
+                            datafield="key" displayfield="value" checkedvalue="Y" uncheckedvalue="N" dataset="Y, N"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
@@ -50,11 +49,15 @@
                 <wm-filter-action key="clear" display-name="Clear" show="true" class="btn-secondary" iconclass="wi wi-cancel" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
             <wm-grid title="" dataset="bind:Widgets.businessFilter.result" navigation="Basic" name="businessTable">
-                <wm-grid-column binding="businessNumber" caption="Business Number" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="businesstype.shortNameEnglish" caption="Business Type" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Businesstype"></wm-grid-column>
+                <wm-grid-column binding="isActive" caption="Active" type="character" widget-type="icon" width="10%" generator="assigned" edit-widget-type="checkbox" defaultvalue="true" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+                    <wm-icon caption="" title="Active" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-check-circle fa-2x text-success':rowData.isActive === 'Y'}"></wm-icon>
+                </wm-grid-column>
+                <wm-grid-column binding="businessNumber" caption="Business Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+                    <wm-anchor caption="{{row.getProperty('businessNumber')}}" on-click="Variables.goToPage_Business.invoke()" class="" data-ng-class=""></wm-anchor>
+                </wm-grid-column>
                 <wm-grid-column binding="businessName" caption="Name" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="businesstype.shortNameEnglish" caption="Business Type" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Businesstype"></wm-grid-column>
                 <wm-grid-column binding="numberOfEmployees" caption="No. of Employees" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="isActive" caption="Status" type="character" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
             </wm-grid>
         </wm-page-content>
     </wm-content>

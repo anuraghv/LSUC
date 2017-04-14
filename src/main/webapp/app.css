@@ -55,3 +55,11 @@ a.app-header-action .badge {
 .panel .app-datagrid {
     margin-bottom: 1em;
 }
+.panel.no-padding-form {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+.panel.no-padding-form .panel-body {
+    padding: 0;
+}

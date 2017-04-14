@@ -37,17 +37,6 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
-  "goToPage_Business" : {
-    "_id" : "wm-goToPage_Business-wm.NavigationVariable-1491300290737",
-    "name" : "goToPage_Business",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Business",
-    "dataSet" : [ ],
-    "pageTransitions" : "none"
-  },
   "goToPage_BusinessList" : {
     "_id" : "wm-goToPage_BusinessList-wm.NavigationVariable-1491301986270",
     "name" : "goToPage_BusinessList",
