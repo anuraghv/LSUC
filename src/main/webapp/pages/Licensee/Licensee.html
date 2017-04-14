@@ -6,6 +6,31 @@
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensees, Licensee" name="breadcrumb1"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" class="h2" caption="License Details" name="label1"></wm-label>
+            <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="None" name="livelist1">
+                <wm-listtemplate layout="inline" name="listtemplate1">
+                    <wm-container class="media-body" padding="unset unset unset 1.25em" name="container3">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow10">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn13">
+                                    <wm-label padding="unset 0.5em" name="label4" class="p text-muted" caption="License No"></wm-label>
+                                    <wm-label padding="unset 0.5em" name="label5" class="p" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].licenseeNumber"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn14">
+                                    <wm-label padding="unset 0.5em" name="label6" class="p text-muted" caption="License Type"></wm-label>
+                                    <wm-label padding="unset 0.5em" name="label7" class="p" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].licencetype.code"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn17">
+                                    <wm-label padding="unset 0.5em" name="label8" caption="Legacy Status" class="p text-muted"></wm-label>
+                                    <wm-label padding="unset 0.5em" name="label9" caption="bind:Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.code + ' - ' + Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.displaySequenceEnglish"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn18" horizontalalign="right">
+                                    <wm-anchor margin="1em 0.5em unset 0.5em" name="anchor1" iconclass="wi wi-chevron-down fa-2x" caption=""></wm-anchor>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-livelist>
             <wm-container content="personProfile" name="container1"></wm-container>
             <wm-livegrid name="licenseLivegrid">
                 <wm-grid gridfirstrowselect="true" editmode="form" title="" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="Basic" name="licenseGrid">
