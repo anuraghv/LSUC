@@ -6,7 +6,7 @@
     margin-left: -2px;
     width: 4px;
     height: 100%;
-    background-color: rgba(0,0, 0, 0.09);
+    background-color: rgba(168,168, 168, 0.1);
 }
 .timeline-inverse ul li:nth-child(odd) .panel.column-right {
     right: 58.33333333%;
