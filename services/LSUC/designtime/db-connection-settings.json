@@ -111,6 +111,9 @@
     "table" : "LICENSEE",
     "schema" : "RMS"
   }, {
+    "table" : "LICENSEE_AUD",
+    "schema" : "RMS"
+  }, {
     "table" : "LICENSEECLASSPRACTICEGROUP",
     "schema" : "RMS"
   }, {
@@ -157,6 +160,9 @@
     "schema" : "RMS"
   }, {
     "table" : "PERSON",
+    "schema" : "RMS"
+  }, {
+    "table" : "PERSON_AUD",
     "schema" : "RMS"
   }, {
     "table" : "PERSONADDRESS",
@@ -220,6 +226,9 @@
     "schema" : "RMS"
   }, {
     "table" : "REGION",
+    "schema" : "RMS"
+  }, {
+    "table" : "REVINFO",
     "schema" : "RMS"
   }, {
     "table" : "ROLE",
