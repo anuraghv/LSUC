@@ -94,19 +94,9 @@ Application.$controller("socialLiveFormController", ["$scope",
 	}
 ]);
 
-Application.$controller("licenseGridController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
 
-Application.$controller("licenseLiveFormController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
+
+
 
 Application.$controller("roleGridController", ["$scope",
 	function($scope) {
