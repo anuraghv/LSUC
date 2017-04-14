@@ -1,9 +1,13 @@
 <wm-partial data-ng-controller="ContactsPageController" name="partial1">
     <wm-grid editmode="quickedit" gridfirstrowselect="true" title="Phone" dataset="bind:Variables.LSUCPersonphonecontactData.dataSet" navigation="None" name="phoneGrid" gridclass="table-striped" iconclass="wi wi-phone" class="panel-default">
-        <wm-grid-column binding="isPreferred" caption="Preferred" type="character" widget-type="icon" width="10%" textalignment="center" generator="assigned" edit-widget-type="checkbox" defaultvalue="false" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+        <wm-grid-column binding="isPreferred" caption="Preferred" type="character" widget-type="icon" width="10%" textalignment="center" generator="assigned" edit-widget-type="checkbox" defaultvalue="false" show="true" checkedvalue="Y" uncheckedvalue="N"
+        readonly="false">
             <wm-icon title="Preferred" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-star fa-2x':rowData.isPreferred === 'Y'}" caption=""></wm-icon>
         </wm-grid-column>
-        <wm-grid-column binding="phonepurpose.shortNameEnglish" caption="Location" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Phonepurpose"></wm-grid-column>
+        <wm-grid-column binding="phonepurpose.pk" caption="Phone Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Phonepurpose"
+        readonly="false">
+            <wm-label caption="{{row.phonepurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
+        </wm-grid-column>
         <wm-grid-column binding="contactNumber" caption="Contact Number" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
         <wm-grid-column binding="extension" caption="Extension" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
         <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
@@ -15,10 +19,14 @@
         <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
     </wm-grid>
     <wm-grid editmode="quickedit" gridfirstrowselect="true" title="Email" dataset="bind:Variables.LSUCPersonemailcontactData.dataSet" navigation="None" name="emailGrid" iconclass="wi wi-email" gridclass="table-striped" class="panel-default">
-        <wm-grid-column binding="isPreferred" caption="Preferred" type="character" widget-type="icon" width="90px" textalignment="center" generator="assigned" edit-widget-type="checkbox" defaultvalue="false" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+        <wm-grid-column binding="isPreferred" caption="Preferred" type="character" widget-type="icon" width="90px" textalignment="center" generator="assigned" edit-widget-type="checkbox" defaultvalue="false" show="true" checkedvalue="Y" uncheckedvalue="N"
+        readonly="false">
             <wm-icon title="Preferred" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-star fa-2x':rowData.isPreferred === 'Y'}" caption=""></wm-icon>
         </wm-grid-column>
-        <wm-grid-column binding="emailpurpose.shortNameEnglish" caption="Type" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Emailpurpose"></wm-grid-column>
+        <wm-grid-column binding="emailpurpose.pk" caption="Email Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Emailpurpose"
+        readonly="false">
+            <wm-label caption="{{row.emailpurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
+        </wm-grid-column>
         <wm-grid-column binding="emailAddress" caption="Email Address" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
         <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory === 'Y'}"></wm-icon>
@@ -33,11 +41,13 @@
         <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory === 'Y'}"></wm-icon>
         </wm-grid-column>
-        <wm-grid-column binding="socialmediapurpose.shortNameEnglish" caption="Name English" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Socialmediapurpose"></wm-grid-column>
-        <wm-grid-column binding="socialmediatype.isActive" caption="Active" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+        <wm-grid-column binding="socialmediapurpose.pk" caption="Social Media Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Socialmediapurpose"
+        readonly="false">
+            <wm-label caption="{{row.socialmediapurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
+        </wm-grid-column>
+        <wm-grid-column binding="socialmediatype.isActive" caption="Active" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" related-entity-name="Socialmediatype" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.socialmediatype.isActive === 'Y'}"></wm-icon>
         </wm-grid-column>
-
         <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
         <wm-grid-action key="addNewRow" display-name="Add Social Media Account" show="true" class="btn-primary" iconclass="wi wi-plus" title="Add Social Media Account" action="addNewRow()" shortcutkey="" disabled="false" position="header"></wm-grid-action>
         <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
