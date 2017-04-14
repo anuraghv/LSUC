@@ -1,6 +1,8 @@
 <wm-partial data-ng-controller="RolePageController" name="partial1">
     <wm-grid editmode="quickedit" title="Roles" dataset="bind:Variables.LSUCPersonroleData.dataSet" navigation="None" name="roleGrid" gridclass="table-striped" showheader="false" iconclass="fa fa-users" class="panel-default">
-        <wm-grid-column binding="role.shortNameEnglish" caption="Role" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Role"></wm-grid-column>
+        <wm-grid-column binding="role.pk" caption="Role Pk" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Role" readonly="false">
+            <wm-label caption="{{row.role.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
+        </wm-grid-column>
         <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
         <wm-grid-action key="addNewRow" display-name="Add Role" show="true" class="btn-primary" iconclass="wi wi-plus" title="Add Role" action="addNewRow()" shortcutkey="" disabled="false" position="header"></wm-grid-action>
         <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
