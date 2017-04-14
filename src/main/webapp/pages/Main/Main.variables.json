@@ -528,7 +528,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "pk" ]
     },
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "BUSINESS",
     "tableType" : "TABLE",
     "properties" : [ "businesslegaltype", "businessstatus", "businesstype" ],
