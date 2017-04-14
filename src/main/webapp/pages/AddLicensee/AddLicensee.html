@@ -162,13 +162,23 @@
                                             outputformat="yyyy-MM-dd"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="3" name="gridcolumn28_1">
-                                            <wm-form-field name="classpraticegroup" displayname="Classpraticegroup" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="true"
-                                            widget="select" displayexpression="classEntity.shortNameEnglish +' ' +practicegroup.shortNameEnglish" placeholder="Select value"></wm-form-field>
+                                            <wm-label padding="unset 0.5em" name="label3" caption="Class"></wm-label>
+                                            <wm-select name="dummyClass" dataset="bind:Variables.LSUCClassData.dataSet" datafield="All Fields" displayfield="shortNameEnglish" placeholder="Select Class" required="true"></wm-select>
                                         </wm-gridcolumn>
-                                        <wm-gridcolumn columnwidth="3" name="gridcolumn33">
+                                        <wm-gridcolumn columnwidth="2" name="gridcolumn37">
+                                            <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="true" widget="select"
+                                            displayexpression="bind:$[practicegroup.shortNameEnglish]" placeholder="Select value" dataset="bind:Variables.getAssociatedPracticeGroups.dataSet" datafield="All Fields"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="1" name="gridcolumn33">
                                             <wm-form-field name="isPrimary" displayname="Is Primary" show="true" primary-key="false" generator="assigned" key="isPrimary" type="character" readonly="false" required="false" widget="checkbox" maxchars="1" inputtype="text"
                                             placeholder="Enter value" defaultvalue="Y" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                                         </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow18">
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn33_2"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn34"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn35"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn36"></wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
                                 <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
