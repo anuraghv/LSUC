@@ -6,7 +6,7 @@
                     <wm-label padding="unset 0.5em" name="label1" caption="Text Size"></wm-label>
                 </wm-gridcolumn>
                 <wm-gridcolumn columnwidth="6" name="gridcolumn2">
-                    <wm-switch datavalue="S" name="textSizeSwitch" dataset="S, M, L" class="btn-group-sm" on-change="textSizeSwitchChange($event, $scope, newVal, oldVal)"></wm-switch>
+                    <wm-switch datavalue="bind:Variables.userPreference.dataSet.textsize" name="textSizeSwitch" dataset="S, M, L" class="btn-group-sm" on-change="textSizeSwitchChange($event, $scope, newVal, oldVal)"></wm-switch>
                 </wm-gridcolumn>
             </wm-gridrow>
             <wm-gridrow name="gridrow2">
@@ -15,7 +15,7 @@
                 </wm-gridcolumn>
                 <wm-gridcolumn columnwidth="6" name="gridcolumn4">
                     <wm-composite name="composite1">
-                        <wm-switch datavalue="Light" name="contrastSwitch" dataset="Light, Dark" class="btn-group-sm" on-change="contrastSwitchChange($event, $scope, newVal, oldVal)"></wm-switch>
+                        <wm-switch datavalue="bind:Variables.userPreference.dataSet.contrast" name="contrastSwitch" dataset="Light, Dark" class="btn-group-sm" on-change="contrastSwitchChange($event, $scope, newVal, oldVal)"></wm-switch>
                     </wm-composite>
                 </wm-gridcolumn>
             </wm-gridrow>

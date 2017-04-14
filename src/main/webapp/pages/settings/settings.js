@@ -17,11 +17,14 @@ Application.$controller("settingsPageController", ["$scope", function($scope) {
 
 
     $scope.textSizeSwitchChange = function($event, $isolateScope, newVal, oldVal) {
+
+        $scope.Variables.userPreference.dataSet.textsize = newVal;
         WM.element('#wm-app-content').removeClass('text-style-' + oldVal).addClass('text-style-' + newVal);
     };
 
 
     $scope.contrastSwitchChange = function($event, $isolateScope, newVal, oldVal) {
+        $scope.Variables.userPreference.dataSet.contrast = newVal;
         if (newVal === 'Dark') {
             WM.element('head').append('<link id="dark-theme" rel="stylesheet" type="text/css" href="themes/neon/style.css">');
         } else {

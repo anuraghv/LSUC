@@ -860,5 +860,19 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
+  },
+  "userPreference" : {
+    "_id" : "wm-userPreferece-wm.Variable-1492145735419",
+    "name" : "userPreference",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "textsize" : "S",
+      "contrast" : "Light"
+    },
+    "type" : "entry",
+    "isList" : false,
+    "saveInPhonegap" : false
   }
 }
