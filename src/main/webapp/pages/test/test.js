@@ -37,31 +37,3 @@ Application.$controller("liveform2Controller", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
-
-Application.$controller("grid2_1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("liveform2_1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("grid3Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("liveform3Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

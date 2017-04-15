@@ -117,6 +117,9 @@
     "table" : "LICENSEECLASSPRACTICEGROUP",
     "schema" : "RMS"
   }, {
+    "table" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
+    "schema" : "RMS"
+  }, {
     "table" : "LICENSEEINSURANCE",
     "schema" : "RMS"
   }, {
