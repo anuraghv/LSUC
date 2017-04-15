@@ -116,6 +116,10 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "RecentActivity",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
   "name" : "Register",
   "type" : "PAGE",
   "params" : [ ]
