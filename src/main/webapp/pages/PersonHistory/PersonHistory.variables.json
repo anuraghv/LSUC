@@ -1,10 +1,44 @@
 {
+  "CommentsArr" : {
+    "_id" : "wm-CommentsArr-wm.Variable-1492176078169",
+    "name" : "CommentsArr",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "CommentsObj" : {
+    "_id" : "wm-CommentsObj-wm.Variable-1492177014833",
+    "name" : "CommentsObj",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "action" : "Added",
+      "heading" : "Edited Person ",
+      "comment" : "Firstname changed",
+      "time" : "",
+      "days" : "2 hour ago",
+      "icon" : "fa fa-briefcase",
+      "icon_class" : "btn btn-rounded btn-primary"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "LSUCPersonAudData" : {
     "_id" : "wm-LSUCPersonAudData-wm.LiveVariable-1492158866878",
     "name" : "LSUCPersonAudData",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "pk",
+      "value" : "bind:pageParams.id",
+      "type" : "number"
+    } ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "PersonAud",
@@ -12,6 +46,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
+    "onSuccess" : "LSUCPersonAudDataonSuccess($event, $scope)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
     "autoUpdate" : true,
@@ -154,6 +189,7 @@
       "watchOn" : "LSUCRevinfoData",
       "package" : "com.lsuc.lsuc.PersonAud"
     } ],
+    "filterFields" : { },
     "package" : "com.lsuc.lsuc.PersonAud"
   },
   "personHistory" : {
