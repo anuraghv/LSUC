@@ -77,6 +77,7 @@ public class Licensee implements Serializable {
     private Person person;
     private Lawyer lawyer;
     private List<Licenseeclasspracticegroup> licenseeclasspracticegroups = new ArrayList<>();
+    private List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses = new ArrayList<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -461,6 +462,16 @@ public class Licensee implements Serializable {
 
     public void setLicenseeclasspracticegroups(List<Licenseeclasspracticegroup> licenseeclasspracticegroups) {
         this.licenseeclasspracticegroups = licenseeclasspracticegroups;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licensee")
+    public List<LicenseeclasspracticegroupApprovals> getLicenseeclasspracticegroupApprovalses() {
+        return this.licenseeclasspracticegroupApprovalses;
+    }
+
+    public void setLicenseeclasspracticegroupApprovalses(List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses) {
+        this.licenseeclasspracticegroupApprovalses = licenseeclasspracticegroupApprovalses;
     }
 
     @Override

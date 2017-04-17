@@ -357,7 +357,7 @@
         "defaultValue" : null
       },
       "fieldName" : "licenseeFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -365,8 +365,8 @@
       "name" : "LICENSEE_FK",
       "nullable" : true,
       "oldName" : "LICENSEE_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : true,
       "precision" : 10,
@@ -557,7 +557,7 @@
         "defaultValue" : null
       },
       "fieldName" : "newClassPracticeGroupFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -565,8 +565,8 @@
       "name" : "NEW_CLASS_PRACTICE_GROUP_FK",
       "nullable" : true,
       "oldName" : "NEW_CLASS_PRACTICE_GROUP_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : true,
       "precision" : 10,
@@ -671,7 +671,41 @@
       "name" : "XPKLICENSEECLASSPRACTICEGROUP_APPROVALS",
       "virtual" : false
     },
-    "relations" : [ ],
+    "relations" : [ {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licensee",
+      "mappings" : [ {
+        "sourceColumn" : "LICENSEE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_LICENSEECLASSPRACTICEeX1D3",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeclasspracticegroup",
+      "mappings" : [ {
+        "sourceColumn" : "NEW_CLASS_PRACTICE_GROUP_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_LICENSEECLASSPRACTICEiw6kl",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP",
+      "virtual" : true
+    } ],
     "schema" : "RMS",
     "type" : "TABLE"
   }, {
@@ -15670,6 +15704,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEECLASSPRACTICEGROUP",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeclasspracticegroupApprovalses",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "LICENSEE_FK"
+      } ],
+      "name" : "FK_LICENSEECLASSPRACTICEeX1D3",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENSEE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -22476,6 +22527,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEE",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeclasspracticegroupApprovalses",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "NEW_CLASS_PRACTICE_GROUP_FK"
+      } ],
+      "name" : "FK_LICENSEECLASSPRACTICEiw6kl",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENSEECLASSPRACTICEGROUP",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"

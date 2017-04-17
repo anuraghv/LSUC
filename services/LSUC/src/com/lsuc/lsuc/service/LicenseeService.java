@@ -16,6 +16,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
+import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseeinsurance;
 import com.lsuc.lsuc.Licenseepersonlanguagepurpose;
 import com.lsuc.lsuc.Licenseephotoidcard;
@@ -206,6 +207,18 @@ public interface LicenseeService {
      * @see Page
      */
     Page<Licenseeclasspracticegroup> findAssociatedLicenseeclasspracticegroups(Integer pk, Pageable pageable);
+
+    /*
+     * Returns the associated licenseeclasspracticegroupApprovalses for given Licensee id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated LicenseeclasspracticegroupApprovals instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(Integer pk, Pageable pageable);
 
 }
 
