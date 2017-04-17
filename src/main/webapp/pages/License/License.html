@@ -112,7 +112,7 @@
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="6" name="gridcolumn23">
                 <wm-liveform novalidate="false" errormessage="" title="License Status" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Variables.licenseStatusData.firstRecord"
-                on-success="licenseStatusFormSuccess($event, $operation, $data)">
+                on-success="licenseStatusFormSuccess($event, $operation, $data)" on-beforeservicecall="licenseStatusFormBeforeservicecall($event, $operation, $data)">
                     <wm-layoutgrid columns="2" name="layoutgrid2">
                         <wm-gridrow name="gridrow13">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn25">
@@ -133,16 +133,11 @@
                                 placeholder="Select value"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
-                        <wm-gridrow name="gridrow15">
-                            <wm-gridcolumn columnwidth="6" name="gridcolumn29">
-                                <wm-form-field name="licensee" displayname="Licensee" show="true" primary-key="false" generator="assigned" key="licensee" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
                     </wm-layoutgrid>
                     <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                     <wm-anchor margin="-24.5em 0.5em unset 0.5em" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="" class="pull-right" on-click="licenseStUpBtnClick($event, $scope)"></wm-anchor>
-                    <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action>
                     <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true" shortcutkey=""></wm-form-action>
                 </wm-liveform>
                 <wm-liveform novalidate="false" errormessage="" title="Insurance" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeInsurance.dataSet" captionalign="left" captionposition="top" name="insuranceForm" formdata="bind:Variables.LicenseeInsurance.firstRecord">
                     <wm-layoutgrid columns="3" name="layoutgrid6">

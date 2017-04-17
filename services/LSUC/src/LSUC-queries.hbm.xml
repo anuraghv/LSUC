@@ -2,4 +2,27 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
+    <query name="approveEditRecord">
+        <![CDATA[
+        update Licenseeclasspracticegroup a
+set a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+where a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+        ]]>
+    <query-param name="approvalPk" type="java.lang.Integer"/>
+    </query>
+
+    <query name="approveEditRecord__count">
+        <![CDATA[
+        select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+where a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+        ]]>
+    <query-param name="approvalPk" type="java.lang.Integer"/>
+    </query>
+
+    <query name="approvedNewRecord">
+        <![CDATA[
+        INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk) select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey
+        ]]>
+    <query-param name="primaryKey" type="java.lang.Integer"/>
+    </query>
 </hibernate-mapping>

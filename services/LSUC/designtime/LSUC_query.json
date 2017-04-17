@@ -1,1 +1,58 @@
-{ }
+{
+  "approveEditRecord" : {
+    "name" : "approveEditRecord",
+    "description" : "Approve the edit LicenseeClassPracticeGroup based on the request PK",
+    "version" : "V2",
+    "queryString" : "update Licenseeclasspracticegroup a\nset a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
+    "nativeSql" : false,
+    "fetchCount" : true,
+    "type" : "UPDATE",
+    "parameters" : [ {
+      "name" : "approvalPk",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "25",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.lsuc.lsuc.models.query.ApproveEditRecordRequest",
+      "method" : "PUT"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  },
+  "approvedNewRecord" : {
+    "name" : "approvedNewRecord",
+    "description" : "Query to Insert a New record into LicenseeClassPracticeGroup on approval",
+    "version" : "V2",
+    "queryString" : "INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk) select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey",
+    "countQueryString" : null,
+    "nativeSql" : false,
+    "fetchCount" : false,
+    "type" : "INSERT",
+    "parameters" : [ {
+      "name" : "primaryKey",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "11",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.lsuc.lsuc.models.query.ApprovedNewRecordRequest",
+      "method" : "POST"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  }
+}

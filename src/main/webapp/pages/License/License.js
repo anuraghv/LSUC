@@ -28,6 +28,29 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         });
     };
 
+
+    $scope.licenseStatusFormBeforeservicecall = function($event, $operation, $data) {
+        debugger;
+
+        $scope.Variables.LSUC_ApprovalData.setInput({
+            "licenseeFk": $data.licenseeFk,
+            "newIsPrimary": $data.isPrimary,
+            "newEffectiveFromDate": $data.effectiveFromDate,
+            "newEffectiveToDate": $data.effectiveToDate,
+            "newClassPracticeGroupFk": $data.classPracticeGroupFk,
+            "status": "pending",
+            "licenseeclasspracticegroupPk": $data.pk
+                // ,
+                // "oldIsPrimary": "",
+                // "oldEffectiveFromDate": "",
+                // "oldEffectiveToDate": "",
+                // "oldClassPracticeGroupFk": ""
+        });
+        $scope.Variables.LSUC_ApprovalData.insertRecord();
+
+        return false;
+    };
+
 }]);
 
 
@@ -67,15 +90,15 @@ Application.$controller("grid2Controller", ["$scope",
 
 
 Application.$controller("liveform4Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
 
 Application.$controller("insuranceFormController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
