@@ -20,7 +20,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
         $data.addresses = [$scope.Widgets.addresses.dataoutput];
         $data.licensees = [$scope.Widgets.licensees.dataoutput];
         $data.personroles = [$scope.Widgets.personroles.dataoutput];
-        $data.licensees[0].licenseeclasspracticegroups = [$scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput];
+        //$data.licensees[0].licenseeclasspracticegroups = [$scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput];
     };
 
 
