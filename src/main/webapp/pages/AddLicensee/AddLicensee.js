@@ -26,6 +26,15 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
 
     $scope.personLiveFormSuccess = function($event, $operation, $data) {
         debugger;
+        $scope.Variables.LSUC_ApprovalData.setInput({
+            "licenseeFk": $data.licensees[0].pk,
+            "newIsPrimary": "N",
+            "newEffectiveFromDate": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveFromDate,
+            "newEffectiveToDate": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate,
+            "newClassPracticeGroupFk": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.classpraticegroup.pk,
+            "status": "Created"
+        });
+        $scope.Variables.LSUC_ApprovalData.insertRecord();
     };
 
 }]);
