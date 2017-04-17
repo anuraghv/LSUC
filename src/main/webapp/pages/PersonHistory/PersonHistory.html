@@ -26,6 +26,30 @@
                     </wm-layoutgrid>
                 </wm-listtemplate>
             </wm-livelist>
+            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personData.dataSet" navigation="None" name="livelist2" groupby="livelist2groupby(rowData)">
+                <wm-listtemplate layout="inline" name="listtemplate2">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="10" name="gridcolumn4">
+                                <wm-label padding="unset 0.5em" name="label7" caption="bind:Variables.personData.dataSet[$i].category_old_val" class="p text-muted"></wm-label>
+                                <wm-label padding="unset 0.5em" name="label8" caption="bind:Variables.personData.dataSet[$i].old_address"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="2" name="gridcolumn5_1">
+                                <wm-label padding="0.2em 2em" name="label6" caption="Old" class="label-default pull-right" width="80"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="10" name="gridcolumn6">
+                                <wm-label padding="unset 0.5em" caption="bind:Variables.personData.dataSet[$i].category_new_val" class="p text-muted" name="label9"></wm-label>
+                                <wm-label padding="unset 0.5em" caption="bind:Variables.personData.dataSet[$i].new_address" name="label10"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="2" name="gridcolumn7">
+                                <wm-label padding="0.2em 2em" caption="New" class="label-info pull-right" name="label11" width="80"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-listtemplate>
+            </wm-livelist>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

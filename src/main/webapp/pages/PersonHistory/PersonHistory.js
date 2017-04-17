@@ -50,6 +50,14 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
 
 
+
+    $scope.livelist2groupby = function(rowData) {
+        return rowData.type + '<br/><p class="text-muted">' + rowData.name + ' (' + rowData.id + ')</p>';
+        /*
+         * this function is iterated over each data object in the livelist dataSet collection the data will be grouped by what is returned from this function E.g. to group a collection of CGPA details under rounded figure CGPA return following return Math.floor(dataObject.cgpa)
+         */
+    };
+
 }]);
 
 

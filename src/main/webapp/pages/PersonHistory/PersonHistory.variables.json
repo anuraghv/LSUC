@@ -178,7 +178,7 @@
       "primaryFields" : [ "pk", "rev" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "PERSON_AUD",
     "tableType" : "TABLE",
     "properties" : [ "revinfo" ],
@@ -191,6 +191,53 @@
     } ],
     "filterFields" : { },
     "package" : "com.lsuc.lsuc.PersonAud"
+  },
+  "personData" : {
+    "_id" : "wm-personData-wm.Variable-1492428341053",
+    "name" : "personData",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "type" : "Address Change",
+      "old_address" : "NY1",
+      "new_address" : "NY2",
+      "old_class" : "",
+      "new_class" : "",
+      "old_practicegrp" : "",
+      "new_practicegrp" : "",
+      "category_old_val" : "Bussiness | Public",
+      "category_new_val" : "Home | Restricted",
+      "name" : "Gerald",
+      "id" : "L123"
+    }, {
+      "type" : "Address Change",
+      "old_address" : "North Orleans, Birtch Street, NY",
+      "new_address" : "New Square, City Hall, NY",
+      "category_old_val" : "Bussiness | Public",
+      "category_new_val" : "Home | Restricted",
+      "name" : "Maria",
+      "id" : "L124"
+    }, {
+      "type" : "Status Change",
+      "old_class" : "6 - Excuse Fee",
+      "new_class" : "2 - Life",
+      "old_practicegrp" : "PP - Private Practice",
+      "new_practicegrp" : "OE - Otherwise Employed",
+      "name" : "MR Nick B M",
+      "id" : "L12356"
+    }, {
+      "type" : "Status Change",
+      "old_class" : "6 - Excuse Fee",
+      "new_class" : "2 - Life",
+      "old_practicegrp" : "PP - Private Practice",
+      "new_practicegrp" : "OE - Otherwise Employed",
+      "name" : "Diana Shore",
+      "id" : "L128"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
   },
   "personHistory" : {
     "_id" : "wm-alphaMeetingList-wm.Variable-1491986582286",

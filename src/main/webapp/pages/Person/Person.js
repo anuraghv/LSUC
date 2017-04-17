@@ -15,3 +15,11 @@ Application.$controller("PersonPageController", ["$scope", function ($scope) {
     };
 
 }]);
+
+
+Application.$controller("personInfoLiveFormController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
