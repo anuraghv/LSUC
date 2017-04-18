@@ -26,40 +26,117 @@
                     </wm-layoutgrid>
                 </wm-listtemplate>
             </wm-livelist>
-            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personData.dataSet" navigation="None" name="livelist2" itemclass="list-group-item">
-                <wm-listtemplate layout="inline" name="listtemplate2">
-                    <wm-container name="container2" padding="unset 1em" borderwidth="1px" bordercolor="#d8d8d8" borderstyle="solid" margin="unset unset 1em unset">
-                        <wm-label name="label6_1" class="h4" caption="bind:Variables.personData.dataSet[$i].type" margin="unset unset 0px unset"></wm-label>
-                        <wm-label name="label7_1" class="text-muted" caption="bind:'MRS: ' + Variables.personData.dataSet[$i].name"></wm-label>
-                        <wm-container name="container3" backgroundcolor="#eee" padding="0.5em 1em" margin="unset unset 1em unset" bordercolor="#aaaaaa" borderstyle="solid" borderwidth="1px">
-                            <wm-layoutgrid name="layoutgrid2">
-                                <wm-gridrow name="gridrow2">
-                                    <wm-gridcolumn columnwidth="10" name="gridcolumn4">
-                                        <wm-label padding="unset 0.5em unset unset" name="label7" caption="bind:Variables.personData.dataSet[$i].category_old_val" class="p text-muted"></wm-label>
-                                        <wm-label padding="unset 0.5em unset unset" name="label8" caption="bind:Variables.personData.dataSet[$i].old_address"></wm-label>
-                                    </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="2" name="gridcolumn5_1" padding="0.5em unset unset unset">
-                                        <wm-label padding="0.2em unset" name="label6" caption="OLD" class="label-default pull-right text-center" width="80" fontunit="em"></wm-label>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                                <!--<wm-gridrow name="gridrow3"><wm-gridcolumn columnwidth="10" name="gridcolumn6"><wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].category_new_val" class="p text-muted" name="label9"></wm-label><wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].new_address" name="label10"></wm-label></wm-gridcolumn><wm-gridcolumn columnwidth="2" name="gridcolumn7" padding="0.5em unset unset unset"><wm-label padding="0.2em 2em" caption="New" class="label-info pull-right" name="label11" width="80"></wm-label></wm-gridcolumn></wm-gridrow>--></wm-layoutgrid>
-                        </wm-container>
-                        <wm-container name="container4" backgroundcolor="#eee" padding="0.5em 1em" margin="unset unset 1em unset" borderwidth="1px" bordercolor="#8dcadf" borderstyle="solid">
-                            <wm-layoutgrid name="layoutgrid2_1">
-                                <wm-gridrow name="gridrow3">
-                                    <wm-gridcolumn columnwidth="10" name="gridcolumn6">
-                                        <wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].category_new_val" class="p text-muted" name="label9"></wm-label>
-                                        <wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].new_address" name="label10"></wm-label>
-                                    </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="2" name="gridcolumn7" padding="0.5em unset unset unset">
-                                        <wm-label padding="0.2em unset" caption="NEW" class="label-info pull-right text-center" name="label11" width="80"></wm-label>
-                                    </wm-gridcolumn>
-                                </wm-gridrow>
-                            </wm-layoutgrid>
-                        </wm-container>
-                    </wm-container>
-                </wm-listtemplate>
-            </wm-livelist>
+            <wm-panel name="panel1" title="History" actions="Filter By, Address Change,Status Change">
+                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personData.dataSet" navigation="None" name="livelist2">
+                    <wm-listtemplate layout="inline" name="listtemplate2">
+                        <wm-layoutgrid name="layoutgrid2_2">
+                            <wm-gridrow name="gridrow2_1">
+                                <wm-gridcolumn name="gridcolumn4_1" columnwidth="2" padding="unset 1em unset unset" horizontalalign="center">
+                                    <wm-label padding="unset 0.5em" name="label33" caption="17 Apr, 2017" class="text-default"></wm-label>
+                                    <wm-label padding="1em" name="label32" class="img-circle pull-right label-default" caption=""></wm-label>
+                                    <wm-container name="container7" borderwidth="0px 1px 0px 0px" bordercolor="#d8d8d8" borderstyle="dotted" height="98%"></wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn5_2" columnwidth="10">
+                                    <wm-container name="container2" padding="unset 1em" borderwidth="1px" bordercolor="#d8d8d8" borderstyle="solid" margin="unset unset 1em unset" backgroundcolor="#fff">
+                                        <wm-label name="label6_1" class="h4" caption="bind:Variables.personData.dataSet[$i].type" margin="unset unset 0px unset"></wm-label>
+                                        <wm-label name="label7_1" class="text-muted" caption="bind:'MSR: ' + Variables.personData.dataSet[$i].name"></wm-label>
+                                        <wm-container name="container3" backgroundcolor="#eee" padding="0.5em 1em" margin="unset unset 1em unset" bordercolor="#aaaaaa" borderstyle="solid" borderwidth="1px" show="bind:Variables.personData.dataSet[$i].type === 'Address Change'">
+                                            <wm-layoutgrid name="layoutgrid2">
+                                                <wm-gridrow name="gridrow2">
+                                                    <wm-gridcolumn columnwidth="10" name="gridcolumn4">
+                                                        <wm-label padding="unset 0.5em unset unset" name="label7" caption="bind:Variables.personData.dataSet[$i].category_old_val" class="p text-muted"></wm-label>
+                                                        <wm-label padding="unset 0.5em unset unset" name="label8" caption="bind:Variables.personData.dataSet[$i].old_address"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" name="gridcolumn5_1" padding="0.5em unset unset unset">
+                                                        <wm-label padding="0.2em unset" name="label6" caption="OLD" class="label-default pull-right text-center" width="80" fontunit="em"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                        <wm-container name="container4" backgroundcolor="#eee" padding="0.5em 1em" margin="unset unset 1em unset" borderwidth="1px" bordercolor="#8dcadf" borderstyle="solid" show="bind:Variables.personData.dataSet[$i].type === 'Address Change'">
+                                            <wm-layoutgrid name="layoutgrid2_1">
+                                                <wm-gridrow name="gridrow3">
+                                                    <wm-gridcolumn columnwidth="10" name="gridcolumn6">
+                                                        <wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].category_new_val" class="p text-muted" name="label9"></wm-label>
+                                                        <wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].new_address" name="label10"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" name="gridcolumn7" padding="0.5em unset unset unset">
+                                                        <wm-label padding="0.2em unset" caption="NEW" class="label-info pull-right text-center" name="label11" width="80"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                        <wm-container backgroundcolor="#eee" padding="0.5em 1em" margin="unset unset 1em unset" bordercolor="#aaaaaa" borderstyle="solid" borderwidth="1px" name="container5" show="bind:Variables.personData.dataSet[$i].type === 'Status Change'">
+                                            <wm-layoutgrid name="layoutgrid4">
+                                                <wm-gridrow name="gridrow4">
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn8">
+                                                        <wm-label padding="unset 0.5em unset unset" caption="Class" class="p text-muted" name="label14"></wm-label>
+                                                        <wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].old_class" name="label15"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn13">
+                                                        <wm-label padding="unset 0.5em" name="label20" class="p text-muted" caption="Practice Group"></wm-label>
+                                                        <wm-label padding="unset 0.5em" name="label21" caption="bind:Variables.personData.dataSet[$i].old_practicegrp"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn12">
+                                                        <wm-label padding="unset 0.5em" name="label22" class="p text-muted" caption="Effective From"></wm-label>
+                                                        <wm-label padding="unset 0.5em" name="label23" caption="12 Aug, 2000"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" padding="0.5em unset unset unset" name="gridcolumn9">
+                                                        <wm-label padding="0.2em unset" caption="OLD" class="label-default pull-right text-center" width="80" fontunit="em" name="label16"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow6">
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn14">
+                                                        <wm-label padding="unset 0.5em unset unset" name="label24" class="p text-muted" caption="Effective To"></wm-label>
+                                                        <wm-label padding="unset 0.5em unset unset" name="label25" caption="-"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn15">
+                                                        <wm-checkbox caption="Is Primary" name="checkbox1"></wm-checkbox>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn16"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" name="gridcolumn17"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                        <wm-container backgroundcolor="#eee" padding="0.5em 1em" margin="unset unset 1em unset" borderwidth="1px" bordercolor="#8dcadf" borderstyle="solid" name="container6" show="bind:Variables.personData.dataSet[$i].type === 'Status Change'">
+                                            <wm-layoutgrid name="layoutgrid5">
+                                                <wm-gridrow name="gridrow5">
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn10">
+                                                        <wm-label padding="unset 0.5em unset unset" caption="Class" class="p text-muted" name="label17"></wm-label>
+                                                        <wm-label padding="unset 0.5em unset unset" caption="bind:Variables.personData.dataSet[$i].new_class" name="label18"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn18">
+                                                        <wm-label padding="unset 0.5em" class="p text-muted" caption="Practice Group" name="label26"></wm-label>
+                                                        <wm-label padding="unset 0.5em" caption="bind:Variables.personData.dataSet[$i].new_practicegrp" name="label27"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn19">
+                                                        <wm-label padding="unset 0.5em" class="p text-muted" caption="Effective From" name="label28"></wm-label>
+                                                        <wm-label padding="unset 0.5em" caption="12 Aug, 2000" name="label29"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" padding="0.5em unset unset unset" name="gridcolumn11">
+                                                        <wm-label padding="0.2em unset" caption="NEW" class="label-info pull-right text-center" width="80" name="label19"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow7">
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn20">
+                                                        <wm-label padding="unset 0.5em unset unset" class="p text-muted" caption="Effective To" name="label30"></wm-label>
+                                                        <wm-label padding="unset 0.5em unset unset" caption="-" name="label31"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn21">
+                                                        <wm-checkbox caption="Is Primary" name="checkbox2"></wm-checkbox>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn22"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" name="gridcolumn23"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-listtemplate>
+                </wm-livelist>
+            </wm-panel>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

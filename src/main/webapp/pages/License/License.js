@@ -102,3 +102,24 @@ Application.$controller("insuranceFormController", ["$scope",
         $scope.ctrlScope = $scope;
     }
 ]);
+
+Application.$controller("insuranceForm Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("licenseDetailsForm Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid2 Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
