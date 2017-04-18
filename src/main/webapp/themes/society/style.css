@@ -1210,7 +1210,7 @@
     font-family: inherit;
     font-weight: 500;
     line-height: 1.5;
-    color: #000;
+    color: #657b2c;
 }
 .wm-app h1 small,
 .wm-app h2 small,
@@ -7477,6 +7477,7 @@ button.wm-app .close {
 }
 .wm-app .form-control:focus,
 .wm-app .form-group + .form-control:focus {
+    border-color: #03516f;
     box-shadow: none;
 }
 .wm-app .input-group-btn .btn {
@@ -7606,6 +7607,18 @@ button.wm-app .close {
     margin-bottom: 1em;
     font-weight: normal;
 }
+.wm-app .app-form .control-label,
+.wm-app .app-liveform .control-label {
+    margin: 0;
+    color: #aaaaaa;
+}
+.wm-app .app-form .form-control-static,
+.wm-app .app-liveform .form-control-static {
+    color: #000;
+    padding-top: 0;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
 .wm-app .app-form .form-action,
 .wm-app .app-liveform .form-action {
     background-color: inherit;
@@ -7619,6 +7632,10 @@ button.wm-app .close {
 .wm-app .app-form .panel-body,
 .wm-app .app-liveform .panel-body {
     padding: 12px;
+}
+.wm-app .app-form .panel-body:not(.update-mode) ~ .panel-footer,
+.wm-app .app-liveform .panel-body:not(.update-mode) ~ .panel-footer {
+    border-color: transparent;
 }
 .wm-app .app-form input[type="file"],
 .wm-app .app-liveform input[type="file"] {
@@ -7635,13 +7652,7 @@ button.wm-app .close {
 }
 .wm-app .app-form input:focus.ng-valid,
 .wm-app .app-liveform input:focus.ng-valid {
-    border: 2px solid #d1d1d1;
-}
-.wm-app .app-form .form-control-static,
-.wm-app .app-liveform .form-control-static {
-    font-weight: normal;
-    font-family: 'Open Sans', sans-serif;
-    color: #999;
+    border: 2px solid #03516f;
 }
 .wm-app .app-livefilter .control-label,
 .wm-app .app-livefilter .app-label {
@@ -7659,6 +7670,9 @@ button.wm-app .close {
 }
 .wm-app .app-livefilter .panel-body {
     padding: 12px;
+}
+.wm-app .app-select {
+    padding-left: .5em;
 }
 .wm-app .app-switch {
     border-radius: 0;
@@ -7888,7 +7902,7 @@ button.wm-app .close {
     border-radius: 0px;
     border-color: transparent;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
     margin-bottom: 1em;
 }
 .wm-app .panel .panel-heading .panel-title .heading,

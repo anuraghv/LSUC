@@ -2661,7 +2661,7 @@ a.wm-app .bg-danger:focus {
     padding-top: 9px;
     font-size: 13px;
     line-height: 1.42857143;
-    color: #777;
+    color: #fff;
 }
 .wm-app .form-control {
     display: block;
@@ -2670,7 +2670,7 @@ a.wm-app .bg-danger:focus {
     padding: 8px 12px;
     font-size: 13px;
     line-height: 1.42857143;
-    color: #777;
+    color: #fff;
     background-color: #000;
     background-image: none;
     border: 1px solid #4d4d4d;
@@ -4080,7 +4080,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     font-size: 13px;
     font-weight: normal;
     line-height: 1;
-    color: #777;
+    color: #fff;
     text-align: center;
     background-color: #000;
     border: 1px solid #4d4d4d;
@@ -7685,7 +7685,7 @@ button.wm-app .close {
 }
 .wm-app .control-label {
     font-weight: normal;
-    color: #fff;
+    color: #ccc;
 }
 .wm-app .form-control,
 .wm-app .form-group + .form-control,
@@ -7860,8 +7860,18 @@ button.wm-app .close {
 .wm-app .app-form .app-label,
 .wm-app .app-liveform .app-label {
     padding: 1em 1em 0;
-    margin-bottom: 1em;
+    margin-bottom: 0;
     font-weight: normal;
+}
+.wm-app .app-form .control-label,
+.wm-app .app-liveform .control-label {
+    color: #ccc;
+}
+.wm-app .app-form .form-control-static,
+.wm-app .app-liveform .form-control-static {
+    padding-top: 0;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
 }
 .wm-app .app-form .form-action,
@@ -7883,6 +7893,10 @@ button.wm-app .close {
 .wm-app .app-liveform .panel-body .app-grid-layout {
     padding: 12px;
 }
+.wm-app .app-form .panel-body .app-grid-layout:not(.update-mode) ~ .panel-footer,
+.wm-app .app-liveform .panel-body .app-grid-layout:not(.update-mode) ~ .panel-footer {
+    border-color: transparent;
+}
 .wm-app .app-form input[type="file"],
 .wm-app .app-liveform input[type="file"] {
     padding: 0;
@@ -7895,11 +7909,6 @@ button.wm-app .close {
 .wm-app .app-form input[type="file"]::-ms-browse,
 .wm-app .app-liveform input[type="file"]::-ms-browse {
     border: 1px solid #4d4d4d;
-}
-.wm-app .app-form .form-control-static,
-.wm-app .app-liveform .form-control-static {
-    font-family: 'Open Sans', sans-serif;
-    color: #999;
 }
 .wm-app .app-livefilter .control-label,
 .wm-app .app-livefilter .app-label {
