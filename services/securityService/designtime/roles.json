@@ -1,23 +1,11 @@
 [ {
-  "name" : "admin",
+  "name" : "msr",
   "description" : null,
   "roleConfig" : {
     "landingPage" : "Main"
   }
 }, {
-  "name" : "user",
-  "description" : null,
-  "roleConfig" : {
-    "landingPage" : "Main"
-  }
-}, {
-  "name" : "MSR",
-  "description" : null,
-  "roleConfig" : {
-    "landingPage" : "Main"
-  }
-}, {
-  "name" : "Supervisor",
+  "name" : "supervisor",
   "description" : null,
   "roleConfig" : {
     "landingPage" : "Main"

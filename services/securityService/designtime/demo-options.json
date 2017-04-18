@@ -2,18 +2,18 @@
   "users" : [ {
     "userid" : "user",
     "password" : "user",
-    "roles" : [ "user" ]
+    "roles" : [ "msr" ]
   }, {
     "userid" : "admin",
     "password" : "admin",
-    "roles" : [ "admin" ]
+    "roles" : [ "supervisor" ]
   }, {
     "userid" : "jerald",
     "password" : "jerald",
-    "roles" : [ "MSR" ]
+    "roles" : [ "msr" ]
   }, {
     "userid" : "mary",
     "password" : "mary",
-    "roles" : [ "Supervisor" ]
+    "roles" : [ "supervisor" ]
   } ]
 }
