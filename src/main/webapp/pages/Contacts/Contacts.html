@@ -28,7 +28,7 @@
             <wm-label caption="{{row.emailpurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
         <wm-grid-column binding="emailAddress" caption="Email Address" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-        <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+        <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory === 'Y'}"></wm-icon>
         </wm-grid-column>
         <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
@@ -37,13 +37,13 @@
         <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
     </wm-grid>
     <wm-grid gridfirstrowselect="true" editmode="quickedit" title="Social Media" dataset="bind:Variables.LSUCPersonsocialmediacontactData.dataSet" navigation="None" name="socialGrid" iconclass="wi wi-share" gridclass="table-striped" class="panel-default">
-        <wm-grid-column binding="socialMedia" caption="Social Media" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+        <wm-grid-column binding="socialMedia" caption="URL" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+        <wm-grid-column binding="socialmediapurpose.pk" caption="Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true"
+        related-entity-name="Socialmediapurpose" readonly="false">
+            <wm-label caption="{{row.socialmediapurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
+        </wm-grid-column>
         <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory === 'Y'}"></wm-icon>
-        </wm-grid-column>
-        <wm-grid-column binding="socialmediapurpose.pk" caption="Social Media Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Socialmediapurpose"
-        readonly="false">
-            <wm-label caption="{{row.socialmediapurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
         <wm-grid-column binding="socialmediatype.isActive" caption="Active" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" related-entity-name="Socialmediatype" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.socialmediatype.isActive === 'Y'}"></wm-icon>

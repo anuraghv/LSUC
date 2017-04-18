@@ -16,16 +16,17 @@ Application.$controller("LanguagePageController", ["$scope", function($scope) {
 
 
     $scope.LSUCPersonlanguagecommunicationchannelDataonBeforeUpdate = function(variable, inputData) {
+        debugger;
         inputData['personlanguage.personFk'] = {
-            'value': 4
+            'value': $scope.pageParams.id
         };
     };
 
 }]);
 
 Application.$controller("liveform3Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);

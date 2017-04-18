@@ -15,7 +15,7 @@
     "onBeforeUpdate" : "LSUCPersonlanguagecommunicationchannelDataonBeforeUpdate($event, $scope)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
-    "autoUpdate" : true,
+    "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
     "ignoreCase" : true,

@@ -5,7 +5,7 @@
             <wm-grid-column
             binding="city" caption="City" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                 <wm-grid-column binding="postalCode" caption="Postal Code" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" type="character" widget-type="icon" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+                <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false">
                     <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory ==='Y'}"></wm-icon>
                 </wm-grid-column>
                 <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
