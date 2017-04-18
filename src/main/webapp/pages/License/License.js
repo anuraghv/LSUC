@@ -30,7 +30,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
 
 
     $scope.licenseStatusFormBeforeservicecall = function($event, $operation, $data) {
-        debugger;
+        //debugger;
 
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licenseeFk,
