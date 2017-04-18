@@ -16,7 +16,6 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
 
 
     $scope.personLiveFormBeforeservicecall = function($event, $operation, $data) {
-        debugger;
         $data.addresses = [$scope.Widgets.addresses.dataoutput];
         $data.licensees = [$scope.Widgets.licensees.dataoutput];
         $data.personroles = [$scope.Widgets.personroles.dataoutput];
@@ -25,7 +24,6 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
 
 
     $scope.personLiveFormSuccess = function($event, $operation, $data) {
-        debugger;
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licensees[0].pk,
             "newIsPrimary": "Y",
