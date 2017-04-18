@@ -25,6 +25,20 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "BusinessPersonRelationshipType",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "businesspersonId",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "BusinessRelationship",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "Common",
   "type" : "PARTIAL",
   "params" : [ ]
@@ -79,6 +93,13 @@
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]
+}, {
+  "name" : "MailingLabel",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
 }, {
   "name" : "Main",
   "type" : "PAGE",

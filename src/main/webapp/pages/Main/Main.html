@@ -66,14 +66,19 @@
                                                     <wm-label padding="unset 0.5em" caption="Effective To" class="text-muted" width="100%" name="label16"></wm-label>
                                                     <wm-label padding="unset 0.5em" name="label17" caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveToDate"></wm-label>
                                                 </wm-gridcolumn>
-                                                <wm-gridcolumn columnwidth="4" name="gridcolumn21" horizontalalign="left">
+                                                <wm-gridcolumn columnwidth="3" name="gridcolumn21" horizontalalign="left">
                                                     <wm-checkbox caption="Is Primary" name="checkbox1" checkedvalue="Y" uncheckedvalue="N" disabled="true" datavalue="bind:Variables.pendingApprovals.dataSet.data[$i].newIsPrimary"></wm-checkbox>
                                                 </wm-gridcolumn>
                                                 <wm-gridcolumn columnwidth="2" name="gridcolumn22">
                                                     <wm-label padding="unset 0.5em" name="label18" caption="Status" color="red"></wm-label>
                                                     <wm-label padding="unset 0.5em" name="label17_1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].status" color="red"></wm-label>
                                                 </wm-gridcolumn>
-                                                <wm-gridcolumn columnwidth="3" name="gridcolumn23"></wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn23">
+                                                    <wm-buttongroup name="buttongroup1">
+                                                        <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn"></wm-button>
+                                                        <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn"></wm-button>
+                                                    </wm-buttongroup>
+                                                </wm-gridcolumn>
                                             </wm-gridrow>
                                         </wm-layoutgrid>
                                     </wm-panel>

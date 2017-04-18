@@ -1,8 +1,8 @@
-Application.$controller("LanguagePageController", ["$scope", function($scope) {
+Application.$controller("MailingLabelPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function() {
+    $scope.onPageReady = function () {
         /*
          * variables can be accessed through '$scope.Variables' property here
          * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
@@ -14,16 +14,17 @@ Application.$controller("LanguagePageController", ["$scope", function($scope) {
          */
     };
 
-
-    $scope.LSUCPersonlanguagecommunicationchannelDataonBeforeUpdate = function(variable, inputData) {
-        inputData['personlanguage.personFk'] = {
-            'value': 4
-        };
-    };
-
 }]);
 
-Application.$controller("liveform3Controller", ["$scope",
+
+Application.$controller("mailingLabelGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("mailingLabelLiveFormController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

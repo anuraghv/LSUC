@@ -1,4 +1,4 @@
-Application.$controller("LanguagePageController", ["$scope", function($scope) {
+Application.$controller("BusinessRelationshipPageController", ["$scope", function($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,17 +15,12 @@ Application.$controller("LanguagePageController", ["$scope", function($scope) {
     };
 
 
-    $scope.LSUCPersonlanguagecommunicationchannelDataonBeforeUpdate = function(variable, inputData) {
-        inputData['personlanguage.personFk'] = {
-            'value': 4
+
+
+    $scope.LSUCBusinesspersonrelationshipDataonBeforeUpdate = function(variable, inputData) {
+        inputData['businessperson.personFk'] = {
+            'value': $scope.pageParams.id
         };
     };
 
 }]);
-
-Application.$controller("liveform3Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

@@ -1,5 +1,5 @@
 {
-  "enforceSecurity" : true,
+  "enforceSecurity" : false,
   "rememberMeConfig" : null,
   "sslConfig" : {
     "sslPort" : 443,
