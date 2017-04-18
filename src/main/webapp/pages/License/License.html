@@ -38,7 +38,11 @@
                     <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
                     <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" shortcutkey="" disabled="false" type="button" update-mode="true"></wm-form-action>
                 </wm-liveform>
-                <wm-liveform novalidate="false " errormessage=" " title="Insurance " iconclass=" " defaultmode="View " dataset="bind:Variables.LicenseeInsurance.dataSet " captionalign="left " captionposition="top " name="insuranceForm " formdata="bind:Variables.LicenseeInsurance.firstRecord ">
+                <wm-liveform novalidate="false " errormessage=" " title="Insurance " iconclass=" " defaultmode="View " dataset="bind:Variables.LicenseeInsurance.dataSet " captionalign="left " captionposition="top " name="insuranceForm " formdata="bind:Variables.LicenseeInsurance.firstRecord "
+                on-success="insuranceFormSuccess($event, $operation, $data)">
+                    <wm-container name="container2" horizontalalign="right" margin="-4em unset unset unset" show="bind: !Widgets.insuranceForm.isUpdateMode">
+                        <wm-button class="btn-primary" type="button" caption="Edit" name="insuranceUpBtn" iconclass="wi wi-mode-edit fa-2x" on-click="button2Click($event, $scope)"></wm-button>
+                    </wm-container>
                     <wm-layoutgrid columns="3 " name="layoutgrid6 ">
                         <wm-gridrow name="gridrow14_2 ">
                             <wm-gridcolumn columnwidth="6 " name="gridcolumn34_1 ">
@@ -47,7 +51,7 @@
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6 " name="gridcolumn35_2 ">
                                 <wm-form-field name="isInsured " displayname="Is Insured " show="true " primary-key="false " generator="assigned " key="isInsured " type="string " readonly="false " required="false " widget="checkbox " maxchars="18
-                                " placeholder="Enter value "></wm-form-field>
+                                " placeholder="Enter value " checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                     </wm-layoutgrid>

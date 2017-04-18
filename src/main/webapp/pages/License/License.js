@@ -51,6 +51,13 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         return false;
     };
 
+
+    $scope.insuranceFormSuccess = function($event, $operation, $data) {
+        $timeout(function() {
+            $scope.Widgets.insuranceForm.isUpdateMode = false;
+        });
+    };
+
 }]);
 
 
@@ -100,26 +107,30 @@ Application.$controller("insuranceFormController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
+
+        $scope.button2Click = function($event, $isolateScope) {
+            $scope.isUpdateMode = true;
+        };
+
+    }
+]);
+Application.$controller("insuranceForm Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
     }
 ]);
 
-Application.$controller("insuranceForm Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
 Application.$controller("licenseDetailsForm Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
 
 Application.$controller("grid2 Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);
