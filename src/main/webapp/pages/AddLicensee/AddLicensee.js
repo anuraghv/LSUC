@@ -37,6 +37,14 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
         $scope.Variables.LSUC_ApprovalData.insertRecord();
     };
 
+
+    $scope.getAssociatedPracticeGroupsonBeforeUpdate = function(variable, inputData) {
+        if ($scope.Widgets.licenseeclasprctcegrpLiveForm.formWidgets.dummyClass.datavalue == undefined) {
+            return false;
+        }
+
+    };
+
 }]);
 
 
