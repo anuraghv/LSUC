@@ -78,7 +78,10 @@
                                                 <wm-gridcolumn columnwidth="4" name="gridcolumn21" horizontalalign="left">
                                                     <wm-checkbox caption="Is Primary" name="checkbox1" checkedvalue="Y" uncheckedvalue="N" disabled="true" datavalue="bind:Variables.pendingApprovals.dataSet.data[$i].newIsPrimary"></wm-checkbox>
                                                 </wm-gridcolumn>
-                                                <wm-gridcolumn columnwidth="2" name="gridcolumn22"></wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="2" name="gridcolumn22">
+                                                    <wm-label padding="unset 0.5em" name="label18" caption="Status" color="red"></wm-label>
+                                                    <wm-label padding="unset 0.5em" name="label17_1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].status" color="red"></wm-label>
+                                                </wm-gridcolumn>
                                                 <wm-gridcolumn columnwidth="3" name="gridcolumn23"></wm-gridcolumn>
                                             </wm-gridrow>
                                         </wm-layoutgrid>

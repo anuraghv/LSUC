@@ -28,7 +28,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
         debugger;
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licensees[0].pk,
-            "newIsPrimary": "N",
+            "newIsPrimary": "Y",
             "newEffectiveFromDate": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveFromDate,
             "newEffectiveToDate": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate,
             "newClassPracticeGroupFk": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.classpraticegroup.pk,

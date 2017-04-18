@@ -2484,7 +2484,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "pk" ]
     },
-    "bindCount" : 3,
+    "bindCount" : 4,
     "tableName" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
     "tableType" : "TABLE",
     "properties" : [ "licensee", "licenseeclasspracticegroup" ],

@@ -38,7 +38,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             "newEffectiveFromDate": $data.effectiveFromDate,
             "newEffectiveToDate": $data.effectiveToDate,
             "newClassPracticeGroupFk": $data.classPracticeGroupFk,
-            "status": "pending",
+            "status": "Pending",
             "licenseeclasspracticegroupPk": $data.pk
                 // ,
                 // "oldIsPrimary": "",
