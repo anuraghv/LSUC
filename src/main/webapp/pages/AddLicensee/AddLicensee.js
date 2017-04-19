@@ -30,7 +30,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
             "newEffectiveFromDate": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveFromDate,
             "newEffectiveToDate": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate,
             "newClassPracticeGroupFk": $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.classpraticegroup.pk,
-            "status": "Created"
+            "status": "New"
         });
         $scope.Variables.LSUC_ApprovalData.insertRecord();
     };

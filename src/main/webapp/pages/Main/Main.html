@@ -14,8 +14,8 @@
                         </wm-composite>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="2" name="gridcolumn22_1">
-                        <wm-search datafield="All Fields" on-select="Variables.goToPage_Business.invoke()" name="searchBusiness" placeholder="Search Business Number, Name" dataset="bind:Variables.BusinessData.dataSet" searchkey="alsoKnownAs,businessName,businessNumber" displaylabel="businessName"
-                        orderby="businessName:desc" show="bind:Widgets.filterOption.datavalue === 'Business'" width="100%"></wm-search>
+                        <wm-search datafield="All Fields" on-select="Variables.goToPage_Business.invoke()" name="searchBusiness" placeholder="Search Business Number, Name" dataset="bind:Variables.BusinessData.dataSet" searchkey="alsoKnownAs,businessName,businessNumber"
+                        displaylabel="businessName" orderby="businessName:desc" show="bind:Widgets.filterOption.datavalue === 'Business'" width="100%"></wm-search>
                         <wm-search name="searchLicensee" dataset="bind:Variables.Licensee.dataSet" searchkey="licenseeNumber,person.firstName,person.lastName" displaylabel="bind:$[data[$i].licenseeNumber] + &quot; - [ &quot; + $[data[$i].person.firstName] + &quot; &quot; + $[data[$i].person.lastName] + &quot;]&quot;"
                         datafield="All Fields" on-select="Variables.goToPage_LicenseeInfo.invoke()" placeholder="Search Licensee ID, Name" show="bind:Widgets.filterOption.datavalue === 'Licensee'" width="100%"></wm-search>
                     </wm-gridcolumn>
@@ -26,7 +26,8 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14" padding="1em unset unset unset">
                     <wm-gridcolumn columnwidth="6" name="gridcolumn36" padding="unset 1em">
-                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.BusinessData.dataSet" navigation="On-Demand" name="recentAcitivityLiveList">
+                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.BusinessData.dataSet" navigation="On-Demand"
+                        name="recentAcitivityLiveList">
                             <wm-listtemplate layout="inline" name="listtemplate1">
                                 <wm-panel subheading="Mr Jack Dawson" iconclass="" autoclose="outsideClick" title="Address Change" badgevalue="1 Oct, 2014" collapsible="true" closable="false" content="RecentActivity" name="recentActivityPanel" expanded="false"></wm-panel>
                             </wm-listtemplate>
@@ -36,17 +37,15 @@
                         <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand"
                         name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate2">
-                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="License Number" badgevalue="new">
+                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status">
                                     <wm-layoutgrid name="layoutgrid3">
                                         <wm-gridrow name="gridrow6">
-                                            <wm-gridcolumn columnwidth="3" name="gridcolumn17_1">
-                                                <wm-label padding="unset 0.5em" name="label13_1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName"></wm-label>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn17_1">
+                                                <wm-anchor margin="unset 0.5em" name="anchor1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName"
+                                                on-click="Variables.goToPage_Approvals.invoke()"></wm-anchor>
                                             </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="3" name="gridcolumn18_1"></wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn19_1"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="3" name="gridcolumn20_1">
-                                                <wm-label padding="unset 0.5em" name="label14_1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.pk"></wm-label>
-                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn20_1"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow7" class="gray">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn16">
@@ -61,9 +60,7 @@
                                                 <wm-label padding="unset 0.5em" caption="Effective From" class="text-muted" width="100%" name="label13"></wm-label>
                                                 <wm-label padding="unset 0.5em" name="label14" caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveFromDate"></wm-label>
                                             </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="3" name="gridcolumn17">
-                                                <wm-label padding="unset 0.5em" name="label8_1" class="pull-right label-primary" caption="New"></wm-label>
-                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn17"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow8" class="gray">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn20">

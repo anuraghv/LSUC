@@ -1,4 +1,4 @@
-Application.$controller("MainPageController", ["$scope", function($scope) {
+Application.$controller("ApprovalsPageController", ["$scope", function($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,10 +15,8 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
     };
 
 
-
-
-
     $scope.approveBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
+        debugger
         if (item.status == "New") {
             $scope.Variables.approveNewRequest.update();
         } else if (item.status == "Edited") {
@@ -50,5 +48,4 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
         $scope.Variables.updateStatus.setInput("pk", item.pk);
         $scope.Variables.updateStatus.update();
     };
-
 }]);

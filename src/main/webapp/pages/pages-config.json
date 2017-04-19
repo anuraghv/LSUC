@@ -14,6 +14,13 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "Approvals",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "Business",
   "type" : "PAGE",
   "params" : [ {

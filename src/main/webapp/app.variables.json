@@ -56,6 +56,25 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_Approvals" : {
+    "_id" : "wm-goToPage_Approvals-wm.NavigationVariable-1492603476563",
+    "name" : "goToPage_Approvals",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Approvals",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "Approvals",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:pageParams.id"
+    } ],
+    "pageTransitions" : "none"
+  },
   "goToPage_BusinessList" : {
     "_id" : "wm-goToPage_BusinessList-wm.NavigationVariable-1491301986270",
     "name" : "goToPage_BusinessList",

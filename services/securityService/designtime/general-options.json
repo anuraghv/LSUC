@@ -22,7 +22,7 @@
     "policyType" : "IMPORT"
   },
   "csrfConfig" : {
-    "enforceCsrfSecurity" : false,
+    "enforceCsrfSecurity" : true,
     "headerName" : "X-WM-XSRF-TOKEN"
   },
   "tokenAuthConfig" : {
