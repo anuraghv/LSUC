@@ -49,6 +49,11 @@ Application.$controller("grid2Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
+
+        $scope.customButtonAction = function($event) {
+            $scope.Widgets.liveform2.new();
+        };
+
     }
 ]);
 
