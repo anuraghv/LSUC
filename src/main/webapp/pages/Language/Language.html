@@ -1,5 +1,5 @@
 <wm-partial data-ng-controller="LanguagePageController" name="partial1">
-    <wm-grid editmode="inline" title="Language" dataset="bind:Variables.LSUCPersonlanguagecommunicationchannelData.dataSet" navigation="None" name="grid2" gridclass="table-striped" iconclass="wi wi-language">
+    <wm-grid editmode="inline" title="Language" dataset="bind:Variables.LSUCPersonlanguagecommunicationchannelData.dataSet" navigation="None" name="grid2" gridclass="table-striped" iconclass="wi wi-language" class="panel-default">
         <wm-grid-column binding="personlanguage.language.shortNameEnglish" caption="Language" type="string" readonly="true" edit-widget-type="text" searchable="false" show="true"></wm-grid-column>
         <wm-grid-column binding="communicationchannel.pk" caption="Channel" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true"
         related-entity-name="Communicationchannel" readonly="false">
@@ -8,12 +8,6 @@
         <wm-grid-column binding="proficiencylevel.pk" caption="Proficiency" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Proficiencylevel"
         readonly="false">
             <wm-label caption="{{row.proficiencylevel.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
-        </wm-grid-column>
-        <wm-grid-column binding="communicationchannel.isDefault" caption="Is Default" type="character" widget-type="icon" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Communicationchannel">
-            <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.communicationchannel.isDefault ==='Y'}"></wm-icon>
-        </wm-grid-column>
-        <wm-grid-column binding="communicationchannel.isActive" caption="Is Active" type="character" widget-type="icon" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Communicationchannel">
-            <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.communicationchannel.isActive ==='Y'}"></wm-icon>
         </wm-grid-column>
         <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
         <wm-grid-action key="customButton" display-name="Add" show="true" class="btn-primary" iconclass="wi wi-plus" title="Add" action="customButtonAction($event)" shortcutkey="" disabled="false" icon="wi wi-plus" position="header"></wm-grid-action>

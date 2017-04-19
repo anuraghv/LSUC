@@ -1,5 +1,5 @@
 <wm-partial data-ng-controller="BusinessPersonRelationshipTypePageController" name="partial1">
-    <wm-grid editmode="inline" title="" dataset="bind:Variables.LSUCBusinesspersonrelationshipData.dataSet" navigation="None" name="grid1">
+    <wm-grid editmode="inline" title="" dataset="bind:Variables.LSUCBusinesspersonrelationshipData.dataSet" navigation="None" name="grid1" gridclass="table-striped">
         <wm-grid-column binding="businesspersonrelationshiptype.pk" caption="Relationship" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="All Fields" displayfield="shortNameEnglish" show="true"
         related-entity-name="Businesspersonrelationshiptype" readonly="false">
             <wm-label caption="{{row.businesspersonrelationshiptype.shortNameEnglish}}" class="" data-ng-class=""></wm-label>

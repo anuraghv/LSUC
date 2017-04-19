@@ -1,6 +1,6 @@
 <wm-partial data-ng-controller="MailingLabelPageController" name="partial1">
     <wm-livegrid name="mailingLabelLiveGrid">
-        <wm-grid gridfirstrowselect="true" editmode="form" title="" dataset="bind:Variables.LSUCMailinglabelData.dataSet" navigation="None" name="mailingLabelGrid" gridclass="table-striped table-hover">
+        <wm-grid gridfirstrowselect="true" editmode="form" title="Mailing Address" dataset="bind:Variables.LSUCMailinglabelData.dataSet" navigation="None" name="mailingLabelGrid" gridclass="table-striped table-hover" iconclass="wi wi-envelope" class="panel-default">
             <wm-grid-column binding="isDisplayedOnDirectory" caption="Is Displayed On Directory" type="character" generator="assigned" edit-widget-type="text" show="false" readonly="false"></wm-grid-column>
             <wm-grid-column binding="line1" caption="Line1" type="string" generator="assigned" edit-widget-type="text" show="false" readonly="false"></wm-grid-column>
             <wm-grid-column binding="line2" caption="Line2" type="string" generator="assigned" edit-widget-type="text" show="false" readonly="false"></wm-grid-column>
@@ -17,7 +17,8 @@
             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
             <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
         </wm-grid>
-        <wm-liveform novalidate="false" errormessage="" title="Mailing Label" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCMailinglabelData.dataSet" captionalign="left" captionposition="top" name="mailingLabelLiveForm" show="bind:Widgets.mailingLabelLiveForm.isUpdateMode">
+        <wm-liveform novalidate="false" errormessage="" title="Edit Mailing Address" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCMailinglabelData.dataSet" captionalign="left" captionposition="top" name="mailingLabelLiveForm"
+        show="bind:Widgets.mailingLabelLiveForm.isUpdateMode">
             <wm-layoutgrid columns="2" name="layoutgrid3">
                 <wm-gridrow name="gridrow3">
                     <wm-gridcolumn columnwidth="6" name="gridcolumn4">

@@ -108,7 +108,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "businessName",
           "type" : "string",
@@ -120,7 +120,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "numberOfEmployees",
           "type" : "integer",
@@ -144,7 +144,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isBusinessNameSameAsOwner",
           "type" : "character",
@@ -156,7 +156,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "alsoKnownAs",
           "type" : "string",
@@ -168,7 +168,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         } ]
       }, {
         "fieldName" : "person",
@@ -253,7 +253,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "lastName",
           "type" : "string",
@@ -265,7 +265,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "middleNames",
           "type" : "string",
@@ -277,7 +277,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "commonlyReferredToName",
           "type" : "string",
@@ -289,7 +289,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "mailingName",
           "type" : "string",
@@ -301,7 +301,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "birthDate",
           "type" : "date",
@@ -313,7 +313,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         } ]
       }, {
         "fieldName" : "pk",
@@ -338,7 +338,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       } ],
       "entityName" : "Businessperson",
       "fullyQualifiedName" : "com.lsuc.lsuc.Businessperson",
