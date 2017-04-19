@@ -1,9 +1,42 @@
-<wm-page data-ng-controller="ReportPageController" pagetitle="Report"> 
-    <wm-header content="header"></wm-header> 
-    <wm-top-nav content="topnav"></wm-top-nav> 
-    <wm-content> 
-        <wm-page-content columnwidth="12"> 
-        </wm-page-content> 
-    </wm-content> 
-    <wm-footer content="footer"></wm-footer> 
+<wm-page data-ng-controller="ReportPageController" pagetitle="Report" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="reportsLeftNav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1" padding="0px 0px unset 0px">
+            <wm-layoutgrid name="layoutgrid12">
+                <wm-gridrow name="gridrow2" class="bg-primary" padding="1em">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn4_1">
+                        <wm-label padding="unset 0.5em" name="label3" caption="From Date"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn5">
+                        <wm-date name="fromDate"></wm-date>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn5_1">
+                        <wm-label padding="unset 0.5em" name="label4" caption="To Date"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn22_1">
+                        <wm-date name="toDate"></wm-date>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn4" horizontalalign="left">
+                        <wm-button class="btn-secondary" caption="View Report" type="button" margin="unset 0.5em" name="button1"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn6"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-grid title="" dataset="bind:Variables.LSUCLicenseeclasspracticegroupData.dataSet" navigation="Basic" name="grid1" exportformat="EXCEL,CSV">
+                <wm-grid-column binding="pk" caption="Pk" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-grid-column>
+                <wm-grid-column binding="isPrimary" caption="Is Primary" type="character" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="effectiveFromDate" caption="Effective From Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="effectiveToDate" caption="Effective To Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="classpraticegroup.pk" caption="Classpraticegroup Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="select" show="true" related-entity-name="Classpraticegroup" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="classpraticegroup.isRequiredToPayFees" caption="Pay Fees" type="character" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Classpraticegroup"></wm-grid-column>
+                <wm-grid-column binding="classpraticegroup.classFk" caption="Class Fk" type="integer" generator="assigned" readonly="true" edit-widget-type="number" show="true" related-entity-name="Classpraticegroup"></wm-grid-column>
+                <wm-grid-column binding="classpraticegroup.practiceGroupFk" caption="Group Fk" type="integer" generator="assigned" readonly="true" edit-widget-type="number" show="true" related-entity-name="Classpraticegroup"></wm-grid-column>
+                <wm-grid-column binding="licensee.pk" caption="Licensee Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="select" show="true" related-entity-name="Licensee" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licensee.licenseeNumber" caption="Licensee Number" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Licensee"></wm-grid-column>
+            </wm-grid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>

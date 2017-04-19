@@ -184,6 +184,10 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "StatusChangeReport",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "User",
   "type" : "PAGE",
   "params" : [ ]
@@ -206,6 +210,10 @@
 }, {
   "name" : "personProfile",
   "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "reportsLeftNav",
+  "type" : "LEFTNAV",
   "params" : [ ]
 }, {
   "name" : "rightnav",
