@@ -162,6 +162,10 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "Report",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Role",
   "type" : "PARTIAL",
   "params" : [ {

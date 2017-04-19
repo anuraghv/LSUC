@@ -176,6 +176,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_Report" : {
+    "_id" : "wm-goToPage_Report-wm.NavigationVariable-1492576205347",
+    "name" : "goToPage_Report",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Report",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Search" : {
     "_id" : "wm-goToPage_Search-wm.NavigationVariable-1492072253333",
     "name" : "goToPage_Search",
