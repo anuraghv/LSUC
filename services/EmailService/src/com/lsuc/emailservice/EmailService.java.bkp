@@ -69,7 +69,7 @@ public class EmailService {
     //     return result;
     // }
     
-    public String sendEmail(String toEmailAddress,  String emailSubject, String emailMessage) {
+    public String sendEmail(String licenseeNumber,String licenseeName) {
         try {
             // Use javamail api, set parameters from registration.properties file
             // set the session properties
@@ -80,11 +80,19 @@ public class EmailService {
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.starttls.required", "true");
             Session session = Session.getDefaultInstance(props, null);
-
+            
+            String emailSubject = "Licensee Status Change for "+ licenseeNumber;
+            String emailMessage = "Hi <br>";
+            emailMessage = emailMessage+"The Licensee Status for " + licenseeName;
+            emailMessage = emailMessage+"with Licensee Number:"+licenseeNumber+" has been changed. Please review and provide your approval.<br>";
+            emailMessage = emailMessage+"Click <a href ='https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Main'>here</a> to review changes.<br>";
+             emailMessage = emailMessage+"Regards<br>"+securityService.getLoggedInUser().getUserName()+"<br><br>";
+             emailMessage = emailMessage+"Note: This is a system generated email. Kindly do not reply.";
+            
             // Create email message
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(NO_REPLY_MAIL_ID));
-            String[] recipientList = toEmailAddress.split(",");
+            String[] recipientList = SUPERVISOR_MAIL_ID.split(",");
             InternetAddress[] recipientAddress = new InternetAddress[recipientList.length];
             int counter = 0;
             for (String recipient: recipientList) {

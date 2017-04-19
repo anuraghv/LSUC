@@ -22,7 +22,7 @@ public class EmailController {
     @RequestMapping(value = "/sendEmail", produces = "application/json", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "")
-    public String sendEmail(@RequestParam(value = "toEmailAddress", required = false) String toEmailAddress, @RequestParam(value = "emailSubject", required = false) String emailSubject, @RequestParam(value = "emailMessage", required = false) String emailMessage) {
-        return emailService.sendEmail(toEmailAddress, emailSubject, emailMessage);
+    public String sendEmail(@RequestParam(value = "emailSubject", required = false) String licenseeNumber, @RequestParam(value = "emailMessage", required = false) String licenseeName) {
+        return emailService.sendEmail(licenseeNumber, licenseeName);
     }
 }
