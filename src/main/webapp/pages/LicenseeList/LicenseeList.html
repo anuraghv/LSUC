@@ -10,10 +10,7 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right">
                         <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus"></wm-button>
-                        <wm-buttongroup name="buttongroup1">
-                            <wm-button type="button" caption="List" name="listBtn" on-click="listBtnClick($event, $scope)" iconclass="wi wi-view-list fa-2x" class="btn-default"></wm-button>
-                            <wm-button type="button" caption="Card" name="cardBtn" on-click="cardBtnClick($event, $scope)" iconclass="wi wi-view-comfy fa-2x" class="btn-default"></wm-button>
-                        </wm-buttongroup>
+                        <wm-switch datavalue="list" name="switch1" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;"></wm-switch>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
@@ -55,8 +52,8 @@
                 <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" title="Filter" action="filter()" disabled="false" type="button"></wm-filter-action>
                 <wm-filter-action key="clear" display-name="Reset" show="true" class="btn-secondary" iconclass="wi wi-cancel" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
-            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="true" on-click="Variables.listgoToPage_LicenseeInfo.invoke()"
-            navigationalign="right">
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="bind:Widgets.switch1.datavalue === 'list'"
+            on-click="Variables.listgoToPage_LicenseeInfo.invoke()" navigationalign="right">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card" class="gray">
                         <wm-card-content horizontalalign="center" name="card_content1">
@@ -83,7 +80,7 @@
                     </wm-card>
                 </wm-listtemplate>
             </wm-livelist>
-            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="false" spacing="normal">
+            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.switch1.datavalue === 'grid'" spacing="normal">
                 <wm-grid-column binding="customField" caption="" type="string" widget-type="icon" width="40px" edit-widget-type="text" searchable="false" show="true" readonly="false">
                     <wm-icon caption="" iconclass="wi wi-account-circle fa-2x" iconposition="left" class="" data-ng-class=""></wm-icon>
                 </wm-grid-column>
