@@ -1210,7 +1210,7 @@
     font-family: inherit;
     font-weight: 500;
     line-height: 1.5;
-    color: #657b2c;
+    color: #000;
 }
 .wm-app h1 small,
 .wm-app h2 small,
@@ -4079,8 +4079,8 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     line-height: 1;
     color: #777;
     text-align: center;
-    background-color: #eaeaea;
-    border: 1px solid #eaeaea;
+    background-color: #fff;
+    border: 1px solid #fff;
     border-radius: 0;
 }
 .wm-app .input-group-addon.input-sm {
@@ -7004,7 +7004,7 @@ button.wm-app .close {
 .wm-app .h5,
 .wm-app .h6 {
     width: 100%;
-    color: #657b2c;
+    color: #000;
 }
 .wm-app .btn-secondary {
     background-color: transparent;
@@ -7445,7 +7445,7 @@ button.wm-app .close {
 }
 .wm-app .app-footer {
     padding: 1em 1.5em;
-    background-color: #e5e5e5;
+    background-color: #73808b;
     color: #515253;
     border-top: 1px solid #ccc;
     height: auto;
@@ -7482,7 +7482,7 @@ button.wm-app .close {
     box-shadow: none;
 }
 .wm-app .input-group-btn .btn {
-    background-color: #eaeaea;
+    background-color: #fff;
 }
 .wm-app .radio input,
 .wm-app .checkbox input {
@@ -7756,6 +7756,7 @@ button.wm-app .close {
 .wm-app .app-datanavigator .pagination.basic .pagination-first a,
 .wm-app .app-datanavigator .pagination.basic .pagination-last a {
     padding: 3px 7px;
+    margin: 0 10px;
 }
 .wm-app .app-datanavigator .pagination.basic li {
     font-size: 1.08em;
@@ -7772,6 +7773,8 @@ button.wm-app .close {
 }
 .wm-app .app-datanavigator .pagination.basic li.pagination-page a {
     font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
 }
 .wm-app .app-datanavigator .pagination.basic li.active a,
 .wm-app .app-datanavigator .pagination.basic li.active a:hover,
@@ -7822,7 +7825,6 @@ button.wm-app .close {
     color: #3b616c;
 }
 .wm-app .app-panel .heading {
-    font-size: 1.2em;
     font-weight: bold;
 }
 .wm-app .app-panel .app-icon {

@@ -24,11 +24,11 @@
     "dataSet" : [ {
       "id" : "list",
       "label" : "List",
-      "icon" : "wi wi-view-list fa-lg"
+      "icon" : "fa fa-th-list fa-lg"
     }, {
       "id" : "grid",
       "label" : "Grid",
-      "icon" : "wi wi-view-comfy fa-lg"
+      "icon" : "fa fa-th-large fa-lg"
     } ],
     "type" : "entry",
     "isList" : true,
