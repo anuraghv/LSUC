@@ -7,7 +7,6 @@ package com.lsuc.lsuc;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,25 +45,25 @@ public class Person implements Serializable {
     private Integer suffixFk;
     private Integer genderFk;
     private Date birthDate;
-    private List<Licenseephotoidcard> licenseephotoidcardsForPersonFkVerified = new ArrayList<>();
-    private List<Licenseephotoidcard> licenseephotoidcardsForPersonFkIssued = new ArrayList<>();
-    private List<Personemailcontact> personemailcontacts = new ArrayList<>();
+    private List<Licenseephotoidcard> licenseephotoidcardsForPersonFkVerified;
+    private List<Licenseephotoidcard> licenseephotoidcardsForPersonFkIssued;
+    private List<Personemailcontact> personemailcontacts;
     private Mailinglabel mailinglabel;
-    private List<Personphonecontact> personphonecontacts = new ArrayList<>();
-    private List<Personsocialmediacontact> personsocialmediacontacts = new ArrayList<>();
-    private List<Personperson> personpersonsForPersonFkParent = new ArrayList<>();
-    private List<Personperson> personpersonsForPersonFkChild = new ArrayList<>();
-    private List<Licensee> licensees = new ArrayList<>();
-    private List<User> users = new ArrayList<>();
+    private List<Personphonecontact> personphonecontacts;
+    private List<Personsocialmediacontact> personsocialmediacontacts;
+    private List<Personperson> personpersonsForPersonFkParent;
+    private List<Personperson> personpersonsForPersonFkChild;
+    private List<Licensee> licensees;
+    private List<User> users;
     private Gender gender;
     private Prefix prefix;
     private Suffix suffix;
-    private List<Businessperson> businesspersons = new ArrayList<>();
-    private List<Personothername> personothernames = new ArrayList<>();
-    private List<Personnameotherlanguage> personnameotherlanguages = new ArrayList<>();
-    private List<Personrole> personroles = new ArrayList<>();
-    private List<Personlanguage> personlanguages = new ArrayList<>();
-    private List<Personaddress> personaddresses = new ArrayList<>();
+    private List<Businessperson> businesspersons;
+    private List<Personothername> personothernames;
+    private List<Personnameotherlanguage> personnameotherlanguages;
+    private List<Personrole> personroles;
+    private List<Personlanguage> personlanguages;
+    private List<Personaddress> personaddresses;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

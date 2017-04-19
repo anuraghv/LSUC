@@ -7,6 +7,7 @@ package com.lsuc.lsuc.controller;
 
 
 import java.sql.Date;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,6 +30,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.export.ExportType;
 import com.wavemaker.runtime.data.expression.QueryFilter;
+import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wavemaker.runtime.file.model.Downloadable;
 import com.wavemaker.runtime.util.WMMultipartUtils;
@@ -144,9 +146,10 @@ public class LicenseephotoidcardController {
 
         return deletedLicenseephotoidcard != null;
     }
+
     @RequestMapping(value = "/licenseeFk-expiryDate", method = RequestMethod.GET)
     @ApiOperation(value = "Returns the matching Licenseephotoidcard with given unique key values.")
-    public Licenseephotoidcard getByLicenseeFkAndExpiryDate(@RequestParam(name = "licenseeFk") Integer licenseeFk, @RequestParam(name = "expiryDate") Date expiryDate) {
+    public Licenseephotoidcard getByLicenseeFkAndExpiryDate(@RequestParam("licenseeFk") Integer licenseeFk, @RequestParam("expiryDate") Date expiryDate) {
         LOGGER.debug("Getting Licenseephotoidcard with uniques key LicenseeFkAndExpiryDate");
         return licenseephotoidcardService.getByLicenseeFkAndExpiryDate(licenseeFk, expiryDate);
     }
@@ -193,6 +196,14 @@ public class LicenseephotoidcardController {
 		LOGGER.debug("counting Licenseephotoidcards");
 		return licenseephotoidcardService.count(query);
 	}
+
+    @ApiOperation(value = "Returns aggregated result with given aggregation info")
+	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	public Page<Map<String, Object>> getLicenseephotoidcardAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
+        LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
+        return licenseephotoidcardService.getAggregatedValues(aggregationInfo, pageable);
+    }
 
 
     /**

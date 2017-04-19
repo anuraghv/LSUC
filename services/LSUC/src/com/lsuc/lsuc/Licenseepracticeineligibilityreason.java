@@ -7,7 +7,6 @@ package com.lsuc.lsuc;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -40,7 +39,7 @@ public class Licenseepracticeineligibilityreason implements Serializable {
     private Integer practiceIneligibilityReason;
     private Date effectiveFromDate;
     private Date effectiveToDate;
-    private List<Licenseepracticeineligibilitysubreason> licenseepracticeineligibilitysubreasons = new ArrayList<>();
+    private List<Licenseepracticeineligibilitysubreason> licenseepracticeineligibilitysubreasons;
     private Licenseeclasspracticegroup licenseeclasspracticegroup;
     private Practiceinelgibilityreason practiceinelgibilityreason;
 

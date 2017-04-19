@@ -7,7 +7,6 @@ package com.lsuc.lsuc;
 
 import java.io.Serializable;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,8 +32,8 @@ public class Revinfo implements Serializable {
 
     private Integer rev;
     private BigInteger revtstmp;
-    private List<PersonAud> personAuds = new ArrayList<>();
-    private List<LicenseeAud> licenseeAuds = new ArrayList<>();
+    private List<PersonAud> personAuds;
+    private List<LicenseeAud> licenseeAuds;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

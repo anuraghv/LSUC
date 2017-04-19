@@ -7,6 +7,7 @@ package com.lsuc.lsuc.controller;
 
 
 import java.sql.Date;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.export.ExportType;
 import com.wavemaker.runtime.data.expression.QueryFilter;
+import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
@@ -99,9 +101,10 @@ public class LicenseepracticeineligibilityreasonController {
 
         return deletedLicenseepracticeineligibilityreason != null;
     }
+
     @RequestMapping(value = "/licenseeClassPracticeGroupFk-practiceIneligibilityReason-effectiveFromDate-effectiveToDate", method = RequestMethod.GET)
     @ApiOperation(value = "Returns the matching Licenseepracticeineligibilityreason with given unique key values.")
-    public Licenseepracticeineligibilityreason getByLicenseeClassPracticeGroupFkAndPracticeIneligibilityReasonAndEffectiveFromDateAndEffectiveToDate(@RequestParam(name = "licenseeClassPracticeGroupFk") Integer licenseeClassPracticeGroupFk, @RequestParam(name = "practiceIneligibilityReason") Integer practiceIneligibilityReason, @RequestParam(name = "effectiveFromDate") Date effectiveFromDate, @RequestParam(name = "effectiveToDate") Date effectiveToDate) {
+    public Licenseepracticeineligibilityreason getByLicenseeClassPracticeGroupFkAndPracticeIneligibilityReasonAndEffectiveFromDateAndEffectiveToDate(@RequestParam("licenseeClassPracticeGroupFk") Integer licenseeClassPracticeGroupFk, @RequestParam("practiceIneligibilityReason") Integer practiceIneligibilityReason, @RequestParam("effectiveFromDate") Date effectiveFromDate, @RequestParam("effectiveToDate") Date effectiveToDate) {
         LOGGER.debug("Getting Licenseepracticeineligibilityreason with uniques key LicenseeClassPracticeGroupFkAndPracticeIneligibilityReasonAndEffectiveFromDateAndEffectiveToDate");
         return licenseepracticeineligibilityreasonService.getByLicenseeClassPracticeGroupFkAndPracticeIneligibilityReasonAndEffectiveFromDateAndEffectiveToDate(licenseeClassPracticeGroupFk, practiceIneligibilityReason, effectiveFromDate, effectiveToDate);
     }
@@ -148,6 +151,14 @@ public class LicenseepracticeineligibilityreasonController {
 		LOGGER.debug("counting Licenseepracticeineligibilityreasons");
 		return licenseepracticeineligibilityreasonService.count(query);
 	}
+
+    @ApiOperation(value = "Returns aggregated result with given aggregation info")
+	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	public Page<Map<String, Object>> getLicenseepracticeineligibilityreasonAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
+        LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
+        return licenseepracticeineligibilityreasonService.getAggregatedValues(aggregationInfo, pageable);
+    }
 
     @RequestMapping(value="/{id:.+}/licenseepracticeineligibilitysubreasons", method=RequestMethod.GET)
     @ApiOperation(value = "Gets the licenseepracticeineligibilitysubreasons instance associated with the given id.")

@@ -7,6 +7,7 @@ package com.lsuc.lsuc.controller;
 
 
 import java.sql.Date;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.export.ExportType;
 import com.wavemaker.runtime.data.expression.QueryFilter;
+import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
@@ -32,7 +34,6 @@ import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
-import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseepracticeineligibilityreason;
 import com.lsuc.lsuc.service.LicenseeclasspracticegroupService;
 
@@ -100,9 +101,10 @@ public class LicenseeclasspracticegroupController {
 
         return deletedLicenseeclasspracticegroup != null;
     }
+
     @RequestMapping(value = "/licenseeFk-effectiveFromDate-effectiveToDate-classPracticeGroupFk", method = RequestMethod.GET)
     @ApiOperation(value = "Returns the matching Licenseeclasspracticegroup with given unique key values.")
-    public Licenseeclasspracticegroup getByLicenseeFkAndEffectiveFromDateAndEffectiveToDateAndClassPracticeGroupFk(@RequestParam(name = "licenseeFk") Integer licenseeFk, @RequestParam(name = "effectiveFromDate") Date effectiveFromDate, @RequestParam(name = "effectiveToDate") Date effectiveToDate, @RequestParam(name = "classPracticeGroupFk") Integer classPracticeGroupFk) {
+    public Licenseeclasspracticegroup getByLicenseeFkAndEffectiveFromDateAndEffectiveToDateAndClassPracticeGroupFk(@RequestParam("licenseeFk") Integer licenseeFk, @RequestParam("effectiveFromDate") Date effectiveFromDate, @RequestParam("effectiveToDate") Date effectiveToDate, @RequestParam("classPracticeGroupFk") Integer classPracticeGroupFk) {
         LOGGER.debug("Getting Licenseeclasspracticegroup with uniques key LicenseeFkAndEffectiveFromDateAndEffectiveToDateAndClassPracticeGroupFk");
         return licenseeclasspracticegroupService.getByLicenseeFkAndEffectiveFromDateAndEffectiveToDateAndClassPracticeGroupFk(licenseeFk, effectiveFromDate, effectiveToDate, classPracticeGroupFk);
     }
@@ -150,6 +152,14 @@ public class LicenseeclasspracticegroupController {
 		return licenseeclasspracticegroupService.count(query);
 	}
 
+    @ApiOperation(value = "Returns aggregated result with given aggregation info")
+	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	public Page<Map<String, Object>> getLicenseeclasspracticegroupAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
+        LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
+        return licenseeclasspracticegroupService.getAggregatedValues(aggregationInfo, pageable);
+    }
+
     @RequestMapping(value="/{id:.+}/licenseepracticeineligibilityreasons", method=RequestMethod.GET)
     @ApiOperation(value = "Gets the licenseepracticeineligibilityreasons instance associated with the given id.")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
@@ -157,15 +167,6 @@ public class LicenseeclasspracticegroupController {
 
         LOGGER.debug("Fetching all associated licenseepracticeineligibilityreasons");
         return licenseeclasspracticegroupService.findAssociatedLicenseepracticeineligibilityreasons(id, pageable);
-    }
-
-    @RequestMapping(value="/{id:.+}/licenseeclasspracticegroupApprovalses", method=RequestMethod.GET)
-    @ApiOperation(value = "Gets the licenseeclasspracticegroupApprovalses instance associated with the given id.")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(@PathVariable("id") Integer id, Pageable pageable) {
-
-        LOGGER.debug("Fetching all associated licenseeclasspracticegroupApprovalses");
-        return licenseeclasspracticegroupService.findAssociatedLicenseeclasspracticegroupApprovalses(id, pageable);
     }
 
     /**

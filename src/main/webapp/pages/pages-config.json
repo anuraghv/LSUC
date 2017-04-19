@@ -108,6 +108,20 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "OtherLanguageNames",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "OtherNames",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "Person",
   "type" : "PAGE",
   "params" : [ {

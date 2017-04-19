@@ -7,7 +7,6 @@ package com.lsuc.lsuc;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,10 +40,9 @@ public class Licenseeclasspracticegroup implements Serializable {
     private Date effectiveFromDate;
     private Date effectiveToDate;
     private Integer classPracticeGroupFk;
-    private List<Licenseepracticeineligibilityreason> licenseepracticeineligibilityreasons = new ArrayList<>();
+    private List<Licenseepracticeineligibilityreason> licenseepracticeineligibilityreasons;
     private Classpraticegroup classpraticegroup;
     private Licensee licensee;
-    private List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses = new ArrayList<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -138,16 +136,6 @@ public class Licenseeclasspracticegroup implements Serializable {
         }
 
         this.licensee = licensee;
-    }
-
-    @JsonInclude(Include.NON_EMPTY)
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licenseeclasspracticegroup")
-    public List<LicenseeclasspracticegroupApprovals> getLicenseeclasspracticegroupApprovalses() {
-        return this.licenseeclasspracticegroupApprovalses;
-    }
-
-    public void setLicenseeclasspracticegroupApprovalses(List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses) {
-        this.licenseeclasspracticegroupApprovalses = licenseeclasspracticegroupApprovalses;
     }
 
     @Override

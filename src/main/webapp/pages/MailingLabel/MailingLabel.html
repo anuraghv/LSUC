@@ -14,7 +14,6 @@
                 <wm-label caption="{{row.line1}}<br> {{row.line2}}<br> {{row.line3}} {{row.line4}}<br> {{row.line5}} {{row.line6}} {{row.city}} {{row.postalCode}}" class="" data-ng-class=""></wm-label>
             </wm-grid-column>
             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
-            <wm-grid-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-grid-action>
             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
             <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
         </wm-grid>

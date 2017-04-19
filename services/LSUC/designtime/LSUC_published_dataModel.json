@@ -28,6 +28,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -52,7 +53,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -77,7 +79,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -102,7 +105,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -127,7 +131,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -152,7 +157,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -177,7 +183,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -202,7 +209,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -228,6 +236,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -253,6 +262,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -260,6 +270,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1CATEGORY",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -272,7 +283,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKCATEGORY",
       "virtual" : false
@@ -322,6 +334,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -347,6 +360,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -372,6 +386,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -396,7 +411,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -421,7 +437,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -446,7 +463,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -472,6 +490,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -496,7 +515,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -521,7 +541,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -546,7 +567,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -572,6 +594,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -596,7 +619,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -621,7 +645,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -646,7 +671,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "timestamp",
       "unique" : false
     } ],
@@ -654,6 +680,7 @@
       "columns" : [ "LICENSEE_FK", "NEW_CLASS_PRACTICE_GROUP_FK", "NEW_EFFECTIVE_FROM_DATE", "NEW_EFFECTIVE_TO_DATE" ],
       "composite" : true,
       "name" : "XAK1LICENSEECLASSPRACTICEGROUP_APPROVALS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -666,7 +693,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEECLASSPRACTICEGROUP_APPROVALS",
       "virtual" : false
@@ -733,6 +761,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -758,6 +787,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -783,6 +813,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -808,6 +839,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -832,7 +864,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -857,7 +890,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -865,6 +899,7 @@
       "columns" : [ "BUSINESS_FK", "SOCIAL_MEDIA_TYPE_FK", "SOCIAL_MEDIA_PURPOSE_FK" ],
       "composite" : true,
       "name" : "XAK1BUSINESSSOCIALMEDIACONTACT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -877,7 +912,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSSOCIALMEDIACONTACT",
       "virtual" : false
@@ -961,6 +997,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -986,6 +1023,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1010,7 +1048,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -1035,7 +1074,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "blob",
       "unique" : false
     }, {
@@ -1060,7 +1100,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -1085,7 +1126,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -1110,7 +1152,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -1135,7 +1178,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -1161,6 +1205,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1186,6 +1231,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1211,6 +1257,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1236,6 +1283,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -1243,6 +1291,7 @@
       "columns" : [ "LICENSEE_FK", "EXPIRY_DATE" ],
       "composite" : true,
       "name" : "XAK1LICENSEEPHOTOIDCARD",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -1255,7 +1304,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEPHOTOIDCARD",
       "virtual" : false
@@ -1373,6 +1423,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -1398,6 +1449,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1423,6 +1475,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1447,7 +1500,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1472,7 +1526,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1497,7 +1552,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -1505,6 +1561,7 @@
       "columns" : [ "PERSON_FK", "EMAIL_PURPOSE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONEMAILCONTACT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -1517,7 +1574,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONEMAILCONTACT",
       "virtual" : false
@@ -1584,6 +1642,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -1608,7 +1667,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -1633,7 +1693,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1658,7 +1719,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1683,7 +1745,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1708,7 +1771,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1733,7 +1797,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1758,7 +1823,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1784,6 +1850,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -1809,6 +1876,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -1816,6 +1884,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1LANGUAGEPURPOSE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -1828,7 +1897,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLANGUAGEPURPOSE",
       "virtual" : false
@@ -1878,6 +1948,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -1902,7 +1973,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -1927,7 +1999,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1952,7 +2025,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -1977,7 +2051,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2002,7 +2077,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2027,7 +2103,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2052,7 +2129,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2078,6 +2156,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -2103,6 +2182,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -2110,6 +2190,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1BUSINESSLEGALTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -2122,7 +2203,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSLEGALTYPE",
       "virtual" : false
@@ -2172,6 +2254,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -2197,6 +2280,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -2221,7 +2305,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2246,7 +2331,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2271,7 +2357,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2296,7 +2383,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2321,7 +2409,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2346,7 +2435,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2371,7 +2461,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2396,7 +2487,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2422,6 +2514,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -2446,7 +2539,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2472,6 +2566,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -2479,6 +2574,7 @@
       "columns" : [ "PERSON_FK" ],
       "composite" : false,
       "name" : "XAK1MAILINGLABEL",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -2491,7 +2587,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKMAILINGLABEL",
       "virtual" : false
@@ -2575,6 +2672,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -2599,7 +2697,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -2624,7 +2723,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2649,7 +2749,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2674,7 +2775,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2699,7 +2801,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2724,7 +2827,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2749,7 +2853,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2775,6 +2880,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -2800,6 +2906,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -2807,6 +2914,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PHONETYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -2819,7 +2927,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPHONETYPE",
       "virtual" : false
@@ -2886,6 +2995,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -2910,7 +3020,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -2935,7 +3046,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2960,7 +3072,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -2985,7 +3098,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3010,7 +3124,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3035,7 +3150,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3060,7 +3176,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3086,6 +3203,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -3111,6 +3229,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -3118,6 +3237,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1CITIZENSHIP",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -3130,7 +3250,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKCITIZENSHIP",
       "virtual" : false
@@ -3180,6 +3301,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -3204,7 +3326,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3229,7 +3352,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3254,7 +3378,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3279,7 +3404,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3304,7 +3430,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3329,7 +3456,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3354,7 +3482,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3380,6 +3509,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -3405,6 +3535,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -3430,6 +3561,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -3437,6 +3569,7 @@
       "columns" : [ "CODE", "PRACTICE_ELIGIBILITY_FK" ],
       "composite" : true,
       "name" : "XAK1PRACTICEGROUP",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -3449,7 +3582,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPRACTICEGROUP",
       "virtual" : false
@@ -3516,6 +3650,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -3541,6 +3676,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -3566,6 +3702,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -3590,7 +3727,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3615,7 +3753,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3640,7 +3779,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3665,7 +3805,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3691,6 +3832,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -3698,6 +3840,7 @@
       "columns" : [ "PERSON_FK", "PHONE_PURPOSE_FK", "PHONE_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONPHONECONTACT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -3710,7 +3853,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONPHONECONTACT",
       "virtual" : false
@@ -3794,6 +3938,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -3818,7 +3963,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -3843,7 +3989,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3868,7 +4015,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3893,7 +4041,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3918,7 +4067,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3943,7 +4093,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3968,7 +4119,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -3994,6 +4146,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -4019,6 +4172,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -4026,6 +4180,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1COMMUNICATIONCHANNEL",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -4038,7 +4193,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKCOMMUNICATIONCHANNEL",
       "virtual" : false
@@ -4088,6 +4244,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -4112,7 +4269,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -4137,7 +4295,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4162,7 +4321,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4187,7 +4347,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4212,7 +4373,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4237,7 +4399,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4262,7 +4425,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4288,6 +4452,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -4313,6 +4478,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -4320,6 +4486,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1REGION",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -4332,7 +4499,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKREGION",
       "virtual" : false
@@ -4382,6 +4550,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -4406,7 +4575,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -4431,7 +4601,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4456,7 +4627,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4481,7 +4653,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4506,7 +4679,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4531,7 +4705,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4556,7 +4731,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4582,6 +4758,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -4607,6 +4784,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -4631,7 +4809,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -4639,6 +4818,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1LANGUAGE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -4651,7 +4831,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLANGUAGE",
       "virtual" : false
@@ -4718,6 +4899,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -4743,6 +4925,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     } ],
@@ -4750,6 +4933,7 @@
       "columns" : [ "LICENSEE_FK" ],
       "composite" : false,
       "name" : "XAK1PARALEGAL",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -4762,7 +4946,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPARALEGAL",
       "virtual" : false
@@ -4812,6 +4997,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -4836,7 +5022,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -4861,7 +5048,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4886,7 +5074,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4911,7 +5100,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4936,7 +5126,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4961,7 +5152,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -4986,7 +5178,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5012,6 +5205,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5037,6 +5231,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -5044,6 +5239,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PRACTICEELIGIBILITY",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -5056,7 +5252,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPRACTICEELIGIBILITY",
       "virtual" : false
@@ -5123,6 +5320,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -5147,7 +5345,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -5172,7 +5371,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5198,6 +5398,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5222,7 +5423,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5247,7 +5449,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5273,6 +5476,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5298,6 +5502,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5323,6 +5528,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5347,7 +5553,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -5355,6 +5562,7 @@
       "columns" : [ "BUSINESS_NUMBER" ],
       "composite" : false,
       "name" : "XAK1BUSINESS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -5367,7 +5575,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESS",
       "virtual" : false
@@ -5621,6 +5830,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -5645,7 +5855,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -5670,7 +5881,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5695,7 +5907,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5720,7 +5933,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5745,7 +5959,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5770,7 +5985,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5795,7 +6011,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -5821,6 +6038,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5846,6 +6064,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -5871,6 +6090,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -5878,6 +6098,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PRACTICEINELGIBILITYSUBREASON",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -5890,7 +6111,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPRACTICEINELGIBILITYSUBREASON",
       "virtual" : false
@@ -5957,6 +6179,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -5981,7 +6204,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -6006,7 +6230,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6031,7 +6256,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6056,7 +6282,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6081,7 +6308,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6106,7 +6334,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6131,7 +6360,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6157,6 +6387,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -6182,6 +6413,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -6189,6 +6421,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1ORGANIZATIONALUNITTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -6201,7 +6434,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKORGANIZATIONALUNITTYPE",
       "virtual" : false
@@ -6251,6 +6485,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -6275,7 +6510,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -6300,7 +6536,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6325,7 +6562,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6350,7 +6588,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6375,7 +6614,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6400,7 +6640,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6425,7 +6666,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6451,6 +6693,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -6476,6 +6719,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -6483,6 +6727,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1GENDER",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -6495,7 +6740,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKGENDER",
       "virtual" : false
@@ -6545,6 +6791,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -6569,7 +6816,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -6594,7 +6842,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6619,7 +6868,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6644,7 +6894,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6669,7 +6920,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6694,7 +6946,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6719,7 +6972,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6745,6 +6999,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -6770,6 +7025,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -6777,6 +7033,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1ADMISSIONROUTE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -6789,7 +7046,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKADMISSIONROUTE",
       "virtual" : false
@@ -6839,6 +7097,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -6863,7 +7122,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -6888,7 +7148,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6913,7 +7174,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6938,7 +7200,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6963,7 +7226,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -6988,7 +7252,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7013,7 +7278,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7039,6 +7305,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -7064,6 +7331,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -7071,6 +7339,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1BUSINESSPERSONRELATIONSHIPTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -7083,7 +7352,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSPERSONRELATIONSHIPTYPE",
       "virtual" : false
@@ -7133,6 +7403,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -7157,7 +7428,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -7182,7 +7454,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7207,7 +7480,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7232,7 +7506,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7257,7 +7532,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7282,7 +7558,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7307,7 +7584,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7333,6 +7611,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -7358,6 +7637,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -7365,6 +7645,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1SUFFIX",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -7377,7 +7658,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKSUFFIX",
       "virtual" : false
@@ -7427,6 +7709,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -7452,6 +7735,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -7477,6 +7761,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -7502,6 +7787,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -7509,6 +7795,7 @@
       "columns" : [ "BUSINESS_FK_CHILD", "BUSINESS_FK_PARENT" ],
       "composite" : true,
       "name" : "XAK1BUSINESSBUSINESS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -7521,7 +7808,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSBUSINESS",
       "virtual" : false
@@ -7605,6 +7893,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -7629,7 +7918,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -7654,7 +7944,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7679,7 +7970,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7704,7 +7996,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7729,7 +8022,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7754,7 +8048,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7779,7 +8074,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7805,6 +8101,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -7830,6 +8127,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -7837,6 +8135,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1BUSINESSTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -7849,7 +8148,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSTYPE",
       "virtual" : false
@@ -7899,6 +8199,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -7923,7 +8224,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -7948,7 +8250,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7973,7 +8276,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -7998,7 +8302,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8023,7 +8328,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8048,7 +8354,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8073,7 +8380,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8099,6 +8407,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -8124,6 +8433,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -8149,6 +8459,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -8156,6 +8467,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1LICENCETYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -8168,7 +8480,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENCETYPE",
       "virtual" : false
@@ -8235,6 +8548,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -8259,7 +8573,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -8284,7 +8599,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8309,7 +8625,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8334,7 +8651,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8359,7 +8677,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8384,7 +8703,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8409,7 +8729,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8435,6 +8756,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -8460,6 +8782,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -8467,6 +8790,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1SOCIALMEDIAPURPOSE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -8479,7 +8803,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKSOCIALMEDIAPURPOSE",
       "virtual" : false
@@ -8546,6 +8871,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -8570,7 +8896,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -8595,7 +8922,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8620,7 +8948,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8645,7 +8974,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8670,7 +9000,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8695,7 +9026,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8720,7 +9052,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8746,6 +9079,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -8771,6 +9105,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -8778,6 +9113,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1BUSINESSRELATIONSHIPTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -8790,7 +9126,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSRELATIONSHIPTYPE",
       "virtual" : false
@@ -8840,6 +9177,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -8864,7 +9202,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -8889,7 +9228,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8914,7 +9254,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8939,7 +9280,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8964,7 +9306,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -8989,7 +9332,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9014,7 +9358,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9040,6 +9385,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -9065,6 +9411,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -9072,6 +9419,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1LEGACYCLASSSTATUS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -9084,7 +9432,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLEGACYCLASSSTATUS",
       "virtual" : false
@@ -9134,6 +9483,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -9158,7 +9508,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -9183,7 +9534,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -9209,6 +9561,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -9234,6 +9587,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -9241,6 +9595,7 @@
       "columns" : [ "EFFECTIVE_FROM_DATE", "EFFECTIVE_TO_DATE", "LICENSEE_PRACTICE_INELIGIBILITY_REASON_FK", "PRACTICE_INELIGIBILITY_SUB_REASON_FK" ],
       "composite" : true,
       "name" : "XAK1LICENSEEPRACTICEINELIGIBILITYSUBREASON",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -9253,7 +9608,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEPRACTICEINELIGIBILITYSUBREASON",
       "virtual" : false
@@ -9320,6 +9676,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -9344,7 +9701,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -9369,7 +9727,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9394,7 +9753,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9419,7 +9779,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9444,7 +9805,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9469,7 +9831,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9494,7 +9857,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9520,6 +9884,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -9545,6 +9910,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -9552,6 +9918,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1USERPREFERENCETYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -9564,7 +9931,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKUSERPREFERENCETYPE",
       "virtual" : false
@@ -9614,6 +9982,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -9638,7 +10007,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -9663,7 +10033,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9688,7 +10059,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9713,7 +10085,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9738,7 +10111,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9763,7 +10137,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9788,7 +10163,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -9814,6 +10190,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -9839,6 +10216,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -9846,6 +10224,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1ADDRESSTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -9858,7 +10237,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKADDRESSTYPE",
       "virtual" : false
@@ -9942,6 +10322,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -9967,6 +10348,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -9992,6 +10374,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10017,6 +10400,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -10024,6 +10408,7 @@
       "columns" : [ "LICENSEE_FK", "PERSON_LANGUAGE_FK", "LANGUAGE_PURPOSE_FK" ],
       "composite" : true,
       "name" : "XAK1LICENSEEPERSONLANGUAGEPURPOSE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -10036,7 +10421,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEPERSONLANGUAGEPURPOSE",
       "virtual" : false
@@ -10120,6 +10506,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10145,6 +10532,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10170,6 +10558,7 @@
       "precision" : 5,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10194,7 +10583,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10219,7 +10609,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10244,7 +10635,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10269,7 +10661,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -10283,7 +10676,8 @@
       "composite" : true,
       "generator" : {
         "generatorType" : "assigned",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "SQL170414082951720",
       "virtual" : false
@@ -10333,6 +10727,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -10357,7 +10752,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -10382,7 +10778,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10407,7 +10804,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10432,7 +10830,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10457,7 +10856,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10482,7 +10882,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10507,7 +10908,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10533,6 +10935,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10558,6 +10961,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -10565,6 +10969,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1COUNTRY",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -10577,7 +10982,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKCOUNTRY",
       "virtual" : false
@@ -10695,6 +11101,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -10720,6 +11127,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10745,6 +11153,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -10769,7 +11178,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10794,7 +11204,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10819,7 +11230,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -10845,6 +11257,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -10852,6 +11265,7 @@
       "columns" : [ "BUSINESS_FK", "PHONE_PURPOSE_FK", "PHONE_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1BUSINESSPHONECONTACT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -10864,7 +11278,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSPHONECONTACT",
       "virtual" : false
@@ -10948,6 +11363,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -10972,7 +11388,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -10997,7 +11414,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11022,7 +11440,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11047,7 +11466,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11072,7 +11492,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11097,7 +11518,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11122,7 +11544,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11148,6 +11571,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11173,6 +11597,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -11180,6 +11605,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PERSONRELATIONSHIPTYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -11192,7 +11618,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONRELATIONSHIPTYPE",
       "virtual" : false
@@ -11242,6 +11669,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -11267,6 +11695,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11292,6 +11721,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11316,7 +11746,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -11324,6 +11755,7 @@
       "columns" : [ "LICENSEE_FK", "INSURANCE_COVERAGE_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1LICENSEEINSURANCE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -11336,7 +11768,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEINSURANCE",
       "virtual" : false
@@ -11420,6 +11853,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -11445,6 +11879,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11470,6 +11905,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11495,6 +11931,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11519,7 +11956,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11544,7 +11982,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -11552,6 +11991,7 @@
       "columns" : [ "PERSON_FK", "SOCIAL_MEDIA_TYPE_FK", "SOCIAL_MEDIA_PURPOSE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONSOCIALMEDIACONTACT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -11564,7 +12004,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONSOCIALMEDIACONTACT",
       "virtual" : false
@@ -11648,6 +12089,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -11673,6 +12115,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11698,6 +12141,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -11722,7 +12166,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -11730,6 +12175,7 @@
       "columns" : [ "CLASS_FK", "PRACTICE_GROUP_FK" ],
       "composite" : true,
       "name" : "XAK1CLASSPRATICEGROUP",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -11742,7 +12188,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKCLASSPRATICEGROUP",
       "virtual" : false
@@ -11826,6 +12273,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -11850,7 +12298,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -11875,7 +12324,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11900,7 +12350,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11925,7 +12376,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11950,7 +12402,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -11975,7 +12428,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12000,7 +12454,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12026,6 +12481,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -12051,6 +12507,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -12075,7 +12532,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -12083,6 +12541,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1FEECATEGORY",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -12095,7 +12554,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKFEECATEGORY",
       "virtual" : false
@@ -12145,6 +12605,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -12169,7 +12630,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -12194,7 +12656,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12219,7 +12682,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12244,7 +12708,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12269,7 +12734,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12294,7 +12760,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12319,7 +12786,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12345,6 +12813,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -12370,6 +12839,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -12377,6 +12847,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1EMAILPURPOSE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -12389,7 +12860,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKEMAILPURPOSE",
       "virtual" : false
@@ -12456,6 +12928,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -12481,6 +12954,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -12506,6 +12980,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -12530,7 +13005,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -12538,6 +13014,7 @@
       "columns" : [ "USER_FK", "USER_PREFERENCE_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1USERPREFERENCE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -12550,7 +13027,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKUSERPREFERENCE",
       "virtual" : false
@@ -12617,6 +13095,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -12642,6 +13121,7 @@
       "precision" : 20,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -12655,7 +13135,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "SQL170414082951900",
       "virtual" : false
@@ -12722,6 +13203,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -12746,7 +13228,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -12771,7 +13254,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12796,7 +13280,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12821,7 +13306,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12846,7 +13332,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12871,7 +13358,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12896,7 +13384,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -12922,6 +13411,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -12947,6 +13437,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -12954,6 +13445,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1INSURANCEPOLICYSTATUS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -12966,7 +13458,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKINSURANCEPOLICYSTATUS",
       "virtual" : false
@@ -13016,6 +13509,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -13040,7 +13534,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13065,7 +13560,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13090,7 +13586,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13115,7 +13612,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13140,7 +13638,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13165,7 +13664,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13190,7 +13690,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13216,6 +13717,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13241,6 +13743,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13266,6 +13769,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -13273,6 +13777,7 @@
       "columns" : [ "CODE", "PRACTICE_ELGIBILITY_FK" ],
       "composite" : true,
       "name" : "XAK1CLASS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -13285,7 +13790,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKCLASS",
       "virtual" : false
@@ -13369,6 +13875,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -13394,6 +13901,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13419,6 +13927,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13444,6 +13953,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -13451,6 +13961,7 @@
       "columns" : [ "PERSON_FK_PARENT", "PERSON_FK_CHILD" ],
       "composite" : true,
       "name" : "XAK1PERSONPERSON",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -13463,7 +13974,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONPERSON",
       "virtual" : false
@@ -13547,6 +14059,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -13572,6 +14085,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13597,6 +14111,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13622,6 +14137,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -13629,6 +14145,7 @@
       "columns" : [ "PERSON_LANGUAGE_FK", "COMMUNICATION_CHANNEL_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONLANGUAGECOMMUNICATIONCHANNEL",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -13641,7 +14158,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONLANGUAGECOMMUNICATIONCHANNEL",
       "virtual" : false
@@ -13725,6 +14243,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -13749,7 +14268,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -13774,7 +14294,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13799,7 +14320,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13824,7 +14346,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13849,7 +14372,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13874,7 +14398,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13899,7 +14424,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -13925,6 +14451,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13950,6 +14477,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -13975,6 +14503,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -13982,6 +14511,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PROVINCE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -13994,7 +14524,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPROVINCE",
       "virtual" : false
@@ -14112,6 +14643,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -14136,7 +14668,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -14161,7 +14694,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14186,7 +14720,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14211,7 +14746,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14236,7 +14772,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14261,7 +14798,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14286,7 +14824,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14312,6 +14851,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -14337,6 +14877,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -14344,6 +14885,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1OTHERNAMETYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -14356,7 +14898,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKOTHERNAMETYPE",
       "virtual" : false
@@ -14406,6 +14949,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -14430,7 +14974,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -14455,7 +15000,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14480,7 +15026,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14505,7 +15052,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14530,7 +15078,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14555,7 +15104,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14580,7 +15130,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -14606,6 +15157,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -14631,6 +15183,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -14638,6 +15191,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1LICENSEEPHOTOIDSTATUS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -14650,7 +15204,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEPHOTOIDSTATUS",
       "virtual" : false
@@ -14700,6 +15255,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -14725,6 +15281,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -14750,6 +15307,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -14774,7 +15332,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     } ],
@@ -14782,6 +15341,7 @@
       "columns" : [ "BUSINESS_PERSON_FK", "BUSINESS_PERSON_RELATIONSHIP_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1BUSINESSPERSONRELATIONSHIP",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -14794,7 +15354,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSPERSONRELATIONSHIP",
       "virtual" : false
@@ -14861,6 +15422,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -14886,6 +15448,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -14911,6 +15474,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -14935,7 +15499,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -14960,7 +15525,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -14985,7 +15551,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -15010,7 +15577,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -15035,7 +15603,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15060,7 +15629,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15085,7 +15655,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15111,6 +15682,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15136,6 +15708,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15161,6 +15734,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15186,6 +15760,7 @@
       "precision" : 5,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15210,7 +15785,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15235,7 +15811,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15260,7 +15837,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15286,6 +15864,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15310,7 +15889,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15336,6 +15916,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15361,6 +15942,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15385,7 +15967,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15411,6 +15994,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15435,7 +16019,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -15443,12 +16028,14 @@
       "columns" : [ "PERSON_FK", "LICENCE_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1LICENSEE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     }, {
       "columns" : [ "LICENSEE_NUMBER" ],
       "composite" : false,
       "name" : "XAK2LICENSEE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -15461,7 +16048,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEE",
       "virtual" : false
@@ -15704,23 +16292,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEECLASSPRACTICEGROUP",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "licenseeclasspracticegroupApprovalses",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "LICENSEE_FK"
-      } ],
-      "name" : "FK_LICENSEECLASSPRACTICEeX1D3",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "LICENSEE",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -15749,6 +16320,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15774,6 +16346,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15799,6 +16372,7 @@
       "precision" : 5,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15823,7 +16397,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     } ],
@@ -15837,7 +16412,8 @@
       "composite" : true,
       "generator" : {
         "generatorType" : "assigned",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "SQL170414082951550",
       "virtual" : false
@@ -15887,6 +16463,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -15912,6 +16489,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15937,6 +16515,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -15961,7 +16540,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -15986,7 +16566,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16011,7 +16592,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16036,7 +16618,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16061,7 +16644,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16086,7 +16670,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16111,7 +16696,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16136,7 +16722,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16162,6 +16749,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -16186,7 +16774,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16212,6 +16801,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -16237,6 +16827,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -16244,6 +16835,7 @@
       "columns" : [ "BUSINESS_FK", "ADDRESS_TYPE_FK_" ],
       "composite" : true,
       "name" : "XAK1BUSINESSADDRESS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -16256,7 +16848,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSADDRESS",
       "virtual" : false
@@ -16374,6 +16967,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -16398,7 +16992,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -16424,6 +17019,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -16448,7 +17044,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -16456,6 +17053,7 @@
       "columns" : [ "USER_PROFILE_NAME" ],
       "composite" : false,
       "name" : "XAK1USER",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -16468,7 +17066,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKUSER",
       "virtual" : false
@@ -16535,6 +17134,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -16559,7 +17159,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -16584,7 +17185,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16609,7 +17211,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16634,7 +17237,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16659,7 +17263,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16684,7 +17289,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16709,7 +17315,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16735,6 +17342,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -16760,6 +17368,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -16767,6 +17376,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1SOCIALMEDIATYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -16779,7 +17389,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKSOCIALMEDIATYPE",
       "virtual" : false
@@ -16846,6 +17457,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -16870,7 +17482,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16895,7 +17508,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16920,7 +17534,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16945,7 +17560,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16970,7 +17586,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -16996,6 +17613,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -17021,6 +17639,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -17046,6 +17665,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -17070,7 +17690,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     } ],
@@ -17084,7 +17705,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSON",
       "virtual" : false
@@ -17440,6 +18062,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -17464,7 +18087,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -17489,7 +18113,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17514,7 +18139,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17539,7 +18165,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17564,7 +18191,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17589,7 +18217,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17614,7 +18243,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17640,6 +18270,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -17665,6 +18296,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -17672,6 +18304,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1INSURANCECOVERAGETYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -17684,7 +18317,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKINSURANCECOVERAGETYPE",
       "virtual" : false
@@ -17734,6 +18368,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -17758,7 +18393,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -17783,7 +18419,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17808,7 +18445,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17833,7 +18471,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17858,7 +18497,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17883,7 +18523,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17908,7 +18549,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -17934,6 +18576,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -17959,6 +18602,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -17966,6 +18610,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PREFIX",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -17978,7 +18623,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPREFIX",
       "virtual" : false
@@ -18028,6 +18674,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -18053,6 +18700,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18078,6 +18726,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18102,7 +18751,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -18110,6 +18760,7 @@
       "columns" : [ "BUSINESS_FK", "PERSON_FK" ],
       "composite" : true,
       "name" : "XAK1BUSINESSPERSON",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -18122,7 +18773,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSPERSON",
       "virtual" : false
@@ -18206,6 +18858,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -18231,6 +18884,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18256,6 +18910,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18280,7 +18935,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -18288,6 +18944,7 @@
       "columns" : [ "PERSON_FK", "OTHER_NAME_TYPE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONOTHERNAME",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -18300,7 +18957,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONOTHERNAME",
       "virtual" : false
@@ -18367,6 +19025,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -18392,6 +19051,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18416,7 +19076,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18441,7 +19102,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18466,7 +19128,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18492,6 +19155,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -18499,6 +19163,7 @@
       "columns" : [ "BUSINESS_FK", "ORGANIZATIONALUNIT_NUMBER" ],
       "composite" : true,
       "name" : "XAK1ORGANIZATIONALUNIT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -18511,7 +19176,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKORGANIZATIONALUNIT",
       "virtual" : false
@@ -18595,6 +19261,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -18619,7 +19286,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -18644,7 +19312,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18669,7 +19338,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18694,7 +19364,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18719,7 +19390,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18744,7 +19416,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18769,7 +19442,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -18795,6 +19469,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18820,6 +19495,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18845,6 +19521,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -18852,6 +19529,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PRACTICEINELGIBILITYREASON",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -18864,7 +19542,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPRACTICEINELGIBILITYREASON",
       "virtual" : false
@@ -18948,6 +19627,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -18973,6 +19653,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -18998,6 +19679,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -19022,7 +19704,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19047,7 +19730,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     } ],
@@ -19055,6 +19739,7 @@
       "columns" : [ "BUSINESS_FK", "EMAIL_PURPOSE_FK" ],
       "composite" : true,
       "name" : "XAK1BUSINESSEMAILCONTACT",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -19067,7 +19752,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSEMAILCONTACT",
       "virtual" : false
@@ -19134,6 +19820,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -19158,7 +19845,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -19183,7 +19871,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19208,7 +19897,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19233,7 +19923,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19258,7 +19949,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19283,7 +19975,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19308,7 +20001,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19334,6 +20028,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -19359,6 +20054,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -19366,6 +20062,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PROFICIENCYLEVEL",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -19378,7 +20075,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPROFICIENCYLEVEL",
       "virtual" : false
@@ -19428,6 +20126,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -19452,7 +20151,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -19477,7 +20177,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19502,7 +20203,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19527,7 +20229,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19552,7 +20255,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19577,7 +20281,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19602,7 +20307,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19628,6 +20334,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -19653,6 +20360,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -19660,6 +20368,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1PHONEPURPOSE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -19672,7 +20381,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPHONEPURPOSE",
       "virtual" : false
@@ -19739,6 +20449,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -19764,6 +20475,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -19789,6 +20501,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -19813,7 +20526,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19838,7 +20552,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19863,7 +20578,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19888,7 +20604,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19913,7 +20630,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19938,7 +20656,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19963,7 +20682,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -19988,7 +20708,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20014,6 +20735,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20038,7 +20760,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20064,6 +20787,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20089,6 +20813,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -20096,6 +20821,7 @@
       "columns" : [ "ORGANIZATIONALUNIT_FK", "ADDRESS_TYPE_FK_" ],
       "composite" : true,
       "name" : "XAK1ORGANIZATIONALUNITADDRESS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -20108,7 +20834,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKORGANIZATIONALUNITADDRESS",
       "virtual" : false
@@ -20226,6 +20953,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -20251,6 +20979,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20276,6 +21005,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20300,7 +21030,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -20325,7 +21056,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     } ],
@@ -20333,6 +21065,7 @@
       "columns" : [ "LICENSEE_CLASS_PRACTICE_GROUP_FK", "PRACTICE_INELIGIBILITY_REASON", "EFFECTIVE_FROM_DATE", "EFFECTIVE_TO_DATE" ],
       "composite" : true,
       "name" : "XAK1LICENSEEPRACTICEINELIGIBILITYREASON",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -20345,7 +21078,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEPRACTICEINELIGIBILITYREASON",
       "virtual" : false
@@ -20429,6 +21163,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -20453,7 +21188,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -20478,7 +21214,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20503,7 +21240,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20528,7 +21266,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20553,7 +21292,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20578,7 +21318,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20603,7 +21344,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20629,6 +21371,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20654,6 +21397,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20679,6 +21423,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -20686,6 +21431,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1ROLE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -20698,7 +21444,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKROLE",
       "virtual" : false
@@ -20765,6 +21512,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -20790,6 +21538,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20815,6 +21564,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20839,7 +21589,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -20865,6 +21616,7 @@
       "precision" : 5,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20890,6 +21642,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -20914,7 +21667,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -20939,7 +21693,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -20965,6 +21720,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -20972,6 +21728,7 @@
       "columns" : [ "LICENSEE_INSURANCE_FK", "BUSINESS_FK_INSURANCE_COMPANY", "INSURANCE_POLICY_NUMBER", "INSURANCE_POLICY_SEQUENCE_NUMBER" ],
       "composite" : true,
       "name" : "XAK1LICENSEEINSURANCEPOLICY",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -20984,7 +21741,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEEINSURANCEPOLICY",
       "virtual" : false
@@ -21085,6 +21843,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -21109,7 +21868,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -21134,7 +21894,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21159,7 +21920,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21184,7 +21946,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21209,7 +21972,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21234,7 +21998,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21259,7 +22024,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21285,6 +22051,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -21310,6 +22077,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -21335,6 +22103,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -21342,6 +22111,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1GEOGRAPHICAREA",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -21354,7 +22124,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKGEOGRAPHICAREA",
       "virtual" : false
@@ -21472,6 +22243,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -21497,6 +22269,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     } ],
@@ -21504,6 +22277,7 @@
       "columns" : [ "LICENSEE_FK" ],
       "composite" : false,
       "name" : "XAK1LAWYER",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -21516,7 +22290,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLAWYER",
       "virtual" : false
@@ -21566,6 +22341,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -21590,7 +22366,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -21615,7 +22392,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21640,7 +22418,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21665,7 +22444,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21690,7 +22470,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21715,7 +22496,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21740,7 +22522,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21766,6 +22549,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -21791,6 +22575,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -21798,6 +22583,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1LICENSEETYPE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -21810,7 +22596,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEETYPE",
       "virtual" : false
@@ -21860,6 +22647,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -21884,7 +22672,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -21910,6 +22699,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -21935,6 +22725,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -21942,6 +22733,7 @@
       "columns" : [ "PERSON_FK", "LANGUAGE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONNAMEOTHERLANGUAGE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -21954,7 +22746,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONNAMEOTHERLANGUAGE",
       "virtual" : false
@@ -22021,6 +22814,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -22046,6 +22840,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -22071,6 +22866,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -22078,6 +22874,7 @@
       "columns" : [ "PERSON_FK", "ROLE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONROLE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -22090,7 +22887,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONROLE",
       "virtual" : false
@@ -22157,6 +22955,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -22182,6 +22981,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -22207,6 +23007,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -22214,6 +23015,7 @@
       "columns" : [ "PERSON_FK", "LANGUAGE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONLANGUAGE",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -22226,7 +23028,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONLANGUAGE",
       "virtual" : false
@@ -22327,6 +23130,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -22352,6 +23156,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -22376,7 +23181,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22401,7 +23207,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -22426,7 +23233,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     }, {
@@ -22452,6 +23260,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -22459,6 +23268,7 @@
       "columns" : [ "LICENSEE_FK", "EFFECTIVE_FROM_DATE", "EFFECTIVE_TO_DATE", "CLASS_PRACTICE_GROUP_FK" ],
       "composite" : true,
       "name" : "XAK1LICENSEECLASSPRACTICEGROUP",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -22471,7 +23281,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKLICENSEECLASSPRACTICEGROUP",
       "virtual" : false
@@ -22527,23 +23338,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEE",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "licenseeclasspracticegroupApprovalses",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "NEW_CLASS_PRACTICE_GROUP_FK"
-      } ],
-      "name" : "FK_LICENSEECLASSPRACTICEiw6kl",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "LICENSEECLASSPRACTICEGROUP",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -22572,6 +23366,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -22596,7 +23391,8 @@
       "partOfUniqueKey" : true,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : true
     }, {
@@ -22621,7 +23417,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22646,7 +23443,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22671,7 +23469,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22696,7 +23495,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22721,7 +23521,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22746,7 +23547,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22772,6 +23574,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -22797,6 +23600,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -22804,6 +23608,7 @@
       "columns" : [ "CODE" ],
       "composite" : false,
       "name" : "XAK1BUSINESSSTATUS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -22816,7 +23621,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKBUSINESSSTATUS",
       "virtual" : false
@@ -22866,6 +23672,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -22891,6 +23698,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -22916,6 +23724,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -22940,7 +23749,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22965,7 +23775,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -22990,7 +23801,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23015,7 +23827,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23040,7 +23853,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23065,7 +23879,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23090,7 +23905,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23115,7 +23931,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23141,6 +23958,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -23165,7 +23983,8 @@
       "partOfUniqueKey" : false,
       "precision" : 19,
       "primaryKey" : false,
-      "scale" : 0,
+      "scale" : 2,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -23191,6 +24010,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     }, {
@@ -23216,6 +24036,7 @@
       "precision" : 10,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : false
     } ],
@@ -23223,6 +24044,7 @@
       "columns" : [ "PERSON_FK", "ADDRESSTYPE_FK" ],
       "composite" : true,
       "name" : "XAK1PERSONADDRESS",
+      "schemaName" : null,
       "type" : "UNIQUE",
       "virtual" : false
     } ],
@@ -23235,7 +24057,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "XPKPERSONADDRESS",
       "virtual" : false

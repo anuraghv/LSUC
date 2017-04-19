@@ -7,7 +7,6 @@ package com.lsuc.lsuc;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -63,11 +62,11 @@ public class Licensee implements Serializable {
     private Character isLegacyClassStatusException;
     private Integer feeCategoryFk;
     private Character isExemptFromCpd;
-    private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFkCertified = new ArrayList<>();
-    private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFk = new ArrayList<>();
+    private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFkCertified;
+    private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFk;
     private Paralegal paralegal;
-    private List<Licenseepersonlanguagepurpose> licenseepersonlanguagepurposes = new ArrayList<>();
-    private List<Licenseeinsurance> licenseeinsurances = new ArrayList<>();
+    private List<Licenseepersonlanguagepurpose> licenseepersonlanguagepurposes;
+    private List<Licenseeinsurance> licenseeinsurances;
     private Admissionroute admissionroute;
     private Citizenship citizenship;
     private Feecategory feecategory;
@@ -76,8 +75,7 @@ public class Licensee implements Serializable {
     private Licencetype licencetype;
     private Person person;
     private Lawyer lawyer;
-    private List<Licenseeclasspracticegroup> licenseeclasspracticegroups = new ArrayList<>();
-    private List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses = new ArrayList<>();
+    private List<Licenseeclasspracticegroup> licenseeclasspracticegroups;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -462,16 +460,6 @@ public class Licensee implements Serializable {
 
     public void setLicenseeclasspracticegroups(List<Licenseeclasspracticegroup> licenseeclasspracticegroups) {
         this.licenseeclasspracticegroups = licenseeclasspracticegroups;
-    }
-
-    @JsonInclude(Include.NON_EMPTY)
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licensee")
-    public List<LicenseeclasspracticegroupApprovals> getLicenseeclasspracticegroupApprovalses() {
-        return this.licenseeclasspracticegroupApprovalses;
-    }
-
-    public void setLicenseeclasspracticegroupApprovalses(List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses) {
-        this.licenseeclasspracticegroupApprovalses = licenseeclasspracticegroupApprovalses;
     }
 
     @Override

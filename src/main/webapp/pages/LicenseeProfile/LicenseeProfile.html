@@ -16,21 +16,27 @@
                         <wm-container content="Addresses" name="container3">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-container>
+                        <wm-container name="otherNamesContainer" content="OtherNames">
+                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
+                        </wm-container>
+                        <wm-container name="otherLangNamescontainer" content="OtherLanguageNames">
+                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
+                        </wm-container>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="5" name="gridcolumn68" padding="unset 1em">
                         <wm-container content="Role" name="container4">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-container>
-
                         <wm-panel iconclass="wi wi-building" autoclose="outsideClick" name="panel3_1" content="BusinessRelationship" title="Business Relationship">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-panel>
-
                         <wm-container content="PersonalRelationShip" name="container6">
                             <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
                         </wm-container>
-                        <wm-panel iconclass="wi wi-account-circle" autoclose="outsideClick" name="panel7" title="Language" content="Language"></wm-panel>
-                        <wm-panel collapsible="false" showheader="true" name="panel3" title="Mailing Label" iconclass="wi wi-briefcase" content="MailingLabel"></wm-panel>
+                        <wm-panel iconclass="wi wi-language" autoclose="outsideClick" name="panel7" title="Language" content="Language">
+                            <wm-param name="id" value="bind:pageParams.id" type="integer"></wm-param>
+                        </wm-panel>
+                        <wm-panel collapsible="false" showheader="true" name="panel3" title="Mailing Label" iconclass="wi wi-home" content="MailingLabel"></wm-panel>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>

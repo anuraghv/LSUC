@@ -3,7 +3,7 @@
     <bean class="com.wavemaker.runtime.security.SecurityService" id="securityService"/>
     <bean class="com.wavemaker.runtime.security.controller.SecurityController" id="securityController"/>
     <bean class="com.wavemaker.runtime.web.filter.SSLSecureFilter" id="sslSecureFilter"/>
-    <bean class="com.wavemaker.runtime.security.xss.filter.WMXSSFilter" id="xssFilter"/>
+    <bean class="com.wavemaker.runtime.security.xss.filter.WMXSSFilter" id="wmXSSFilter"/>
     <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
@@ -20,6 +20,7 @@
         <property name="enforceSecurity">
             <value>${enabled}</value>
         </property>
+        <property name="tokenAuthConfig" ref="tokenAuthConfig"/>
     </bean>
     <bean class="com.wavemaker.commons.model.security.SSLConfig" id="sslConfig">
         <property name="useSSL" value="${general.ssl.enabled}"/>
@@ -29,5 +30,17 @@
         <property name="enforceXssSecurity" value="${general.xss.enabled}"/>
         <property name="policyFile" value="wm-xss-policies.xml"/>
         <property name="xssFilterStrategy" value="NONE"/>
+    </bean>
+    <bean class="com.wavemaker.commons.model.security.TokenAuthConfig" id="tokenAuthConfig">
+        <property name="enabled" value="${general.tokenService.enabled}"/>
+        <property name="parameter" value="${general.tokenService.parameter}"/>
+        <property name="tokenValiditySeconds" value="${general.tokenService.tokenValiditySeconds}"/>
+    </bean>
+    <bean class="com.wavemaker.runtime.security.filter.WMXFrameOptionsHeaderFilter" id="wmXFrameOptionsFilter"/>
+    <bean class="com.wavemaker.runtime.security.filter.WMXContentTypeOptionsFilter" id="wmXContentTypeOptionsFilter"/>
+    <bean class="org.springframework.security.web.FilterChainProxy" id="wmCompositeSecurityFilter">
+        <constructor-arg>
+            <security:filter-chain pattern="/**" filters="sslSecureFilter, wmXSSFilter, wmXFrameOptionsFilter, wmXContentTypeOptionsFilter"/>
+        </constructor-arg>
     </bean>
 </beans>

@@ -22,10 +22,10 @@ import com.wavemaker.runtime.data.dao.WMGenericDao;
 import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.export.ExportType;
 import com.wavemaker.runtime.data.expression.QueryFilter;
+import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
-import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseepracticeineligibilityreason;
 
 
@@ -38,10 +38,6 @@ import com.lsuc.lsuc.Licenseepracticeineligibilityreason;
 public class LicenseeclasspracticegroupServiceImpl implements LicenseeclasspracticegroupService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LicenseeclasspracticegroupServiceImpl.class);
-
-    @Autowired
-	@Qualifier("LSUC.LicenseeclasspracticegroupApprovalsService")
-	private LicenseeclasspracticegroupApprovalsService licenseeclasspracticegroupApprovalsService;
 
     @Autowired
 	@Qualifier("LSUC.LicenseepracticeineligibilityreasonService")
@@ -65,14 +61,6 @@ public class LicenseeclasspracticegroupServiceImpl implements Licenseeclasspract
                 licenseepracticeineligibilityreason.setLicenseeclasspracticegroup(licenseeclasspracticegroupCreated);
                 LOGGER.debug("Creating a new child Licenseepracticeineligibilityreason with information: {}", licenseepracticeineligibilityreason);
                 licenseepracticeineligibilityreasonService.create(licenseepracticeineligibilityreason);
-            }
-        }
-
-        if(licenseeclasspracticegroupCreated.getLicenseeclasspracticegroupApprovalses() != null) {
-            for(LicenseeclasspracticegroupApprovals licenseeclasspracticegroupApprovalse : licenseeclasspracticegroupCreated.getLicenseeclasspracticegroupApprovalses()) {
-                licenseeclasspracticegroupApprovalse.setLicenseeclasspracticegroup(licenseeclasspracticegroupCreated);
-                LOGGER.debug("Creating a new child LicenseeclasspracticegroupApprovals with information: {}", licenseeclasspracticegroupApprovalse);
-                licenseeclasspracticegroupApprovalsService.create(licenseeclasspracticegroupApprovalse);
             }
         }
         return licenseeclasspracticegroupCreated;
@@ -169,6 +157,12 @@ public class LicenseeclasspracticegroupServiceImpl implements Licenseeclasspract
     }
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
+	@Override
+    public Page<Map<String, Object>> getAggregatedValues(AggregationInfo aggregationInfo, Pageable pageable) {
+        return this.wmGenericDao.getAggregatedValues(aggregationInfo, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
     public Page<Licenseepracticeineligibilityreason> findAssociatedLicenseepracticeineligibilityreasons(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated licenseepracticeineligibilityreasons");
@@ -177,26 +171,6 @@ public class LicenseeclasspracticegroupServiceImpl implements Licenseeclasspract
         queryBuilder.append("licenseeclasspracticegroup.pk = '" + pk + "'");
 
         return licenseepracticeineligibilityreasonService.findAll(queryBuilder.toString(), pageable);
-    }
-
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(Integer pk, Pageable pageable) {
-        LOGGER.debug("Fetching all associated licenseeclasspracticegroupApprovalses");
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("licenseeclasspracticegroup.pk = '" + pk + "'");
-
-        return licenseeclasspracticegroupApprovalsService.findAll(queryBuilder.toString(), pageable);
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service LicenseeclasspracticegroupApprovalsService instance
-	 */
-	protected void setLicenseeclasspracticegroupApprovalsService(LicenseeclasspracticegroupApprovalsService service) {
-        this.licenseeclasspracticegroupApprovalsService = service;
     }
 
     /**

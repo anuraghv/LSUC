@@ -21,12 +21,12 @@ import com.wavemaker.runtime.data.dao.WMGenericDao;
 import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.export.ExportType;
 import com.wavemaker.runtime.data.expression.QueryFilter;
+import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Lawyer;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
-import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseeinsurance;
 import com.lsuc.lsuc.Licenseepersonlanguagepurpose;
 import com.lsuc.lsuc.Licenseephotoidcard;
@@ -54,10 +54,6 @@ public class LicenseeServiceImpl implements LicenseeService {
     @Autowired
 	@Qualifier("LSUC.LicenseeinsuranceService")
 	private LicenseeinsuranceService licenseeinsuranceService;
-
-    @Autowired
-	@Qualifier("LSUC.LicenseeclasspracticegroupApprovalsService")
-	private LicenseeclasspracticegroupApprovalsService licenseeclasspracticegroupApprovalsService;
 
     @Autowired
 	@Qualifier("LSUC.LicenseepersonlanguagepurposeService")
@@ -137,14 +133,6 @@ public class LicenseeServiceImpl implements LicenseeService {
                 licenseeclasspracticegroupService.create(licenseeclasspracticegroup);
             }
         }
-
-        if(licenseeCreated.getLicenseeclasspracticegroupApprovalses() != null) {
-            for(LicenseeclasspracticegroupApprovals licenseeclasspracticegroupApprovalse : licenseeCreated.getLicenseeclasspracticegroupApprovalses()) {
-                licenseeclasspracticegroupApprovalse.setLicensee(licenseeCreated);
-                LOGGER.debug("Creating a new child LicenseeclasspracticegroupApprovals with information: {}", licenseeclasspracticegroupApprovalse);
-                licenseeclasspracticegroupApprovalsService.create(licenseeclasspracticegroupApprovalse);
-            }
-        }
         return licenseeCreated;
     }
 
@@ -169,6 +157,23 @@ public class LicenseeServiceImpl implements LicenseeService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Licensee getByLicenseeNumber(String licenseeNumber) {
+        Map<String, Object> licenseeNumberMap = new HashMap<>();
+        licenseeNumberMap.put("licenseeNumber", licenseeNumber);
+
+        LOGGER.debug("Finding Licensee by unique keys: {}", licenseeNumberMap);
+        Licensee licensee = this.wmGenericDao.findByUniqueKey(licenseeNumberMap);
+
+        if (licensee == null){
+            LOGGER.debug("No Licensee found with given unique key values: {}", licenseeNumberMap);
+            throw new EntityNotFoundException(String.valueOf(licenseeNumberMap));
+        }
+
+        return licensee;
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Licensee getByPersonFkAndLicenceTypeFk(Integer personFk, Integer licenceTypeFk) {
         Map<String, Object> personFkAndLicenceTypeFkMap = new HashMap<>();
         personFkAndLicenceTypeFkMap.put("personFk", personFk);
@@ -180,23 +185,6 @@ public class LicenseeServiceImpl implements LicenseeService {
         if (licensee == null){
             LOGGER.debug("No Licensee found with given unique key values: {}", personFkAndLicenceTypeFkMap);
             throw new EntityNotFoundException(String.valueOf(personFkAndLicenceTypeFkMap));
-        }
-
-        return licensee;
-    }
-
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Licensee getByLicenseeNumber(String licenseeNumber) {
-        Map<String, Object> licenseeNumberMap = new HashMap<>();
-        licenseeNumberMap.put("licenseeNumber", licenseeNumber);
-
-        LOGGER.debug("Finding Licensee by unique keys: {}", licenseeNumberMap);
-        Licensee licensee = this.wmGenericDao.findByUniqueKey(licenseeNumberMap);
-
-        if (licensee == null){
-            LOGGER.debug("No Licensee found with given unique key values: {}", licenseeNumberMap);
-            throw new EntityNotFoundException(String.valueOf(licenseeNumberMap));
         }
 
         return licensee;
@@ -254,6 +242,12 @@ public class LicenseeServiceImpl implements LicenseeService {
     }
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
+	@Override
+    public Page<Map<String, Object>> getAggregatedValues(AggregationInfo aggregationInfo, Pageable pageable) {
+        return this.wmGenericDao.getAggregatedValues(aggregationInfo, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
     public Page<Licenseephotoidcard> findAssociatedLicenseephotoidcardsForLicenseeFkCertified(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated licenseephotoidcardsForLicenseeFkCertified");
@@ -308,17 +302,6 @@ public class LicenseeServiceImpl implements LicenseeService {
         return licenseeclasspracticegroupService.findAll(queryBuilder.toString(), pageable);
     }
 
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(Integer pk, Pageable pageable) {
-        LOGGER.debug("Fetching all associated licenseeclasspracticegroupApprovalses");
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("licensee.pk = '" + pk + "'");
-
-        return licenseeclasspracticegroupApprovalsService.findAll(queryBuilder.toString(), pageable);
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -344,15 +327,6 @@ public class LicenseeServiceImpl implements LicenseeService {
 	 */
 	protected void setLicenseeinsuranceService(LicenseeinsuranceService service) {
         this.licenseeinsuranceService = service;
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service LicenseeclasspracticegroupApprovalsService instance
-	 */
-	protected void setLicenseeclasspracticegroupApprovalsService(LicenseeclasspracticegroupApprovalsService service) {
-        this.licenseeclasspracticegroupApprovalsService = service;
     }
 
     /**
