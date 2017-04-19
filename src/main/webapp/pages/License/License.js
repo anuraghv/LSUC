@@ -58,6 +58,13 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         });
     };
 
+
+    $scope.policyFormSuccess = function($event, $operation, $data, item, currentItemWidgets) {
+        $timeout(function() {
+            $scope.Widgets.policyForm.isUpdateMode = false;
+        });
+    };
+
 }]);
 
 
@@ -129,6 +136,53 @@ Application.$controller("licenseDetailsForm Controller", ["$scope",
 ]);
 
 Application.$controller("grid2 Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("policyFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+
+        $scope.policyUpBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
+            $scope.isUpdateMode = true;
+        };
+
+    }
+]);
+
+Application.$controller("licenseeinsurancepolicyDialogController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("liveform5Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("addInsuranceFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("addPolicyFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("licenseeinsuranceDialogController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
