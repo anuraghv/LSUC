@@ -2,7 +2,7 @@
     <wm-layoutgrid name="layoutgrid3">
         <wm-gridrow name="gridrow9">
             <wm-gridcolumn columnwidth="6" name="gridcolumn22" padding="unset 1em unset unset">
-                <wm-liveform novalidate="false" errormessage="" title="License Status" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Variables.licenseStatusData.firstRecord"
+                <wm-liveform novalidate="false" errormessage="" title="License Information" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Variables.licenseStatusData.firstRecord"
                 on-success="licenseStatusFormSuccess($event, $operation, $data)" on-beforeservicecall="licenseStatusFormBeforeservicecall($event, $operation, $data)">
                     <wm-container name="container1_2" horizontalalign="right" margin="-4em unset unset unset" show="bind: !Widgets.licenseStatusForm.isUpdateMode">
                         <wm-button type="button" margin="unset 0.5em" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-primary" on-click="licenseStUpBtnClick($event, $scope)"></wm-button>
@@ -10,16 +10,18 @@
                     <wm-layoutgrid columns="2" name="layoutgrid2">
                         <wm-gridrow name="gridrow13">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn26">
-                                <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
-                                displayexpression="practicegroup.code + ' -  ' + practicegroup.shortNameEnglish"></wm-form-field>
+                                <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                placeholder="Select value" displayexpression="practicegroup.code + ' -  ' + practicegroup.shortNameEnglish"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn27_1">
-                                <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
+                                <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                outputformat="yyyy-MM-dd"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                         <wm-gridrow name="gridrow14">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn27">
-                                <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
+                                <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                outputformat="yyyy-MM-dd"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn28">
                                 <wm-form-field name="isPrimary" displayname="Is Primary" show="true" primary-key="false" generator="assigned" key="isPrimary" type="character" readonly="false" required="false" widget="checkbox" maxchars="1" placeholder="Enter value"></wm-form-field>
@@ -38,11 +40,12 @@
                     <wm-layoutgrid columns="3" name="layoutgrid6">
                         <wm-gridrow name="gridrow14_2">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn34_1">
-                                <wm-form-field name="insurancecoveragetype" displayname="Coverage Type" show="true" primary-key="false" generator="assigned" key="insurancecoveragetype" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
-                                displayexpression="code + ' - ' + shortNameEnglish"></wm-form-field>
+                                <wm-form-field name="insurancecoveragetype" displayname="Coverage Type" show="true" primary-key="false" generator="assigned" key="insurancecoveragetype" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                placeholder="Select value" displayexpression="code + ' - ' + shortNameEnglish"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn35_2">
-                                <wm-form-field name="isInsured" displayname="Is Insured" show="true" primary-key="false" generator="assigned" key="isInsured" type="string" readonly="false" required="false" widget="checkbox" maxchars="18" placeholder="Enter value" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
+                                <wm-form-field name="isInsured" displayname="Is Insured" show="true" primary-key="false" generator="assigned" key="isInsured" type="string" readonly="false" required="false" widget="checkbox" maxchars="18" placeholder="Enter value"
+                                checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                     </wm-layoutgrid>
@@ -52,7 +55,7 @@
                 </wm-liveform>
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="6" name="gridcolumn23">
-                <wm-liveform novalidate="false" errormessage="" title="Details" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm" formdata="bind:Variables.LicenseeData.firstRecord"
+                <wm-liveform novalidate="false" errormessage="" title="Licensee Information" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm" formdata="bind:Variables.LicenseeData.firstRecord"
                 on-success="licenseDetailsFormSuccess($event, $operation, $data)">
                     <wm-container name="container1_1" horizontalalign="right" show="bind:!Widgets.licenseDetailsForm.isUpdateMode" margin="-4em unset unset unset">
                         <wm-button margin="unset 0.5em" type="button" name="licenseDetUpBtn" iconclass="wi wi-mode-edit fa-2x" show="true" caption="Edit" class="btn-primary" on-click="licenseDetUpBtnClick($event, $scope)"></wm-button>
