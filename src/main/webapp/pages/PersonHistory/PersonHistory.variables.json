@@ -1,34 +1,4 @@
 {
-  "CommentsArr" : {
-    "_id" : "wm-CommentsArr-wm.Variable-1492176078169",
-    "name" : "CommentsArr",
-    "owner" : "Page",
-    "category" : "wm.Variable",
-    "dataBinding" : [ ],
-    "dataSet" : [ ],
-    "type" : "entry",
-    "isList" : true,
-    "saveInPhonegap" : false
-  },
-  "CommentsObj" : {
-    "_id" : "wm-CommentsObj-wm.Variable-1492177014833",
-    "name" : "CommentsObj",
-    "owner" : "Page",
-    "category" : "wm.Variable",
-    "dataBinding" : [ ],
-    "dataSet" : {
-      "action" : "Added",
-      "heading" : "Edited Person ",
-      "comment" : "Firstname changed",
-      "time" : "",
-      "days" : "2 hour ago",
-      "icon" : "fa fa-briefcase",
-      "icon_class" : "btn btn-rounded btn-primary"
-    },
-    "type" : "string",
-    "isList" : false,
-    "saveInPhonegap" : false
-  },
   "LSUCPersonAudData" : {
     "_id" : "wm-LSUCPersonAudData-wm.LiveVariable-1492158866878",
     "name" : "LSUCPersonAudData",
@@ -49,7 +19,7 @@
     "onSuccess" : "LSUCPersonAudDataonSuccess($event, $scope)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
-    "autoUpdate" : true,
+    "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
     "ignoreCase" : true,
@@ -192,127 +162,25 @@
     "filterFields" : { },
     "package" : "com.lsuc.lsuc.PersonAud"
   },
-  "personData" : {
-    "_id" : "wm-personData-wm.Variable-1492428341053",
-    "name" : "personData",
+  "personHistoryData" : {
+    "_id" : "wm-CommentsArr-wm.Variable-1492176078169",
+    "name" : "personHistoryData",
     "owner" : "Page",
     "category" : "wm.Variable",
     "dataBinding" : [ ],
     "dataSet" : [ {
-      "type" : "Address Change",
-      "old_address" : "NY1",
-      "new_address" : "NY2",
-      "old_class" : "",
-      "new_class" : "",
-      "old_practicegrp" : "",
-      "new_practicegrp" : "",
-      "category_old_val" : "Bussiness | Public",
-      "category_new_val" : "Home | Restricted",
-      "name" : "Gerald",
-      "id" : "L123"
-    }, {
-      "type" : "Address Change",
-      "old_address" : "North Orleans, Birtch Street, NY",
-      "new_address" : "New Square, City Hall, NY",
-      "category_old_val" : "Bussiness | Public",
-      "category_new_val" : "Home | Restricted",
-      "name" : "Maria",
-      "id" : "L124"
-    }, {
-      "type" : "Status Change",
-      "old_class" : "6 - Excuse Fee",
-      "new_class" : "2 - Life",
-      "old_practicegrp" : "PP - Private Practice",
-      "new_practicegrp" : "OE - Otherwise Employed",
-      "name" : "MR Nick B M",
-      "id" : "L12356"
-    }, {
-      "type" : "Status Change",
-      "old_class" : "6 - Excuse Fee",
-      "new_class" : "2 - Life",
-      "old_practicegrp" : "PP - Private Practice",
-      "new_practicegrp" : "OE - Otherwise Employed",
-      "name" : "Diana Shore",
-      "id" : "L128"
-    } ],
-    "type" : "entry",
-    "isList" : true,
-    "saveInPhonegap" : false
-  },
-  "personHistory" : {
-    "_id" : "wm-alphaMeetingList-wm.Variable-1491986582286",
-    "name" : "personHistory",
-    "owner" : "Page",
-    "category" : "wm.Variable",
-    "dataBinding" : [ ],
-    "dataSet" : [ {
-      "icon" : "fa fa-briefcase",
-      "icon_class" : "btn btn-rounded btn-primary",
-      "heading" : " ESFS Business Meeting",
-      "comment" : "This is the first announcement of details of the ESFS General Meeting for 2015 It will take place at the Barcelona Eurocon.",
-      "time" : "6:00 am",
-      "days" : "2 hour ago",
-      "date" : "Dec 24",
-      "tag" : "Tag",
-      "action_button" : "More info",
-      "action_button_class" : "btn-success"
-    }, {
-      "icon" : "wi wi-people",
-      "icon_class" : "btn btn-rounded btn-warning",
-      "heading" : "2nd International Skin Care Conference - An Asian Perspective",
-      "comment" : "Protection from the detrimental and damaging effects of the sun is a major concern world-wide.",
-      "time" : "7:00 am ",
-      "days" : "3 hour ago",
-      "date" : "Dec 24",
-      "tag" : "Mark",
-      "action_button" : "Download file",
-      "action_button_class" : "btn-primary"
-    }, {
-      "icon" : "fa fa-coffee",
-      "icon_class" : "btn btn-rounded btn-success",
-      "heading" : "Coffee Fest Anaheim 2016",
-      "comment" : "Where passionate coffee and tea professionals will learn skills, receive education and experience new products, alongside great networking.",
-      "time" : "8:00 am",
-      "days" : "1 hour ago",
-      "date" : "Dec 23",
-      "tag" : "Mark",
-      "action_button" : "Read more",
-      "action_button_class" : "btn-info"
-    }, {
-      "icon" : "wi wi-people",
-      "icon_class" : "btn btn-rounded btn-info",
-      "heading" : "RSA Conference",
-      "comment" : "RSA Conference conducts information security events around the globe that connect you to industry leaders and highly relevant information.",
-      "time" : "11:00 am",
-      "days" : "21 hour ago",
-      "date" : "Dec 23",
-      "tag" : "Done"
-    }, {
-      "icon" : "wi wi-glass",
-      "icon_class" : "btn btn-rounded btn-warning",
-      "heading" : "Corporate & Social Events Planning",
-      "comment" : "We’re grateful to have enjoyed nearly a century as the hospitality industry leader in planning and hosting private parties and corporate events.",
-      "time" : "09:00 pm",
-      "days" : "21 hour ago",
-      "tag" : "Tag"
-    }, {
-      "icon" : "fa fa-comments",
-      "icon_class" : "btn btn-rounded btn-primary",
-      "heading" : "Chat with Monica and Eric",
-      "comment" : "Details about who runs the company, and other key roles. Legal structure and action plan for British industry.",
-      "time" : "12:50 pm",
-      "days" : "48 hour ago",
-      "date" : "Dec 23",
-      "tag" : "Mark"
-    }, {
-      "icon" : "wi wi-room-service",
-      "icon_class" : "btn btn-rounded btn-danger",
-      "heading" : "Food Integration Lab",
-      "comment" : "The NEW Food Integration Lab, sponsored by Fresh Cup Magazine, designed to educate attendees about what it takes to successfully add a culinary program to their coffee shop.",
-      "time" : "12:50 pm",
-      "days" : "48 hour ago",
-      "date" : "Dec 23",
-      "tag" : "Mark"
+      "type" : "",
+      "entity" : "",
+      "newPropertyValues" : [ {
+        "types" : "",
+        "value" : ""
+      } ],
+      "oldPropertyValues" : [ {
+        "types" : "",
+        "value" : ""
+      } ],
+      "changedby" : "",
+      "timestamp" : ""
     } ],
     "type" : "entry",
     "isList" : true,

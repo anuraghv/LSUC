@@ -15,48 +15,55 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
     };
 
 
-
-
-
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
-        for (var i = 0; i < data.length; i++) {
-            debugger;
-            if (data.length === i)
-                return false;
-            _.mergeWith(data[i], data[i + 1],
-                function(objectValue, sourceValue, key, object, source) {
-                    if (key == "rev" || key == "revtstmp") {
-                        return;
-                    }
-                    if (!(_.isEqual(objectValue, sourceValue)) && (Object(objectValue) !== objectValue)) {
-                        if (source.revtype == 1) {
-                            $scope.Variables.CommentsObj.dataSet.icon = "wi wi-edit";
-                            source.revtype = "UPDATED"
-                        } else {
-                            source.revtype = "CREATED"
-                        }
-                        $scope.Variables.CommentsObj.dataSet.action = source.revtype,
-                            $scope.Variables.CommentsObj.dataSet.heading = "Edited  " + key,
-                            $scope.Variables.CommentsObj.dataSet.comment = key + " changed to " + sourceValue + " Old Value is  " + objectValue,
-                            $scope.Variables.CommentsObj.dataSet.time = source.revinfo.revtstmp,
-                            $scope.Variables.CommentsObj.dataSet.days = source.revinfo.revtstmp
-                        $scope.Variables.CommentsArr.dataSet.push($scope.Variables.CommentsObj.dataSet);
-                        // console.log($scope.Variables.CommentsArr.dataSet);
-                    }
-                });
+        $scope.Variables.personHistoryData.dataSet = [];
+        for (var i = 0; i < data.length - 1; i++) {
+            var historyData = {
+                "type": "edit",
+                "entity": "status",
+                "newPropertyValues": [],
+                "oldPropertyValues": [],
+                "changedby": "Gerald",
+                "timestamp": ""
+            };
+            var original = data[i],
+                latest = data[i + 1];
+            _.reduce(original, function(result, val, key) {
+                var newobj = {
+                    types: "",
+                    value: ""
+                }
+                var oldObj = {
+                    types: "",
+                    value: ""
+                }
+                if (!_.isEqual(latest[key], val) && !_.includes(["rev", "revinfo"], key)) {
+                    historyData.type = "Person Details Changed";
+                    newobj.types = key;
+                    newobj.value = latest[key];
+                    historyData.oldPropertyValues.push(newobj);
+                    oldObj.types = key;
+                    oldObj.value = val;
+                    historyData.newPropertyValues.push(oldObj);
+                    historyData.timestamp = latest.revinfo.revtstmp;
+                }
+
+            });
         }
+        $scope.Variables.personHistoryData.dataSet.push(historyData);
+
     };
 
 
 
 
 
-    $scope.livelist2groupby = function(rowData) {
-        return rowData.type + '<br/><p class="text-muted">' + rowData.name + ' (' + rowData.id + ')</p>';
-        /*
-         * this function is iterated over each data object in the livelist dataSet collection the data will be grouped by what is returned from this function E.g. to group a collection of CGPA details under rounded figure CGPA return following return Math.floor(dataObject.cgpa)
-         */
-    };
+    // $scope.livelist2groupby = function(rowData) {
+    //     return rowData.type + '<br/><p class="text-muted">' + rowData.name + ' (' + rowData.id + ')</p>';
+    //     /*
+    //      * this function is iterated over each data object in the livelist dataSet collection the data will be grouped by what is returned from this function E.g. to group a collection of CGPA details under rounded figure CGPA return following return Math.floor(dataObject.cgpa)
+    //      */
+    // };
 
 }]);
 

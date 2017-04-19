@@ -60,3 +60,15 @@ a.app-header-action .badge {
 .panel.no-padding-form .panel-body {
     padding: 0;
 }
+.old-block {
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px rgba(0, 0, 0, 0.1) solid;
+    margin-bottom: 1em;
+}
+.new-block {
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px rgba(0, 0, 0, 0.1) solid;
+    margin-bottom: 1em;
+}

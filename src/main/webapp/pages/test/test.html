@@ -4,6 +4,68 @@
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1" on-click="button1Click($event, $scope)"></wm-button>
+            <wm-livegrid formlayout="dialog" name="livegrid2_1">
+                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Person List" dataset="bind:Variables.LSUCPersonData1.dataSet" navigation="Basic" name="grid2_1">
+                    <wm-grid-column binding="pk" caption="Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="firstName" caption="First Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="lastName" caption="Last Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="middleNames" caption="Middle Names" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="commonlyReferredToName" caption="Commonly Referred To Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="mailingName" caption="Mailing Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="birthDate" caption="Birth Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-grid-column>
+                    <wm-grid-column binding="gender.pk" caption="Gender Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" related-entity-name="Gender"></wm-grid-column>
+                    <wm-grid-column binding="gender.code" caption="Gender Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Gender" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="gender.shortNameEnglish" caption="Name English" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Gender" readonly="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                    <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                    <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" errormessage="" title="Person Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonData1.dataSet" captionalign="left" captionposition="top" name="liveform2_1">
+                    <wm-layoutgrid columns="3" name="layoutgrid2_1">
+                        <wm-gridrow name="gridrow2_1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn4_1">
+                                <wm-form-field name="firstName" displayname="First Name" required="false" show="true" generator="assigned" primary-key="false" key="firstName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn5_1">
+                                <wm-form-field name="lastName" displayname="Last Name" required="false" show="true" generator="assigned" primary-key="false" key="lastName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn6_1">
+                                <wm-form-field name="middleNames" displayname="Middle Names" required="false" show="true" generator="assigned" primary-key="false" key="middleNames" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn7">
+                                <wm-form-field name="commonlyReferredToName" displayname="Commonly Referred To Name" required="false" show="true" generator="assigned" primary-key="false" key="commonlyReferredToName" type="string" is-related="false" maxchars="100"
+                                pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn8">
+                                <wm-form-field name="mailingName" displayname="Mailing Name" required="false" show="true" generator="assigned" primary-key="false" key="mailingName" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn9">
+                                <wm-form-field name="birthDate" displayname="Birth Date" required="false" show="true" generator="assigned" primary-key="false" key="birthDate" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10">
+                                <wm-form-field name="gender" displayname="Gender" required="false" show="true" generator="assigned" primary-key="false" key="gender" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11">
+                                <wm-form-field name="prefix" displayname="Prefix" required="false" show="true" generator="assigned" primary-key="false" key="prefix" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn12">
+                                <wm-form-field name="suffix" displayname="Suffix" required="false" show="true" generator="assigned" primary-key="false" key="suffix" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="pk" displayname="Pk" required="true" show="false" generator="identity" primary-key="true" key="pk" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
             <wm-livegrid formlayout="dialog" name="livegrid2">
                 <wm-grid gridfirstrowselect="true" editmode="dialog" title="Businesspersonrelationship List" dataset="bind:Variables.LSUCBusinesspersonrelationshipData.dataSet" navigation="Basic" name="grid2">
                     <wm-grid-column binding="pk" caption="Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
