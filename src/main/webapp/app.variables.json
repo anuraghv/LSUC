@@ -15,6 +15,25 @@
     } ],
     "operation" : "toast"
   },
+  "dataViews" : {
+    "_id" : "wm-dataViews-wm.Variable-1492591273557",
+    "name" : "dataViews",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "id" : "list",
+      "label" : "List",
+      "icon" : "wi wi-view-list fa-2x"
+    }, {
+      "id" : "grid",
+      "label" : "Grid",
+      "icon" : "wi wi-view-comfy fa-2x"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
   "goToPage_AddBusiness" : {
     "_id" : "wm-goToPage_AddBusiness-wm.NavigationVariable-1491988702597",
     "name" : "goToPage_AddBusiness",
