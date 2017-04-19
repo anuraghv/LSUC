@@ -39,9 +39,9 @@ import javax.mail.internet.MimeMessage;
 public class EmailService {
 
     private static final Logger logger = LoggerFactory.getLogger(EmailService.class);
-    private static final String NO_REPLY_MAIL_ID ="";
-    private static final String NO_REPLY_MAIL_PASSWORD ="";
-    private static final String SUPERVISOR_MAIL_ID ="";
+    private static final String NO_REPLY_MAIL_ID ="pramati.wave@gmail.com";
+    private static final String NO_REPLY_MAIL_PASSWORD ="Pr@m@t!123";
+    private static final String SUPERVISOR_MAIL_ID ="tribhuvan.durgam@wavemaker.com";
     //private static final String FORM_URL = "http://e12561a71473b.cloud.wavemakeronline.com/CivicXpress/#/Forms?
 
     @Autowired
@@ -84,7 +84,7 @@ public class EmailService {
             String emailSubject = "Licensee Status Change for "+ licenseeNumber;
             String emailMessage = "Hi <br><br>";
             emailMessage = emailMessage+"The Licensee Status for " + licenseeName;
-            emailMessage = emailMessage+"with Licensee Number:"+licenseeNumber+" has been changed. Please review and provide your approval.<br><br>";
+            emailMessage = emailMessage+" with Licensee Number:"+licenseeNumber+" has been changed. Please review and provide your approval.<br><br>";
             emailMessage = emailMessage+"Click <a href ='https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Main'>here</a> to review changes.<br><br>";
              emailMessage = emailMessage+"Regards<br>"+securityService.getLoggedInUser().getUserName()+"<br><br>";
              emailMessage = emailMessage+"Note: This is a system generated email. Kindly do not reply.";

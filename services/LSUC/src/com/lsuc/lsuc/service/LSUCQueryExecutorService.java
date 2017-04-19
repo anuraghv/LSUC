@@ -9,8 +9,11 @@ package com.lsuc.lsuc.service;
 
 import com.lsuc.lsuc.models.query.ApproveEditRecordRequest;
 import com.lsuc.lsuc.models.query.ApprovedNewRecordRequest;
+import com.lsuc.lsuc.models.query.UpdateStatusRequest;
 
 public interface LSUCQueryExecutorService {
+
+    Integer executeUpdateStatus(UpdateStatusRequest updateStatusRequest);
 
     Integer executeApproveEditRecord(ApproveEditRecordRequest approveEditRecordRequest);
 

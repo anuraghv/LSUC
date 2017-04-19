@@ -38,10 +38,11 @@
                     <wm-gridcolumn columnwidth="6" name="gridcolumn37" padding="unset 1em">
                         <wm-panel iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" name="panel2">
                             <wm-panel-footer name="panel_footer2"></wm-panel-footer>
-                            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand" name="pendingApprovalLiveList">
+                            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand" name="pendingApprovalLiveList"
+                            on-click="pendingApprovalLiveListClick($event, $scope)">
                                 <wm-listtemplate layout="inline" name="listtemplate2">
                                     <wm-panel subheading="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" iconclass="" autoclose="outsideClick" title="Status Change"
-                                    badgevalue="1 Oct, 2014" collapsible="true" closable="false" expanded="false" name="panel5">
+                                    badgevalue="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.pk" collapsible="true" closable="false" expanded="false" name="panel5">
                                         <wm-layoutgrid name="layoutgrid3">
                                             <wm-gridrow name="gridrow7" class="gray">
                                                 <wm-gridcolumn columnwidth="3" name="gridcolumn16">
@@ -74,8 +75,8 @@
                                                 </wm-gridcolumn>
                                                 <wm-gridcolumn columnwidth="4" name="gridcolumn23">
                                                     <wm-buttongroup name="buttongroup1">
-                                                        <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn"></wm-button>
-                                                        <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn"></wm-button>
+                                                        <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn" on-click="approveBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
+                                                        <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
                                                     </wm-buttongroup>
                                                 </wm-gridcolumn>
                                             </wm-gridrow>

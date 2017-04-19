@@ -3,8 +3,8 @@
     "name" : "approveEditRecord",
     "description" : "Approve the edit LicenseeClassPracticeGroup based on the request PK",
     "version" : "V2",
-    "queryString" : "update Licenseeclasspracticegroup a\nset a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
-    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
+    "queryString" : "update Licenseeclasspracticegroup a\n\nset a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\n\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\n\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
     "nativeSql" : false,
     "fetchCount" : true,
     "type" : "UPDATE",
@@ -31,7 +31,7 @@
     "name" : "approvedNewRecord",
     "description" : "Query to Insert a New record into LicenseeClassPracticeGroup on approval",
     "version" : "V2",
-    "queryString" : "INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk) select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey",
+    "queryString" : "INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk)\n\nselect licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey",
     "countQueryString" : null,
     "nativeSql" : false,
     "fetchCount" : false,
@@ -48,6 +48,41 @@
       "wrapped" : true,
       "typeRef" : "com.lsuc.lsuc.models.query.ApprovedNewRecordRequest",
       "method" : "POST"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  },
+  "updateStatus" : {
+    "name" : "updateStatus",
+    "description" : "Update the Status after approving/rejecting a request",
+    "version" : "V2",
+    "queryString" : "update RMS.LICENSEECLASSPRACTICEGROUP_APPROVALS set STATUS=:status where PK=:pk",
+    "countQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "UPDATE",
+    "parameters" : [ {
+      "name" : "status",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "TEST",
+      "required" : true
+    }, {
+      "name" : "pk",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.lsuc.lsuc.models.query.UpdateStatusRequest",
+      "method" : "PUT"
     },
     "response" : {
       "typeRef" : "java.lang.Integer",

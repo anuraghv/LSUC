@@ -2,10 +2,26 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
+    <sql-query name="updateStatus">
+        <![CDATA[
+        update RMS.LICENSEECLASSPRACTICEGROUP_APPROVALS set STATUS=:status where PK=:pk
+        ]]>
+    <query-param name="status" type="java.lang.String"/>
+    <query-param name="pk" type="java.lang.String"/>
+    </sql-query>
+
     <query name="approveEditRecord">
         <![CDATA[
         update Licenseeclasspracticegroup a
-set a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+
+set a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
+
+a.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
+
+a.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
+
+a.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+
 where a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
         ]]>
     <query-param name="approvalPk" type="java.lang.Integer"/>
@@ -13,7 +29,14 @@ where a.pk=(select b.licenseeclasspracticegroupPk from Licenseeclasspracticegrou
 
     <query name="approveEditRecord__count">
         <![CDATA[
-        select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+        select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
+
+a.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
+
+a.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
+
+a.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
+
 where a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
         ]]>
     <query-param name="approvalPk" type="java.lang.Integer"/>
@@ -21,7 +44,9 @@ where a.pk=(select b.licenseeclasspracticegroupPk from Licenseeclasspracticegrou
 
     <query name="approvedNewRecord">
         <![CDATA[
-        INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk) select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey
+        INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk)
+
+select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey
         ]]>
     <query-param name="primaryKey" type="java.lang.Integer"/>
     </query>

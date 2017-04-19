@@ -237,8 +237,8 @@
                     </constructor-arg>
                 </bean>
                 <bean class="com.wavemaker.runtime.security.WMUser">
-                    <constructor-arg value="jerald"/>
-                    <constructor-arg value="jerald"/>
+                    <constructor-arg value="Gerald"/>
+                    <constructor-arg value="Gerald"/>
                     <constructor-arg>
                         <list>
                             <value>ROLE_msr</value>
@@ -246,8 +246,8 @@
                     </constructor-arg>
                 </bean>
                 <bean class="com.wavemaker.runtime.security.WMUser">
-                    <constructor-arg value="mary"/>
-                    <constructor-arg value="mary"/>
+                    <constructor-arg value="Mary"/>
+                    <constructor-arg value="Mary"/>
                     <constructor-arg>
                         <list>
                             <value>ROLE_supervisor</value>

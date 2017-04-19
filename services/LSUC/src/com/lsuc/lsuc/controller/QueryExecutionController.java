@@ -31,6 +31,7 @@ import com.wordnik.swagger.annotations.ApiOperation;
 
 import com.lsuc.lsuc.models.query.ApproveEditRecordRequest;
 import com.lsuc.lsuc.models.query.ApprovedNewRecordRequest;
+import com.lsuc.lsuc.models.query.UpdateStatusRequest;
 import com.lsuc.lsuc.service.LSUCQueryExecutorService;
 
 @RestController(value = "LSUC.QueryExecutionController")
@@ -42,6 +43,16 @@ public class QueryExecutionController {
 
     @Autowired
     private LSUCQueryExecutorService queryService;
+
+    @RequestMapping(value = "/queries/updateStatus", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Update the Status after approving/rejecting a request")
+    public IntegerWrapper executeUpdateStatus(@Valid @RequestBody UpdateStatusRequest updateStatusRequest) {
+        LOGGER.debug("Executing named query: updateStatus");
+        Integer _result = queryService.executeUpdateStatus(updateStatusRequest);
+        LOGGER.debug("got the result for named query: updateStatus, result:{}", _result);
+        return new IntegerWrapper(_result);
+    }
 
     @RequestMapping(value = "/queries/approveEditRecord", method = RequestMethod.PUT)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)

@@ -94,7 +94,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         } ]
       }, {
         "fieldName" : "businesspersonrelationshiptype",
@@ -137,7 +137,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -149,7 +149,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -161,7 +161,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -173,7 +173,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -185,7 +185,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -197,7 +197,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -209,7 +209,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -258,7 +258,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       } ],
       "entityName" : "Businesspersonrelationship",
       "fullyQualifiedName" : "com.lsuc.lsuc.Businesspersonrelationship",

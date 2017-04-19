@@ -8,12 +8,12 @@
     "password" : "admin",
     "roles" : [ "supervisor" ]
   }, {
-    "userid" : "jerald",
-    "password" : "jerald",
+    "userid" : "Gerald",
+    "password" : "Gerald",
     "roles" : [ "msr" ]
   }, {
-    "userid" : "mary",
-    "password" : "mary",
+    "userid" : "Mary",
+    "password" : "Mary",
     "roles" : [ "supervisor" ]
   } ]
 }

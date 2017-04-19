@@ -20,6 +20,7 @@ import com.wavemaker.runtime.data.dao.query.WMQueryExecutor;
 
 import com.lsuc.lsuc.models.query.ApproveEditRecordRequest;
 import com.lsuc.lsuc.models.query.ApprovedNewRecordRequest;
+import com.lsuc.lsuc.models.query.UpdateStatusRequest;
 
 @Service
 public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
@@ -29,6 +30,17 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
     @Autowired
     @Qualifier("LSUCWMQueryExecutor")
     private WMQueryExecutor queryExecutor;
+
+    @Transactional(value = "LSUCTransactionManager")
+    @Override
+    public Integer executeUpdateStatus(UpdateStatusRequest updateStatusRequest) {
+        Map params = new HashMap(2);
+
+        params.put("status", updateStatusRequest.getStatus());
+        params.put("pk", updateStatusRequest.getPk());
+
+        return queryExecutor.executeNamedQueryForUpdate("updateStatus", params);
+    }
 
     @Transactional(value = "LSUCTransactionManager")
     @Override
