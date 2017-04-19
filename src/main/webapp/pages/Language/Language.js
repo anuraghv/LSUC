@@ -16,28 +16,45 @@ Application.$controller("LanguagePageController", ["$scope", function($scope) {
 
 
     $scope.LSUCPersonlanguagecommunicationchannelDataonBeforeUpdate = function(variable, inputData) {
+        if (inputData) {
+            inputData['personlanguage.personFk'] = {
+                'value': $scope.pageParams.id
+            };
+        }
+    };
 
+
+    $scope.liveform2Beforeservicecall = function($event, $operation, $data) {
+        $data.personlanguagecommunicationchannels = [{
+            communicationChannelFk: $data.Communicationchannel,
+            proficiencyLevelFk: $data.Proficiencylevel
+        }];
+    };
+
+
+    $scope.liveform3Beforeservicecall = function($event, $operation, $data) {
+        $data[personlanguage] = {
+            languageFk: 41,
+            personFk: 1
+        }
     };
 
 }]);
 
-Application.$controller("liveform3Controller", ["$scope",
+
+
+
+
+Application.$controller("grid2Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
     }
 ]);
 
-Application.$controller("grid1Controller", ["$scope",
+Application.$controller("liveform2Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
     }
-]);
-
-Application.$controller("personlanguageController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
 ]);
