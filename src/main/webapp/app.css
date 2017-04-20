@@ -46,10 +46,6 @@ a.app-header-action .badge {
     right: 2px;
     z-index: 2;
 }
-/*.panel .app-datagrid {*/
-/*    margin-bottom: 1em;*/
-/*}*/
-
 .panel.no-padding-form {
     padding: 0;
     border: 0;
@@ -70,27 +66,3 @@ a.app-header-action .badge {
     border: 1px rgba(0, 0, 0, 0.1) solid;
     margin-bottom: 1em;
 }
-/**************************************************/
-/*.wm-app .btn-link {*/
-/*    padding-top: 0;*/
-/*}*/
-/*.wm-app .btn-link:hover {*/
-/*    text-decoration: none;*/
-/*}*/
-/*.wm-app .btn-link .app-icon {*/
-/*    font-size: 1em !important;*/
-/*}*/
-/************************************************/
-/*.panel.panel-primary {*/
-/*    background: transparent;*/
-/*    border: none;*/
-/*    box-shadow: none;*/
-/*}*/
-/*.panel.panel-primary > .panel-heading {*/
-/*    background-color: #50a0a3;*/
-/*    color: white;*/
-/*}*/
-/*.panel.panel-primary > .panel-content > .panel-body {*/
-/*    padding-left: 0;*/
-/*    padding-right: 0;*/
-/*}*/

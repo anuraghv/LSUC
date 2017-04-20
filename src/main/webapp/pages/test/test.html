@@ -108,6 +108,24 @@
                     <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
                 </wm-liveform>
             </wm-livegrid>
+            <wm-grid editmode="inline" title="Licenseephotoidcard List" dataset="bind:Variables.LSUCLicenseephotoidcardData.dataSet" navigation="Basic" name="grid3">
+                <wm-grid-column binding="pk" caption="Pk" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-grid-column>
+                <wm-grid-column binding="expiryDate" caption="Expiry Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="photo" caption="Photo" type="blob" generator="assigned" edit-widget-type="upload" searchable="false" show="true" readonly="false"><a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a>
+                </wm-grid-column>
+                <wm-grid-column binding="applicationDate" caption="Application Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="applicationReceivedDate" caption="Application Received Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="verifiedDate" caption="Verified Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="issuedDate" caption="Issued Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licenseeByLicenseeFkCertified.pk" caption="Certified Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="pk" show="true" related-entity-name="Licensee"
+                readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licenseeByLicenseeFkCertified.licenseeNumber" caption="Licensee Number" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Licensee"></wm-grid-column>
+                <wm-grid-column binding="licenseeByLicenseeFkCertified.licenseDate" caption="License Date" type="date" generator="assigned" readonly="true" edit-widget-type="date" show="true" related-entity-name="Licensee"></wm-grid-column>
+                <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-grid-column>
+                <wm-grid-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-grid-action>
+                <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
+                <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
+            </wm-grid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
