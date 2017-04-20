@@ -45,7 +45,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
 
 
     $scope.LSUCInsertPersonDataonSuccess = function(variable, data) {
-        debugger;
+        $scope.Variables.NewPerson.dataSet.dataValue = data.pk;
         $scope.Variables.sendEmail.setInput({
             "licenseeNumber": data.licensees[0].licenseeNumber,
             "licenseeName": data.firstName + " " + data.lastName,
@@ -53,6 +53,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
         });
         $scope.Variables.sendEmail.update();
     };
+
 
 }]);
 

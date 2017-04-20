@@ -899,6 +899,19 @@
     "filterFields" : { },
     "package" : "com.lsuc.lsuc.Person"
   },
+  "NewPerson" : {
+    "_id" : "wm-NewPerson-wm.Variable-1492687814985",
+    "name" : "NewPerson",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : 0
+    },
+    "type" : "number",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "sitemap" : {
     "_id" : "wm-sitemap-wm.Variable-1492681085957",
     "name" : "sitemap",

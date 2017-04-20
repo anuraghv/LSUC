@@ -10,13 +10,15 @@
                 <wm-layoutgrid columns="3" name="layoutgrid2">
                     <wm-gridrow name="gridrow10">
                         <wm-gridcolumn columnwidth="4" name="gridcolumn13">
-                            <wm-form-field name="firstName" displayname="First Name" show="true" primary-key="false" generator="assigned" key="firstName" type="string" readonly="false" required="true" widget="text" maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="firstName" displayname="First Name" show="true" primary-key="false" generator="assigned" key="firstName" type="string" readonly="false" required="true" widget="text" maxchars="25" inputtype="text" placeholder="Enter value"
+                            regexp="^[a-zA-Z.]{1,}$" updateon="default"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="4" name="gridcolumn14">
                             <wm-form-field name="middleNames" displayname="Middle Name" show="true" primary-key="false" generator="assigned" key="middleNames" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="4" name="gridcolumn15">
-                            <wm-form-field name="lastName" displayname="Last Name" show="true" primary-key="false" generator="assigned" key="lastName" type="string" readonly="false" required="true" widget="text" maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="lastName" displayname="Last Name" show="true" primary-key="false" generator="assigned" key="lastName" type="string" readonly="false" required="true" widget="text" maxchars="100" inputtype="text" placeholder="Enter value"
+                            regexp="^[a-zA-Z.]{1,}$" updateon="default"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow11">
@@ -24,11 +26,9 @@
                             <wm-form-field name="gender" displayname="Gender" show="true" primary-key="false" generator="assigned" key="gender" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="4" name="gridcolumn17">
-                            <wm-form-field name="birthDate" displayname="Birth Date" show="true" primary-key="false" generator="assigned" key="birthDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
+                            <wm-form-field name="birthDate" displayname="Birth Date" show="true" primary-key="false" generator="assigned" key="birthDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd" outputformat="yyyy-MM-dd"
+                            maxdate="CURRENT_DATE"></wm-form-field>
                         </wm-gridcolumn>
-                    </wm-gridrow>
-                    <wm-gridrow name="gridrow16">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn31" padding="1em unset unset unset"></wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow15">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn29_1">
@@ -37,14 +37,14 @@
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn7">
                                             <wm-form-field name="addressLine1" displayname="Address Line 1" show="true" primary-key="false" generator="assigned" key="addressLine1" type="string" readonly="false" required="true" widget="text" maxchars="50"
-                                            inputtype="text" placeholder="Enter value"></wm-form-field>
+                                            inputtype="text" placeholder="Enter value" regexp="^[a-zA-Z0-9/()\s,'-]{5,}$" validationmessage="Minimum 5 characters" updateon="default"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn8">
                                             <wm-form-field name="addressLine2" displayname="Address Line 2" show="true" primary-key="false" generator="assigned" key="addressLine2" type="string" readonly="false" required="false" widget="text" maxchars="50"
                                             inputtype="text" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn9" class="gray">
-                                            <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false"
+                                            <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory ?" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false"
                                             widget="checkbox" maxchars="1" inputtype="text" placeholder="Enter value" defaultvalue="Y" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
@@ -58,7 +58,7 @@
                                             inputtype="text" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn12" class="gray">
-                                            <wm-form-field name="addresstype" displayname="Address Type" show="true" primary-key="false" generator="assigned" key="addresstype" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                            <wm-form-field name="addresstype" displayname="Address Type" show="true" primary-key="false" generator="assigned" key="addresstype" type="list" is-related="true" readonly="false" required="true" widget="select"
                                             placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
@@ -98,7 +98,6 @@
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
-                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                             </wm-liveform>
                         </wm-gridcolumn>
                     </wm-gridrow>
@@ -109,11 +108,11 @@
                                     <wm-gridrow name="gridrow9">
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn24_1">
                                             <wm-form-field name="licenseeNumber" displayname="Licensee Number" show="true" primary-key="false" generator="assigned" key="licenseeNumber" type="string" readonly="false" required="true" widget="text" maxchars="20"
-                                            inputtype="text" placeholder="Enter value"></wm-form-field>
+                                            inputtype="text" placeholder="Enter value" regexp="[0-9A-Za-z]{5,}" updateon="default"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn25">
-                                            <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date"
-                                            outputformat="yyyy-MM-dd"></wm-form-field>
+                                            <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd"
+                                            outputformat="yyyy-MM-dd" maxdate="CURRENT_DATE"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn26">
                                             <wm-form-field name="citizenship" displayname="Citizenship" show="true" primary-key="false" generator="assigned" key="citizenship" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
@@ -130,22 +129,15 @@
                                                 <wm-layoutgrid columns="1" name="layoutgrid5">
                                                     <wm-gridrow name="gridrow17_1">
                                                         <wm-gridcolumn columnwidth="4" name="gridcolumn33_1">
-                                                            <wm-form-field name="role" displayname="Role" show="true" primary-key="false" generator="assigned" key="role" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                                            <wm-form-field name="role" displayname="Role" show="true" primary-key="false" generator="assigned" key="role" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
                                                             displayexpression="shortNameEnglish"></wm-form-field>
                                                         </wm-gridcolumn>
                                                     </wm-gridrow>
                                                 </wm-layoutgrid>
-                                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                                             </wm-liveform>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow13">
-                                        <wm-gridcolumn columnwidth="12" name="gridcolumn25_1"></wm-gridcolumn>
-                                    </wm-gridrow>
                                 </wm-layoutgrid>
-                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                             </wm-liveform>
                         </wm-gridcolumn>
                     </wm-gridrow>
@@ -155,12 +147,12 @@
                             class="no-padding-form">
                                 <wm-layoutgrid columns="3" name="layoutgrid4" class="gray">
                                     <wm-gridrow name="gridrow14">
-                                        <wm-gridcolumn columnwidth="2" name="gridcolumn31_1">
-                                            <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date"
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn31_1">
+                                            <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd"
                                             outputformat="yyyy-MM-dd"></wm-form-field>
                                         </wm-gridcolumn>
-                                        <wm-gridcolumn columnwidth="2" name="gridcolumn27">
-                                            <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date"
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn27">
+                                            <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd"
                                             outputformat="yyyy-MM-dd"></wm-form-field>
                                         </wm-gridcolumn>
                                         <!--  <wm-gridcolumn columnwidth="2" name="gridcolumn28_1"><wm-label padding="unset 0.5em" name="label3" caption="Class"></wm-label><wm-select name="dummyClass" dataset="bind:Variables.LSUCClassData.dataSet" datafield="All Fields" displayfield="shortNameEnglish" placeholder="Select Class" required="true"></wm-select></wm-gridcolumn>-->
@@ -178,17 +170,19 @@
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
-                                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                             </wm-liveform>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="Variables.goToPage_Main.invoke()" display-name="Cancel" show="true" type="button" update-mode="true" shortcutkey=""></wm-form-action>
                 <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
-                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
             </wm-liveform>
         </wm-page-content>
     </wm-content>
