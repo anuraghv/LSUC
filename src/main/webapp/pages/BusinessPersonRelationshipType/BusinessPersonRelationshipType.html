@@ -1,7 +1,9 @@
 <wm-partial data-ng-controller="BusinessPersonRelationshipTypePageController" name="partial1">
     <wm-grid editmode="inline" title="bind:pageParams.businessName" dataset="bind:Variables.LSUCBusinesspersonrelationshipData.dataSet" navigation="None" name="businessRelations" gridclass="table-striped">
-        <wm-grid-column binding="businesspersonrelationshiptype.pk" caption="Relationship" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="All Fields" displayfield="shortNameEnglish" show="true"
-        related-entity-name="Businesspersonrelationshiptype" readonly="false">
+        <wm-grid-column binding="businessperson.pk" caption="Businessperson Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businesspersonId" show="false" related-entity-name="Businessperson"
+        readonly="false"></wm-grid-column>
+        <wm-grid-column binding="businesspersonrelationshiptype.pk" caption="Relationship" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="All Fields" displayfield="shortNameEnglish"
+        show="true" related-entity-name="Businesspersonrelationshiptype" readonly="false">
             <wm-label caption="{{row.businesspersonrelationshiptype.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
         <wm-grid-column binding="userReportedStartDate" caption="From Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>

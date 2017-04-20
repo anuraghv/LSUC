@@ -1,5 +1,6 @@
 <wm-partial data-ng-controller="OtherLanguageNamesPageController" name="partial1">
     <wm-grid editmode="inline" title="Other Language" dataset="bind:Variables.LSUCPersonnameotherlanguageData.dataSet" navigation="None" name="grid1" class="panel-default" gridclass="table-striped">
+        <wm-grid-column binding="person.pk" caption="Person Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.id" show="false" related-entity-name="Person" readonly="false"></wm-grid-column>
         <wm-grid-column binding="language.pk" caption="Language" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Language"
         readonly="false">
             <wm-label caption="{{row.language.shortNameEnglish}}" class="" data-ng-class=""></wm-label>

@@ -43,8 +43,8 @@
                         <wm-form-field name="addressLine4" displayname="Address Line4" show="true" primary-key="false" generator="assigned" key="addressLine4" type="string" readonly="false" required="false" widget="text" maxchars="50" inputtype="text" placeholder="Enter value"></wm-form-field>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn8">
-                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false" widget="text"
-                        maxchars="1" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false" widget="checkbox"
+                        maxchars="1" placeholder="Enter value" defaultvalue="N" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn9">
                         <wm-form-field name="addresstype" displayname="Addresstype" show="true" primary-key="false" generator="assigned" key="addresstype" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
@@ -69,6 +69,9 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn14">
                         <wm-form-field name="province" displayname="Province" show="true" primary-key="false" generator="assigned" key="province" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="4">
+                        <wm-form-field name="personFk" key="personFk" displayname="Person Fk" show="false" type="string" widget="number" defaultvalue="bind:pageParams.id"></wm-form-field>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>

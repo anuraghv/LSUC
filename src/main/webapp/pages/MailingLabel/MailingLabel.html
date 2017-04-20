@@ -25,8 +25,8 @@
                         <wm-form-field name="line1" displayname="Line1" show="true" primary-key="false" generator="assigned" key="line1" type="string" readonly="false" required="false" widget="text" maxchars="40" inputtype="text" placeholder="Enter value"></wm-form-field>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="6" name="gridcolumn5">
-                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false" widget="text"
-                        maxchars="1" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false" widget="checkbox"
+                        maxchars="1" placeholder="Enter value" defaultvalue="N" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                     </wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow4">
@@ -66,7 +66,12 @@
                         <wm-form-field name="country" displayname="Country" show="true" primary-key="false" generator="assigned" key="country" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn1" columnwidth="6">
-                        <wm-form-field name="pk" displayname="Pk" show="true" primary-key="true" generator="assigned" key="pk" type="integer" readonly="false" required="true" step="0" widget="number"></wm-form-field>
+                        <wm-form-field name="pk" displayname="Pk" show="true" primary-key="true" generator="assigned" key="pk" type="integer" readonly="false" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="6">
+                        <wm-form-field name="personFk" key="personFk" displayname="Person Fk" show="false" type="integer" widget="text" defaultvalue="bind:pageParams.id"></wm-form-field>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
