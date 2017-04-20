@@ -943,6 +943,10 @@
           "label" : "Approvals",
           "id" : "Approvals",
           "link" : "#/PersonHistory"
+        }, {
+          "label" : "Add Licensee",
+          "id" : "AddLicensee",
+          "link" : "#/AddLicensee"
         } ]
       }, {
         "label" : "Businesses",

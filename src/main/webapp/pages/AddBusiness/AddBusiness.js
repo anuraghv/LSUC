@@ -1,8 +1,8 @@
-Application.$controller("AddBusinessPageController", ["$scope", function ($scope) {
+Application.$controller("AddBusinessPageController", ["$scope", function($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function () {
+    $scope.onPageReady = function() {
         /*
          * variables can be accessed through '$scope.Variables' property here
          * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
@@ -14,4 +14,30 @@ Application.$controller("AddBusinessPageController", ["$scope", function ($scope
          */
     };
 
+    $scope.businessFormBeforeservicecall = function($event, $operation, $data) {
+        $data.businessaddresses = [$scope.Widgets.addressForm.dataoutput];
+    };
+
 }]);
+
+
+Application.$controller("businessFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("liveform2Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("addressFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
