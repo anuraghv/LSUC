@@ -5,17 +5,18 @@
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensees, Licensee" name="breadcrumb1"></wm-breadcrumb>
-            <wm-container content="personProfile" name="profileContainer"></wm-container>
             <wm-label padding="unset 0.5em" class="h2" caption="Licenses" name="label1"></wm-label>
+            <wm-container content="personProfile" name="profileContainer"></wm-container>
             <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="None" name="licenseList">
                 <wm-listtemplate layout="inline" name="listtemplate1">
                     <wm-panel subheading="bind:&quot;License Type: &quot;+Variables.LSUCLicenseeData.dataSet.data[$i].licencetype.code" iconclass="" autoclose="outsideClick" name="panel1" title="bind:&quot;License Number: &quot; + Variables.LSUCLicenseeData.dataSet.data[$i].licenseeNumber"
-                    badgevalue="bind:Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.code + ' - ' + Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.shortNameEnglish" collapsible="true" closable="false" content="License" class="panel-default"
+                    badgevalue="bind:Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.code + ' - ' + Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.shortNameEnglish" collapsible="true" closable="false" content="License" class="panel-primary"
                     expanded="true">
                         <wm-param name="licenseNumber" value="bind:Widgets.licenseList.currentItem.licenseeNumber" type="integer"></wm-param>
                     </wm-panel>
                 </wm-listtemplate>
             </wm-livelist>
+
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

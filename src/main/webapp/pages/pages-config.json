@@ -37,6 +37,9 @@
   "params" : [ {
     "name" : "businesspersonId",
     "type" : "integer"
+  }, {
+    "name" : "businessName",
+    "type" : "string"
   } ]
 }, {
   "name" : "BusinessRelationship",

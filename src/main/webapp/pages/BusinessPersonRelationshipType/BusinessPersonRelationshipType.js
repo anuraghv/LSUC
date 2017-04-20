@@ -17,7 +17,7 @@ Application.$controller("BusinessPersonRelationshipTypePageController", ["$scope
 }]);
 
 
-Application.$controller("grid1Controller", ["$scope",
+Application.$controller("businessRelationsController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
