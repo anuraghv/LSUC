@@ -17,9 +17,9 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
         $scope.PersonAudData = data.length;
-        if (data.length == 0)
+        if (data.length == 0) {
             return;
-        $scope.Variables.personHistoryData.dataSet = [];
+        }
         diffData(data, "Person Details");
 
 
@@ -37,7 +37,6 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
             "timestamp": ""
         };
         for (var i = 0; i < data.length - 1; i++) {
-
             var original = data[i],
                 latest = data[i + 1];
             _.reduce(original, function(result, val, key) {
@@ -66,7 +65,6 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
             });
             $scope.Variables.personHistoryData.dataSet.push(historyData);
-            console.log($scope.Variables.personHistoryData.dataSet);
         }
     }
 
@@ -75,17 +73,19 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
     $scope.LSUCPersonaddresDataonSuccess = function(variable, data) {
         $scope.Personaddres = data.length;
-        if (data.length == 0)
+        if (data.length == 0) {
             return;
-        $scope.Variables.personHistoryData.dataSet = [];
+        }
+
         diffData(data, "Address Details");
     };
 
 
     $scope.LicenseeClassPracticegrouponSuccess = function(variable, data) {
         $scope.Classpracticegroup = data.length;
-        if (data.length == 0)
+        if (data.length == 0) {
             return;
+        }
         $scope.Variables.personHistoryData.dataSet = [];
         diffData(data.content, "Licensee Class Practice Group Details");
     };
