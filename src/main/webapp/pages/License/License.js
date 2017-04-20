@@ -168,10 +168,22 @@ Application.$controller("addPolicyFormController", ["$scope",
     }
 ]);
 
+Application.$controller("policyFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
 Application.$controller("licenseeinsuranceDialogController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
+
+        $scope.addInsuranceFormBeforeservicecall = function($event, $operation, $data) {
+            $data.licenseeinsurancepolicies = [$scope.Widgets.policyForm.dataoutput];
+        };
+
     }
 ]);
 

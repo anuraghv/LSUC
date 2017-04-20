@@ -1,4 +1,4 @@
-Application.$controller("insurancePolicyPageController", ["$scope", function($scope) {
+Application.$controller("insurancePolicyPageController", ["$scope", "DialogService", function($scope, DialogService) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -20,6 +20,11 @@ Application.$controller("insurancePolicyPageController", ["$scope", function($sc
         });
     };
 
+
+    $scope.addPolicyBtnClick = function($event, $isolateScope) {
+        $scope.Widgets.addPolicyForm.new()
+    };
+
 }]);
 
 Application.$controller("policyFormController", ["$scope",
@@ -31,5 +36,19 @@ Application.$controller("policyFormController", ["$scope",
             $scope.isUpdateMode = true;
         };
 
+    }
+]);
+
+Application.$controller("licenseeinsurancepolicyDialogController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("addPolicyFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
     }
 ]);

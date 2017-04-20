@@ -4307,7 +4307,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 13,
+    "bindCount" : 14,
     "tableName" : "LICENSEEINSURANCEPOLICY",
     "tableType" : "TABLE",
     "properties" : [ "businessByBusinessFkInsuranceCompany", "businessByBusinessFkInsuranceBroker", "insurancepolicystatus", "licenseeinsurance" ],
