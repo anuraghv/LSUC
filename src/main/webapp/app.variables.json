@@ -899,6 +899,44 @@
     "filterFields" : { },
     "package" : "com.lsuc.lsuc.Person"
   },
+  "sitemap" : {
+    "_id" : "wm-sitemap-wm.Variable-1492681085957",
+    "name" : "sitemap",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "label" : "Home",
+      "icon" : "wi wi-home",
+      "link" : "#/Main",
+      "id" : "Main",
+      "children" : [ {
+        "label" : "Licensees",
+        "link" : "#/LicenseeList",
+        "id" : "LicenseeList",
+        "children" : [ {
+          "label" : "License Details",
+          "link" : "#/Licensee",
+          "id" : "Licensee"
+        }, {
+          "label" : "Personal Details",
+          "id" : "LicenseeProfile",
+          "link" : "#/LicenseeProfile"
+        }, {
+          "label" : "History",
+          "id" : "PersonHistory",
+          "link" : "#/PersonHistory"
+        }, {
+          "label" : "Approvals",
+          "id" : "Approvals",
+          "link" : "#/PersonHistory"
+        } ]
+      } ]
+    },
+    "type" : "entry",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",

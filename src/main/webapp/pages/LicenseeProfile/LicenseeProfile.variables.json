@@ -140,6 +140,18 @@
         "generator" : "assigned",
         "isRelated" : false,
         "scale" : 2
+      }, {
+        "fieldName" : "middleNames",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "MIDDLE_NAMES",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 100,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 2
       } ],
       "entityName" : "PersonAud",
       "fullyQualifiedName" : "com.lsuc.lsuc.PersonAud",

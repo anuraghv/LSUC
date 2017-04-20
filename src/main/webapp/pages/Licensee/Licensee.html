@@ -4,7 +4,7 @@
     <wm-content name="content1">
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
-            <wm-breadcrumb dataset="Home, Licensees, License Details" name="breadcrumb1"></wm-breadcrumb>
+            <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemid="id" itemchildren="children"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" class="h2" caption="License Details" name="label1"></wm-label>
             <wm-container content="personProfile" name="profileContainer"></wm-container>
             <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="None" name="licenseList">
