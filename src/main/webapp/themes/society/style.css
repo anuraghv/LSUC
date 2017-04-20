@@ -32,6 +32,7 @@
     /***Switch widget****/
     /******grid styles*******/
     /*** pagination***/
+    /***************Panel styles***********/
     /****accordion classes****/
     /**** panel *****/
     /*** dropdown menu*****/
@@ -5876,7 +5877,7 @@ button.wm-app .list-group-item-danger.active:focus {
     border-color: transparent;
 }
 .wm-app .panel-default > .panel-heading {
-    color: #555555;
+    color: #333;
     background-color: #fff;
     border-color: transparent;
 }
@@ -5885,28 +5886,28 @@ button.wm-app .list-group-item-danger.active:focus {
 }
 .wm-app .panel-default > .panel-heading .badge {
     color: #fff;
-    background-color: #555555;
+    background-color: #333;
 }
 .wm-app .panel-default > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: transparent;
 }
 .wm-app .panel-primary {
-    border-color: #3b616c;
+    border-color: transparent;
 }
 .wm-app .panel-primary > .panel-heading {
     color: #fff;
-    background-color: #3b616c;
-    border-color: #3b616c;
+    background-color: #50a0a3;
+    border-color: transparent;
 }
 .wm-app .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: #3b616c;
+    border-top-color: transparent;
 }
 .wm-app .panel-primary > .panel-heading .badge {
-    color: #3b616c;
+    color: #50a0a3;
     background-color: #fff;
 }
 .wm-app .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #3b616c;
+    border-bottom-color: transparent;
 }
 .wm-app .panel-success {
     border-color: #02b76e;
@@ -7006,21 +7007,6 @@ button.wm-app .close {
     width: 100%;
     color: #000;
 }
-.wm-app .btn-secondary {
-    background-color: transparent;
-    border: 2px solid #50a0a3;
-    color: #63d8dc;
-}
-.wm-app .btn-secondary:hover,
-.wm-app .btn-secondary:focus {
-    background-color: rgba(0, 0, 0, 0.01);
-    color: #50a0a3;
-}
-.wm-app .input-group-btn .btn[disabled]:hover,
-.wm-app .input-group-btn .btn[disabled]:focus {
-    background-color: transparent;
-    outline-color: transparent;
-}
 .wm-app * {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
@@ -7142,9 +7128,34 @@ button.wm-app .close {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+.wm-app .btn-link {
+    padding-top: 0;
+}
+.wm-app .btn-link:hover,
+.wm-app .btn-link.active {
+    text-decoration: none;
+}
+.wm-app .btn-link .app-icon {
+    font-size: 1em !important;
+}
 .wm-app .btn-group .btn {
     box-shadow: none;
     border-color: transparent;
+}
+.wm-app .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #50a0a3;
+    color: #63d8dc;
+}
+.wm-app .btn-secondary:hover,
+.wm-app .btn-secondary:focus {
+    background-color: rgba(0, 0, 0, 0.01);
+    color: #50a0a3;
+}
+.wm-app .input-group-btn .btn[disabled]:hover,
+.wm-app .input-group-btn .btn[disabled]:focus {
+    background-color: transparent;
+    outline-color: transparent;
 }
 .wm-app .btn-default:hover,
 .wm-app .btn-default:focus .wm-app .btn-default:active {
@@ -7315,6 +7326,10 @@ button.wm-app .close {
 .wm-app .popover .popover-content {
     padding: 0;
 }
+.wm-app .app-left-panel .nav,
+.wm-app .app-right-panel .nav {
+    margin: .5em .5em 0;
+}
 .wm-app .app-left-panel .nav li.app-nav-item,
 .wm-app .app-right-panel .nav li.app-nav-item {
     margin-top: 0;
@@ -7323,13 +7338,13 @@ button.wm-app .close {
 .wm-app .app-left-panel .nav li.app-nav-item.active > a,
 .wm-app .app-right-panel .nav li.app-nav-item.active > a {
     color: #fff;
-    background-color: #3b616c;
+    background-color: #8a969f;
 }
 .wm-app .app-left-panel .nav li.app-nav-item.active > a:hover,
 .wm-app .app-right-panel .nav li.app-nav-item.active > a:hover,
 .wm-app .app-left-panel .nav li.app-nav-item.active > a:focus,
 .wm-app .app-right-panel .nav li.app-nav-item.active > a:focus {
-    background-color: #3b616c;
+    background-color: #8a969f;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a,
 .wm-app .app-right-panel .nav li.app-nav-item a,
@@ -7341,12 +7356,14 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .dropdown a.dropdown-toggle,
 .wm-app .app-left-panel .nav li.app-nav-item .app-popover a,
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a {
-    padding: 1em;
+    padding: 0.5em;
     position: relative;
     border-radius: 0;
     line-height: 1.7;
-    color: #b3b3b3;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.15);
     text-shadow: none;
+    margin: 0.5em;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a.active,
 .wm-app .app-right-panel .nav li.app-nav-item a.active,
@@ -7358,7 +7375,7 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .dropdown a.dropdown-toggle.active,
 .wm-app .app-left-panel .nav li.app-nav-item .app-popover a.active,
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a.active {
-    background-color: #3b616c;
+    background-color: #8a969f;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a:hover,
 .wm-app .app-right-panel .nav li.app-nav-item a:hover,
@@ -7372,7 +7389,7 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 .wm-app .app-left-panel .nav li.app-nav-item a .app-icon,
 .wm-app .app-right-panel .nav li.app-nav-item a .app-icon,
@@ -7407,7 +7424,7 @@ button.wm-app .close {
     border: 0;
     border-bottom: 1px transparent solid;
     box-shadow: none;
-    background-color: #3d3c3c;
+    background-color: #73808b;
 }
 .wm-app .app-left-panel .nav li.app-nav-item > .dropdown.open > .dropdown-menu li a,
 .wm-app .app-right-panel .nav li.app-nav-item > .dropdown.open > .dropdown-menu li a {
@@ -7418,7 +7435,7 @@ button.wm-app .close {
 .wm-app .app-left-panel .nav li.app-nav-item > .dropdown.open .dropdown-menu,
 .wm-app .app-right-panel .nav li.app-nav-item > .dropdown.open .dropdown-menu {
     color: #fff;
-    background-color: #3d3c3c;
+    background-color: #73808b;
 }
 .wm-app .app-left-panel .nav li.app-nav-item > .dropdown.open .dropdown-menu .dropdown-submenu i.app-icon,
 .wm-app .app-right-panel .nav li.app-nav-item > .dropdown.open .dropdown-menu .dropdown-submenu i.app-icon {
@@ -7428,16 +7445,16 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav.open a:hover,
 .wm-app .app-left-panel .nav.open a:focus,
 .wm-app .app-right-panel .nav.open a:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 .wm-app .app-left-panel .app-nav .app-nav-item > .dropdown > a,
 .wm-app .app-right-panel .app-nav .app-nav-item > .dropdown > a {
     padding: 1.333em;
 }
 .wm-app .app-left-panel {
-    background-color: #3d3c3c;
+    background-color: #73808b;
     border-right: 1px solid #CFDBE2;
-    box-shadow: -1px 0px 0 #3d3c3c;
+    box-shadow: -1px 0px 0 #73808b;
 }
 .wm-app .app-right-panel {
     background-color: #3d3c3c;
@@ -7446,7 +7463,7 @@ button.wm-app .close {
 .wm-app .app-footer {
     padding: 1em 1.5em;
     background-color: #73808b;
-    color: #515253;
+    color: #fff;
     border-top: 1px solid #ccc;
     height: auto;
 }
@@ -7457,6 +7474,9 @@ button.wm-app .close {
 }
 .wm-app .panel.panel-default > .panel-heading {
     border-color: #ddd;
+}
+.wm-app .panel.panel-default > .panel-heading > .panel-title {
+    text-transform: uppercase;
 }
 .wm-app .form-group.live-field.active .control-label {
     text-shadow: 1px 1px 0 #eee;
@@ -7730,7 +7750,7 @@ button.wm-app .close {
     vertical-align: middle;
 }
 .wm-app .app-grid .app-datagrid {
-    padding: 0.6em 1em;
+    margin-bottom: 1em;
 }
 .wm-app .app-grid .app-datagrid .app-datagrid-cell.cell-editing:not(.checkbox-widget) {
     padding: 2px 4px;
@@ -7830,6 +7850,30 @@ button.wm-app .close {
 .wm-app .app-panel .app-icon {
     font-size: 1.5em;
 }
+.wm-app .app-panel.panel-primary {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent !important;
+}
+.wm-app .app-panel.panel-primary > .panel-heading {
+    box-shadow: -1px 2px 7px rgba(0, 0, 0, 0.15);
+}
+.wm-app .app-panel.panel-primary > .panel-content > .panel-body {
+    background-color: inherit;
+    box-shadow: inherit;
+    border-color: inherit;
+    padding-left: 0;
+    padding-right: 0;
+}
+.wm-app .app-panel.panel-primary .panel-actions > .app-icon {
+    opacity: .6;
+}
+.wm-app .app-panel.panel-primary .panel-actions > .app-icon.wi-minus:before {
+    content: "\f1d3";
+}
+.wm-app .app-panel.panel-primary .panel-actions > .app-icon.wi-plus:before {
+    content: "\f1d0";
+}
 .wm-app .app-accordion .app-accordion-panel.panel {
     box-shadow: none;
 }
@@ -7907,13 +7951,9 @@ button.wm-app .close {
 .wm-app .card {
     border-radius: 0;
     border-color: transparent;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
     margin-bottom: 1em;
-}
-.wm-app .panel .panel-heading .panel-title,
-.wm-app .card .panel-heading .panel-title {
-    color: #333;
 }
 .wm-app .panel .panel-heading .panel-title .heading,
 .wm-app .card .panel-heading .panel-title .heading {
@@ -7985,6 +8025,7 @@ button.wm-app .close {
 }
 .wm-app .app-card .app-card-header .card-heading {
     font-size: 1.155em;
+    color: #333;
 }
 .wm-app .app-card .app-card-header .app-card-avatar {
     height: 18pt;
@@ -8518,9 +8559,3 @@ button.wm-app .close {
     padding-top: 0.833em;
 }
 .wm-app .app-files-upload-status.multiple {
-    padding-top: 0.333em;
-    font-size: 1.2em;
-}
-.wm-app input[type='range'] {
-    color: #3b616c;
-}

@@ -29,7 +29,8 @@
                         <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand"
                         name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate2">
-                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:&quot;License Number: &quot;+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status">
+                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:&quot;License Number: &quot;+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status"
+                                iconclass="">
                                     <wm-anchor margin="unset 0.5em" name="anchor1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" on-click="Variables.goToPage_Approval.invoke()"></wm-anchor>
                                     <wm-layoutgrid name="layoutgrid3" class="new-block app-form">
                                         <wm-gridrow name="gridrow7">

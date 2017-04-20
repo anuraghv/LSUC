@@ -37,11 +37,8 @@
     display: inline-block;
 }
 a.app-header-action .badge {
-    top: 1em;
-    right: 0;
     font-size: 10px;
     background-color: red;
-    border-radius: 1em;
 }
 .icon-fixed {
     float: right;
@@ -49,9 +46,10 @@ a.app-header-action .badge {
     right: 2px;
     z-index: 2;
 }
-.panel .app-datagrid {
-    margin-bottom: 1em;
-}
+/*.panel .app-datagrid {*/
+/*    margin-bottom: 1em;*/
+/*}*/
+
 .panel.no-padding-form {
     padding: 0;
     border: 0;
@@ -73,28 +71,26 @@ a.app-header-action .badge {
     margin-bottom: 1em;
 }
 /**************************************************/
-
-.wm-app .btn-link {
-    padding-top: 0;
-}
-.wm-app .btn-link: hover {
-    text-decoration: none;
-}
-.wm-app .btn-link .app-icon {
-    font-size: 1em !important;
-}
+/*.wm-app .btn-link {*/
+/*    padding-top: 0;*/
+/*}*/
+/*.wm-app .btn-link:hover {*/
+/*    text-decoration: none;*/
+/*}*/
+/*.wm-app .btn-link .app-icon {*/
+/*    font-size: 1em !important;*/
+/*}*/
 /************************************************/
-
-.panel.panel-primary {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-}
-.panel.panel-primary > .panel-heading {
-    background-color: #50a0a3;
-    color: white;
-}
-.panel.panel-primary > .panel-content > .panel-body {
-    padding-left: 0;
-    padding-right: 0;
-}
+/*.panel.panel-primary {*/
+/*    background: transparent;*/
+/*    border: none;*/
+/*    box-shadow: none;*/
+/*}*/
+/*.panel.panel-primary > .panel-heading {*/
+/*    background-color: #50a0a3;*/
+/*    color: white;*/
+/*}*/
+/*.panel.panel-primary > .panel-content > .panel-body {*/
+/*    padding-left: 0;*/
+/*    padding-right: 0;*/
+/*}*/
