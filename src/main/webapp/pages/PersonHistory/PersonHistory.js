@@ -17,6 +17,8 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
         $scope.PersonAudData = data.length;
+        if (data.length == 0)
+            return;
         $scope.Variables.personHistoryData.dataSet = [];
         diffData(data, "Person Details");
 
@@ -47,7 +49,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                     types: "",
                     value: ""
                 }
-                if (!_.isEqual(latest[key], val) && !_.includes(["rev", "revinfo"], key)) {
+                if (!_.isEqual(latest[key], val) && !_.includes(["rev", "revinfo", "revtstmp"], key)) {
                     historyData.type = type;
                     newobj.types = key || "NULL";
                     newobj.value = latest[key] || "NULL";
@@ -55,11 +57,16 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                     oldObj.types = key || "NULL";
                     oldObj.value = val || "NULL";
                     historyData.oldPropertyValues.push(oldObj);
-                    historyData.timestamp = latest.revinfo.revtstmp;
+                    if (type == "Licensee Class Practice Group Details") {
+                        historyData.timestamp = latest.revtstmp;
+                    } else {
+                        historyData.timestamp = latest.revinfo.revtstmp;
+                    }
                 }
 
             });
             $scope.Variables.personHistoryData.dataSet.push(historyData);
+            console.log($scope.Variables.personHistoryData.dataSet);
         }
     }
 
@@ -68,12 +75,17 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
     $scope.LSUCPersonaddresDataonSuccess = function(variable, data) {
         $scope.Personaddres = data.length;
+        if (data.length == 0)
+            return;
+        $scope.Variables.personHistoryData.dataSet = [];
         diffData(data, "Address Details");
     };
 
 
     $scope.LicenseeClassPracticegrouponSuccess = function(variable, data) {
         $scope.Classpracticegroup = data.length;
+        if (data.length == 0)
+            return;
         $scope.Variables.personHistoryData.dataSet = [];
         diffData(data.content, "Licensee Class Practice Group Details");
     };
