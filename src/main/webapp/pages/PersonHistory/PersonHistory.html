@@ -7,49 +7,46 @@
             <wm-breadcrumb dataset="Home, Licensees, Licensee, History" name="breadcrumb1"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label5" class="h2" caption="History"></wm-label>
             <wm-container content="personProfile" name="container1"></wm-container>
-            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personHistoryData.dataSet" navigation="None" name="livelist2">
+            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personHistoryData.dataSet" navigation="None" name="livelist2" show="bind:PersonAudData > 0" title="History">
                 <wm-listtemplate layout="inline" name="listtemplate2">
-                    <wm-layoutgrid name="layoutgrid2_2">
-                        <wm-gridrow name="gridrow2_1">
-                            <wm-gridcolumn name="gridcolumn4_1" columnwidth="2" padding="unset 1em unset unset" horizontalalign="center">
-                                <wm-label padding="unset 0.5em" name="label33" caption="bind:Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'MMM dd, yyyy'" class="text-default"></wm-label>
-                                <wm-icon padding="1em" name="icon32" caption="" iconclass="wi wi-edit fa-5x"></wm-icon>
-                                <wm-container name="container7" borderwidth="0px 1px 0px 0px" bordercolor="#d8d8d8" borderstyle="dotted" height="98%"></wm-container>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn name="gridcolumn5_2" columnwidth="10">
-                                <wm-panel name="panel1" title="bind:Variables.personHistoryData.dataSet[$i].type" subheading="bind:&quot;Changed by:&quot;+ Variables.personHistoryData.dataSet[$i].changedby">
-                                    <wm-layoutgrid name="layoutgrid2">
-                                        <wm-gridrow name="gridrow2" class="new-block">
-                                            <wm-gridcolumn columnwidth="10" name="gridcolumn4">
-                                                <wm-livelist name="livelist2_1" dataset="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues" listclass="list-inline" itemsperrow="xs-1 sm-2 md-2 lg-3">
-                                                    <wm-listtemplate layout="inline" name="listtemplate2_1">
-                                                        <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues.types" class="p text-muted" name="label11_1"></wm-label>
-                                                        <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues.value" name="label12" class="p"></wm-label>
-                                                    </wm-listtemplate>
-                                                </wm-livelist>
-                                            </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="2" name="gridcolumn5_1" padding="0.5em unset unset unset">
-                                                <wm-label padding="0.2em unset" name="label6" caption="NEW" class="label-success pull-right text-center" width="80" fontunit="em"></wm-label>
-                                            </wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow3" class="old-block">
-                                            <wm-gridcolumn columnwidth="10" name="gridcolumn6">
-                                                <wm-livelist name="livelist3" dataset="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues" listclass="list-inline" itemsperrow="xs-1 sm-2 md-2 lg-3">
-                                                    <wm-listtemplate layout="inline" name="listtemplate2_2">
-                                                        <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues.types" class="p text-muted" name="label13"></wm-label>
-                                                        <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues.value" name="label14" class="p"></wm-label>
-                                                    </wm-listtemplate>
-                                                </wm-livelist>
-                                            </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="2" name="gridcolumn7" padding="0.5em unset unset unset">
-                                                <wm-label padding="0.2em unset" caption="OLD" class="label-default pull-right text-center" name="label11" width="80"></wm-label>
-                                            </wm-gridcolumn>
-                                        </wm-gridrow>
-                                    </wm-layoutgrid>
-                                </wm-panel>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                    </wm-layoutgrid>
+                    <wm-container class="media-left" name="container2">
+                        <wm-container name="container4" width="120" height="100%">
+                            <wm-label padding="unset 0.5em" name="Datelabel" caption="bind:Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'dd MMM, yyyy'" class="text-default" whitespace="nowrap"></wm-label>
+                            <wm-icon padding="1em" name="Historyicon" caption="" iconclass="wi wi-edit fa-2x" iconposition="left"></wm-icon>
+                        </wm-container>
+                    </wm-container>
+                    <wm-container class="media-body" name="container3">
+                        <wm-panel name="HistoryPanel" title="bind:Variables.personHistoryData.dataSet[$i].type" subheading="bind:&quot;Changed by:  &quot;+ (Variables.personHistoryData.dataSet[$i].changedby)+&quot; On &quot;+(Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'MMM dd, yyyy')">
+                            <wm-layoutgrid name="layoutgrid2">
+                                <wm-gridrow name="gridrow2" class="new-block">
+                                    <wm-gridcolumn columnwidth="10" name="gridcolumn4">
+                                        <wm-livelist name="NewPropertylivelist" dataset="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues" listclass="list-inline" itemsperrow="xs-1 sm-2 md-2 lg-3">
+                                            <wm-listtemplate layout="inline" name="listtemplate2_1">
+                                                <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues.types" class="p text-muted" name="NewPropertyTypelabel"></wm-label>
+                                                <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues.value" name="NewPropertyValuelabel" class="p"></wm-label>
+                                            </wm-listtemplate>
+                                        </wm-livelist>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="2" name="gridcolumn5_1" padding="0.5em unset unset unset">
+                                        <wm-label padding="0.2em unset" name="Newlabel" caption="NEW" class="label-success pull-right text-center" width="80" fontunit="em"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow3" class="old-block">
+                                    <wm-gridcolumn columnwidth="10" name="gridcolumn6">
+                                        <wm-livelist name="OldPropertylivelist" dataset="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues" listclass="list-inline" itemsperrow="xs-1 sm-2 md-2 lg-3">
+                                            <wm-listtemplate layout="inline" name="listtemplate2_2">
+                                                <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues.types" class="p text-muted" name="OldPropertyKeylabel"></wm-label>
+                                                <wm-label caption="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues.value" name="OldPropertyValuelabel" class="p"></wm-label>
+                                            </wm-listtemplate>
+                                        </wm-livelist>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="2" name="gridcolumn7" padding="0.5em unset unset unset">
+                                        <wm-label padding="0.2em unset" caption="OLD" class="label-default pull-right text-center" name="Oldlabel" width="80"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                    </wm-container>
                 </wm-listtemplate>
             </wm-livelist>
         </wm-page-content>

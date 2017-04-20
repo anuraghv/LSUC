@@ -16,6 +16,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
 
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
+        $scope.PersonAudData = data.length;
         $scope.Variables.personHistoryData.dataSet = [];
         for (var i = 0; i < data.length - 1; i++) {
             var historyData = {
@@ -39,18 +40,19 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                 }
                 if (!_.isEqual(latest[key], val) && !_.includes(["rev", "revinfo"], key)) {
                     historyData.type = "Person Details Changed";
-                    newobj.types = key;
-                    newobj.value = latest[key];
+                    newobj.types = key || "NULL";
+                    newobj.value = latest[key] || "NULL";
                     historyData.oldPropertyValues.push(newobj);
-                    oldObj.types = key;
-                    oldObj.value = val;
+                    oldObj.types = key || "NULL";
+                    oldObj.value = val || "NULL";
                     historyData.newPropertyValues.push(oldObj);
                     historyData.timestamp = latest.revinfo.revtstmp;
                 }
 
             });
+            $scope.Variables.personHistoryData.dataSet.push(historyData);
         }
-        $scope.Variables.personHistoryData.dataSet.push(historyData);
+
 
     };
 
