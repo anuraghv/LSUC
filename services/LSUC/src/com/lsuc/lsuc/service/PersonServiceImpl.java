@@ -29,6 +29,7 @@ import com.lsuc.lsuc.Licenseephotoidcard;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Person;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Personemailcontact;
 import com.lsuc.lsuc.Personlanguage;
 import com.lsuc.lsuc.Personnameotherlanguage;
@@ -61,6 +62,10 @@ public class PersonServiceImpl implements PersonService {
     @Autowired
 	@Qualifier("LSUC.PersonlanguageService")
 	private PersonlanguageService personlanguageService;
+
+    @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
 
     @Autowired
 	@Qualifier("LSUC.PersonsocialmediacontactService")
@@ -243,6 +248,14 @@ public class PersonServiceImpl implements PersonService {
                 personaddresse.setPerson(personCreated);
                 LOGGER.debug("Creating a new child Personaddress with information: {}", personaddresse);
                 personaddressService.create(personaddresse);
+            }
+        }
+
+        if(personCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : personCreated.getPersonaddressAuds()) {
+                personaddressAud.setPerson(personCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
             }
         }
         return personCreated;
@@ -490,6 +503,17 @@ public class PersonServiceImpl implements PersonService {
         return personaddressService.findAll(queryBuilder.toString(), pageable);
     }
 
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("person.pk = '" + pk + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -515,6 +539,15 @@ public class PersonServiceImpl implements PersonService {
 	 */
 	protected void setPersonlanguageService(PersonlanguageService service) {
         this.personlanguageService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
     }
 
     /**

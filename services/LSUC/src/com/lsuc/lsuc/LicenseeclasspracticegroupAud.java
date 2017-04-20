@@ -35,6 +35,7 @@ public class LicenseeclasspracticegroupAud implements Serializable {
     private String isPrimary;
     private Integer licenseeFk;
     private Revinfo revinfo;
+    private Licensee licensee;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -122,6 +123,20 @@ public class LicenseeclasspracticegroupAud implements Serializable {
         }
 
         this.revinfo = revinfo;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`LICENSEE_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Licensee getLicensee() {
+        return this.licensee;
+    }
+
+    public void setLicensee(Licensee licensee) {
+        if(licensee != null) {
+            this.licenseeFk = licensee.getPk();
+        }
+
+        this.licensee = licensee;
     }
 
     @Override

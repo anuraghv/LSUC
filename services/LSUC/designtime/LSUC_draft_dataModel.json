@@ -1,6 +1,6 @@
 {
   "description" : null,
-  "draft" : false,
+  "draft" : true,
   "name" : "LSUC",
   "packageName" : "com.lsuc.lsuc",
   "tables" : [ {
@@ -3364,7 +3364,7 @@
         "defaultValue" : null
       },
       "fieldName" : "classPracticeGroupFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -3372,8 +3372,8 @@
       "name" : "CLASS_PRACTICE_GROUP_FK",
       "nullable" : true,
       "oldName" : "CLASS_PRACTICE_GROUP_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : false,
       "precision" : 10,
@@ -3536,6 +3536,23 @@
       "sourceTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : null,
+      "mappings" : [ {
+        "sourceColumn" : "CLASS_PRACTICE_GROUP_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_LICENSEECLASSPRACTICExYyo6",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "CLASSPRATICEGROUP",
       "virtual" : true
     } ],
     "schema" : "RMS",
@@ -12535,6 +12552,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEECLASSPRACTICEGROUP",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : null,
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "CLASS_PRACTICE_GROUP_FK"
+      } ],
+      "name" : "FK_LICENSEECLASSPRACTICExYyo6",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "CLASSPRATICEGROUP",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"

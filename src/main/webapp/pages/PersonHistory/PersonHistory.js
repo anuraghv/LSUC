@@ -18,15 +18,24 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
         $scope.PersonAudData = data.length;
         $scope.Variables.personHistoryData.dataSet = [];
+        diffData(data, "Person Details");
+
+
+    };
+
+
+
+    function diffData(data, type) {
+        var historyData = {
+            "type": "edit",
+            "entity": "status",
+            "newPropertyValues": [],
+            "oldPropertyValues": [],
+            "changedby": "Gerald",
+            "timestamp": ""
+        };
         for (var i = 0; i < data.length - 1; i++) {
-            var historyData = {
-                "type": "edit",
-                "entity": "status",
-                "newPropertyValues": [],
-                "oldPropertyValues": [],
-                "changedby": "Gerald",
-                "timestamp": ""
-            };
+
             var original = data[i],
                 latest = data[i + 1];
             _.reduce(original, function(result, val, key) {
@@ -39,7 +48,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                     value: ""
                 }
                 if (!_.isEqual(latest[key], val) && !_.includes(["rev", "revinfo"], key)) {
-                    historyData.type = "Person Details Changed";
+                    historyData.type = type;
                     newobj.types = key || "NULL";
                     newobj.value = latest[key] || "NULL";
                     historyData.newPropertyValues.push(newobj);
@@ -52,20 +61,29 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
             });
             $scope.Variables.personHistoryData.dataSet.push(historyData);
         }
+    }
 
 
+
+
+    $scope.LSUCPersonaddresDataonSuccess = function(variable, data) {
+        $scope.Personaddres = data.length;
+        diffData(data, "Address Details");
     };
 
 
+    $scope.LSUCLicenseeclasspracticegroupAudDataonSuccess = function(variable, data) {
+        $scope.Classpracticegroup = data.length;
+        $scope.Variables.personHistoryData.dataSet = [];
+        diffData(data, "Licensee Class Practice Group Details");
+    };
 
 
-
-    // $scope.livelist2groupby = function(rowData) {
-    //     return rowData.type + '<br/><p class="text-muted">' + rowData.name + ' (' + rowData.id + ')</p>';
-    //     /*
-    //      * this function is iterated over each data object in the livelist dataSet collection the data will be grouped by what is returned from this function E.g. to group a collection of CGPA details under rounded figure CGPA return following return Math.floor(dataObject.cgpa)
-    //      */
-    // };
+    $scope.LSUCLicenseeclasspracticegroupAudDataonBeforeUpdate = function(variable, inputData) {
+        inputData['licensee.personFk'] = {
+            "value": $scope.pageParams.id
+        }
+    };
 
 }]);
 

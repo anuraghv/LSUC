@@ -7,7 +7,8 @@
             <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemchildren="children" itemid="id"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label5" class="h2" caption="History"></wm-label>
             <wm-container content="personProfile" name="container1"></wm-container>
-            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personHistoryData.dataSet" navigation="None" name="livelist2" show="bind:PersonAudData > 0" title="History">
+            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.personHistoryData.dataSet" navigation="None" name="livelist2" show="bind:((PersonAudData > 0) || (Personaddres >0) || (Classpracticegroup > 0))"
+            title="History" orderby="timestamp:desc">
                 <wm-listtemplate layout="inline" name="listtemplate2">
                     <wm-container class="media-left" name="container2">
                         <wm-container name="container4" width="120" height="100%">

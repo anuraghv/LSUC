@@ -43,6 +43,7 @@ public class PersonaddressAud implements Serializable {
     private String postalCode;
     private Integer provinceFk;
     private Revinfo revinfo;
+    private Person person;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -211,6 +212,20 @@ public class PersonaddressAud implements Serializable {
         }
 
         this.revinfo = revinfo;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`PERSON_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Person getPerson() {
+        return this.person;
+    }
+
+    public void setPerson(Person person) {
+        if(person != null) {
+            this.personFk = person.getPk();
+        }
+
+        this.person = person;
     }
 
     @Override
