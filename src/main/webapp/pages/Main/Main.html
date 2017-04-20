@@ -26,18 +26,10 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14" padding="1em unset unset unset">
                     <wm-gridcolumn columnwidth="6" name="gridcolumn36" padding="unset 1em">
-                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.BusinessData.dataSet" navigation="On-Demand"
-                        name="recentAcitivityLiveList">
-                            <wm-listtemplate layout="inline" name="listtemplate1">
-                                <wm-panel subheading="Mr Jack Dawson" iconclass="" autoclose="outsideClick" title="Address Change" badgevalue="1 Oct, 2014" collapsible="true" closable="false" content="RecentActivity" name="recentActivityPanel" expanded="false"></wm-panel>
-                            </wm-listtemplate>
-                        </wm-livelist>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="6" name="gridcolumn37" padding="unset 1em">
                         <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand"
                         name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate2">
-                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status">
+                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:&quot;License Number: &quot;+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status">
                                     <wm-anchor margin="unset 0.5em" name="anchor1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" on-click="Variables.goToPage_Approval.invoke()"></wm-anchor>
                                     <wm-layoutgrid name="layoutgrid3" class="new-block app-form">
                                         <wm-gridrow name="gridrow7">
@@ -77,6 +69,14 @@
                                         <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)" margin="unset unset unset .5em"></wm-button>
                                     </wm-buttongroup>
                                 </wm-panel>
+                            </wm-listtemplate>
+                        </wm-livelist>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn37" padding="unset 1em">
+                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.BusinessData.dataSet" navigation="On-Demand"
+                        name="recentAcitivityLiveList">
+                            <wm-listtemplate layout="inline" name="listtemplate1">
+                                <wm-panel subheading="Mr Jack Dawson" iconclass="" autoclose="outsideClick" title="Address Change" badgevalue="1 Oct, 2014" collapsible="true" closable="false" content="RecentActivity" name="recentActivityPanel" expanded="false"></wm-panel>
                             </wm-listtemplate>
                         </wm-livelist>
                     </wm-gridcolumn>
