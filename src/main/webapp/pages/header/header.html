@@ -16,7 +16,15 @@
                         <wm-popover popoverwidth="240" name="settings" iconclass="wi wi-gear fa-2x" caption="" class="app-header-action" content="settings"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item4">
-                        <wm-menu caption="" autoclose="outsideClick" name="userActions" iconclass="wi wi-user fa-2x" type="anchor" menuclass="app-header-action" menuposition="down,left"></wm-menu>
+                        <wm-menu caption=" " autoclose="outsideClick" name="userActions" iconclass="" type="anchor" menuclass="app-header-action user-badge" menuposition="down,left" dataset="bind:Variables.userProfileActions.dataSet">
+                            <wm-container class="media-left hidden-xs" name="container1">
+                                <wm-label caption="bind:Variables.loggedInUser.dataSet.name" class="app-username small bold" name="username"></wm-label>
+                                <wm-label caption="bind:Variables.loggedInUser.dataSet.roles[0]" class="app-userrole p small text-uppercase" name="userrole"></wm-label>
+                            </wm-container>
+                            <wm-container class="media-right" name="container2">
+                                <wm-picture name="picture2" pictureplaceholder="resources/images/imagelists/user.png" width="30" height="30" class="user-pic" picturesource="bind:&quot;resources/images/user/&quot;+Variables.loggedInUser.dataSet.name+&quot;.png&quot;" shape="circle"></wm-picture>
+                            </wm-container>
+                        </wm-menu>
                     </wm-nav-item>
                 </wm-nav>
             </wm-gridcolumn>

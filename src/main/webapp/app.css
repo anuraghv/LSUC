@@ -66,3 +66,16 @@ a.app-header-action .badge {
     border: 1px rgba(0, 0, 0, 0.1) solid;
     margin-bottom: 1em;
 }
+/******************************************************************/
+
+.app-header-action.user-badge {
+    padding: 10px 15px !important;
+    border-left: 1px rgba(0, 0, 0, 0.1) solid !important;
+}
+.user-badge .app-username,
+.user-badge .app-userrole {
+    margin: 0 !important;
+}
+.user-badge .user-pic {
+    border: 2px rgba(192, 192, 192, 0.3);
+}
