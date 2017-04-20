@@ -42,10 +42,10 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                     historyData.type = "Person Details Changed";
                     newobj.types = key || "NULL";
                     newobj.value = latest[key] || "NULL";
-                    historyData.oldPropertyValues.push(newobj);
+                    historyData.newPropertyValues.push(newobj);
                     oldObj.types = key || "NULL";
                     oldObj.value = val || "NULL";
-                    historyData.newPropertyValues.push(oldObj);
+                    historyData.oldPropertyValues.push(oldObj);
                     historyData.timestamp = latest.revinfo.revtstmp;
                 }
 
