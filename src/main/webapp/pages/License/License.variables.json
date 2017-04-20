@@ -1975,7 +1975,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "pk" ]
     },
-    "bindCount" : 6,
+    "bindCount" : 7,
     "tableName" : "LICENSEEINSURANCE",
     "tableType" : "TABLE",
     "properties" : [ "insurancecoveragetype", "licensee" ],
@@ -3692,7 +3692,7 @@
     "category" : "wm.LiveVariable",
     "dataBinding" : [ {
       "target" : "licenseeInsuranceFk",
-      "value" : "bind:Variables.LicenseeInsurance.firstRecord.pk",
+      "value" : "bind:Variables.LicenseeInsurance.dataSet.data[$i].pk",
       "type" : "number"
     } ],
     "operation" : "read",

@@ -59,13 +59,6 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
     };
 
 
-    $scope.policyFormSuccess = function($event, $operation, $data, item, currentItemWidgets) {
-        $timeout(function() {
-            $scope.Widgets.policyForm.isUpdateMode = false;
-        });
-    };
-
-
     $scope.liveform7Beforeservicecall = function($event, $operation, $data) {
         $data['licenseepersonlanguagepurposes'] = [{
             languagePurposeFk: $data.languagepurpose,
@@ -100,7 +93,7 @@ Application.$controller("licenseDetailsFormController", ["$scope",
     }
 ]);
 
-Application.$controller("grid2Controller", ["$scope",
+Application.$controller("languagedatatableController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
@@ -118,17 +111,7 @@ Application.$controller("liveform4Controller", ["$scope",
     }
 ]);
 
-Application.$controller("insuranceFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
 
-        $scope.button2Click = function($event, $isolateScope) {
-            $scope.isUpdateMode = true;
-        };
-
-    }
-]);
 Application.$controller("insuranceForm Controller", ["$scope",
     function($scope) {
         "use strict";
@@ -150,17 +133,7 @@ Application.$controller("grid2 Controller", ["$scope",
     }
 ]);
 
-Application.$controller("policyFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
 
-        $scope.policyUpBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
-            $scope.isUpdateMode = true;
-        };
-
-    }
-]);
 
 Application.$controller("licenseeinsurancepolicyDialogController", ["$scope",
     function($scope) {

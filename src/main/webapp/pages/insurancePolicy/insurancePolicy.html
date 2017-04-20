@@ -1,0 +1,59 @@
+<wm-partial data-ng-controller="insurancePolicyPageController" name="partial1">
+    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.LSUCLicenseeinsurancepolicyData.dataSet" navigation="None" name="policyList">
+        <wm-listtemplate layout="inline" name="listtemplate1">
+            <wm-container class="media-body" padding="unset unset unset 1.25em" name="container2">
+                <wm-liveform novalidate="false" errormessage="" title="bind:&quot;Policy Number: &quot;+Variables.LSUCLicenseeinsurancepolicyData.dataSet.data[$i].insurancePolicyNumber" iconclass="" defaultmode="View" dataset="bind:Variables.LSUCLicenseeinsurancepolicyData.dataSet"
+                captionalign="left" captionposition="top" name="policyForm" formdata="bind:Widgets.policyList.currentItem" on-success="policyFormSuccess($event, $operation, $data, item, currentItemWidgets)" class="gray" subheading="bind:&quot;Policy End Date:&quot;+ Variables.LSUCLicenseeinsurancepolicyData.dataSet.data[$i].policyEndDate">
+                    <wm-container show="bind: !Widgets.policyForm.isUpdateMode" horizontalalign="right" name="container6">
+                        <wm-button class="btn-link" type="button" caption="Edit" name="policyUpBtn" iconclass="wi wi-mode-edit fa-2x" on-click="policyUpBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
+                    </wm-container>
+                    <wm-layoutgrid columns="2" name="layoutgrid1">
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                                <wm-form-field name="insurancePolicyNumber" displayname="Policy Number" show="true" primary-key="false" generator="assigned" key="insurancePolicyNumber" type="string" readonly="false" required="false" widget="text" maxchars="25"
+                                inputtype="text" placeholder="Enter value" disabled="true"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                                <wm-form-field name="insurancePolicySequenceNumber" displayname="Policy Sequence No." show="true" primary-key="false" generator="assigned" key="insurancePolicySequenceNumber" type="short" readonly="false" required="false" step="0"
+                                widget="number" inputtype="number" placeholder="Enter value" disabled="true"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                <wm-form-field name="insurancepolicystatus" displayname="Policy Status" show="true" primary-key="false" generator="assigned" key="insurancepolicystatus" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                                <wm-form-field name="businessByBusinessFkInsuranceCompany" displayname="Insurance Company" show="true" primary-key="false" generator="assigned" key="businessByBusinessFkInsuranceCompany" type="list" is-related="true" readonly="false"
+                                required="false" widget="select" placeholder="Select value" displayexpression="businessName" disabled="true"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                                <wm-form-field name="businessByBusinessFkInsuranceBroker" displayname="Insurance Broker" show="true" primary-key="false" generator="assigned" key="businessByBusinessFkInsuranceBroker" type="list" is-related="true" readonly="false"
+                                required="false" widget="select" placeholder="Select value" displayexpression="businesstype.shortNameEnglish"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                                <wm-form-field name="policyStartDate" displayname="Policy Start Date" show="true" primary-key="false" generator="assigned" key="policyStartDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                outputformat="yyyy-MM-dd" disabled="true"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                <wm-form-field name="policyEndDate" displayname="Policy End Date" show="true" primary-key="false" generator="assigned" key="policyEndDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                outputformat="yyyy-MM-dd"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                                <wm-form-field name="licenseeinsurance" displayname="Licenseeinsurance" show="false" primary-key="false" generator="assigned" key="licenseeinsurance" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                placeholder="Select value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-container>
+        </wm-listtemplate>
+    </wm-livelist>
+</wm-partial>

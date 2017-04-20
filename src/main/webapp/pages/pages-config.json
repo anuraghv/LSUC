@@ -217,6 +217,13 @@
   "type" : "HEADER",
   "params" : [ ]
 }, {
+  "name" : "insurancePolicy",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "insuranceId",
+    "type" : "string"
+  } ]
+}, {
   "name" : "leftnav",
   "type" : "LEFTNAV",
   "params" : [ ]
