@@ -102,8 +102,8 @@
                     <wm-grid-action key="addNewRow" display-name="Add Language" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Language" action="addNewRowAction($event)" shortcutkey="" disabled="false" position="header"></wm-grid-action>
                     <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
                 </wm-grid>
-                <wm-liveform novalidate="false" errormessage="" title="Add Person Language" iconclass="" defaultmode="View" dataset="bind:Variables.Personlanguage.dataSet" captionalign="left" captionposition="top" name="liveform7" on-beforeservicecall="liveform7Beforeservicecall($event, $operation, $data)"
-                show="bind:Widgets.liveform7.isUpdateMode" on-success="Variables.LicenseeLanguageData.listRecords()" class="panel-default">
+                <wm-liveform novalidate="false" errormessage="" title="Add Person Language" iconclass="" defaultmode="View" dataset="bind:Variables.Personlanguage.dataSet" captionalign="left" captionposition="top" name="addLanguageForm" on-beforeservicecall="liveform7Beforeservicecall($event, $operation, $data)"
+                show="bind:Widgets.addLanguageForm.isUpdateMode" on-success="Variables.LicenseeLanguageData.listRecords()" class="panel-default">
                     <wm-layoutgrid columns="2" name="layoutgrid8">
                         <wm-gridrow name="gridrow20_1">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn34_1">

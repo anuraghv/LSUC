@@ -24,10 +24,22 @@
                         <wm-button class="btn-secondary" caption="Add Business" type="button" margin="unset 0.5em" name="button1" iconclass="wi wi-business" on-click="Variables.goToPage_AddBusiness.invoke()"></wm-button>
                     </wm-gridcolumn>
                 </wm-gridrow>
-                <wm-gridrow name="gridrow14" padding="1em unset unset unset">
+                <wm-gridrow name="gridrow3" padding="1em unset unset unset">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn6" padding="unset 1em">
+                        <wm-chart type="Bar" title="MSR Activity" height="250px" iconclass="" name="chart1" class="small btn-transparent" accessroles="supervisor" theme="Annabelle"></wm-chart>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn7" padding="unset 1em">
+                        <wm-chart type="Line" title="Change Request" height="250px" iconclass="" name="chart4" class="btn-transparent  small" accessroles="supervisor" theme="Orient"></wm-chart>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn8" padding="unset 1em">
+                        <wm-chart type="Column" title="Business Employees" height="250" iconclass="" name="chart3" dataset="bind:Variables.BusinessData.dataSet" xaxisdatakey="businessName" yaxisdatakey="numberOfEmployees" orderby="numberOfEmployees:desc"
+                        class="btn-transparent small" showyaxis="true" offsetleft="25" offsetright="0" offsettop="0" accessroles="supervisor" theme="Flyer"></wm-chart>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
                     <wm-gridcolumn columnwidth="6" name="gridcolumn36" padding="unset 1em">
-                        <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand"
-                        name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)">
+                        <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet"
+                        navigation="On-Demand" name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)" padding="1em 1em unset 1em">
                             <wm-listtemplate layout="inline" name="listtemplate2">
                                 <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName+' ('+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber+')'"
                                 badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status" iconclass="">
@@ -74,24 +86,12 @@
                         </wm-livelist>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="6" name="gridcolumn37" padding="unset 1em">
-                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.BusinessData.dataSet" navigation="On-Demand"
-                        name="recentAcitivityLiveList">
+                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.BusinessData.dataSet"
+                        navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em">
                             <wm-listtemplate layout="inline" name="listtemplate1">
                                 <wm-panel subheading="Mr Jack Dawson" iconclass="" autoclose="outsideClick" title="Address Change" badgevalue="1 Oct, 2014" collapsible="true" closable="false" content="RecentActivity" name="recentActivityPanel" expanded="false"></wm-panel>
                             </wm-listtemplate>
                         </wm-livelist>
-                    </wm-gridcolumn>
-                </wm-gridrow>
-                <wm-gridrow name="gridrow3">
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn6" padding="unset 1em">
-                        <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart1"></wm-chart>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn7" padding="unset 1em">
-                        <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart2"></wm-chart>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn8" padding="unset 1em">
-                        <wm-chart type="Column" title="Business" height="250px" iconclass="wi wi-business" name="chart3" dataset="bind:Variables.BusinessData.dataSet" xaxisdatakey="businessName" yaxisdatakey="numberOfEmployees" orderby="numberOfEmployees:desc"
-                        class="panel-default"></wm-chart>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>

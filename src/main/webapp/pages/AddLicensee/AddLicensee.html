@@ -3,7 +3,7 @@
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-breadcrumb dataset="Home, Licensee List, Add Licensee" name="breadcrumb1"></wm-breadcrumb>
+            <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemchildren="children" itemid="id"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label1" caption="Add Licensee" class="h2"></wm-label>
             <wm-liveform novalidate="false" errormessage="" title="Personal Details" iconclass="wi wi-account-circle" defaultmode="Edit" dataset="bind:Variables.LSUCInsertPersonData.dataSet" captionalign="left" captionposition="top" name="personLiveForm"
             on-beforeservicecall="personLiveFormBeforeservicecall($event, $operation, $data)" on-success="personLiveFormSuccess($event, $operation, $data)">
@@ -32,7 +32,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow15">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn29_1">
-                            <wm-liveform novalidate="false" errormessage="" title="Address" iconclass="" defaultmode="Edit" dataset="bind:Variables.LSUCPersonaddressData.dataSet" captionalign="left" captionposition="top" name="addresses" class="panel-info">
+                            <wm-liveform novalidate="false" errormessage="" title="Address" iconclass="" defaultmode="Edit" dataset="bind:Variables.LSUCPersonaddressData.dataSet" captionalign="left" captionposition="top" name="addresses" class="panel-default">
                                 <wm-layoutgrid columns="3" name="layoutgrid2_1">
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn7">
@@ -103,7 +103,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow11_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn29">
-                            <wm-liveform novalidate="false" errormessage="" title="License  Details" iconclass="" defaultmode="Edit" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licensees" class="panel-info">
+                            <wm-liveform novalidate="false" errormessage="" title="License  Details" iconclass="" defaultmode="Edit" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="licensees" class="panel-default">
                                 <wm-layoutgrid columns="3" name="layoutgrid3">
                                     <wm-gridrow name="gridrow9">
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn24_1">

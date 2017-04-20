@@ -17,7 +17,7 @@ Application.$controller("OtherLanguageNamesPageController", ["$scope", function 
 }]);
 
 
-Application.$controller("grid1Controller", ["$scope",
+Application.$controller("nameslanguagegridController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

@@ -97,6 +97,11 @@ Application.$controller("languagedatatableController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
+
+        $scope.addNewRowAction = function($event) {
+            $scope.Widgets.addLanguageForm.new();
+        };
+
     }
 ]);
 
@@ -164,6 +169,14 @@ Application.$controller("addPolicyFormController", ["$scope",
 ]);
 
 Application.$controller("licenseeinsuranceDialogController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+
+Application.$controller("addLanguageFormController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
