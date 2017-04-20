@@ -1,1 +1,24 @@
-
+{
+  "approvals1" : {
+    "_id" : "wm-approvals1-wm.ServiceVariable-1492666258851",
+    "name" : "approvals1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.lsuc.lsuc.LicenseeclasspracticegroupApprovals",
+    "service" : "LSUC",
+    "operation" : "filterLicenseeclasspracticegroupApprovals",
+    "operationId" : "LicenseeclasspracticegroupApprovalsController_filterLicenseeclasspracticegroupApprovals",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "LicenseeclasspracticegroupApprovals"
+  }
+}

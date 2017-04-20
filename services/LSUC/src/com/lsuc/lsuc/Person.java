@@ -96,6 +96,7 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
+    @Audited
     @Column(name = "`MIDDLE_NAMES`", nullable = true, length = 100)
     public String getMiddleNames() {
         return this.middleNames;
