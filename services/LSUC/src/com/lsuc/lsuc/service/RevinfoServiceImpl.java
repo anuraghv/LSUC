@@ -24,7 +24,9 @@ import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.LicenseeAud;
+import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 import com.lsuc.lsuc.PersonAud;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Revinfo;
 
 
@@ -37,6 +39,14 @@ import com.lsuc.lsuc.Revinfo;
 public class RevinfoServiceImpl implements RevinfoService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RevinfoServiceImpl.class);
+
+    @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
+
+    @Autowired
+	@Qualifier("LSUC.LicenseeclasspracticegroupAudService")
+	private LicenseeclasspracticegroupAudService licenseeclasspracticegroupAudService;
 
     @Autowired
 	@Qualifier("LSUC.PersonAudService")
@@ -59,11 +69,27 @@ public class RevinfoServiceImpl implements RevinfoService {
 	public Revinfo create(Revinfo revinfo) {
         LOGGER.debug("Creating a new Revinfo with information: {}", revinfo);
         Revinfo revinfoCreated = this.wmGenericDao.create(revinfo);
+        if(revinfoCreated.getLicenseeclasspracticegroupAuds() != null) {
+            for(LicenseeclasspracticegroupAud licenseeclasspracticegroupAud : revinfoCreated.getLicenseeclasspracticegroupAuds()) {
+                licenseeclasspracticegroupAud.setRevinfo(revinfoCreated);
+                LOGGER.debug("Creating a new child LicenseeclasspracticegroupAud with information: {}", licenseeclasspracticegroupAud);
+                licenseeclasspracticegroupAudService.create(licenseeclasspracticegroupAud);
+            }
+        }
+
         if(revinfoCreated.getPersonAuds() != null) {
             for(PersonAud personAud : revinfoCreated.getPersonAuds()) {
                 personAud.setRevinfo(revinfoCreated);
                 LOGGER.debug("Creating a new child PersonAud with information: {}", personAud);
                 personAudService.create(personAud);
+            }
+        }
+
+        if(revinfoCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : revinfoCreated.getPersonaddressAuds()) {
+                personaddressAud.setRevinfo(revinfoCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
             }
         }
 
@@ -156,6 +182,17 @@ public class RevinfoServiceImpl implements RevinfoService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(Integer rev, Pageable pageable) {
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("revinfo.rev = '" + rev + "'");
+
+        return licenseeclasspracticegroupAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<PersonAud> findAssociatedPersonAuds(Integer rev, Pageable pageable) {
         LOGGER.debug("Fetching all associated personAuds");
 
@@ -167,6 +204,17 @@ public class RevinfoServiceImpl implements RevinfoService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer rev, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("revinfo.rev = '" + rev + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<LicenseeAud> findAssociatedLicenseeAuds(Integer rev, Pageable pageable) {
         LOGGER.debug("Fetching all associated licenseeAuds");
 
@@ -174,6 +222,24 @@ public class RevinfoServiceImpl implements RevinfoService {
         queryBuilder.append("revinfo.rev = '" + rev + "'");
 
         return licenseeAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service LicenseeclasspracticegroupAudService instance
+	 */
+	protected void setLicenseeclasspracticegroupAudService(LicenseeclasspracticegroupAudService service) {
+        this.licenseeclasspracticegroupAudService = service;
     }
 
     /**

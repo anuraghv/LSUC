@@ -32,7 +32,9 @@ public class Revinfo implements Serializable {
 
     private Integer rev;
     private BigInteger revtstmp;
+    private List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds;
     private List<PersonAud> personAuds;
+    private List<PersonaddressAud> personaddressAuds;
     private List<LicenseeAud> licenseeAuds;
 
     @Id
@@ -57,12 +59,32 @@ public class Revinfo implements Serializable {
 
     @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "revinfo")
+    public List<LicenseeclasspracticegroupAud> getLicenseeclasspracticegroupAuds() {
+        return this.licenseeclasspracticegroupAuds;
+    }
+
+    public void setLicenseeclasspracticegroupAuds(List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds) {
+        this.licenseeclasspracticegroupAuds = licenseeclasspracticegroupAuds;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "revinfo")
     public List<PersonAud> getPersonAuds() {
         return this.personAuds;
     }
 
     public void setPersonAuds(List<PersonAud> personAuds) {
         this.personAuds = personAuds;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "revinfo")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
     }
 
     @JsonInclude(Include.NON_EMPTY)

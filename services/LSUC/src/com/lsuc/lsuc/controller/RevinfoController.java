@@ -33,7 +33,9 @@ import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.LicenseeAud;
+import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 import com.lsuc.lsuc.PersonAud;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Revinfo;
 import com.lsuc.lsuc.service.RevinfoService;
 
@@ -153,6 +155,15 @@ public class RevinfoController {
         return revinfoService.getAggregatedValues(aggregationInfo, pageable);
     }
 
+    @RequestMapping(value="/{id:.+}/licenseeclasspracticegroupAuds", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the licenseeclasspracticegroupAuds instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupAuds");
+        return revinfoService.findAssociatedLicenseeclasspracticegroupAuds(id, pageable);
+    }
+
     @RequestMapping(value="/{id:.+}/personAuds", method=RequestMethod.GET)
     @ApiOperation(value = "Gets the personAuds instance associated with the given id.")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
@@ -160,6 +171,15 @@ public class RevinfoController {
 
         LOGGER.debug("Fetching all associated personAuds");
         return revinfoService.findAssociatedPersonAuds(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/personaddressAuds", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the personaddressAuds instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated personaddressAuds");
+        return revinfoService.findAssociatedPersonaddressAuds(id, pageable);
     }
 
     @RequestMapping(value="/{id:.+}/licenseeAuds", method=RequestMethod.GET)

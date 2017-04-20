@@ -34,6 +34,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
+import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseeinsurance;
 import com.lsuc.lsuc.Licenseepersonlanguagepurpose;
 import com.lsuc.lsuc.Licenseephotoidcard;
@@ -167,6 +168,15 @@ public class LicenseeController {
 	public Page<Map<String, Object>> getLicenseeAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return licenseeService.getAggregatedValues(aggregationInfo, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/licenseeclasspracticegroupApprovalses", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the licenseeclasspracticegroupApprovalses instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupApprovalses");
+        return licenseeService.findAssociatedLicenseeclasspracticegroupApprovalses(id, pageable);
     }
 
     @RequestMapping(value="/{id:.+}/licenseephotoidcardsForLicenseeFkCertified", method=RequestMethod.GET)

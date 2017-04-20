@@ -120,6 +120,9 @@
     "table" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
     "schema" : "RMS"
   }, {
+    "table" : "LICENSEECLASSPRACTICEGROUP_AUD",
+    "schema" : "RMS"
+  }, {
     "table" : "LICENSEEINSURANCE",
     "schema" : "RMS"
   }, {
@@ -169,6 +172,9 @@
     "schema" : "RMS"
   }, {
     "table" : "PERSONADDRESS",
+    "schema" : "RMS"
+  }, {
+    "table" : "PERSONADDRESS_AUD",
     "schema" : "RMS"
   }, {
     "table" : "PERSONEMAILCONTACT",

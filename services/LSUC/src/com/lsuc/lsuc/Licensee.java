@@ -62,6 +62,7 @@ public class Licensee implements Serializable {
     private Character isLegacyClassStatusException;
     private Integer feeCategoryFk;
     private Character isExemptFromCpd;
+    private List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses;
     private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFkCertified;
     private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFk;
     private Paralegal paralegal;
@@ -297,6 +298,16 @@ public class Licensee implements Serializable {
     }
 
     @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licensee")
+    public List<LicenseeclasspracticegroupApprovals> getLicenseeclasspracticegroupApprovalses() {
+        return this.licenseeclasspracticegroupApprovalses;
+    }
+
+    public void setLicenseeclasspracticegroupApprovalses(List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses) {
+        this.licenseeclasspracticegroupApprovalses = licenseeclasspracticegroupApprovalses;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licenseeByLicenseeFkCertified")
     public List<Licenseephotoidcard> getLicenseephotoidcardsForLicenseeFkCertified() {
         return this.licenseephotoidcardsForLicenseeFkCertified;
@@ -475,3 +486,4 @@ public class Licensee implements Serializable {
         return Objects.hash(getPk());
     }
 }
+

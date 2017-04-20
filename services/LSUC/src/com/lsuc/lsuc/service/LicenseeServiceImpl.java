@@ -27,6 +27,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 import com.lsuc.lsuc.Lawyer;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
+import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseeinsurance;
 import com.lsuc.lsuc.Licenseepersonlanguagepurpose;
 import com.lsuc.lsuc.Licenseephotoidcard;
@@ -60,6 +61,10 @@ public class LicenseeServiceImpl implements LicenseeService {
 	private LicenseepersonlanguagepurposeService licenseepersonlanguagepurposeService;
 
     @Autowired
+	@Qualifier("LSUC.LicenseeclasspracticegroupApprovalsService")
+	private LicenseeclasspracticegroupApprovalsService licenseeclasspracticegroupApprovalsService;
+
+    @Autowired
 	@Qualifier("LSUC.LicenseephotoidcardService")
 	private LicenseephotoidcardService licenseephotoidcardService;
 
@@ -80,6 +85,14 @@ public class LicenseeServiceImpl implements LicenseeService {
 	public Licensee create(Licensee licensee) {
         LOGGER.debug("Creating a new Licensee with information: {}", licensee);
         Licensee licenseeCreated = this.wmGenericDao.create(licensee);
+        if(licenseeCreated.getLicenseeclasspracticegroupApprovalses() != null) {
+            for(LicenseeclasspracticegroupApprovals licenseeclasspracticegroupApprovalse : licenseeCreated.getLicenseeclasspracticegroupApprovalses()) {
+                licenseeclasspracticegroupApprovalse.setLicensee(licenseeCreated);
+                LOGGER.debug("Creating a new child LicenseeclasspracticegroupApprovals with information: {}", licenseeclasspracticegroupApprovalse);
+                licenseeclasspracticegroupApprovalsService.create(licenseeclasspracticegroupApprovalse);
+            }
+        }
+
         if(licenseeCreated.getLicenseephotoidcardsForLicenseeFkCertified() != null) {
             for(Licenseephotoidcard licenseephotoidcardsForLicenseeFkCertified : licenseeCreated.getLicenseephotoidcardsForLicenseeFkCertified()) {
                 licenseephotoidcardsForLicenseeFkCertified.setLicenseeByLicenseeFkCertified(licenseeCreated);
@@ -249,6 +262,17 @@ public class LicenseeServiceImpl implements LicenseeService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupApprovalses");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("licensee.pk = '" + pk + "'");
+
+        return licenseeclasspracticegroupApprovalsService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<Licenseephotoidcard> findAssociatedLicenseephotoidcardsForLicenseeFkCertified(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated licenseephotoidcardsForLicenseeFkCertified");
 
@@ -336,6 +360,15 @@ public class LicenseeServiceImpl implements LicenseeService {
 	 */
 	protected void setLicenseepersonlanguagepurposeService(LicenseepersonlanguagepurposeService service) {
         this.licenseepersonlanguagepurposeService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service LicenseeclasspracticegroupApprovalsService instance
+	 */
+	protected void setLicenseeclasspracticegroupApprovalsService(LicenseeclasspracticegroupApprovalsService service) {
+        this.licenseeclasspracticegroupApprovalsService = service;
     }
 
     /**

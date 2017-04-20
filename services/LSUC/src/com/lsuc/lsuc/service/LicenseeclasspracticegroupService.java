@@ -18,6 +18,7 @@ import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
+import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
 import com.lsuc.lsuc.Licenseepracticeineligibilityreason;
 
 /**
@@ -152,6 +153,18 @@ public interface LicenseeclasspracticegroupService {
      * @see Page
 	 */
 	Page<Map<String, Object>> getAggregatedValues(AggregationInfo aggregationInfo, Pageable pageable);
+
+    /*
+     * Returns the associated licenseeclasspracticegroupApprovalses for given Licenseeclasspracticegroup id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated LicenseeclasspracticegroupApprovals instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<LicenseeclasspracticegroupApprovals> findAssociatedLicenseeclasspracticegroupApprovalses(Integer pk, Pageable pageable);
 
     /*
      * Returns the associated licenseepracticeineligibilityreasons for given Licenseeclasspracticegroup id.
