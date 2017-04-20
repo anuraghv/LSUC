@@ -931,6 +931,28 @@
           "id" : "Approvals",
           "link" : "#/PersonHistory"
         } ]
+      }, {
+        "label" : "Businesses",
+        "link" : "#/BusinessList",
+        "id" : "BusinessList",
+        "children" : [ {
+          "label" : "Business",
+          "link" : "#/Business",
+          "id" : "Business"
+        }, {
+          "label" : "Add Business",
+          "id" : "AddBusiness",
+          "link" : "#/AddBusiness"
+        } ]
+      }, {
+        "label" : "Report",
+        "link" : "#/Report",
+        "id" : "Report",
+        "children" : [ {
+          "label" : "License Change",
+          "link" : "/StatusChangeReport",
+          "id" : "StatusChangeReport"
+        } ]
       } ]
     },
     "type" : "entry",

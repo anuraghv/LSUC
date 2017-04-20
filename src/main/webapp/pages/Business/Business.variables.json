@@ -65,7 +65,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -77,7 +77,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -89,7 +89,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -101,7 +101,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -113,7 +113,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -125,7 +125,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -137,7 +137,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -204,7 +204,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -216,7 +216,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -228,7 +228,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -240,7 +240,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -252,7 +252,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -264,7 +264,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -276,7 +276,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -343,7 +343,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -355,7 +355,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -367,7 +367,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -379,7 +379,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -391,7 +391,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -403,7 +403,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -415,7 +415,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -464,7 +464,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "businessName",
         "type" : "string",
@@ -476,7 +476,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "numberOfEmployees",
         "type" : "integer",
@@ -500,7 +500,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "isBusinessNameSameAsOwner",
         "type" : "character",
@@ -512,7 +512,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "alsoKnownAs",
         "type" : "string",
@@ -524,7 +524,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       } ],
       "entityName" : "Business",
       "fullyQualifiedName" : "com.lsuc.lsuc.Business",
@@ -624,7 +624,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -636,7 +636,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -648,7 +648,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -660,7 +660,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -672,7 +672,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -684,7 +684,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -696,7 +696,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -805,7 +805,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "businessName",
           "type" : "string",
@@ -817,7 +817,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "numberOfEmployees",
           "type" : "integer",
@@ -841,7 +841,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isBusinessNameSameAsOwner",
           "type" : "character",
@@ -853,7 +853,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "alsoKnownAs",
           "type" : "string",
@@ -865,7 +865,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         } ]
       }, {
         "fieldName" : "country",
@@ -908,7 +908,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -920,7 +920,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -932,7 +932,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -944,7 +944,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -956,7 +956,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -968,7 +968,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -980,7 +980,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -1061,7 +1061,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -1073,7 +1073,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -1085,7 +1085,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -1097,7 +1097,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -1109,7 +1109,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -1121,7 +1121,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -1133,7 +1133,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -1214,7 +1214,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameEnglish",
           "type" : "string",
@@ -1226,7 +1226,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "shortNameFrench",
           "type" : "string",
@@ -1238,7 +1238,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameEnglish",
           "type" : "string",
@@ -1250,7 +1250,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "longNameFrench",
           "type" : "string",
@@ -1262,7 +1262,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isActive",
           "type" : "character",
@@ -1274,7 +1274,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "isDefault",
           "type" : "character",
@@ -1286,7 +1286,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "displaySequenceEnglish",
           "type" : "integer",
@@ -1335,7 +1335,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "addressLine1",
         "type" : "string",
@@ -1347,7 +1347,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "addressLine2",
         "type" : "string",
@@ -1359,7 +1359,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "addressLine3",
         "type" : "string",
@@ -1371,7 +1371,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "addressLine4",
         "type" : "string",
@@ -1383,7 +1383,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "addressLine5",
         "type" : "string",
@@ -1395,7 +1395,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "addressLine6",
         "type" : "string",
@@ -1407,7 +1407,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "city",
         "type" : "string",
@@ -1419,7 +1419,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "postalCode",
         "type" : "string",
@@ -1431,7 +1431,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       } ],
       "entityName" : "Businessaddress",
       "fullyQualifiedName" : "com.lsuc.lsuc.Businessaddress",

@@ -1,9 +1,10 @@
-<wm-page data-ng-controller="AddBusinessPageController" pagetitle="Add Business"> 
-    <wm-header content="header"></wm-header> 
-    <wm-top-nav content="topnav"></wm-top-nav> 
-    <wm-content> 
-        <wm-page-content columnwidth="12"> 
-        </wm-page-content> 
-    </wm-content> 
-    <wm-footer content="footer"></wm-footer> 
+<wm-page data-ng-controller="AddBusinessPageController" pagetitle="Add Business" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemid="id" itemchildren="children"></wm-breadcrumb>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>
