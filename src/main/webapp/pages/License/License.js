@@ -38,7 +38,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             "newEffectiveFromDate": $data.effectiveFromDate,
             "newEffectiveToDate": $data.effectiveToDate,
             "newClassPracticeGroupFk": $data.classPracticeGroupFk,
-            "status": "Edited",
+            "status": "Updated",
             "licenseeclasspracticegroupPk": $data.pk
                 // ,
                 // "oldIsPrimary": "",
@@ -104,11 +104,6 @@ Application.$controller("grid2Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
-
-        $scope.addNewRowAction = function($event) {
-            $scope.Widgets.liveform7.new();
-        };
-
     }
 ]);
 
@@ -196,14 +191,6 @@ Application.$controller("addPolicyFormController", ["$scope",
 ]);
 
 Application.$controller("licenseeinsuranceDialogController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-
-Application.$controller("liveform7Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;

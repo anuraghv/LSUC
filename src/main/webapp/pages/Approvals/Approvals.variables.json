@@ -60,7 +60,7 @@
     "category" : "wm.ServiceVariable",
     "dataBinding" : [ {
       "target" : "q",
-      "value" : "bind:\"licensee.person.pk =\"+pageParams.id+\" and status = 'New' or status='Edited'\"",
+      "value" : "bind:\"licensee.person.pk =\"+pageParams.id+\" and status = 'Created' or status='Updated'\"",
       "type" : "string"
     } ],
     "type" : "com.lsuc.lsuc.LicenseeclasspracticegroupApprovals",

@@ -13,13 +13,13 @@
                             </wm-container>
                         </wm-composite>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="2" name="gridcolumn22_1">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn22_1">
                         <wm-search datafield="All Fields" on-select="Variables.goToPage_Business.invoke()" name="searchBusiness" placeholder="Search Business Number, Name" dataset="bind:Variables.BusinessData.dataSet" searchkey="alsoKnownAs,businessName,businessNumber"
-                        displaylabel="businessName" orderby="businessName:desc" show="bind:Widgets.filterOption.datavalue === 'Business'" width="100%"></wm-search>
+                        displaylabel="bind:$[data[$i].businessNumber]+' - '+$[data[$i].businessName]" orderby="businessName:desc" show="bind:Widgets.filterOption.datavalue === 'Business'" width="100%"></wm-search>
                         <wm-search name="searchLicensee" dataset="bind:Variables.Licensee.dataSet" searchkey="licenseeNumber,person.firstName,person.lastName" displaylabel="bind:$[data[$i].licenseeNumber] + &quot; - [ &quot; + $[data[$i].person.firstName] + &quot; &quot; + $[data[$i].person.lastName] + &quot;]&quot;"
                         datafield="All Fields" on-select="Variables.goToPage_LicenseeInfo.invoke()" placeholder="Search Licensee ID, Name" show="bind:Widgets.filterOption.datavalue === 'Licensee'" width="100%"></wm-search>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="8" name="gridcolumn4" horizontalalign="right">
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn4" horizontalalign="right">
                         <wm-button class="btn-secondary" caption="Add Licensee" type="button" margin="unset 0.5em" name="button2" iconclass="fa fa-user-plus" on-click="Variables.goToPage_AddLicensee.invoke()"></wm-button>
                         <wm-button class="btn-secondary" caption="Add Business" type="button" margin="unset 0.5em" name="button1" iconclass="wi wi-business" on-click="Variables.goToPage_AddBusiness.invoke()"></wm-button>
                     </wm-gridcolumn>
@@ -29,8 +29,8 @@
                         <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand"
                         name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate2">
-                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:&quot;License Number: &quot;+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status"
-                                iconclass="">
+                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="time" title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName+' ('+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber+')'"
+                                badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status" iconclass="">
                                     <wm-anchor margin="unset 0.5em" name="anchor1" caption="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" on-click="Variables.goToPage_Approval.invoke()"></wm-anchor>
                                     <wm-layoutgrid name="layoutgrid3" class="new-block app-form">
                                         <wm-gridrow name="gridrow7">
