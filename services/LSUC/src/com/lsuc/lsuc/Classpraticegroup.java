@@ -40,6 +40,7 @@ public class Classpraticegroup implements Serializable {
     private ClassEntity classEntity;
     private Practicegroup practicegroup;
     private List<Licenseeclasspracticegroup> licenseeclasspracticegroups;
+    private List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -115,6 +116,16 @@ public class Classpraticegroup implements Serializable {
 
     public void setLicenseeclasspracticegroups(List<Licenseeclasspracticegroup> licenseeclasspracticegroups) {
         this.licenseeclasspracticegroups = licenseeclasspracticegroups;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "classpraticegroup")
+    public List<LicenseeclasspracticegroupAud> getLicenseeclasspracticegroupAuds() {
+        return this.licenseeclasspracticegroupAuds;
+    }
+
+    public void setLicenseeclasspracticegroupAuds(List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds) {
+        this.licenseeclasspracticegroupAuds = licenseeclasspracticegroupAuds;
     }
 
     @Override

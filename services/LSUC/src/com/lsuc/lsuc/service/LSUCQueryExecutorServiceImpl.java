@@ -13,14 +13,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.wavemaker.runtime.data.dao.query.WMQueryExecutor;
+import com.wavemaker.runtime.data.export.ExportType;
+import com.wavemaker.runtime.file.model.Downloadable;
 
-import com.lsuc.lsuc.models.query.ApproveEditRecordRequest;
-import com.lsuc.lsuc.models.query.ApprovedNewRecordRequest;
-import com.lsuc.lsuc.models.query.UpdateStatusRequest;
+import com.lsuc.lsuc.models.query.*;
 
 @Service
 public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
@@ -50,6 +52,26 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
         params.put("approvalPk", approveEditRecordRequest.getApprovalPk());
 
         return queryExecutor.executeNamedQueryForUpdate("approveEditRecord", params);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable) {
+        Map params = new HashMap(1);
+
+        params.put("personID", personId);
+
+        return queryExecutor.executeNamedQuery("getStatusChangeDetails", params, GetStatusChangeDetailsResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable) {
+        Map params = new HashMap(1);
+
+        params.put("personID", personId);
+
+        return queryExecutor.exportNamedQueryData("getStatusChangeDetails", params, exportType, GetStatusChangeDetailsResponse.class, pageable);
     }
 
     @Transactional(value = "LSUCTransactionManager")

@@ -72,17 +72,10 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
     };
 
 
-    $scope.LSUCLicenseeclasspracticegroupAudDataonSuccess = function(variable, data) {
+    $scope.LicenseeClassPracticegrouponSuccess = function(variable, data) {
         $scope.Classpracticegroup = data.length;
         $scope.Variables.personHistoryData.dataSet = [];
-        diffData(data, "Licensee Class Practice Group Details");
-    };
-
-
-    $scope.LSUCLicenseeclasspracticegroupAudDataonBeforeUpdate = function(variable, inputData) {
-        inputData['licensee.personFk'] = {
-            "value": $scope.pageParams.id
-        }
+        diffData(data.content, "Licensee Class Practice Group Details");
     };
 
 }]);

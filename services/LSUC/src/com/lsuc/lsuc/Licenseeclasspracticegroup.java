@@ -57,7 +57,7 @@ public class Licenseeclasspracticegroup implements Serializable {
     public void setPk(Integer pk) {
         this.pk = pk;
     }
-    
+
     @Audited
     @Column(name = "`LICENSEE_FK`", nullable = true, scale = 0, precision = 10)
     public Integer getLicenseeFk() {

@@ -55,6 +55,89 @@
       "responseType" : "SINGLE"
     }
   },
+  "getStatusChangeDetails" : {
+    "name" : "getStatusChangeDetails",
+    "description" : "get Status Change Details Based on PersonID",
+    "version" : "V2",
+    "queryString" : "select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where licensee.personFk=:personID",
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupAud where licensee.personFk=:personID",
+    "nativeSql" : false,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "personID",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.lsuc.lsuc.models.query.GetStatusChangeDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "Type",
+        "fieldName" : "type",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "EffectiveDate",
+        "fieldName" : "effectiveDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "EffectiveTo",
+        "fieldName" : "effectiveTo",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "PracticeGroup",
+        "fieldName" : "practiceGroup",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "isPrimary",
+        "fieldName" : "isPrimary",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "revtstmp",
+        "fieldName" : "revtstmp",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      } ]
+    }
+  },
   "updateStatus" : {
     "name" : "updateStatus",
     "description" : "Update the Status after approving/rejecting a request",

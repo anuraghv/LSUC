@@ -15,24 +15,28 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wavemaker.commons.wrapper.IntegerWrapper;
 import com.wavemaker.runtime.data.dao.query.WMQueryExecutor;
+import com.wavemaker.runtime.data.export.ExportType;
+import com.wavemaker.runtime.file.model.Downloadable;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 
-import com.lsuc.lsuc.models.query.ApproveEditRecordRequest;
-import com.lsuc.lsuc.models.query.ApprovedNewRecordRequest;
-import com.lsuc.lsuc.models.query.UpdateStatusRequest;
 import com.lsuc.lsuc.service.LSUCQueryExecutorService;
+import com.lsuc.lsuc.models.query.*;
 
 @RestController(value = "LSUC.QueryExecutionController")
 @RequestMapping("/LSUC/queryExecutor")
@@ -62,6 +66,25 @@ public class QueryExecutionController {
         Integer _result = queryService.executeApproveEditRecord(approveEditRecordRequest);
         LOGGER.debug("got the result for named query: approveEditRecord, result:{}", _result);
         return new IntegerWrapper(_result);
+    }
+
+    @RequestMapping(value = "/queries/getStatusChangeDetails", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "get Status Change Details Based on PersonID")
+    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(@RequestParam(value = "personID") Integer personId, Pageable pageable) {
+        LOGGER.debug("Executing named query: getStatusChangeDetails");
+        Page<GetStatusChangeDetailsResponse> _result = queryService.executeGetStatusChangeDetails(personId, pageable);
+        LOGGER.debug("got the result for named query: getStatusChangeDetails, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query getStatusChangeDetails")
+    @RequestMapping(value = "/queries/getStatusChangeDetails/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportGetStatusChangeDetails(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "personID") Integer personId, Pageable pageable) {
+        LOGGER.debug("Exporting named query: getStatusChangeDetails");
+
+        return queryService.exportGetStatusChangeDetails(exportType, personId, pageable);
     }
 
     @RequestMapping(value = "/queries/approvedNewRecord", method = RequestMethod.POST)
