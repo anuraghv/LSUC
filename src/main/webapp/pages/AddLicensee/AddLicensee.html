@@ -5,7 +5,7 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-breadcrumb dataset="Home, Licensee List, Add Licensee" name="breadcrumb1"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label1" caption="Add Licensee" class="h2"></wm-label>
-            <wm-liveform novalidate="false" errormessage="" title="Personal Details" iconclass="wi wi-account-circle" defaultmode="Edit" dataset="bind:Variables.LSUCPersonData.dataSet" captionalign="left" captionposition="top" name="personLiveForm"
+            <wm-liveform novalidate="false" errormessage="" title="Personal Details" iconclass="wi wi-account-circle" defaultmode="Edit" dataset="bind:Variables.LSUCInsertPersonData.dataSet" captionalign="left" captionposition="top" name="personLiveForm"
             on-beforeservicecall="personLiveFormBeforeservicecall($event, $operation, $data)" on-success="personLiveFormSuccess($event, $operation, $data)">
                 <wm-layoutgrid columns="3" name="layoutgrid2">
                     <wm-gridrow name="gridrow10">

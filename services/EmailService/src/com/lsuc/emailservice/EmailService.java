@@ -69,7 +69,7 @@ public class EmailService {
     //     return result;
     // }
     
-    public String sendEmail(String licenseeNumber,String licenseeName) {
+    public String sendEmail(String licenseeNumber,String licenseeName, String personPk) {
         try {
             // Use javamail api, set parameters from registration.properties file
             // set the session properties
@@ -83,9 +83,12 @@ public class EmailService {
             
             String emailSubject = "Licensee Status Change for "+ licenseeNumber;
             String emailMessage = "Hi <br><br>";
+            String approveUrl = "https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Approvals?id="+personPk;
+            logger.info("*********************Approve URL****************"+approveUrl);
+            
             emailMessage = emailMessage+"The Licensee Status for " + licenseeName;
             emailMessage = emailMessage+" with Licensee Number:"+licenseeNumber+" has been changed. Please review and provide your approval.<br><br>";
-            emailMessage = emailMessage+"Click <a href ='https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Main'>here</a> to review changes.<br><br>";
+            emailMessage = emailMessage+"Click <a href = '"+approveUrl+"'>here</a> to review changes.<br><br>";
              emailMessage = emailMessage+"Regards<br>"+securityService.getLoggedInUser().getUserName()+"<br><br>";
              emailMessage = emailMessage+"Note: This is a system generated email. Kindly do not reply.";
             

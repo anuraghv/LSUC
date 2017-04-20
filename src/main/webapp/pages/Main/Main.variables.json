@@ -2005,7 +2005,7 @@
     "dataSet" : [ ],
     "isList" : false,
     "maxResults" : 20,
-    "onSuccess" : "Variables.pendingApprovals.listRecords()",
+    "onSuccess" : "Variables.pendingApprovals.invoke()",
     "startUpdate" : false,
     "autoUpdate" : false,
     "inFlightBehavior" : "executeLast",
