@@ -12,10 +12,15 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
          * e.g. to get value of text widget named 'username' use following script
          * '$scope.Widgets.username.datavalue'
          */
+        $scope.Widgets.licenseDate.mindate = moment().subtract(40, 'year').format('YYYY-MM-DD');
     };
 
 
     $scope.personLiveFormBeforeservicecall = function($event, $operation, $data) {
+
+        if ($scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate == undefined) {
+            $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate = "2999-12-31";
+        }
         $data.addresses = [$scope.Widgets.addresses.dataoutput];
         $data.licensees = [$scope.Widgets.licensees.dataoutput];
         $data.personroles = [$scope.Widgets.personroles.dataoutput];

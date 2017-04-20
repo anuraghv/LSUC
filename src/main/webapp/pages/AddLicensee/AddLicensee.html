@@ -112,7 +112,7 @@
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn25">
                                             <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd"
-                                            outputformat="yyyy-MM-dd" maxdate="CURRENT_DATE"></wm-form-field>
+                                            outputformat="yyyy-MM-dd" maxdate="CURRENT_DATE" mindate="1977-04-20"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn26">
                                             <wm-form-field name="citizenship" displayname="Citizenship" show="true" primary-key="false" generator="assigned" key="citizenship" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
@@ -152,8 +152,8 @@
                                             outputformat="yyyy-MM-dd"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="3" name="gridcolumn27">
-                                            <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd"
-                                            outputformat="yyyy-MM-dd"></wm-form-field>
+                                            <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="yyyy-MM-dd"
+                                            outputformat="yyyy-MM-dd" mindate="bind:Widgets.effectiveFromDate.datavalue"></wm-form-field>
                                         </wm-gridcolumn>
                                         <!--  <wm-gridcolumn columnwidth="2" name="gridcolumn28_1"><wm-label padding="unset 0.5em" name="label3" caption="Class"></wm-label><wm-select name="dummyClass" dataset="bind:Variables.LSUCClassData.dataSet" datafield="All Fields" displayfield="shortNameEnglish" placeholder="Select Class" required="true"></wm-select></wm-gridcolumn>-->
                                         <wm-gridcolumn columnwidth="2" name="gridcolumn34">

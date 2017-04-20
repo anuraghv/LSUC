@@ -1,4 +1,32 @@
 {
+  "changeSuccess" : {
+    "_id" : "wm-changeSuccess-wm.NotificationVariable-1492698626785",
+    "name" : "changeSuccess",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "Request for Change has been added successfully",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "3000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
   "Languagepurpose" : {
     "_id" : "wm-Languagepurpose-wm.LiveVariable-1492682297412",
     "name" : "Languagepurpose",
@@ -3087,6 +3115,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
+    "onSuccess" : "Variables.changeSuccess.invoke()",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : false,
     "autoUpdate" : false,
