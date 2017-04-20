@@ -83,6 +83,9 @@
   "params" : [ {
     "name" : "licenseNumber",
     "type" : "integer"
+  }, {
+    "name" : "personId",
+    "type" : "integer"
   } ]
 }, {
   "name" : "Licensee",

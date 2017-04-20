@@ -13,6 +13,7 @@
                     badgevalue="bind:Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.code + ' - ' + Variables.LSUCLicenseeData.dataSet.data[$i].legacyclassstatus.shortNameEnglish" collapsible="true" closable="false" content="License" class="panel-primary"
                     expanded="true">
                         <wm-param name="licenseNumber" value="bind:Widgets.licenseList.currentItem.licenseeNumber" type="integer"></wm-param>
+                        <wm-param name="personId" value="bind:pageParams.id" type="integer"></wm-param>
                     </wm-panel>
                 </wm-listtemplate>
             </wm-livelist>

@@ -65,6 +65,14 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         });
     };
 
+
+    $scope.liveform7Beforeservicecall = function($event, $operation, $data) {
+        $data['licenseepersonlanguagepurposes'] = [{
+            languagePurposeFk: $data.languagepurpose,
+            licenseeFk: $scope.Variables.LicenseeData.firstRecord.pk
+        }]
+    };
+
 }]);
 
 
@@ -96,6 +104,11 @@ Application.$controller("grid2Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
+
+        $scope.addNewRowAction = function($event) {
+            $scope.Widgets.liveform7.new();
+        };
+
     }
 ]);
 
@@ -183,6 +196,14 @@ Application.$controller("addPolicyFormController", ["$scope",
 ]);
 
 Application.$controller("licenseeinsuranceDialogController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+
+Application.$controller("liveform7Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
