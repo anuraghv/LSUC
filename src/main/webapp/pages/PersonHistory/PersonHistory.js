@@ -20,21 +20,22 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
         if (data.length == 0) {
             return;
         }
-        diffData(data, "Person Details");
+        diffData(data, "Person Details Change", "wi wi-person fa-2x");
 
 
     };
 
 
 
-    function diffData(data, type) {
+    function diffData(data, type, iconType) {
         var historyData = {
             "type": "edit",
             "entity": "status",
             "newPropertyValues": [],
             "oldPropertyValues": [],
             "changedby": "Gerald",
-            "timestamp": ""
+            "timestamp": "",
+            "icon": ""
         };
         for (var i = 0; i < data.length - 1; i++) {
             var original = data[i],
@@ -56,7 +57,8 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                     oldObj.types = key || "NULL";
                     oldObj.value = val || "NULL";
                     historyData.oldPropertyValues.push(oldObj);
-                    if (type == "Licensee Class Practice Group Details") {
+                    historyData.icon = iconType;
+                    if (type == "Status Change") {
                         historyData.timestamp = latest.revtstmp;
                     } else {
                         historyData.timestamp = latest.revinfo.revtstmp;
@@ -77,7 +79,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
             return;
         }
 
-        diffData(data, "Address Details");
+        diffData(data, "Address Change", "wi wi-location-on fa-2x");
     };
 
 
@@ -87,7 +89,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
             return;
         }
         $scope.Variables.personHistoryData.dataSet = [];
-        diffData(data.content, "Licensee Class Practice Group Details");
+        diffData(data.content, "Status Change", "wi wi-pencil fa-2x");
     };
 
 }]);

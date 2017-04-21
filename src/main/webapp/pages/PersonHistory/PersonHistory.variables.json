@@ -639,7 +639,8 @@
         "value" : ""
       } ],
       "changedby" : "",
-      "timestamp" : ""
+      "timestamp" : "",
+      "icon" : ""
     } ],
     "type" : "entry",
     "isList" : true,
