@@ -29,9 +29,9 @@
                         <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet"
                         navigation="On-Demand" name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)" padding="1em 1em unset 1em">
                             <wm-listtemplate layout="inline" name="listtemplate2">
-                                <wm-panel name="panel3" collapsible="true" expanded="false" subheading="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName+' ('+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber+')'"
-                                title="Status Change" badgevalue="time" iconclass="">
-                                    <wm-layoutgrid name="oldlayoutgrid" class="new-block app-form" show="bind:Variables.pendingApprovals.dataSet[$i].status == 'Updated'">
+                                <wm-panel name="panel3" collapsible="true" expanded="true" subheading="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName+' ('+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber+')'"
+                                title="Status Change" badgevalue="time" iconclass="" class="panel-secondary">
+                                    <wm-layoutgrid name="oldlayoutgrid" class="new-block app-form panel" show="bind:Variables.pendingApprovals.dataSet[$i].status == 'Updated'">
                                         <wm-gridrow name="gridrow7">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn16">
                                                 <wm-label name="label9_1" caption="Class" class="control-label" width="100%"></wm-label>
@@ -66,7 +66,7 @@
                                             <wm-gridcolumn columnwidth="4" name="gridcolumn23"></wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
-                                    <wm-layoutgrid class="new-block app-form" name="newlayoutgrid">
+                                    <wm-layoutgrid class="new-block app-form panel" name="newlayoutgrid">
                                         <wm-gridrow name="gridrow6">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn17_1">
                                                 <wm-label caption="Class" class="control-label" width="100%" name="label12_1"></wm-label>
@@ -98,14 +98,14 @@
                                                 <wm-label padding="unset 0.5em" caption="Status" class="control-label p" name="label20"></wm-label>
                                                 <wm-label padding="unset 0.5em" caption="bind:Variables.pendingApprovals.dataSet.data[$i].status" color="red" name="label21"></wm-label>
                                             </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn24">
-                                                <wm-anchor margin="unset 0.5em" name="anchor1" caption="More..." on-click="Variables.goToPage_Approval.invoke()"></wm-anchor>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn24" horizontalalign="left">
+                                                <wm-anchor margin="1em 0.5em unset 0.5em" name="anchor1" caption="More..." on-click="Variables.goToPage_Approval.invoke()"></wm-anchor>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
                                     <wm-buttongroup name="approverejectBtnGrp" accessroles="supervisor">
                                         <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn" on-click="approveBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
-                                        <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)" margin="unset unset unset .5em"></wm-button>
+                                        <wm-button class="btn btn-secondary" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)" margin="unset unset unset .5em"></wm-button>
                                     </wm-buttongroup>
                                 </wm-panel>
                             </wm-listtemplate>

@@ -53,13 +53,11 @@ a.app-header-action .badge {
 }
 .old-block {
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.05);
     border: 1px rgba(0, 0, 0, 0.1) solid;
     margin-bottom: 1em;
 }
 .new-block {
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.05);
     border: 1px rgba(0, 0, 0, 0.1) solid;
     margin-bottom: 1em;
 }
@@ -86,4 +84,45 @@ a.app-header-action .badge {
 }
 .wm-app .h2 {
     margin-top: 0;
+}
+/***************************History page styles****************************************/
+
+.history-panel ul li:first-child .timeline-media {
+    margin-top: 2em;
+}
+.history-panel ul li:last-child .timeline-media {
+    margin-bottom: 4em;
+}
+.history-panel ul li:last-child .timeline-media .timeline-container:after {
+    content: 'start';
+    width: auto;
+    padding: .05em 1em;
+    background: #c8c8c8;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -2.5em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .8em;
+    border-radius: 3px;
+    z-index: 2;
+}
+.timeline-icon {
+    position: absolute;
+    right: -1em;
+    top: 0;
+    border-radius: 50%;
+    z-index: 2;
+    text-align: center;
+    padding-top: 0.3em;
+    width: 30px;
+    height: 30px;
+}
+.timeline-icon .app-icon {
+    font-size: 1em !important;
+}
+.border-dashed {
+    border: 1px #ccc dashed !important;
+    box-shadow: none !important;
 }

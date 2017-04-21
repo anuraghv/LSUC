@@ -5053,11 +5053,11 @@ a.wm-app .label:focus {
     top: -1px;
 }
 .wm-app .label-default {
-    background-color: #aaaaaa;
+    background-color: #333;
 }
 .wm-app .label-default[href]:hover,
 .wm-app .label-default[href]:focus {
-    background-color: #919191;
+    background-color: #1a1a1a;
 }
 .wm-app .label-primary {
     background-color: #3b616c;
@@ -6976,6 +6976,7 @@ button.wm-app .close {
 .wm-app label {
     font-weight: normal;
 }
+.wm-app .label-default,
 .wm-app .label-primary,
 .wm-app .label-success,
 .wm-app .label-info,
@@ -6984,19 +6985,19 @@ button.wm-app .close {
     color: #fff;
 }
 .wm-app .text-danger {
-    color: #781330;
+    color: #d02153;
 }
 .wm-app .text-success {
-    color: #016b52;
+    color: #02d0a0;
 }
 .wm-app .text-info {
-    color: #004799;
+    color: #0076ff;
 }
 .wm-app .text-primary {
-    color: #17262a;
+    color: #3b616c;
 }
 .wm-app .text-warning {
-    color: #a64609;
+    color: #f37322;
 }
 .wm-app .h1,
 .wm-app .h2,
@@ -7140,7 +7141,6 @@ button.wm-app .close {
 }
 .wm-app .btn-group .btn {
     box-shadow: none;
-    border-color: transparent;
 }
 .wm-app .btn-secondary {
     background-color: transparent;
@@ -7328,7 +7328,7 @@ button.wm-app .close {
 }
 .wm-app .app-left-panel .nav,
 .wm-app .app-right-panel .nav {
-    margin: .5em .5em 0;
+    margin: 1em .5em 0;
 }
 .wm-app .app-left-panel .nav li.app-nav-item,
 .wm-app .app-right-panel .nav li.app-nav-item {
@@ -7356,14 +7356,15 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .dropdown a.dropdown-toggle,
 .wm-app .app-left-panel .nav li.app-nav-item .app-popover a,
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a {
-    padding: 0.5em;
+    padding: 0.2em;
     position: relative;
     border-radius: 0;
     line-height: 1.7;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: #697681;
     text-shadow: none;
-    margin: 0.5em;
+    margin: 0.35em;
+    font-size: 1.2em;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a.active,
 .wm-app .app-right-panel .nav li.app-nav-item a.active,
@@ -7389,7 +7390,7 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav li.app-nav-item .app-popover a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: #697681;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a .app-icon,
 .wm-app .app-right-panel .nav li.app-nav-item a .app-icon,
@@ -7445,7 +7446,7 @@ button.wm-app .close {
 .wm-app .app-right-panel .nav.open a:hover,
 .wm-app .app-left-panel .nav.open a:focus,
 .wm-app .app-right-panel .nav.open a:focus {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: #697681;
 }
 .wm-app .app-left-panel .app-nav .app-nav-item > .dropdown > a,
 .wm-app .app-right-panel .app-nav .app-nav-item > .dropdown > a {
@@ -7621,9 +7622,7 @@ button.wm-app .close {
     transform: translate(-50%, -50%) scale(1);
 }
 .wm-app .app-form .control-label,
-.wm-app .app-liveform .control-label,
-.wm-app .app-form .app-label,
-.wm-app .app-liveform .app-label {
+.wm-app .app-liveform .control-label {
     padding: 1em 1em 0;
     margin-bottom: 1em;
     font-weight: normal;
@@ -7850,6 +7849,12 @@ button.wm-app .close {
 .wm-app .app-panel .app-icon {
     font-size: 1.5em;
 }
+.wm-app .app-panel .app-icon.wi-minus:before {
+    content: "\f1d3";
+}
+.wm-app .app-panel .app-icon.wi-plus:before {
+    content: "\f1d0";
+}
 .wm-app .app-panel.panel-primary {
     background-color: transparent;
     box-shadow: none;
@@ -7857,6 +7862,9 @@ button.wm-app .close {
 }
 .wm-app .app-panel.panel-primary > .panel-heading {
     box-shadow: -1px 2px 7px rgba(0, 0, 0, 0.15);
+}
+.wm-app .app-panel.panel-primary > .panel-heading .app-badge {
+    background-color: #333;
 }
 .wm-app .app-panel.panel-primary > .panel-content > .panel-body {
     background-color: inherit;
@@ -7868,11 +7876,12 @@ button.wm-app .close {
 .wm-app .app-panel.panel-primary .panel-actions > .app-icon {
     opacity: .6;
 }
-.wm-app .app-panel.panel-primary .panel-actions > .app-icon.wi-minus:before {
-    content: "\f1d3";
+.wm-app .app-panel.panel-secondary {
+    background-color: #eee;
+    border-color: transparent;
 }
-.wm-app .app-panel.panel-primary .panel-actions > .app-icon.wi-plus:before {
-    content: "\f1d0";
+.wm-app .app-panel.panel-secondary > .panel-content > .panel-body {
+    background-color: inherit;
 }
 .wm-app .app-accordion .app-accordion-panel.panel {
     box-shadow: none;
@@ -8019,6 +8028,10 @@ button.wm-app .close {
 .wm-app .app-livelist .app-card:hover {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
     border-color: #50a0a3;
+}
+.wm-app .app-list.panel-secondary,
+.wm-app .app-livelist.panel-secondary {
+    border: none;
 }
 .wm-app .app-card .app-card-header {
     background-color: transparent;
@@ -8559,3 +8572,4 @@ button.wm-app .close {
     padding-top: 0.833em;
 }
 .wm-app .app-files-upload-status.multiple {
+    padding-top: 0.333em;
