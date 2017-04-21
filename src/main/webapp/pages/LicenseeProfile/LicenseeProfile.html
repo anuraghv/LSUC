@@ -30,12 +30,30 @@
                                 </wm-gridrow>
                                 <wm-gridrow name="gridrow3">
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn6">
-                                        <wm-form-field name="gender" displayname="Gender" show="true" primary-key="false" generator="assigned" key="gender" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
+                                        <wm-form-field name="prefix" displayname="Prefix" show="true" primary-key="false" generator="assigned" key="prefix" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
                                         displayexpression="shortNameEnglish"></wm-form-field>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn7">
+                                        <wm-form-field name="suffix" displayname="Suffix" show="true" primary-key="false" generator="assigned" key="suffix" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                        displayexpression="shortNameEnglish"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn1" columnwidth="4">
+                                        <wm-form-field name="gender" displayname="Gender" show="true" primary-key="false" generator="assigned" key="gender" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
+                                        displayexpression="shortNameEnglish"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn name="gridcolumn2" columnwidth="4">
                                         <wm-form-field name="birthDate" displayname="Birth Date" show="true" primary-key="false" generator="assigned" key="birthDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"
                                         datepattern="dd MMM yyyy"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn3" columnwidth="4">
+                                        <wm-form-field name="commonlyReferredToName" displayname="Preferred Name" show="true" primary-key="false" generator="assigned" key="commonlyReferredToName" type="string" readonly="false" required="false" widget="text"
+                                        maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn4" columnwidth="4">
+                                        <wm-form-field name="mailingName" displayname="Mailing Name" show="true" primary-key="false" generator="assigned" key="mailingName" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text"
+                                        placeholder="Enter value"></wm-form-field>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
