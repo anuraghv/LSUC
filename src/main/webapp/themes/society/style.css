@@ -7879,9 +7879,13 @@ button.wm-app .close {
 .wm-app .app-panel.panel-secondary {
     background-color: #eee;
     border-color: transparent;
+    box-shadow: none;
 }
 .wm-app .app-panel.panel-secondary > .panel-content > .panel-body {
     background-color: inherit;
+}
+.wm-app .app-panel.panel-secondary > .panel-content:not(.ng-hide) {
+    border-top: 1px solid #ddd;
 }
 .wm-app .app-accordion .app-accordion-panel.panel {
     box-shadow: none;
