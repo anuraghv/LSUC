@@ -76,3 +76,11 @@ a.app-header-action .badge {
 .user-badge .user-pic {
     border: 2px rgba(192, 192, 192, 0.3);
 }
+/******************************************************************/
+
+.btn-action-top {
+    right: 1em;
+    position: absolute;
+    top: 1em;
+    z-index: 1;
+}

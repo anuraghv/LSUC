@@ -64,7 +64,7 @@
     "type" : "Business",
     "isList" : false,
     "saveInPhonegap" : false,
-    "maxResults" : 6,
+    "maxResults" : 5,
     "designMaxResults" : 5,
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,

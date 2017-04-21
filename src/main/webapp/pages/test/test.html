@@ -596,6 +596,23 @@
                         </wm-liveform>
                     </wm-livegrid>
                 </wm-tabpane>
+                <wm-tabpane name="tabpane5" title="Business">
+                    <wm-grid editmode="inline" title="Business List" dataset="bind:Variables.LSUCBusinessData.dataSet" navigation="Basic" name="grid9_1">
+                        <wm-grid-column binding="pk" caption="Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="businessNumber" caption="Business Number" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                        <wm-grid-column binding="businessName" caption="Business Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                        <wm-grid-column binding="numberOfEmployees" caption="Number Of Employees" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-grid-column>
+                        <wm-grid-column binding="isActive" caption="Is Active" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+                        <wm-grid-column binding="isBusinessNameSameAsOwner" caption="Is Business Name Same As Owner" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character"></wm-grid-column>
+                        <wm-grid-column binding="alsoKnownAs" caption="Also Known As" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                        <wm-grid-column binding="businesslegaltype.pk" caption="Businesslegaltype Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" related-entity-name="Businesslegaltype"></wm-grid-column>
+                        <wm-grid-column binding="businesslegaltype.code" caption="Businesslegaltype Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Businesslegaltype" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="businesslegaltype.shortNameEnglish" caption="Name English" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Businesslegaltype" readonly="true"></wm-grid-column>
+                        <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                        <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                        <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                    </wm-grid>
+                </wm-tabpane>
             </wm-tabs>
         </wm-page-content>
     </wm-content>

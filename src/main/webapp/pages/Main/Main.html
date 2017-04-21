@@ -32,8 +32,9 @@
                         <wm-chart type="Line" title="Change Request" height="250px" iconclass="" name="chart4" class="btn-transparent  small" accessroles="supervisor" theme="Orient"></wm-chart>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn8" padding="unset 1em">
-                        <wm-chart type="Column" title="Business Employees" height="250" iconclass="" name="chart3" dataset="bind:Variables.BusinessData.dataSet" xaxisdatakey="businessName" yaxisdatakey="numberOfEmployees" orderby="numberOfEmployees:desc"
-                        class="btn-transparent small" showyaxis="true" offsetleft="25" offsetright="0" offsettop="0" accessroles="supervisor" theme="Flyer"></wm-chart>
+                        <wm-chart type="Column" title="Top 5 Business By Employee Number" height="250" iconclass="" name="chart3" dataset="bind:Variables.BusinessData.dataSet" xaxisdatakey="businessName" yaxisdatakey="numberOfEmployees" orderby="numberOfEmployees:desc"
+                        class="btn-transparent small" showyaxis="true" offsetleft="25" offsetright="0" offsettop="5" accessroles="supervisor" theme="Flyer" xaxislabel="Business" reducexticks="false" barspacing="0.3" staggerlabels="true" xdomain="Min"
+                        showlegend="hide"></wm-chart>
                     </wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14">

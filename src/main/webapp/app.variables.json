@@ -22,13 +22,13 @@
     "category" : "wm.Variable",
     "dataBinding" : [ ],
     "dataSet" : [ {
-      "id" : "list",
-      "label" : "List",
-      "icon" : "fa fa-th-list fa-lg"
-    }, {
       "id" : "grid",
       "label" : "Grid",
       "icon" : "fa fa-th-large fa-lg"
+    }, {
+      "id" : "list",
+      "label" : "List",
+      "icon" : "fa fa-th-list fa-lg"
     } ],
     "type" : "entry",
     "isList" : true,

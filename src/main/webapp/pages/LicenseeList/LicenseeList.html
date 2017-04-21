@@ -10,7 +10,7 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right">
                         <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus fa-lg"></wm-button>
-                        <wm-switch datavalue="list" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;"></wm-switch>
+                        <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;"></wm-switch>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
@@ -52,7 +52,7 @@
                 <wm-filter-action key="clear" display-name="Reset" show="true" class="btn-secondary" iconclass="" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
                 <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="" title="Filter" action="filter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
-            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="bind:Widgets.viewSwitch.datavalue === 'list'"
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="bind:Widgets.viewSwitch.datavalue === 'grid'"
             on-click="Variables.listgoToPage_LicenseeInfo.invoke()" navigationalign="right">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card" class="gray">
@@ -80,7 +80,7 @@
                     </wm-card>
                 </wm-listtemplate>
             </wm-livelist>
-            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.viewSwitch.datavalue === 'grid'" spacing="normal">
+            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.viewSwitch.datavalue === 'list'" spacing="normal">
                 <wm-grid-column binding="customField" caption="" type="string" widget-type="icon" width="40px" edit-widget-type="text" searchable="false" show="true" readonly="false">
                     <wm-icon caption="" iconclass="wi wi-account-circle fa-2x" iconposition="left" class="" data-ng-class=""></wm-icon>
                 </wm-grid-column>
