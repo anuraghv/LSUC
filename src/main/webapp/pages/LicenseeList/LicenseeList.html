@@ -4,9 +4,11 @@
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-layoutgrid name="layoutgrid2">
-                <wm-gridrow name="gridrow4">
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn12"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right">
+                <wm-gridrow name="gridrow4" padding="unset unset 1em unset">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn12">
+                        <wm-label padding="unset 0.5em" name="label8" class="h2" caption="bind:appLocale.LABEL_LICENSEES"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right" padding="unset unset 1px unset">
                         <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus fa-lg"></wm-button>
                         <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;"></wm-switch>
                     </wm-gridcolumn>

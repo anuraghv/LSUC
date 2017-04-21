@@ -84,3 +84,6 @@ a.app-header-action .badge {
     top: 1em;
     z-index: 1;
 }
+.wm-app .h2 {
+    margin-top: 0;
+}

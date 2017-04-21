@@ -1,6 +1,6 @@
 var _WM_APP_PROPERTIES = {
   "activeTheme" : "society",
-  "dateFormat" : "",
+  "dateFormat" : "dd MMM yyyy",
   "defaultLanguage" : "en",
   "displayName" : "LSUC",
   "homePage" : "Main",
