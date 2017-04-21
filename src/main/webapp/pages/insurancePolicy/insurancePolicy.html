@@ -1,8 +1,8 @@
 <wm-partial data-ng-controller="insurancePolicyPageController" name="partial1">
-    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.LSUCLicenseeinsurancepolicyData.dataSet" navigation="None" name="policyList">
+    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.LSUCLicenseeinsurancepolicyData.dataSet" navigation="None" name="policyList" class="media-list">
         <wm-listtemplate layout="inline" name="listtemplate1">
             <wm-container class="media-body" padding="unset unset unset 1.25em" name="container2">
-                <wm-liveform novalidate="false" errormessage="" title="bind:&quot;Policy Number: &quot;+Variables.LSUCLicenseeinsurancepolicyData.dataSet.data[$i].insurancePolicyNumber" iconclass="bind:Widgets.policyList.currentItem.insurancepolicystatus.code === 'A' ? 'wi wi-done' :'wi wi-close'"
+                <wm-liveform novalidate="false" errormessage="" title="bind:&quot;Policy Number: &quot;+Variables.LSUCLicenseeinsurancepolicyData.dataSet.data[$i].insurancePolicyNumber" iconclass="bind:Widgets.policyList.currentItem.insurancepolicystatus.code === 'A' ? 'wi wi-dot-circle text-success' :'wi wi-dot-circle text-danger'"
                 defaultmode="View" dataset="bind:Variables.LSUCLicenseeinsurancepolicyData.dataSet" captionalign="left" captionposition="top" name="policyForm" formdata="bind:Widgets.policyList.currentItem" class="gray" subheading="bind:&quot;Policy End Date:&quot;+ Variables.LSUCLicenseeinsurancepolicyData.dataSet.data[$i].policyEndDate">
                     <wm-container show="bind: !Widgets.policyForm.isUpdateMode" horizontalalign="right" name="container6">
                         <wm-button class="btn-link" type="button" caption="Edit" name="policyUpBtn" iconclass="wi wi-mode-edit fa-2x" on-click="policyUpBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>

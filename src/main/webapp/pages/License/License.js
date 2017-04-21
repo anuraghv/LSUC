@@ -27,7 +27,6 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
 
 
     $scope.licenseStatusFormBeforeservicecall1 = function($event, $operation, $data, item, currentItemWidgets) {
-
         if ($data.effectiveToDate == undefined) {
             $data.effectiveToDate = '9999-12-31';
         }
@@ -56,6 +55,13 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
 
     $scope.addLicenseeStatusBtnClick = function($event, $isolateScope) {
         $scope.Widgets.addLicenseeStatusForm.new()
+    };
+
+    $scope.getAssociatedPracticeGroupsonBeforeUpdate = function(variable, inputData) {
+        if ($scope.Widgets.addLicenseeStatusForm.formWidgets.dummyClass.datavalue == undefined) {
+            return false;
+        }
+
     };
 
 }]);
