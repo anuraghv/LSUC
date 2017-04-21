@@ -7849,10 +7849,10 @@ button.wm-app .close {
 .wm-app .app-panel .app-icon {
     font-size: 1.5em;
 }
-.wm-app .app-panel .app-icon.wi-minus:before {
+.wm-app .app-panel .app-icon.panel-action.wi-minus:before {
     content: "\f1d3";
 }
-.wm-app .app-panel .app-icon.wi-plus:before {
+.wm-app .app-panel .app-icon.panel-action.wi-plus:before {
     content: "\f1d0";
 }
 .wm-app .app-panel.panel-primary {
@@ -8024,14 +8024,14 @@ button.wm-app .close {
 .wm-app .app-livelist .app-list-item.active > .app-card {
     border-color: #3b616c;
 }
+.wm-app .app-list .app-list-item.active > .panel-secondary,
+.wm-app .app-livelist .app-list-item.active > .panel-secondary {
+    border: none;
+}
 .wm-app .app-list .app-card:hover,
 .wm-app .app-livelist .app-card:hover {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
     border-color: #50a0a3;
-}
-.wm-app .app-list.panel-secondary,
-.wm-app .app-livelist.panel-secondary {
-    border: none;
 }
 .wm-app .app-card .app-card-header {
     background-color: transparent;
