@@ -1255,7 +1255,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 10,
+    "bindCount" : 9,
     "tableName" : "LICENSEE",
     "tableType" : "TABLE",
     "properties" : [ "admissionroute", "citizenship", "feecategory", "geographicarea", "legacyclassstatus", "licencetype", "person" ],

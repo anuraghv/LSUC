@@ -86,8 +86,8 @@ public class EmailService {
             String approveUrl = "https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Approvals?id="+personPk;
             logger.info("*********************Approve URL****************"+approveUrl);
             
-            emailMessage = emailMessage+"The Licensee Status for " + licenseeName;
-            emailMessage = emailMessage+" with Licensee Number:"+licenseeNumber+" has been changed. Please review and provide your approval.<br><br>";
+            emailMessage = emailMessage+"The Licensee Status for <b>" + licenseeName+"</b>";
+            emailMessage = emailMessage+" with Licensee Number: <b>"+licenseeNumber+"</b> has been changed. Please review and provide your approval.<br><br>";
             emailMessage = emailMessage+"Click <a href = '"+approveUrl+"'>here</a> to review changes.<br><br>";
              emailMessage = emailMessage+"Regards<br>"+securityService.getLoggedInUser().getUserName()+"<br><br>";
              emailMessage = emailMessage+"Note: This is a system generated email. Kindly do not reply.";
