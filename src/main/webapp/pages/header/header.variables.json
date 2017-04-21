@@ -1,4 +1,30 @@
 {
+  "getPendingApprovalsCount" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1492747457239",
+    "name" : "getPendingApprovalsCount",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"status = 'Updated' or status='Created'\"",
+      "type" : "string"
+    } ],
+    "type" : "integer",
+    "service" : "LSUC",
+    "operation" : "countLicenseeclasspracticegroupApprovals",
+    "operationId" : "LicenseeclasspracticegroupApprovalsController_countLicenseeclasspracticegroupApprovals",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "LicenseeclasspracticegroupApprovals"
+  },
   "userProfileActions" : {
     "_id" : "wm-userProfileActions-wm.Variable-1492684959889",
     "name" : "userProfileActions",

@@ -10,7 +10,7 @@
                         <wm-anchor name="searchLink" iconclass="wi wi-search fa-2x" class="app-header-action" caption="" on-click="Variables.goToPage_Search.invoke()"></wm-anchor>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item5">
-                        <wm-popover popoverwidth="240" popoverheight="360" name="alertsInfo" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="10" content="alerts"></wm-popover>
+                        <wm-popover popoverwidth="240" popoverheight="360" name="alertsInfo" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="bind:Variables.getPendingApprovalsCount.dataSet.value" content="alerts"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item2">
                         <wm-popover popoverwidth="240" name="settings" iconclass="wi wi-gear fa-2x" caption="" class="app-header-action" content="settings"></wm-popover>
@@ -22,7 +22,8 @@
                                 <wm-label caption="bind:Variables.loggedInUser.dataSet.roles[0]" class="app-userrole p small text-uppercase" name="userrole"></wm-label>
                             </wm-container>
                             <wm-container class="media-right" name="container2">
-                                <wm-picture name="picture2" pictureplaceholder="resources/images/imagelists/user.png" width="30" height="30" class="user-pic" picturesource="bind:&quot;resources/images/user/&quot;+Variables.loggedInUser.dataSet.name+&quot;.png&quot;" shape="circle"></wm-picture>
+                                <wm-picture name="picture2" pictureplaceholder="resources/images/imagelists/user.png" width="30" height="30" class="user-pic" picturesource="bind:&quot;resources/images/user/&quot;+Variables.loggedInUser.dataSet.name+&quot;.png&quot;"
+                                shape="circle"></wm-picture>
                             </wm-container>
                         </wm-menu>
                     </wm-nav-item>
