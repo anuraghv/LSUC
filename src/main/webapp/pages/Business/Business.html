@@ -51,6 +51,7 @@
                         </wm-grid>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="6" name="gridcolumn25_1" padding="unset 0.5em unset 0.25em">
+                        <wm-container name="container2" content="BusinessPersonRelationship"></wm-container>
                         <wm-grid editmode="inline" title="Phone" dataset="bind:Variables.LSUCBusinessphonecontactData.dataSet" navigation="None" name="businessPhoneGrid" iconclass="wi wi-phone fa-2x">
                             <wm-grid-column binding="phonepurpose.shortNameEnglish" caption="Purpose" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Phonepurpose"></wm-grid-column>
                             <wm-grid-column binding="contactNumber" caption="Number" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>

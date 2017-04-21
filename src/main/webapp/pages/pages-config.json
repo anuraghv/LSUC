@@ -32,6 +32,13 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "BusinessPersonRelationship",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "businessId",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "BusinessPersonRelationshipType",
   "type" : "PARTIAL",
   "params" : [ {
