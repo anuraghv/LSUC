@@ -17,12 +17,7 @@ Application.$controller("BusinessPageController", ["$scope", function ($scope) {
 }]);
 
 
-Application.$controller("liveform1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
+
 
 Application.$controller("BusinessAddressGridController", ["$scope",
 	function($scope) {
@@ -31,7 +26,87 @@ Application.$controller("BusinessAddressGridController", ["$scope",
 	}
 ]);
 
-Application.$controller("BusinessAddressFormController", ["$scope",
+
+
+Application.$controller("grid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+
+
+Application.$controller("phoneGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("emailGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+
+
+Application.$controller("businessEmailGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+
+
+Application.$controller("socialMediaGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("businessPhoneGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("orgUnitsFormController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+
+
+Application.$controller("businessAddressGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("businessSocialMediaGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid7Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("businessOrgUnitGridController", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
