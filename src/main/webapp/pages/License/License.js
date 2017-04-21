@@ -30,8 +30,6 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
 
 
     $scope.licenseStatusFormBeforeservicecall = function($event, $operation, $data) {
-        //debugger;
-
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licenseeFk,
             "newIsPrimary": $data.isPrimary,
@@ -65,6 +63,9 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             licenseeFk: $scope.Variables.LicenseeData.firstRecord.pk
         }]
     };
+
+
+
 
 }]);
 

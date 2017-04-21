@@ -3115,7 +3115,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "onSuccess" : "Variables.changeSuccess.invoke()",
+    "onSuccess" : "Variables.changeSuccess.invoke();Variables.sendEmail.invoke()",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : false,
     "autoUpdate" : false,
@@ -4694,5 +4694,39 @@
     "filterFields" : { },
     "inputFields" : { },
     "package" : "com.lsuc.lsuc.Personlanguage"
+  },
+  "sendEmail" : {
+    "_id" : "wm-sendEmail-wm.ServiceVariable-1492748618982",
+    "name" : "sendEmail",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "licenseeNumber",
+      "value" : "bind:pageParams.licenseNumber",
+      "type" : "string"
+    }, {
+      "target" : "licenseeName",
+      "value" : "bind:Variables.LicenseeData.dataSet.data[0].person.firstName +' '+\nVariables.LicenseeData.dataSet.data[0].person.lastName",
+      "type" : "string"
+    }, {
+      "target" : "personPk",
+      "value" : "bind:Variables.LicenseeData.dataSet.data[0].person.pk",
+      "type" : "string"
+    } ],
+    "type" : "string",
+    "service" : "EmailService",
+    "operation" : "sendEmail",
+    "operationId" : "EmailController_sendEmail",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Email"
   }
 }
