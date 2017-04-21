@@ -20,7 +20,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
         if (data.length == 0) {
             return;
         }
-        diffData(data, "Person Details Change", "wi wi-person fa-2x");
+        diffData(data, "Name Change", "wi wi-person fa-2x");
 
 
     };

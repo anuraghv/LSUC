@@ -51,4 +51,40 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
         $scope.Variables.updateStatus.update();
     };
 
+
+    $scope.LicenseePracticegroupAudonSuccess = function(variable, data) {
+        PersonHistory(data, "Status Change");
+    };
+
+
+    $scope.PersonaddressAudonSuccess = function(variable, data) {
+        PersonHistory(data, "Address Change");
+    };
+
+
+    $scope.PersonAudonSuccess = function(variable, data) {
+        $scope.Variables.PersonHistoryData.dataSet = []
+        debugger;
+        PersonHistory(data, "Name Change");
+    };
+
+    function PersonHistory(data, type) {
+        _.forEach(data, function(obj) {
+            var HistoryData = {
+                "type": "",
+                "username": "",
+                "timeStamp": ""
+            }
+            debugger;
+            HistoryData.type = type;
+            HistoryData.username = obj.firstName + " " + obj.lastName;
+            HistoryData.timeStamp = obj.revinfo.revtstmp;
+            $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
+        });
+
+
+
+    }
+
+
 }]);

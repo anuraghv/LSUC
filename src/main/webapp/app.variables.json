@@ -912,6 +912,31 @@
     "isList" : false,
     "saveInPhonegap" : false
   },
+  "PersonHistory" : {
+    "_id" : "wm-PersonHistory-wm.Variable-1492755372975",
+    "name" : "PersonHistory",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "type" : "",
+      "entity" : "",
+      "newPropertyValues" : [ {
+        "types" : "",
+        "value" : ""
+      } ],
+      "oldPropertyValues" : [ {
+        "types" : "",
+        "value" : ""
+      } ],
+      "changedby" : "",
+      "timestamp" : "",
+      "icon" : ""
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
   "sitemap" : {
     "_id" : "wm-sitemap-wm.Variable-1492681085957",
     "name" : "sitemap",

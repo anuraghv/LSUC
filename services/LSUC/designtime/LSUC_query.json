@@ -162,8 +162,8 @@
     "name" : "getStatusChangeDetails",
     "description" : "get Status Change Details Based on PersonID",
     "version" : "V2",
-    "queryString" : "select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where licensee.personFk=:personID",
-    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupAud where licensee.personFk=:personID",
+    "queryString" : "select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )",
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )",
     "nativeSql" : false,
     "fetchCount" : true,
     "type" : "SELECT",
@@ -173,7 +173,7 @@
       "list" : false,
       "variableType" : "PROMPT",
       "testValue" : "1",
-      "required" : true
+      "required" : false
     } ],
     "request" : {
       "wrapped" : false,

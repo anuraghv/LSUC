@@ -112,16 +112,16 @@
                         </wm-livelist>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn37" padding="unset 1em">
-                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-info" dataset="bind:Variables.BusinessData.dataSet"
+                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-info" dataset="bind:Variables.PersonHistoryData.dataSet"
                         navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item">
                             <wm-listtemplate layout="inline" name="listtemplate1">
                                 <wm-container class="media-left" name="container2_1">
                                     <wm-container width="40" height="40" name="container3" class="btn-rounded btn btn-primary"></wm-container>
                                 </wm-container>
                                 <wm-container class="media-body" name="container4">
-                                    <wm-label class="p media-heading" caption="Address Change" fontsize="1.143" fontunit="em" name="label5"></wm-label>
-                                    <wm-label caption="Address Change" class="p text-muted" name="label6"></wm-label>
-                                    <wm-label caption="23 Sept, 2014" class="p text-muted" name="label7_1"></wm-label>
+                                    <wm-label class="p media-heading" caption="bind:Variables.PersonHistoryData.dataSet[$i].type" fontsize="1.143" fontunit="em" name="label5"></wm-label>
+                                    <wm-label caption="bind:Variables.PersonHistoryData.dataSet[$i].username" class="p text-muted" name="label6"></wm-label>
+                                    <wm-label caption="bind:Variables.PersonHistoryData.dataSet[$i].timeStamp" class="pull-right text-muted" name="label27"></wm-label>
                                 </wm-container>
                             </wm-listtemplate>
                         </wm-livelist>

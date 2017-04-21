@@ -10,8 +10,8 @@
                 <wm-listtemplate layout="inline" name="listtemplate2">
                     <wm-container class="media-left" name="container2">
                         <wm-container name="container4" width="120" height="100%">
-                            <wm-label padding="unset 0.5em" name="Datelabel" caption="bind:Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'dd MMM, yyyy'" class="text-default" whitespace="nowrap"></wm-label>
-                            <wm-icon padding="1em" name="Historyicon" caption="" iconclass="bind:Variables.personHistoryData.dataSet[$i].icon" iconposition="left"></wm-icon>
+                            <wm-label padding="0em 0.5em unset 0.5em" name="Datelabel" caption="bind:Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'dd MMM, yyyy'" class="text-default" whitespace="nowrap"></wm-label>
+                            <wm-icon padding="1em" name="Historyicon" caption="" iconclass="bind:Variables.personHistoryData.dataSet[$i].icon" iconposition="left" class="btn-rounded btn btn-primary"></wm-icon>
                         </wm-container>
                     </wm-container>
                     <wm-container class="media-body" name="container3">

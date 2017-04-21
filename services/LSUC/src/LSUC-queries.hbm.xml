@@ -53,14 +53,14 @@ select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassP
 
     <query name="getStatusChangeDetails">
         <![CDATA[
-        select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where licensee.personFk=:personID
+        select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
         ]]>
     <query-param name="personID" type="java.lang.Integer"/>
     </query>
 
     <query name="getStatusChangeDetails__count">
         <![CDATA[
-        select count(*)  from LicenseeclasspracticegroupAud where licensee.personFk=:personID
+        select count(*)  from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
         ]]>
     <query-param name="personID" type="java.lang.Integer"/>
     </query>
