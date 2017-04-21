@@ -626,7 +626,7 @@
     }, {
       "columnValue" : {
         "type" : "server-defined",
-        "insertable" : true,
+        "insertable" : false,
         "updatable" : true,
         "variableType" : "USER_NAME"
       },
@@ -651,20 +651,20 @@
       "unique" : false
     }, {
       "columnValue" : {
-        "type" : "database-defined",
-        "insertable" : false,
+        "type" : "server-defined",
+        "insertable" : true,
         "updatable" : false,
-        "defaultValue" : null
+        "variableType" : "USER_NAME"
       },
-      "fieldName" : "modifiedOn",
+      "fieldName" : "createdBy",
       "foreignKey" : false,
       "generatorType" : "assigned",
       "generatorValue" : null,
-      "javaType" : "timestamp",
-      "length" : 26,
-      "name" : "MODIFIED_ON",
+      "javaType" : "string",
+      "length" : 15,
+      "name" : "CREATED_BY",
       "nullable" : true,
-      "oldName" : "MODIFIED_ON",
+      "oldName" : "CREATED_BY",
       "partOfAnyRelation" : false,
       "partOfForeignKey" : false,
       "partOfPrimaryKey" : false,
@@ -673,7 +673,111 @@
       "primaryKey" : false,
       "scale" : 2,
       "sequenceSchema" : null,
-      "sqlType" : "timestamp",
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "server-defined",
+        "insertable" : true,
+        "updatable" : false,
+        "variableType" : "DATE"
+      },
+      "fieldName" : "createdDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "date",
+      "length" : 10,
+      "name" : "CREATED_DATE",
+      "nullable" : true,
+      "oldName" : "CREATED_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "server-defined",
+        "insertable" : true,
+        "updatable" : false,
+        "variableType" : "TIME"
+      },
+      "fieldName" : "createdTime",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "time",
+      "length" : 8,
+      "name" : "CREATED_TIME",
+      "nullable" : true,
+      "oldName" : "CREATED_TIME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "time",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "server-defined",
+        "insertable" : false,
+        "updatable" : true,
+        "variableType" : "TIME"
+      },
+      "fieldName" : "modifiedTime",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "time",
+      "length" : 8,
+      "name" : "MODIFIED_TIME",
+      "nullable" : true,
+      "oldName" : "MODIFIED_TIME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "time",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "server-defined",
+        "insertable" : false,
+        "updatable" : true,
+        "variableType" : "DATE"
+      },
+      "fieldName" : "modifiedDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "date",
+      "length" : 10,
+      "name" : "MODIFIED_DATE",
+      "nullable" : true,
+      "oldName" : "MODIFIED_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
       "unique" : false
     } ],
     "constraints" : [ {
@@ -12552,23 +12656,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEECLASSPRACTICEGROUP",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "licenseeclasspracticegroupAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "CLASS_PRACTICE_GROUP_FK"
-      } ],
-      "name" : "FK_LICENSEECLASSPRACTICExYyo6",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "CLASSPRATICEGROUP",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -17165,23 +17252,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEECLASSPRACTICEGROUP",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "licenseeclasspracticegroupAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "LICENSEE_FK"
-      } ],
-      "name" : "FK_LICENSEECLASSPRACTICEzWkGE",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "LICENSEE",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -18924,23 +18994,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personaddressAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "PERSON_FK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_uApCQ",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PERSON",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSONADDRESS_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"

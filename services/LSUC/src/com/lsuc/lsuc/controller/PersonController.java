@@ -37,7 +37,6 @@ import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseephotoidcard;
 import com.lsuc.lsuc.Person;
 import com.lsuc.lsuc.Personaddress;
-import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Personemailcontact;
 import com.lsuc.lsuc.Personlanguage;
 import com.lsuc.lsuc.Personnameotherlanguage;
@@ -298,15 +297,6 @@ public class PersonController {
 
         LOGGER.debug("Fetching all associated personaddresses");
         return personService.findAssociatedPersonaddresses(id, pageable);
-    }
-
-    @RequestMapping(value="/{id:.+}/personaddressAuds", method=RequestMethod.GET)
-    @ApiOperation(value = "Gets the personaddressAuds instance associated with the given id.")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(@PathVariable("id") Integer id, Pageable pageable) {
-
-        LOGGER.debug("Fetching all associated personaddressAuds");
-        return personService.findAssociatedPersonaddressAuds(id, pageable);
     }
 
     /**

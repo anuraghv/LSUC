@@ -28,7 +28,6 @@ import com.lsuc.lsuc.Lawyer;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
 import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
-import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 import com.lsuc.lsuc.Licenseeinsurance;
 import com.lsuc.lsuc.Licenseepersonlanguagepurpose;
 import com.lsuc.lsuc.Licenseephotoidcard;
@@ -56,10 +55,6 @@ public class LicenseeServiceImpl implements LicenseeService {
     @Autowired
 	@Qualifier("LSUC.LicenseeinsuranceService")
 	private LicenseeinsuranceService licenseeinsuranceService;
-
-    @Autowired
-	@Qualifier("LSUC.LicenseeclasspracticegroupAudService")
-	private LicenseeclasspracticegroupAudService licenseeclasspracticegroupAudService;
 
     @Autowired
 	@Qualifier("LSUC.LicenseepersonlanguagepurposeService")
@@ -149,14 +144,6 @@ public class LicenseeServiceImpl implements LicenseeService {
                 licenseeclasspracticegroup.setLicensee(licenseeCreated);
                 LOGGER.debug("Creating a new child Licenseeclasspracticegroup with information: {}", licenseeclasspracticegroup);
                 licenseeclasspracticegroupService.create(licenseeclasspracticegroup);
-            }
-        }
-
-        if(licenseeCreated.getLicenseeclasspracticegroupAuds() != null) {
-            for(LicenseeclasspracticegroupAud licenseeclasspracticegroupAud : licenseeCreated.getLicenseeclasspracticegroupAuds()) {
-                licenseeclasspracticegroupAud.setLicensee(licenseeCreated);
-                LOGGER.debug("Creating a new child LicenseeclasspracticegroupAud with information: {}", licenseeclasspracticegroupAud);
-                licenseeclasspracticegroupAudService.create(licenseeclasspracticegroupAud);
             }
         }
         return licenseeCreated;
@@ -339,17 +326,6 @@ public class LicenseeServiceImpl implements LicenseeService {
         return licenseeclasspracticegroupService.findAll(queryBuilder.toString(), pageable);
     }
 
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(Integer pk, Pageable pageable) {
-        LOGGER.debug("Fetching all associated licenseeclasspracticegroupAuds");
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("licensee.pk = '" + pk + "'");
-
-        return licenseeclasspracticegroupAudService.findAll(queryBuilder.toString(), pageable);
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -375,15 +351,6 @@ public class LicenseeServiceImpl implements LicenseeService {
 	 */
 	protected void setLicenseeinsuranceService(LicenseeinsuranceService service) {
         this.licenseeinsuranceService = service;
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service LicenseeclasspracticegroupAudService instance
-	 */
-	protected void setLicenseeclasspracticegroupAudService(LicenseeclasspracticegroupAudService service) {
-        this.licenseeclasspracticegroupAudService = service;
     }
 
     /**

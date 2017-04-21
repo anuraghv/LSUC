@@ -18,7 +18,6 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
-import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 
 /**
  * Service object for domain model class {@link Classpraticegroup}.
@@ -162,18 +161,6 @@ public interface ClasspraticegroupService {
      * @see Page
      */
     Page<Licenseeclasspracticegroup> findAssociatedLicenseeclasspracticegroups(Integer pk, Pageable pageable);
-
-    /*
-     * Returns the associated licenseeclasspracticegroupAuds for given Classpraticegroup id.
-     *
-     * @param pk value of pk; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated LicenseeclasspracticegroupAud instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(Integer pk, Pageable pageable);
 
 }
 

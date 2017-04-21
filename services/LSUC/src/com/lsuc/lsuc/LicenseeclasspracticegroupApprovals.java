@@ -7,7 +7,7 @@ package com.lsuc.lsuc;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.sql.Timestamp;
+import java.sql.Time;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -45,9 +45,18 @@ public class LicenseeclasspracticegroupApprovals implements Serializable {
     private Date newEffectiveToDate;
     private Integer newClassPracticeGroupFk;
     private String status;
-    @ServerDefinedProperty( value = VariableType.USER_NAME, scopes = { Scope.UPDATE, Scope.INSERT })
+    @ServerDefinedProperty( value = VariableType.USER_NAME, scopes = { Scope.UPDATE })
     private String modifiedBy;
-    private Timestamp modifiedOn;
+    @ServerDefinedProperty( value = VariableType.USER_NAME, scopes = { Scope.INSERT })
+    private String createdBy;
+    @ServerDefinedProperty( value = VariableType.DATE, scopes = { Scope.INSERT })
+    private Date createdDate;
+    @ServerDefinedProperty( value = VariableType.TIME, scopes = { Scope.INSERT })
+    private Time createdTime;
+    @ServerDefinedProperty( value = VariableType.TIME, scopes = { Scope.UPDATE })
+    private Time modifiedTime;
+    @ServerDefinedProperty( value = VariableType.DATE, scopes = { Scope.UPDATE })
+    private Date modifiedDate;
     private Licensee licensee;
     private Licenseeclasspracticegroup licenseeclasspracticegroup;
 
@@ -161,7 +170,7 @@ public class LicenseeclasspracticegroupApprovals implements Serializable {
         this.status = status;
     }
 
-    @Column(name = "`MODIFIED_BY`", nullable = true, length = 10)
+    @Column(name = "`MODIFIED_BY`", nullable = true, insertable = false, length = 10)
     public String getModifiedBy() {
         return this.modifiedBy;
     }
@@ -170,13 +179,49 @@ public class LicenseeclasspracticegroupApprovals implements Serializable {
         this.modifiedBy = modifiedBy;
     }
 
-    @Column(name = "`MODIFIED_ON`", nullable = true, insertable = false, updatable = false)
-    public Timestamp getModifiedOn() {
-        return this.modifiedOn;
+    @Column(name = "`CREATED_BY`", nullable = true, updatable = false, length = 15)
+    public String getCreatedBy() {
+        return this.createdBy;
     }
 
-    public void setModifiedOn(Timestamp modifiedOn) {
-        this.modifiedOn = modifiedOn;
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    @Column(name = "`CREATED_DATE`", nullable = true, updatable = false)
+    public Date getCreatedDate() {
+        return this.createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    @Column(name = "`CREATED_TIME`", nullable = true, updatable = false)
+    public Time getCreatedTime() {
+        return this.createdTime;
+    }
+
+    public void setCreatedTime(Time createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    @Column(name = "`MODIFIED_TIME`", nullable = true, insertable = false)
+    public Time getModifiedTime() {
+        return this.modifiedTime;
+    }
+
+    public void setModifiedTime(Time modifiedTime) {
+        this.modifiedTime = modifiedTime;
+    }
+
+    @Column(name = "`MODIFIED_DATE`", nullable = true, insertable = false)
+    public Date getModifiedDate() {
+        return this.modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
