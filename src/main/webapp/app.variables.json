@@ -974,11 +974,11 @@
           "link" : "#/AddLicensee"
         } ]
       }, {
-        "label" : "Businesses",
+        "label" : "Business List",
         "link" : "#/BusinessList",
         "id" : "BusinessList",
         "children" : [ {
-          "label" : "Business",
+          "label" : "View Business",
           "link" : "#/Business",
           "id" : "Business"
         }, {

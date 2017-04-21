@@ -3,7 +3,6 @@
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemid="id" itemchildren="children"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label1" class="h2" caption="Business Details"></wm-label>
             <wm-layoutgrid name="layoutgrid1">
                 <wm-gridrow name="gridrow1">
@@ -13,7 +12,7 @@
                                 <wm-gridrow name="gridrow2">
                                     <wm-gridcolumn columnwidth="6" name="gridcolumn3">
                                         <wm-label padding="unset 1em" name="isActive" caption="bind:Variables.Business.firstRecord.isActive === 'Y' ? &quot;ACTIVE&quot; : &quot;&quot;" class="label-success"></wm-label>
-                                        <wm-label padding="unset 0.5em" name="businessName" caption="bind:Variables.Business.firstRecord.businessName + ' (' + Variables.Business.firstRecord.alsoKnownAs + ')'" class="h3" margin="unset unset 0px unset"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="businessName" caption="bind:Variables.Business.firstRecord.businessName + ' (' + Variables.Business.firstRecord.alsoKnownAs + ')'" class="h3" margin="4px unset 0px unset"></wm-label>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="6" name="gridcolumn4" horizontalalign="left">
                                         <wm-label padding="unset 0.5em" name="label3" class="p text-muted" caption="Business Type"></wm-label>
