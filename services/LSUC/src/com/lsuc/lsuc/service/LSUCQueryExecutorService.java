@@ -21,11 +21,15 @@ public interface LSUCQueryExecutorService {
 
     Integer executeApproveEditRecord(ApproveEditRecordRequest approveEditRecordRequest);
 
+    Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest);
+
     Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable);
 
     Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable);
 
-    Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest);
+    Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable);
+
+    Downloadable exportExpirationStatus(ExportType exportType, Pageable pageable);
 
 }
 

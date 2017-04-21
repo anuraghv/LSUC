@@ -135,6 +135,10 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "PendingApprovals",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
   "name" : "Person",
   "type" : "PAGE",
   "params" : [ {

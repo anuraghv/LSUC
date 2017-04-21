@@ -1,4 +1,4 @@
-Application.$controller("ReportPageController", ["$scope", function ($scope) {
+Application.$controller("PendingApprovalsPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */

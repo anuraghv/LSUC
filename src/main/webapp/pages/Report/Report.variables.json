@@ -1,4 +1,31 @@
 {
+  "LSUCExecuteExpirationStatus" : {
+    "_id" : "wm-LSUCExecuteExpirationStatus-wm.ServiceVariable-1492764942646",
+    "name" : "LSUCExecuteExpirationStatus",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "toDate",
+      "value" : "9999-12-31",
+      "type" : "string"
+    } ],
+    "type" : "com.lsuc.lsuc.models.query.ExpirationStatusResponse",
+    "service" : "LSUC",
+    "operation" : "executeExpirationStatus",
+    "operationId" : "QueryExecutionController_executeExpirationStatus",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
+  },
   "LSUCLicenseeclasspracticegroupData" : {
     "_id" : "wm-LSUCLicenseeclasspracticegroupData-wm.LiveVariable-1492584188897",
     "name" : "LSUCLicenseeclasspracticegroupData",

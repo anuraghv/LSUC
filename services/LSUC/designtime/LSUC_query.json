@@ -55,6 +55,109 @@
       "responseType" : "SINGLE"
     }
   },
+  "expirationStatus" : {
+    "name" : "expirationStatus",
+    "description" : "Shows details of all Licensees which have LicenseeClassPracticeGroup(s) with Effective_To in the Input date range",
+    "version" : "V2",
+    "queryString" : "select DISTINCT l.LICENSEE_NUMBER,\n    p.FIRST_NAME||' '||p.LAST_NAME,\n    pa.ADDRESS_LINE_1||' '||pa.ADDRESS_LINE_2||' '||pa.CITY,\n    lt.SHORT_NAME_ENGLISH,l.LICENSE_DATE,\n    c.SHORT_NAME_ENGLISH as Class,\n    pg.SHORT_NAME_ENGLISH as PracticeGroup ,\n    lcpg.EFFECTIVE_FROM_DATE ,\n    lcpg.EFFECTIVE_TO_DATE\nfrom RMS.PERSON p,\n    RMS.PERSONADDRESS pa,\n    RMS.LICENSEE l,\n    RMS.LICENCETYPE lt,\n    RMS.LICENSEECLASSPRACTICEGROUP lcpg,\n    RMS.CLASSPRATICEGROUP cpg ,\n    RMS.CLASS c,\n    RMS.PRACTICEGROUP pg \nwhere p.PK = pa.PERSON_FK and \n    l.PERSON_FK = p.PK and\n    l.LICENCE_TYPE_FK = lt.PK and \n    lcpg.LICENSEE_FK = l.PK and \n    lcpg.CLASS_PRACTICE_GROUP_FK = cpg.PK and \n    cpg.CLASS_FK = c.PK and \n    cpg.PRACTICE_GROUP_FK = pg.PK",
+    "countQueryString" : "select count(*) from (select DISTINCT l.LICENSEE_NUMBER,\n    p.FIRST_NAME||' '||p.LAST_NAME,\n    pa.ADDRESS_LINE_1||' '||pa.ADDRESS_LINE_2||' '||pa.CITY,\n    lt.SHORT_NAME_ENGLISH,l.LICENSE_DATE,\n    c.SHORT_NAME_ENGLISH as Class,\n    pg.SHORT_NAME_ENGLISH as PracticeGroup ,\n    lcpg.EFFECTIVE_FROM_DATE ,\n    lcpg.EFFECTIVE_TO_DATE\nfrom RMS.PERSON p,\n    RMS.PERSONADDRESS pa,\n    RMS.LICENSEE l,\n    RMS.LICENCETYPE lt,\n    RMS.LICENSEECLASSPRACTICEGROUP lcpg,\n    RMS.CLASSPRATICEGROUP cpg ,\n    RMS.CLASS c,\n    RMS.PRACTICEGROUP pg \nwhere p.PK = pa.PERSON_FK and \n    l.PERSON_FK = p.PK and\n    l.LICENCE_TYPE_FK = lt.PK and \n    lcpg.LICENSEE_FK = l.PK and \n    lcpg.CLASS_PRACTICE_GROUP_FK = cpg.PK and \n    cpg.CLASS_FK = c.PK and \n    cpg.PRACTICE_GROUP_FK = pg.PK) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.lsuc.lsuc.models.query.ExpirationStatusResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "LICENSEE_NUMBER",
+        "fieldName" : "licenseeNumber",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "2",
+        "fieldName" : "col2",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "3",
+        "fieldName" : "col3",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SHORT_NAME_ENGLISH",
+        "fieldName" : "shortNameEnglish",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "LICENSE_DATE",
+        "fieldName" : "licenseDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "CLASS",
+        "fieldName" : "class_",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PRACTICEGROUP",
+        "fieldName" : "practicegroup",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "EFFECTIVE_FROM_DATE",
+        "fieldName" : "effectiveFromDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "EFFECTIVE_TO_DATE",
+        "fieldName" : "effectiveToDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      } ]
+    }
+  },
   "getStatusChangeDetails" : {
     "name" : "getStatusChangeDetails",
     "description" : "get Status Change Details Based on PersonID",

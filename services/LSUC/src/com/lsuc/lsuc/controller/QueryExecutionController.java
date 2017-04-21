@@ -68,6 +68,16 @@ public class QueryExecutionController {
         return new IntegerWrapper(_result);
     }
 
+    @RequestMapping(value = "/queries/approvedNewRecord", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Query to Insert a New record into LicenseeClassPracticeGroup on approval")
+    public IntegerWrapper executeApprovedNewRecord(@Valid @RequestBody ApprovedNewRecordRequest approvedNewRecordRequest) {
+        LOGGER.debug("Executing named query: approvedNewRecord");
+        Integer _result = queryService.executeApprovedNewRecord(approvedNewRecordRequest);
+        LOGGER.debug("got the result for named query: approvedNewRecord, result:{}", _result);
+        return new IntegerWrapper(_result);
+    }
+
     @RequestMapping(value = "/queries/getStatusChangeDetails", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "get Status Change Details Based on PersonID")
@@ -87,14 +97,23 @@ public class QueryExecutionController {
         return queryService.exportGetStatusChangeDetails(exportType, personId, pageable);
     }
 
-    @RequestMapping(value = "/queries/approvedNewRecord", method = RequestMethod.POST)
+    @RequestMapping(value = "/queries/expirationStatus", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "Query to Insert a New record into LicenseeClassPracticeGroup on approval")
-    public IntegerWrapper executeApprovedNewRecord(@Valid @RequestBody ApprovedNewRecordRequest approvedNewRecordRequest) {
-        LOGGER.debug("Executing named query: approvedNewRecord");
-        Integer _result = queryService.executeApprovedNewRecord(approvedNewRecordRequest);
-        LOGGER.debug("got the result for named query: approvedNewRecord, result:{}", _result);
-        return new IntegerWrapper(_result);
+    @ApiOperation(value = "Shows details of all Licensees which have LicenseeClassPracticeGroup(s) with Effective_To in the Input date range")
+    public Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable) {
+        LOGGER.debug("Executing named query: expirationStatus");
+        Page<ExpirationStatusResponse> _result = queryService.executeExpirationStatus(pageable);
+        LOGGER.debug("got the result for named query: expirationStatus, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query expirationStatus")
+    @RequestMapping(value = "/queries/expirationStatus/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportExpirationStatus(@PathVariable("exportType") ExportType exportType, Pageable pageable) {
+        LOGGER.debug("Exporting named query: expirationStatus");
+
+        return queryService.exportExpirationStatus(exportType, pageable);
     }
 
 }

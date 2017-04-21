@@ -54,6 +54,16 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
         return queryExecutor.executeNamedQueryForUpdate("approveEditRecord", params);
     }
 
+    @Transactional(value = "LSUCTransactionManager")
+    @Override
+    public Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest) {
+        Map params = new HashMap(1);
+
+        params.put("primaryKey", approvedNewRecordRequest.getPrimaryKey());
+
+        return queryExecutor.executeNamedQueryForUpdate("approvedNewRecord", params);
+    }
+
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
     public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable) {
@@ -74,14 +84,22 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
         return queryExecutor.exportNamedQueryData("getStatusChangeDetails", params, exportType, GetStatusChangeDetailsResponse.class, pageable);
     }
 
-    @Transactional(value = "LSUCTransactionManager")
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
-    public Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest) {
-        Map params = new HashMap(1);
+    public Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable) {
+        Map params = new HashMap(0);
 
-        params.put("primaryKey", approvedNewRecordRequest.getPrimaryKey());
 
-        return queryExecutor.executeNamedQueryForUpdate("approvedNewRecord", params);
+        return queryExecutor.executeNamedQuery("expirationStatus", params, ExpirationStatusResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Downloadable exportExpirationStatus(ExportType exportType, Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.exportNamedQueryData("expirationStatus", params, exportType, ExpirationStatusResponse.class, pageable);
     }
 
 }

@@ -25,18 +25,6 @@
                     <wm-gridcolumn columnwidth="3" name="gridcolumn6"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
-            <wm-grid title="" dataset="bind:Variables.LSUCLicenseeclasspracticegroupData.dataSet" navigation="Basic" name="grid1" exportformat="EXCEL,CSV">
-                <wm-grid-column binding="pk" caption="Pk" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-grid-column>
-                <wm-grid-column binding="isPrimary" caption="Is Primary" type="character" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="effectiveFromDate" caption="Effective From Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="effectiveToDate" caption="Effective To Date" type="date" generator="assigned" edit-widget-type="date" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="classpraticegroup.pk" caption="Classpraticegroup Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="select" show="true" related-entity-name="Classpraticegroup" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="classpraticegroup.isRequiredToPayFees" caption="Pay Fees" type="character" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Classpraticegroup"></wm-grid-column>
-                <wm-grid-column binding="classpraticegroup.classFk" caption="Class Fk" type="integer" generator="assigned" readonly="true" edit-widget-type="number" show="true" related-entity-name="Classpraticegroup"></wm-grid-column>
-                <wm-grid-column binding="classpraticegroup.practiceGroupFk" caption="Group Fk" type="integer" generator="assigned" readonly="true" edit-widget-type="number" show="true" related-entity-name="Classpraticegroup"></wm-grid-column>
-                <wm-grid-column binding="licensee.pk" caption="Licensee Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="select" show="true" related-entity-name="Licensee" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="licensee.licenseeNumber" caption="Licensee Number" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Licensee"></wm-grid-column>
-            </wm-grid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
