@@ -116,7 +116,7 @@
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
-                                    <wm-buttongroup name="buttongroup1">
+                                    <wm-buttongroup name="approverejectBtnGrp" accessroles="supervisor">
                                         <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn" on-click="approveBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
                                         <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)" margin="unset unset unset .5em"></wm-button>
                                     </wm-buttongroup>

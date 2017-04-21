@@ -2,7 +2,7 @@
     <wm-layoutgrid name="layoutgrid3">
         <wm-gridrow name="gridrow9">
             <wm-gridcolumn columnwidth="6" name="gridcolumn22" padding="unset 1em unset unset">
-                <wm-liveform novalidate="false" errormessage="" title="License Information" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Variables.licenseStatusData.firstRecord"
+                <wm-liveform novalidate="false" errormessage="" title="Licensee Status" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Variables.licenseStatusData.firstRecord"
                 on-success="licenseStatusFormSuccess($event, $operation, $data)" on-beforeservicecall="licenseStatusFormBeforeservicecall($event, $operation, $data)" class="panel-default">
                     <wm-container name="container1_2" horizontalalign="right" margin="-3.5em unset unset unset" show="bind: !Widgets.licenseStatusForm.isUpdateMode">
                         <wm-button type="button" margin="unset 0.5em" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link" on-click="licenseStUpBtnClick($event, $scope)"></wm-button>
@@ -14,7 +14,7 @@
                                 placeholder="Select value" displayexpression="practicegroup.code + ' -  ' + practicegroup.shortNameEnglish"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn27_1">
-                                <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date"
                                 outputformat="yyyy-MM-dd"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
@@ -46,23 +46,23 @@
                 </wm-container>
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="6" name="gridcolumn23">
-                <wm-liveform novalidate="false" errormessage="" title="Licensee Information" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm" formdata="bind:Variables.LicenseeData.firstRecord"
+                <wm-liveform novalidate="false" errormessage="" title="Details" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm" formdata="bind:Variables.LicenseeData.firstRecord"
                 on-success="licenseDetailsFormSuccess($event, $operation, $data)" class="panel-default">
                     <wm-button class="btn-link btn-action-top" type="button" name="licenseDetUpBtn" iconclass="wi wi-mode-edit fa-2x" show="bind:!Widgets.licenseDetailsForm.isUpdateMode" caption="Edit" on-click="licenseDetUpBtnClick($event, $scope)" margin="-3.75em unset unset unset"></wm-button>
                     <wm-layoutgrid columns="2" name="layoutgrid1">
                         <wm-gridrow name="gridrow12_1">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn28_1">
-                                <wm-form-field name="licencetype" displayname="Licence Type" show="true" primary-key="false" generator="assigned" key="licencetype" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
+                                <wm-form-field name="licencetype" displayname="Licence Type" show="true" primary-key="false" generator="assigned" key="licencetype" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
                                 displayexpression="code + ' -' + shortNameEnglish"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn29_1">
-                                <wm-form-field name="licenseeNumber" displayname="Licensee Number" show="true" primary-key="false" generator="assigned" key="licenseeNumber" type="string" readonly="false" required="false" widget="text" maxchars="20" placeholder="Enter value"></wm-form-field>
+                                <wm-form-field name="licenseeNumber" displayname="Licensee Number" show="true" primary-key="false" generator="assigned" key="licenseeNumber" type="string" readonly="false" required="true" widget="text" maxchars="20" placeholder="Enter value"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                         <wm-gridrow name="gridrow13_1">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn30_1">
-                                <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="false" widget="date" placeholder="Select
-                                date" outputformat="yyyy-MM-dd" datepattern="dd MMMM, yyyy"></wm-form-field>
+                                <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="Select
+                                date" outputformat="yyyy-MM-dd" datepattern="dd MMMM, yyyy" maxdate="CURRENT_DATE"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn31_1">
                                 <wm-form-field name="legacyclassstatus" displayname="Legacy Status" show="true" primary-key="false" generator="assigned" key="legacyclassstatus" type="list" is-related="true" readonly="false" required="false" widget="select"

@@ -30,7 +30,9 @@
         readonly="false">
             <wm-label caption="{{row.emailpurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
-        <wm-grid-column binding="emailAddress" caption="Email Address" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+        <wm-grid-column binding="emailAddress" caption="Email Address" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+            <wm-anchor caption="{{row.getProperty('emailAddress')}}" hyperlink="mailto:{{row.getProperty('emailAddress')}}" class="" data-ng-class=""></wm-anchor>
+        </wm-grid-column>
         <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
             <wm-icon title="Displayed on Directory" caption="" iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory === 'Y'}"></wm-icon>
         </wm-grid-column>
@@ -45,9 +47,11 @@
         related-entity-name="Socialmediatype" readonly="false">
             <wm-label caption="{{row.socialmediatype.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
-        <wm-grid-column binding="socialMedia" caption="URL" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-        <wm-grid-column binding="socialmediapurpose.pk" caption="Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true"
-        related-entity-name="Socialmediapurpose" readonly="false">
+        <wm-grid-column binding="socialMedia" caption="URL" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+            <wm-anchor caption="{{row.getProperty('socialMedia')}}" hyperlink="{{row.getProperty('socialMedia')}}" target="_blank" class="" data-ng-class=""></wm-anchor>
+        </wm-grid-column>
+        <wm-grid-column binding="socialmediapurpose.pk" caption="Purpose" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Socialmediapurpose"
+        readonly="false">
             <wm-label caption="{{row.socialmediapurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
         <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">

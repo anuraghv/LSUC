@@ -30,6 +30,10 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
 
 
     $scope.licenseStatusFormBeforeservicecall = function($event, $operation, $data) {
+
+        if ($data.effectiveToDate == undefined) {
+            $data.effectiveToDate = '2999-12-31';
+        }
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licenseeFk,
             "newIsPrimary": $data.isPrimary,
@@ -45,7 +49,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
                 // "oldClassPracticeGroupFk": ""
         });
         $scope.Variables.LSUC_ApprovalData.insertRecord();
-
+        $scope.Widgets.licenseStatusForm.cancel();
         return false;
     };
 
