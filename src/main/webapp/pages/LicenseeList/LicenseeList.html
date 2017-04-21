@@ -5,9 +5,7 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-layoutgrid name="layoutgrid2">
                 <wm-gridrow name="gridrow4">
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn12">
-                        <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemid="id" itemchildren="children"></wm-breadcrumb>
-                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn12"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right">
                         <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus fa-lg"></wm-button>
                         <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;"></wm-switch>

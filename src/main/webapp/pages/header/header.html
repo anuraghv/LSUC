@@ -10,7 +10,7 @@
                         <wm-anchor name="searchLink" iconclass="wi wi-search fa-2x" class="app-header-action" caption="" on-click="Variables.goToPage_Search.invoke()"></wm-anchor>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item5">
-                        <wm-popover popoverwidth="240" popoverheight="360" name="alertsInfo" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="bind:Variables.getPendingApprovalsCount.dataSet.value" content="alerts"></wm-popover>
+                        <wm-popover popoverwidth="240" popoverheight="360" name="alertsInfo" iconclass="wi wi-bell fa-2x" caption="" class="app-header-action" badgevalue="bind:Variables.getPendingApprovalsCount.dataSet.value" content="alerts" accessroles="supervisor"></wm-popover>
                     </wm-nav-item>
                     <wm-nav-item name="nav_item2">
                         <wm-popover popoverwidth="240" name="settings" iconclass="wi wi-gear fa-2x" caption="" class="app-header-action" content="settings"></wm-popover>

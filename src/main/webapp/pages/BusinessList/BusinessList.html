@@ -5,10 +5,11 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-layoutgrid name="layoutgrid2_1">
                 <wm-gridrow name="gridrow3">
-                    <wm-gridcolumn columnwidth="6" name="gridcolumn8_1">
-                        <wm-breadcrumb dataset="Home, Businesses" name="breadcrumb1"></wm-breadcrumb>
-                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn8_1"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="6" name="gridcolumn9_1" horizontalalign="right">
+                        <wm-button class="btn-primary" caption="Add Business" type="button" name="button1" iconclass="wi wi-business"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn9_2" horizontalalign="right">
                         <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" datafield="id" displayfield="label" iconclass="icon" width="180"></wm-switch>
                     </wm-gridcolumn>
                 </wm-gridrow>

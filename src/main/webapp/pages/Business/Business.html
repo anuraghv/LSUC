@@ -3,11 +3,10 @@
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemid="id" itemchildren="children"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label1" class="h2" caption="Business Details"></wm-label>
             <wm-layoutgrid name="layoutgrid1">
                 <wm-gridrow name="gridrow1">
-                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
                         <wm-liveform novalidate="false" errormessage="" title="Business Info" iconclass="wi wi-business" defaultmode="View" dataset="bind:Variables.Business.dataSet" captionalign="left" captionposition="top" name="liveform1" formdata="bind:Variables.Business.firstRecord">
                             <wm-layoutgrid columns="2" name="layoutgrid2">
                                 <wm-gridrow name="gridrow2">
@@ -154,7 +153,6 @@
                             </wm-liveform>
                         </wm-livegrid>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="6" name="gridcolumn2"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
         </wm-page-content>
