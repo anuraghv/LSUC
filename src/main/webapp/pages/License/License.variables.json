@@ -2628,6 +2628,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
+    "onBeforeUpdate" : "licenseStatusDataonBeforeUpdate($event, $scope)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
     "autoUpdate" : true,
@@ -3083,7 +3084,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "pk" ]
     },
-    "bindCount" : 1,
+    "bindCount" : 4,
     "tableName" : "LICENSEECLASSPRACTICEGROUP",
     "tableType" : "TABLE",
     "properties" : [ "classpraticegroup", "licensee" ],

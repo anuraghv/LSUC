@@ -16,7 +16,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
 
 
 
-    $scope.liveform7Beforeservicecall = function($event, $operation, $data) {
+    $scope.addLanguageFormBeforeservicecall = function($event, $operation, $data) {
         $data['licenseepersonlanguagepurposes'] = [{
             languagePurposeFk: $data.languagepurpose,
             licenseeFk: $scope.Variables.LicenseeData.firstRecord.pk
@@ -44,6 +44,18 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             currentItemWidgets.licenseStatusForm.cancel();
         });
         return false;
+    };
+
+
+    $scope.licenseStatusDataonBeforeUpdate = function(variable, inputData) {
+        if (inputData && !inputData.licenseeFk) {
+            return false;
+        }
+    };
+
+
+    $scope.addLicenseeStatusBtnClick = function($event, $isolateScope) {
+        $scope.Widgets.addLicenseeStatusForm.new()
     };
 
 }]);
@@ -169,6 +181,13 @@ Application.$controller("licenseeinsuranceDialogController", ["$scope",
 
 
 Application.$controller("addLanguageFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("addLicenseeStatusFormController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
