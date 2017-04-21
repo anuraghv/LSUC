@@ -15,3 +15,12 @@ Application.$controller("ReportPageController", ["$scope", function ($scope) {
     };
 
 }]);
+
+
+
+Application.$controller("expirationReportGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
