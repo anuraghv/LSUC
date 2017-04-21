@@ -206,6 +206,13 @@
   "type" : "POPOVER",
   "params" : [ ]
 }, {
+  "name" : "businessPersonRelation",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "businessPersonId",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "footer",
   "type" : "FOOTER",
   "params" : [ ]
