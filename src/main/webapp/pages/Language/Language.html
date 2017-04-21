@@ -10,8 +10,8 @@
             <wm-label caption="{{row.proficiencylevel.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
         <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
-        <wm-grid-action key="customButton" display-name="Add Language" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Language" action="customButtonAction($event)" accessroles="msr" shortcutkey="" disabled="false" icon="wi wi-plus"
-        position="header"></wm-grid-action>
+        <wm-grid-action key="customButton" display-name="Add Language" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Language" action="customButtonAction($event)" accessroles="supervisor" shortcutkey="" disabled="false"
+        icon="wi wi-plus" position="header"></wm-grid-action>
         <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" accessroles="supervisor" disabled="false"></wm-grid-row-action>
         <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" accessroles="supervisor" disabled="false"></wm-grid-row-action>
     </wm-grid>

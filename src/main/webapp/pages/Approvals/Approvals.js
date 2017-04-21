@@ -17,9 +17,9 @@ Application.$controller("ApprovalsPageController", ["$scope", function($scope) {
 
     $scope.approveBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
         debugger
-        if (item.status == "New") {
+        if (item.status == "Created") {
             $scope.Variables.approveNewRequest.update();
-        } else if (item.status == "Edited") {
+        } else if (item.status == "Updated") {
             $scope.Variables.approvedEditRequest.update();
         }
     };
