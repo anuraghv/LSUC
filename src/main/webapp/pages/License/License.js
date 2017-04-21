@@ -14,7 +14,19 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
          */
     };
 
-    $scope.licenseStatusFormBeforeservicecall = function($event, $operation, $data) {
+
+
+    $scope.liveform7Beforeservicecall = function($event, $operation, $data) {
+        $data['licenseepersonlanguagepurposes'] = [{
+            languagePurposeFk: $data.languagepurpose,
+            licenseeFk: $scope.Variables.LicenseeData.firstRecord.pk
+        }]
+    };
+
+
+
+
+    $scope.licenseStatusFormBeforeservicecall1 = function($event, $operation, $data, item, currentItemWidgets) {
 
         if ($data.effectiveToDate == undefined) {
             $data.effectiveToDate = '9999-12-31';
@@ -28,22 +40,10 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             "status": "Updated",
             "licenseeclasspracticegroupPk": $data.pk
         });
-        $scope.Variables.LSUC_ApprovalData.insertRecord();
-        return false;
-    };
-
-
-    $scope.liveform7Beforeservicecall = function($event, $operation, $data) {
-        $data['licenseepersonlanguagepurposes'] = [{
-            languagePurposeFk: $data.languagepurpose,
-            licenseeFk: $scope.Variables.LicenseeData.firstRecord.pk
-        }]
-    };
-
-    $scope.LSUC_ApprovalDataonSuccess = function(variable, data) {
-        $timeout(function() {
-            $scope.Widgets.licenseStatusForm.isUpdateMode = false;
+        $scope.Variables.LSUC_ApprovalData.insertRecord({}, function() {
+            currentItemWidgets.licenseStatusForm.cancel();
         });
+        return false;
     };
 
 }]);

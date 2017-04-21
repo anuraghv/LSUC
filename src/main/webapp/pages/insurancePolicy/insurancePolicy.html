@@ -45,10 +45,9 @@
                             </wm-gridcolumn>
                         </wm-gridrow>
                     </wm-layoutgrid>
-                    <wm-form-field name="licenseeinsurance" displayname="Licenseeinsurance" show="false" primary-key="false" generator="assigned" key="licenseeinsurance" type="list" is-related="true" readonly="false" required="false" widget="select" placeholder="Select value"
-                    defaultvalue="bind:Widgets.policyList.selecteditem.pk"></wm-form-field>
                     <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                    <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true" shortcutkey=""></wm-form-action>
+                    <wm-form-field name="licenseeinsurance" displayname="Licenseeinsurance" show="false" primary-key="false" generator="assigned" key="licenseeinsurance" type="list" is-related="true" readonly="false" required="false" widget="select"
+                    placeholder="Select value" defaultvalue="bind:Widgets.policyList.selecteditem.pk"></wm-form-field>
                     <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
                     <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="saveAndView()" disabled="false" type="button" update-mode="true"></wm-form-action>
                 </wm-liveform>
