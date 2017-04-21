@@ -4,7 +4,16 @@
     <wm-content name="content1">
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
-            <wm-label padding="unset 0.5em" class="h2" caption="License Details" name="label1"></wm-label>
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1" class="col-xs-5">
+                        <wm-label padding="unset 0.5em" class="h2" caption="Licensee Details" name="label1"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2" class="col-xs-7" horizontalalign="right">
+                        <wm-button class="btn-primary" caption="Add License" type="button" margin="unset 0.5em" name="addLicenseBtn" iconclass="wi wi-plus"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
             <wm-container content="personProfile" name="profileContainer"></wm-container>
             <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCLicenseeData.dataSet" navigation="None" name="licenseList">
                 <wm-listtemplate layout="inline" name="listtemplate1">

@@ -2,15 +2,16 @@
     <wm-layoutgrid name="layoutgrid3">
         <wm-gridrow name="gridrow9">
             <wm-gridcolumn columnwidth="6" name="gridcolumn22" padding="unset 1em unset unset">
-                <wm-liveform novalidate="false" errormessage="" title="Licensee Status" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Variables.licenseStatusData.firstRecord"
-                on-beforeservicecall="licenseStatusFormBeforeservicecall($event, $operation, $data)" class="panel-default">
+                <wm-liveform novalidate="false" errormessage="Licensee Status was not updated" title="Licensee Status" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm"
+                formdata="bind:Variables.licenseStatusData.firstRecord" on-beforeservicecall="licenseStatusFormBeforeservicecall($event, $operation, $data)" class="panel-default" messagelayout="Inline" insertmessage="Licensee Status added successfully"
+                updatemessage="Licensee Status updated successfully" deletemessage="Licensee Status deleted successfully">
                     <wm-container name="container1_2" horizontalalign="right" margin="-3.5em unset unset unset" show="bind: !Widgets.licenseStatusForm.isUpdateMode">
                         <wm-button type="button" margin="unset 0.5em" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link" on-click="licenseStUpBtnClick($event, $scope)"></wm-button>
                     </wm-container>
                     <wm-layoutgrid columns="2" name="layoutgrid2">
                         <wm-gridrow name="gridrow13">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn26">
-                                <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="true" widget="select"
                                 placeholder="Select value" displayexpression="practicegroup.code + ' -  ' + practicegroup.shortNameEnglish"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn27_1">
@@ -30,16 +31,15 @@
                         </wm-gridrow>
                     </wm-layoutgrid>
                     <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                    <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true" shortcutkey=""></wm-form-action>
                     <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" shortcutkey="" disabled="false" type="button" update-mode="true"></wm-form-action>
                     <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
                 </wm-liveform>
                 <wm-container name="container2_1">
                     <wm-button class="btn-link btn-action-top" caption="Add" type="button" name="addInsBtn" iconclass="wi wi-plus fa-2x" on-click="Widgets.licenseeinsuranceDialog.open()"></wm-button>
-                    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.LicenseeInsurance.dataSet" navigation="None" name="insuranceList" class="panel-default media-list" title="Insurance"
-                    itemclass="list-group-item">
+                    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.LicenseeInsurance.dataSet" navigation="None" name="insuranceList" class="panel panel-default media-list" title="Insurance">
                         <wm-listtemplate layout="inline" name="listtemplate2">
-                            <wm-panel iconclass="" autoclose="outsideClick" title="bind:Variables.LicenseeInsurance.dataSet.data[$i].insurancecoveragetype.shortNameEnglish" name="panel1" content="insurancePolicy">
+                            <wm-panel iconclass="" autoclose="outsideClick" title="bind:Variables.LicenseeInsurance.dataSet.data[$i].insurancecoveragetype.code+&quot;-&quot;+Variables.LicenseeInsurance.dataSet.data[$i].insurancecoveragetype.shortNameEnglish"
+                            name="panel1" content="insurancePolicy" expanded="false" collapsible="true">
                                 <wm-param name="insuranceId" value="bind:Widgets.insuranceList.currentItem.pk" type="string"></wm-param>
                             </wm-panel>
                         </wm-listtemplate>
@@ -47,8 +47,8 @@
                 </wm-container>
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="6" name="gridcolumn23">
-                <wm-liveform novalidate="false" errormessage="" title="Details" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm" formdata="bind:Variables.LicenseeData.firstRecord"
-                class="panel-default">
+                <wm-liveform novalidate="false" errormessage="License Details  save unsuccessful" title="Details" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm"
+                formdata="bind:Variables.LicenseeData.firstRecord" class="panel-default" messagelayout="Toaster" insertmessage="License Details added successfully" updatemessage="License Details updated successfully" deletemessage="License Details deleted successfully">
                     <wm-button class="btn-link btn-action-top" type="button" name="licenseDetUpBtn" iconclass="wi wi-mode-edit fa-2x" show="bind:!Widgets.licenseDetailsForm.isUpdateMode" caption="Edit" on-click="licenseDetUpBtnClick($event, $scope)" margin="-3.75em unset unset unset"></wm-button>
                     <wm-layoutgrid columns="2" name="layoutgrid1">
                         <wm-gridrow name="gridrow12_1">
@@ -83,7 +83,6 @@
                         </wm-gridrow>
                     </wm-layoutgrid>
                     <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
-                    <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-info" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action>
                     <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" shortcutkey="" disabled="false" type="button" update-mode="true"></wm-form-action>
                     <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="saveAndView()" disabled="false" type="button" update-mode="true"></wm-form-action>
                 </wm-liveform>
