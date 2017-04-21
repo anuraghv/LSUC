@@ -3115,7 +3115,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "onSuccess" : "Variables.changeSuccess.invoke();Variables.sendEmail.invoke()",
+    "onSuccess" : "Variables.changeSuccess.invoke();Variables.sendEmail.invoke();LSUC_ApprovalDataonSuccess($event, $scope)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : false,
     "autoUpdate" : false,

@@ -14,21 +14,6 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
          */
     };
 
-
-    $scope.licenseDetailsFormSuccess = function($event, $operation, $data) {
-        $timeout(function() {
-            $scope.Widgets.licenseDetailsForm.isUpdateMode = false;
-        });
-    };
-
-
-    $scope.licenseStatusFormSuccess = function($event, $operation, $data) {
-        $timeout(function() {
-            $scope.Widgets.licenseStatusForm.isUpdateMode = false;
-        });
-    };
-
-
     $scope.licenseStatusFormBeforeservicecall = function($event, $operation, $data) {
 
         if ($data.effectiveToDate == undefined) {
@@ -49,15 +34,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
                 // "oldClassPracticeGroupFk": ""
         });
         $scope.Variables.LSUC_ApprovalData.insertRecord();
-        $scope.Widgets.licenseStatusForm.cancel();
         return false;
-    };
-
-
-    $scope.insuranceFormSuccess = function($event, $operation, $data) {
-        $timeout(function() {
-            $scope.Widgets.insuranceForm.isUpdateMode = false;
-        });
     };
 
 
@@ -68,8 +45,11 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         }]
     };
 
-
-
+    $scope.LSUC_ApprovalDataonSuccess = function(variable, data) {
+        $timeout(function() {
+            $scope.Widgets.licenseStatusForm.isUpdateMode = false;
+        });
+    };
 
 }]);
 
@@ -80,7 +60,7 @@ Application.$controller("licenseStatusFormController", ["$scope",
         $scope.ctrlScope = $scope;
 
         $scope.licenseStUpBtnClick = function($event, $isolateScope) {
-            $scope.isUpdateMode = true;
+            $scope.edit();
         };
 
     }
@@ -92,7 +72,7 @@ Application.$controller("licenseDetailsFormController", ["$scope",
         $scope.ctrlScope = $scope;
 
         $scope.licenseDetUpBtnClick = function($event, $isolateScope) {
-            $scope.isUpdateMode = true;
+            $scope.edit();
         };
 
     }

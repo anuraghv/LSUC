@@ -14,12 +14,6 @@ Application.$controller("insurancePolicyPageController", ["$scope", "DialogServi
          */
     };
 
-    $scope.policyFormSuccess = function($event, $operation, $data, item, currentItemWidgets) {
-        $timeout(function() {
-            $scope.Widgets.policyForm.isUpdateMode = false;
-        });
-    };
-
 
     $scope.addPolicyBtnClick = function($event, $isolateScope) {
         $scope.Widgets.addPolicyForm.new()
@@ -33,7 +27,7 @@ Application.$controller("policyFormController", ["$scope",
         $scope.ctrlScope = $scope;
 
         $scope.policyUpBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
-            $scope.isUpdateMode = true;
+            $scope.edit();
         };
 
     }
