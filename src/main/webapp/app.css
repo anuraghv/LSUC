@@ -33,9 +33,6 @@
 }
 /******header special classes*****/
 
-.app-header-actions {
-    display: inline-block;
-}
 a.app-header-action .badge {
     font-size: 10px;
     background-color: red;
@@ -69,7 +66,7 @@ a.app-header-action .badge {
 /******************************************************************/
 
 .app-header-action.user-badge {
-    padding: 10px 15px !important;
+    padding: 11px 15px !important;
     border-left: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 .user-badge .app-username,
