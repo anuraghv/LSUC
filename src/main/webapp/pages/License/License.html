@@ -37,7 +37,7 @@
                     </wm-listtemplate>
                 </wm-livelist>
                 <wm-liveform novalidate="false" errormessage="" title="" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="addLicenseeStatusForm" show="bind:Widgets.addLicenseeStatusForm.isUpdateMode"
-                on-success="Widgets.addLicenseeStatusForm.cancel()">
+                on-success="Widgets.addLicenseeStatusForm.cancel()" on-beforeservicecall="addLicenseeStatusFormBeforeservicecall($event, $operation, $data)">
                     <wm-layoutgrid columns="2" name="layoutgrid8_1">
                         <wm-gridrow name="gridrow17">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn34">
@@ -46,7 +46,7 @@
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn33">
                                 <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="true" widget="select"
-                                displayexpression="bind:$[practicegroup.shortNameEnglish]" placeholder="Select value" dataset="bind:Variables.getAssociatedPracticeGroups.dataSet" datafield="All Fields"></wm-form-field>
+                                displayexpression="bind:$[practicegroup.shortNameEnglish]" placeholder="Select value" dataset="bind:Variables.getAssociatedPracticeGroups.dataSet" datafield="pk"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
                         <wm-gridrow name="gridrow18">

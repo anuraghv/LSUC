@@ -49,6 +49,28 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
     };
 
 
+    $scope.addLicenseeStatusFormBeforeservicecall = function($event, $operation, $data) {
+        /* If effective date is not selected, set the default value*/
+        if ($data.effectiveToDate == undefined) {
+            $data.effectiveToDate = '9999-12-31';
+        }
+        /* Set the inputs for LSUC_ApprovalData variable*/
+        $scope.Variables.LSUC_ApprovalData.setInput({
+            "licenseeFk": $data.licenseeFk,
+            "newIsPrimary": $data.isPrimary,
+            "newEffectiveFromDate": $data.effectiveFromDate,
+            "newEffectiveToDate": $data.effectiveToDate,
+            "newClassPracticeGroupFk": $data.classpraticegroup,
+            "status": "Updated"
+        });
+        /* Insert data in LSUC_ApprovalData*/
+        $scope.Variables.LSUC_ApprovalData.insertRecord({}, function() {
+            /* On success, close the live form*/
+            $scope.Widgets.addLicenseeStatusForm.cancel();
+        });
+        return false;
+    };
+
     /* This method is executed on before sending the call for licenseStatusData variable*/
     $scope.licenseStatusDataonBeforeUpdate = function(variable, inputData) {
         /*If licenseeFk is not present, dont make the call*/
@@ -91,7 +113,6 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             $scope.Widgets.insurancecoveragetype.focus();
         });
     };
-
 }]);
 
 
