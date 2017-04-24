@@ -3,7 +3,7 @@
         <wm-card-content horizontalalign="center" name="card_content3">
             <wm-container class="media" name="container1">
                 <wm-container class="media-left" name="container2">
-                    <wm-picture class="media-object visible-xs-block" name="Picture" shape="circle" picturesource="http://dev.wavemaker.com/examples/salesrep/Keith-Neilson.png" width="100"></wm-picture>
+                    <wm-picture class="media-object visible-xs-block" name="Picture" shape="circle" picturesource="bind:&quot;resources/images/person/&quot;+Variables.LSUCPersonData.firstRecord.gender.code+&quot;.png&quot;" width="100"></wm-picture>
                 </wm-container>
                 <wm-container class="media-body" name="container3" padding="unset unset unset 1em">
                     <wm-label name="ID" caption="bind:Variables.LSUCPersonData.firstRecord.prefix.shortNameEnglish + ' '+Variables.LSUCPersonData.firstRecord.firstName+' '+

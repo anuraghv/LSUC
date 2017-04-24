@@ -873,7 +873,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 12,
+    "bindCount" : 15,
     "tableName" : "PERSON",
     "tableType" : "TABLE",
     "properties" : [ "gender", "prefix", "suffix" ],
