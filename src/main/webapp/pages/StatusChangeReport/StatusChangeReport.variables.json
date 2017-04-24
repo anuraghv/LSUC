@@ -1,1 +1,33 @@
-{ }
+{
+  "LSUCExecutePendingLicenseeStatusReports" : {
+    "_id" : "wm-LSUCExecutePendingLicenseeStatusReports-wm.ServiceVariable-1493010694139",
+    "name" : "LSUCExecutePendingLicenseeStatusReports",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "startDate",
+      "value" : "bind:Widgets.fromDate.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "endDate",
+      "value" : "bind:Widgets.toDate.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.lsuc.lsuc.models.query.PendingLicenseeStatusReportsResponse",
+    "service" : "LSUC",
+    "operation" : "executePendingLicenseeStatusReports",
+    "operationId" : "QueryExecutionController_executePendingLicenseeStatusReports",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
+  }
+}

@@ -19,11 +19,23 @@
                         <wm-date name="toDate"></wm-date>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn4" horizontalalign="left">
-                        <wm-button class="btn-secondary" caption="View Report" type="button" margin="unset 0.5em" name="button1"></wm-button>
+                        <wm-button class="btn-secondary" caption="View Report" type="button" margin="unset 0.5em" name="button1" on-click="Variables.LSUCExecutePendingLicenseeStatusReports.invoke()"></wm-button>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn6"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
+            <wm-grid title="" dataset="bind:Variables.LSUCExecutePendingLicenseeStatusReports.dataSet" navigation="Basic" name="pendingStatusGrid" exportdatasize="1000" exportformat="EXCEL,CSV">
+                <wm-grid-column binding="licNum" caption="Lic Num" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="newEffectiveFromDate" caption="New Effective From Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="newPracticeGroup" caption="New Practice Group" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="name" caption="Name" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licType" caption="Lic Type" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="oldEffectiveToDate" caption="Old Effective To Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licDate" caption="Lic Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="newEffectiveToDate" caption="New Effective To Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="oldEffectiveFromDate" caption="Old Effective From Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="newClass" caption="New Class" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

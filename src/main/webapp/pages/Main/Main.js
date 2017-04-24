@@ -53,19 +53,49 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
 
     $scope.LicenseePracticegroupAudonSuccess = function(variable, data) {
-        PersonHistory(data, "Status Change");
+        LicenseePracticegroup(data, "Status Change");
     };
 
-
+    function LicenseePracticegroup(data, type) {
+        _.forEach(data, function(obj) {
+            var HistoryData = {
+                "type": "",
+                "username": "",
+                "timeStamp": "",
+                "PersonID": ""
+            }
+            HistoryData.type = type;
+            HistoryData.username = obj.licensee.person.commonlyReferredToName;
+            HistoryData.shortcutName = obj.licensee.person.lastName[0];
+            HistoryData.PersonID = obj.licensee.person.pk;
+            HistoryData.timeStamp = obj.revinfo.revtstmp;
+            $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
+        });
+    }
     $scope.PersonaddressAudonSuccess = function(variable, data) {
-        PersonHistory(data, "Address Change");
+        PersonAddress(data, "Address Change");
     };
 
+    function PersonAddress(data, type) {
+        _.forEach(data, function(obj) {
+            var HistoryData = {
+                "type": "",
+                "username": "",
+                "timeStamp": "",
+                "PersonID": ""
+            }
+            HistoryData.type = type;
+            HistoryData.username = obj.person.commonlyReferredToName;
+            HistoryData.shortcutName = obj.person.lastName[0];
+            HistoryData.PersonID = obj.person.pk;
+            HistoryData.timeStamp = obj.revinfo.revtstmp;
+            $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
+        });
+    }
 
     $scope.PersonAudonSuccess = function(variable, data) {
         $scope.Variables.PersonHistoryData.dataSet = []
-        debugger;
-        PersonHistory(data, "Name Change");
+        PersonHistory(data, "Peson Details changed for");
     };
 
     function PersonHistory(data, type) {
@@ -73,18 +103,26 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             var HistoryData = {
                 "type": "",
                 "username": "",
-                "timeStamp": ""
+                "timeStamp": "",
+                "PersonID": ""
             }
-            debugger;
             HistoryData.type = type;
-            HistoryData.username = obj.firstName + " " + obj.lastName;
+            HistoryData.username = obj.commonlyReferredToName;
+            HistoryData.PersonID = obj.pk;
+            HistoryData.shortcutName = obj.lastName[0];
             HistoryData.timeStamp = obj.revinfo.revtstmp;
             $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
         });
 
-
-
     }
 
+
+
+
+
+
+    $scope.UserNameAnchorClick = function($event, $isolateScope, item, currentItemWidgets) {
+        debugger;
+    };
 
 }]);

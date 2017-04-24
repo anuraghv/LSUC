@@ -1,4 +1,139 @@
 {
+  "PendingLicenseeStatusReports" : {
+    "name" : "PendingLicenseeStatusReports",
+    "description" : "Get Excel reports for Pending Licensee Status Reports",
+    "version" : "V2",
+    "queryString" : "select licensee.person.firstName as name, licensee.licenseeNumber as licNum , licensee.licencetype.shortNameEnglish as LicType,licensee.licenseDate as LicDate,licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,newEffectiveFromDate as New_Effective_from_Date,newEffectiveToDate as New_Effective_to_Date ,oldEffectiveFromDate as Old_Effective_From_Date, oldEffectiveToDate as Old_Effective_to_Date, createdDate as Created_Date from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate",
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate",
+    "nativeSql" : false,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "startDate",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-04-13",
+      "required" : true
+    }, {
+      "name" : "endDate",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-04-28",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.lsuc.lsuc.models.query.PendingLicenseeStatusReportsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "name",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "licNum",
+        "fieldName" : "licNum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "LicType",
+        "fieldName" : "licType",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "LicDate",
+        "fieldName" : "licDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "NewClass",
+        "fieldName" : "newClass",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "NewPracticeGroup",
+        "fieldName" : "newPracticeGroup",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "New_Effective_from_Date",
+        "fieldName" : "newEffectiveFromDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "New_Effective_to_Date",
+        "fieldName" : "newEffectiveToDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "Old_Effective_From_Date",
+        "fieldName" : "oldEffectiveFromDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "Old_Effective_to_Date",
+        "fieldName" : "oldEffectiveToDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "Created_Date",
+        "fieldName" : "createdDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.util.Date",
+          "list" : false
+        }
+      } ]
+    }
+  },
   "approveEditRecord" : {
     "name" : "approveEditRecord",
     "description" : "Approve the edit LicenseeClassPracticeGroup based on the request PK",

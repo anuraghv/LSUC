@@ -15,3 +15,11 @@ Application.$controller("StatusChangeReportPageController", ["$scope", function 
     };
 
 }]);
+
+
+Application.$controller("pendingStatusGridController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
