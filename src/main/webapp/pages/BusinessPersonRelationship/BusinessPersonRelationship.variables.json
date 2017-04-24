@@ -570,6 +570,24 @@
     "inputFields" : { },
     "package" : "com.lsuc.lsuc.Businesspersonrelationship"
   },
+  "listGoToPage_Licensee" : {
+    "_id" : "wm-listGoToPage_Person-wm.NavigationVariable-1493042608949",
+    "name" : "listGoToPage_Licensee",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "LicenseeProfile",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.businessPersonRelList.selecteditem.businessperson.person.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
   "LSUCBusinesspersonData" : {
     "_id" : "wm-LSUCBusinesspersonData-wm.LiveVariable-1492773135633",
     "name" : "LSUCBusinesspersonData",

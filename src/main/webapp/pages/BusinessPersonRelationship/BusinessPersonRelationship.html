@@ -46,13 +46,15 @@
                 </wm-liveform>
             </wm-livegrid>
             <wm-container name="container4">
-                <wm-button class="btn-link pull-right" caption="Add" type="button" margin="-3.5em 0.5em unset 0.5em" name="button3" iconclass="wi wi-plus" on-click="Widgets.businessPersonRelForm.new()"></wm-button>
+                <wm-button class="btn-link pull-right" caption="Add" type="button" margin="-3.5em 0.5em unset 0.5em" name="addBusinessPersonRelBtn" iconclass="wi wi-plus" on-click="Widgets.businessPersonRelForm.new()"></wm-button>
                 <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCBusinesspersonrelationshipData1.dataSet" navigation="None" name="businessPersonRelList"
                 show="true" enablereorder="false" groupby="businesspersonrelationshiptype.shortNameEnglish">
                     <wm-listtemplate layout="inline" name="listtemplate1">
                         <wm-container name="container1" class="media-body">
-                            <wm-label padding="unset 0.5em" name="label1" caption="bind:Variables.LSUCBusinesspersonrelationshipData1.dataSet.data[$i].businessperson.person.firstName"></wm-label>
-                            <wm-label padding="unset 0.5em" name="label2" class="p text-muted" caption="bind:Variables.LSUCBusinesspersonrelationshipData1.dataSet.data[$i].userReportedStartDate | toDate: 'dd MMM yyyy'" show="bind:Widgets.businessPersonRelList.currentItem.userReportedStartDate !== null"></wm-label>
+                            <wm-anchor name="personName" caption="bind:Variables.LSUCBusinesspersonrelationshipData1.dataSet.data[$i].businessperson.person.firstName + ' ' + Variables.LSUCBusinesspersonrelationshipData1.dataSet.data[$i].businessperson.person.lastName"
+                            class="inline" on-click="Variables.listGoToPage_Licensee.invoke()"></wm-anchor>
+                            <wm-label padding="unset 0.5em" name="joinDate" class="inline text-muted" caption="bind:'Joined On ' + (Variables.LSUCBusinesspersonrelationshipData1.dataSet.data[$i].userReportedStartDate | toDate: 'dd MMM yyyy')"
+                            show="bind:Widgets.businessPersonRelList.currentItem.userReportedStartDate !== null"></wm-label>
                         </wm-container>
                         <wm-container name="container2" class="media-right" horizontalalign="center">
                             <wm-button class="btn-link" caption="" type="button" margin="unset 0.5em unset unset" name="deleteBusinessPersonRelBtn" iconclass="wi wi-clear fa-2x" on-click="Variables.deleteBusinessPerson.deleteRecord()"></wm-button>
