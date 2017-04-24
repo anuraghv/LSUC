@@ -21,7 +21,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
         if ($scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate == undefined) {
             $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate = "2999-12-31";
         }
-        $data.addresses = [$scope.Widgets.addresses.dataoutput];
+        $data.personaddresses = [$scope.Widgets.addresses.dataoutput];
         $data.licensees = [$scope.Widgets.licensees.dataoutput];
         $data.personroles = [$scope.Widgets.personroles.dataoutput];
         //$data.licensees[0].licenseeclasspracticegroups = [$scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput];

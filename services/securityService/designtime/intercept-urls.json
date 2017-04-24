@@ -3,4 +3,19 @@
   "permission" : "Authenticated",
   "roles" : null,
   "httpMethod" : null
+}, {
+  "urlPattern" : "/services/LSUC/Personlanguagecommunicationchannel",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "POST"
+}, {
+  "urlPattern" : "/services/LSUC/Personlanguagecommunicationchannel/{id}",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "PUT"
+}, {
+  "urlPattern" : "/services/LSUC/Personlanguagecommunicationchannel/{id}",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "DELETE"
 } ]
