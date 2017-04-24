@@ -22,9 +22,9 @@ public interface LSUCQueryExecutorService {
 
     Integer executeApproveEditRecord(ApproveEditRecordRequest approveEditRecordRequest);
 
-    Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, Pageable pageable);
+    Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, String status, Pageable pageable);
 
-    Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, Pageable pageable);
+    Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, String status, Pageable pageable);
 
     Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest);
 

@@ -57,22 +57,24 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
-    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, Pageable pageable) {
-        Map params = new HashMap(2);
+    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, String status, Pageable pageable) {
+        Map params = new HashMap(3);
 
         params.put("startDate", startDate);
         params.put("endDate", endDate);
+        params.put("status", status);
 
         return queryExecutor.executeNamedQuery("PendingLicenseeStatusReports", params, PendingLicenseeStatusReportsResponse.class, pageable);
     }
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
-    public Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, Pageable pageable) {
-        Map params = new HashMap(2);
+    public Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, String status, Pageable pageable) {
+        Map params = new HashMap(3);
 
         params.put("startDate", startDate);
         params.put("endDate", endDate);
+        params.put("status", status);
 
         return queryExecutor.exportNamedQueryData("PendingLicenseeStatusReports", params, exportType, PendingLicenseeStatusReportsResponse.class, pageable);
     }

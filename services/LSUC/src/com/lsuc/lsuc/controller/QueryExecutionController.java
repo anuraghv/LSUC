@@ -72,9 +72,9 @@ public class QueryExecutionController {
     @RequestMapping(value = "/queries/PendingLicenseeStatusReports", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Get Excel reports for Pending Licensee Status Reports")
-    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(@RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, Pageable pageable) {
+    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(@RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, @RequestParam(value = "status") String status, Pageable pageable) {
         LOGGER.debug("Executing named query: PendingLicenseeStatusReports");
-        Page<PendingLicenseeStatusReportsResponse> _result = queryService.executePendingLicenseeStatusReports(startDate, endDate, pageable);
+        Page<PendingLicenseeStatusReportsResponse> _result = queryService.executePendingLicenseeStatusReports(startDate, endDate, status, pageable);
         LOGGER.debug("got the result for named query: PendingLicenseeStatusReports, result:{}", _result);
         return _result;
     }
@@ -82,10 +82,10 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file for query PendingLicenseeStatusReports")
     @RequestMapping(value = "/queries/PendingLicenseeStatusReports/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Downloadable exportPendingLicenseeStatusReports(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, Pageable pageable) {
+    public Downloadable exportPendingLicenseeStatusReports(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, @RequestParam(value = "status") String status, Pageable pageable) {
         LOGGER.debug("Exporting named query: PendingLicenseeStatusReports");
 
-        return queryService.exportPendingLicenseeStatusReports(exportType, startDate, endDate, pageable);
+        return queryService.exportPendingLicenseeStatusReports(exportType, startDate, endDate, status, pageable);
     }
 
     @RequestMapping(value = "/queries/approvedNewRecord", method = RequestMethod.POST)

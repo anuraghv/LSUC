@@ -40,10 +40,11 @@ where a.pk=(select b.licenseeclasspracticegroupPk from Licenseeclasspracticegrou
     oldEffectiveFromDate as Old_Effective_From_Date, 
     oldEffectiveToDate as Old_Effective_to_Date,
     createdDate as Created_Date
-from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate
+from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status
         ]]>
     <query-param name="startDate" type="java.sql.Date"/>
     <query-param name="endDate" type="java.sql.Date"/>
+    <query-param name="status" type="java.lang.String"/>
     </query>
 
     <query name="approvedNewRecord">

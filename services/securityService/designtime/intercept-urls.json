@@ -4,6 +4,11 @@
   "roles" : [ "supervisor" ],
   "httpMethod" : null
 }, {
+  "urlPattern" : "/pages/StatusChangeReport/**",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : null
+}, {
   "urlPattern" : "/**",
   "permission" : "Authenticated",
   "roles" : null,

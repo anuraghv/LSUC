@@ -66,6 +66,7 @@
         <security:intercept-url pattern="/j_spring_security_check" access="permitAll"/>
         <security:intercept-url pattern="/j_spring_security_logout" access="permitAll"/>
         <security:intercept-url pattern="/pages/Approvals/**" access="hasAnyRole('ROLE_supervisor')"/>
+        <security:intercept-url pattern="/pages/StatusChangeReport/**" access="hasAnyRole('ROLE_supervisor')"/>
         <security:intercept-url pattern="/services/LSUC/Personlanguagecommunicationchannel" access="hasAnyRole('ROLE_supervisor')" method="POST"/>
         <security:intercept-url pattern="/services/LSUC/Personlanguagecommunicationchannel/*" access="hasAnyRole('ROLE_supervisor')" method="PUT"/>
         <security:intercept-url pattern="/services/LSUC/Personlanguagecommunicationchannel/*" access="hasAnyRole('ROLE_supervisor')" method="DELETE"/>

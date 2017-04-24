@@ -3,7 +3,7 @@
     "name" : "PendingLicenseeStatusReports",
     "description" : "Get Excel reports for Pending Licensee Status Reports",
     "version" : "V2",
-    "queryString" : "select licensee.person.firstName as name,\n    licensee.licenseeNumber as licNum ,\n    licensee.licencetype.shortNameEnglish as LicType,\n    licensee.licenseDate as LicDate,\n    licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,\n    licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,\n    newEffectiveFromDate as New_Effective_from_Date,\n    newEffectiveToDate as New_Effective_to_Date ,\n    oldEffectiveFromDate as Old_Effective_From_Date, \n    oldEffectiveToDate as Old_Effective_to_Date,\n    createdDate as Created_Date\nfrom LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate",
+    "queryString" : "select licensee.person.firstName as name,\n    licensee.licenseeNumber as licNum ,\n    licensee.licencetype.shortNameEnglish as LicType,\n    licensee.licenseDate as LicDate,\n    licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,\n    licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,\n    newEffectiveFromDate as New_Effective_from_Date,\n    newEffectiveToDate as New_Effective_to_Date ,\n    oldEffectiveFromDate as Old_Effective_From_Date, \n    oldEffectiveToDate as Old_Effective_to_Date,\n    createdDate as Created_Date\nfrom LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status",
     "countQueryString" : null,
     "nativeSql" : false,
     "fetchCount" : false,
@@ -21,6 +21,13 @@
       "list" : false,
       "variableType" : "PROMPT",
       "testValue" : "2017-04-28",
+      "required" : true
+    }, {
+      "name" : "status",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "Updated",
       "required" : true
     } ],
     "request" : {

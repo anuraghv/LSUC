@@ -12,6 +12,10 @@
       "target" : "endDate",
       "value" : "bind:Widgets.toDate.datavalue",
       "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "bind:Widgets.statusSelect.datavalue",
+      "type" : "string"
     } ],
     "type" : "com.lsuc.lsuc.models.query.PendingLicenseeStatusReportsResponse",
     "service" : "LSUC",
