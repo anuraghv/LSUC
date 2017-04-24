@@ -83,7 +83,7 @@ a.app-header-action .badge {
     z-index: 1;
 }
 .wm-app .h2 {
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 /***************************History page styles****************************************/
 

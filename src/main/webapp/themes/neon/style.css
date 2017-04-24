@@ -9,7 +9,7 @@
     /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
     /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
     
-    font-size: 13px;
+    font-size: 14px;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     background-color: #000;
@@ -33,6 +33,7 @@
     /***search widget****/
     /****Input addon***/
     /******grid styles*******/
+    /********Panel************/
     /****accordion classes****/
     /**** panel *****/
     /*** dropdown menu*****/
@@ -1113,7 +1114,7 @@
 }
 .wm-app body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
     background-color: #000;
@@ -1171,8 +1172,8 @@
     border-radius: 50%;
 }
 .wm-app hr {
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #eeeeee;
 }
@@ -1249,8 +1250,8 @@
 .wm-app .h2,
 .wm-app h3,
 .wm-app .h3 {
-    margin-top: 18px;
-    margin-bottom: 9px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .wm-app h1 small,
 .wm-app .h1 small,
@@ -1272,8 +1273,8 @@
 .wm-app .h5,
 .wm-app h6,
 .wm-app .h6 {
-    margin-top: 9px;
-    margin-bottom: 9px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .wm-app h4 small,
 .wm-app .h4 small,
@@ -1291,45 +1292,45 @@
 }
 .wm-app h1,
 .wm-app .h1 {
-    font-size: 33px;
+    font-size: 36px;
 }
 .wm-app h2,
 .wm-app .h2 {
-    font-size: 22px;
+    font-size: 23px;
 }
 .wm-app h3,
 .wm-app .h3 {
-    font-size: 17px;
+    font-size: 19px;
 }
 .wm-app h4,
 .wm-app .h4 {
-    font-size: 15px;
+    font-size: 16px;
 }
 .wm-app h5,
 .wm-app .h5 {
-    font-size: 13px;
+    font-size: 14px;
 }
 .wm-app h6,
 .wm-app .h6 {
-    font-size: 12px;
+    font-size: 13px;
 }
 .wm-app p {
-    margin: 0 0 9px;
+    margin: 0 0 10px;
 }
 .wm-app .lead {
-    margin-bottom: 18px;
-    font-size: 14px;
+    margin-bottom: 20px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1.4;
 }
 @media (min-width: 768px) {
     .wm-app .lead {
-        font-size: 19.5px;
+        font-size: 21px;
     }
 }
 .wm-app small,
 .wm-app .small {
-    font-size: 84%;
+    font-size: 78%;
 }
 .wm-app mark,
 .wm-app .mark {
@@ -1435,14 +1436,14 @@ a.wm-app .bg-danger:focus {
     background-color: #ea3434;
 }
 .wm-app .page-header {
-    padding-bottom: 8px;
-    margin: 36px 0 18px;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
     border-bottom: 1px solid #eeeeee;
 }
 .wm-app ul,
 .wm-app ol {
     margin-top: 0;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 .wm-app ul ul,
 .wm-app ol ul,
@@ -1466,7 +1467,7 @@ a.wm-app .bg-danger:focus {
 }
 .wm-app dl {
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 .wm-app dt,
 .wm-app dd {
@@ -1502,9 +1503,9 @@ a.wm-app .bg-danger:focus {
     text-transform: uppercase;
 }
 .wm-app blockquote {
-    padding: 9px 18px;
-    margin: 0 0 18px;
-    font-size: 16.25px;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
     border-left: 5px solid #eeeeee;
 }
 .wm-app blockquote p:last-child,
@@ -1550,7 +1551,7 @@ a.wm-app .bg-danger:focus {
     content: '\00A0 \2014';
 }
 .wm-app address {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     font-style: normal;
     line-height: 1.42857143;
 }
@@ -1583,9 +1584,9 @@ a.wm-app .bg-danger:focus {
 }
 .wm-app pre {
     display: block;
-    padding: 8.5px;
-    margin: 0 0 9px;
-    font-size: 12px;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
     line-height: 1.42857143;
     word-break: break-all;
     word-wrap: break-word;
@@ -2379,7 +2380,7 @@ a.wm-app .bg-danger:focus {
 .wm-app .table {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 .wm-app .table > thead > tr > th,
 .wm-app .table > tbody > tr > th,
@@ -2562,7 +2563,7 @@ a.wm-app .bg-danger:focus {
 @media screen and (max-width: 767px) {
     .wm-app .table-responsive {
         width: 100%;
-        margin-bottom: 13.5px;
+        margin-bottom: 15px;
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border: 1px solid #1a1a1a;
@@ -2614,8 +2615,8 @@ a.wm-app .bg-danger:focus {
     display: block;
     width: 100%;
     padding: 0;
-    margin-bottom: 18px;
-    font-size: 19.5px;
+    margin-bottom: 20px;
+    font-size: 21px;
     line-height: inherit;
     color: #333333;
     border: 0;
@@ -2659,16 +2660,16 @@ a.wm-app .bg-danger:focus {
 .wm-app output {
     display: block;
     padding-top: 9px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
 }
 .wm-app .form-control {
     display: block;
     width: 100%;
-    height: 38px;
+    height: 40px;
     padding: 8px 12px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
     background-color: #000;
@@ -2732,7 +2733,7 @@ textarea.wm-app .form-control {
     .wm-app input[type="time"].form-control,
     .wm-app input[type="datetime-local"].form-control,
     .wm-app input[type="month"].form-control {
-        line-height: 38px;
+        line-height: 40px;
     }
     .wm-app input[type="date"].input-sm,
     .wm-app input[type="time"].input-sm,
@@ -2752,7 +2753,7 @@ textarea.wm-app .form-control {
     .input-group-lg .wm-app input[type="time"],
     .input-group-lg .wm-app input[type="datetime-local"],
     .input-group-lg .wm-app input[type="month"] {
-        line-height: 48px;
+        line-height: 49px;
     }
 }
 .wm-app .form-group {
@@ -2767,7 +2768,7 @@ textarea.wm-app .form-control {
 }
 .wm-app .radio label,
 .wm-app .checkbox label {
-    min-height: 18px;
+    min-height: 20px;
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
@@ -2824,7 +2825,7 @@ fieldset[disabled] .wm-app .checkbox label {
     padding-top: 9px;
     padding-bottom: 9px;
     margin-bottom: 0;
-    min-height: 31px;
+    min-height: 34px;
 }
 .wm-app .form-control-static.input-lg,
 .wm-app .form-control-static.input-sm {
@@ -2863,53 +2864,53 @@ select[multiple].wm-app .input-sm {
 }
 .wm-app .form-group-sm .form-control-static {
     height: 22px;
-    min-height: 29px;
+    min-height: 31px;
     padding: 3px 4px;
     font-size: 11px;
     line-height: 1.5;
 }
 .wm-app .input-lg {
-    height: 48px;
+    height: 49px;
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.3333333;
     border-radius: 6px;
 }
 select.wm-app .input-lg {
-    height: 48px;
-    line-height: 48px;
+    height: 49px;
+    line-height: 49px;
 }
 textarea.wm-app .input-lg,
 select[multiple].wm-app .input-lg {
     height: auto;
 }
 .wm-app .form-group-lg .form-control {
-    height: 48px;
+    height: 49px;
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.3333333;
     border-radius: 6px;
 }
 .wm-app .form-group-lg select.form-control {
-    height: 48px;
-    line-height: 48px;
+    height: 49px;
+    line-height: 49px;
 }
 .wm-app .form-group-lg textarea.form-control,
 .wm-app .form-group-lg select[multiple].form-control {
     height: auto;
 }
 .wm-app .form-group-lg .form-control-static {
-    height: 48px;
-    min-height: 34px;
+    height: 49px;
+    min-height: 37px;
     padding: 13px 16px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.3333333;
 }
 .wm-app .has-feedback {
     position: relative;
 }
 .wm-app .has-feedback .form-control {
-    padding-right: 47.5px;
+    padding-right: 50px;
 }
 .wm-app .form-control-feedback {
     position: absolute;
@@ -2917,18 +2918,18 @@ select[multiple].wm-app .input-lg {
     right: 0;
     z-index: 2;
     display: block;
-    width: 38px;
-    height: 38px;
-    line-height: 38px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     pointer-events: none;
 }
 .wm-app .input-lg + .form-control-feedback,
 .wm-app .input-group-lg + .form-control-feedback,
 .wm-app .form-group-lg .form-control + .form-control-feedback {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
+    width: 49px;
+    height: 49px;
+    line-height: 49px;
 }
 .wm-app .input-sm + .form-control-feedback,
 .wm-app .input-group-sm + .form-control-feedback,
@@ -3058,7 +3059,7 @@ select[multiple].wm-app .input-lg {
     color: #fff;
 }
 .wm-app .has-feedback label ~ .form-control-feedback {
-    top: 23px;
+    top: 25px;
 }
 .wm-app .has-feedback label.sr-only ~ .form-control-feedback {
     top: 0;
@@ -3129,7 +3130,7 @@ select[multiple].wm-app .input-lg {
 }
 .wm-app .form-horizontal .radio,
 .wm-app .form-horizontal .checkbox {
-    min-height: 27px;
+    min-height: 29px;
 }
 .wm-app .form-horizontal .form-group {
     margin-left: 0;
@@ -3148,7 +3149,7 @@ select[multiple].wm-app .input-lg {
 @media (min-width: 768px) {
     .wm-app .form-horizontal .form-group-lg .control-label {
         padding-top: 13px;
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 @media (min-width: 768px) {
@@ -3169,7 +3170,7 @@ select[multiple].wm-app .input-lg {
     border: 1px solid transparent;
     white-space: nowrap;
     padding: 8px 12px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.42857143;
     border-radius: 0px;
     -webkit-user-select: none;
@@ -3605,7 +3606,7 @@ fieldset[disabled] .wm-app .btn-link:focus {
 }
 .wm-app .btn-lg {
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.3333333;
     border-radius: 6px;
 }
@@ -3694,7 +3695,7 @@ tbody.wm-app .collapse.in {
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
-    font-size: 13px;
+    font-size: 14px;
     text-align: left;
     background-color: #000;
     border: 1px solid #ccc;
@@ -3715,7 +3716,7 @@ tbody.wm-app .collapse.in {
 }
 .wm-app .dropdown-menu .divider {
     height: 1px;
-    margin: 8px 0;
+    margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5;
 }
@@ -4016,17 +4017,17 @@ tbody.wm-app .collapse.in {
 .wm-app .input-group-lg > .form-control,
 .wm-app .input-group-lg > .input-group-addon,
 .wm-app .input-group-lg > .input-group-btn > .btn {
-    height: 48px;
+    height: 49px;
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.3333333;
     border-radius: 6px;
 }
 select.wm-app .input-group-lg > .form-control,
 select.wm-app .input-group-lg > .input-group-addon,
 select.wm-app .input-group-lg > .input-group-btn > .btn {
-    height: 48px;
-    line-height: 48px;
+    height: 49px;
+    line-height: 49px;
 }
 textarea.wm-app .input-group-lg > .form-control,
 textarea.wm-app .input-group-lg > .input-group-addon,
@@ -4077,7 +4078,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
 }
 .wm-app .input-group-addon {
     padding: 8px 12px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 1;
     color: #fff;
@@ -4093,7 +4094,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
 }
 .wm-app .input-group-addon.input-lg {
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 17px;
     border-radius: 6px;
 }
 .wm-app .input-group-addon input[type="radio"],
@@ -4188,7 +4189,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
 }
 .wm-app .nav .nav-divider {
     height: 1px;
-    margin: 8px 0;
+    margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5;
 }
@@ -4368,7 +4369,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
 }
 .wm-app .navbar {
     position: relative;
-    min-height: 50px;
+    min-height: 35px;
     margin-bottom: 0;
     border: 1px solid transparent;
 }
@@ -4474,10 +4475,10 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
 }
 .wm-app .navbar-brand {
     float: left;
-    padding: 16px 0;
-    font-size: 16px;
-    line-height: 18px;
-    height: 50px;
+    padding: 7.5px 0;
+    font-size: 17px;
+    line-height: 20px;
+    height: 35px;
 }
 .wm-app .navbar-brand:hover,
 .wm-app .navbar-brand:focus {
@@ -4497,8 +4498,8 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     float: right;
     margin-right: 0;
     padding: 9px 10px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -4522,12 +4523,12 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     }
 }
 .wm-app .navbar-nav {
-    margin: 8px 0;
+    margin: 3.75px 0;
 }
 .wm-app .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 18px;
+    line-height: 20px;
 }
 @media (max-width: 767px) {
     .wm-app .navbar-nav .open .dropdown-menu {
@@ -4544,7 +4545,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
         padding: 5px 15px 5px 25px;
     }
     .wm-app .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 18px;
+        line-height: 20px;
     }
     .wm-app .navbar-nav .open .dropdown-menu > li > a:hover,
     .wm-app .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4560,8 +4561,8 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
         float: left;
     }
     .wm-app .navbar-nav > li > a {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
     }
 }
 .wm-app .navbar-form {
@@ -4577,8 +4578,8 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) 2px 5px #DBDBDB;
     -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) 2px 5px #DBDBDB;
     -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) 2px 5px #DBDBDB;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: -2.5px;
+    margin-bottom: -2.5px;
 }
 @media (min-width: 768px) {
     .wm-app .navbar-form .form-group {
@@ -4668,20 +4669,20 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     border-bottom-left-radius: 0;
 }
 .wm-app .navbar-btn {
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: -2.5px;
+    margin-bottom: -2.5px;
 }
 .wm-app .navbar-btn.btn-sm {
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin-top: 6.5px;
+    margin-bottom: 6.5px;
 }
 .wm-app .navbar-btn.btn-xs {
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin-top: 6.5px;
+    margin-bottom: 6.5px;
 }
 .wm-app .navbar-text {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
 }
 @media (min-width: 768px) {
     .wm-app .navbar-text {
@@ -4715,7 +4716,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     background-color: transparent;
 }
 .wm-app .navbar-default .navbar-text {
-    color: #333333;
+    color: #fff;
 }
 .wm-app .navbar-default .navbar-nav > li > a {
     color: #ef6262;
@@ -4902,7 +4903,7 @@ fieldset[disabled] .wm-app .navbar-inverse .btn-link:focus {
 }
 .wm-app .breadcrumb {
     padding: 8px 12px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     list-style: none;
     background-color: transparent;
     border-radius: 0px;
@@ -4921,7 +4922,7 @@ fieldset[disabled] .wm-app .navbar-inverse .btn-link:focus {
 .wm-app .pagination {
     display: inline-block;
     padding-left: 0;
-    margin: 18px 0;
+    margin: 20px 0;
     border-radius: 0px;
 }
 .wm-app .pagination > li {
@@ -4985,7 +4986,7 @@ fieldset[disabled] .wm-app .navbar-inverse .btn-link:focus {
 .wm-app .pagination-lg > li > a,
 .wm-app .pagination-lg > li > span {
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.3333333;
 }
 .wm-app .pagination-lg > li:first-child > a,
@@ -5016,7 +5017,7 @@ fieldset[disabled] .wm-app .navbar-inverse .btn-link:focus {
 }
 .wm-app .pager {
     padding-left: 0;
-    margin: 18px 0;
+    margin: 20px 0;
     list-style: none;
     text-align: center;
 }
@@ -5178,7 +5179,7 @@ a.wm-app .badge:focus {
 }
 .wm-app .jumbotron p {
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 200;
 }
 .wm-app .jumbotron > hr {
@@ -5205,13 +5206,13 @@ a.wm-app .badge:focus {
     }
     .wm-app .jumbotron h1,
     .wm-app .jumbotron .h1 {
-        font-size: 59px;
+        font-size: 63px;
     }
 }
 .wm-app .thumbnail {
     display: block;
     padding: 4px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     line-height: 1.42857143;
     background-color: #000;
     border: 1px solid #ddd;
@@ -5236,7 +5237,7 @@ a.wm-app .thumbnail.active {
 }
 .wm-app .alert {
     padding: 12px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 0px;
 }
@@ -5327,8 +5328,8 @@ a.wm-app .thumbnail.active {
 }
 .wm-app .progress {
     overflow: hidden;
-    height: 18px;
-    margin-bottom: 18px;
+    height: 20px;
+    margin-bottom: 20px;
     background-color: #f5f5f5;
     border-radius: 0px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5344,7 +5345,7 @@ a.wm-app .thumbnail.active {
     width: 0%;
     height: 100%;
     font-size: 11px;
-    line-height: 18px;
+    line-height: 20px;
     color: #fff;
     text-align: center;
     background-color: #19a8a6;
@@ -5659,7 +5660,7 @@ button.wm-app .list-group-item-danger.active:focus {
     line-height: 1.3;
 }
 .wm-app .panel {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     background-color: #000;
     border: 1px solid transparent;
     border-radius: 0px;
@@ -5686,7 +5687,7 @@ button.wm-app .list-group-item-danger.active:focus {
 .wm-app .panel-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 16px;
     color: inherit;
 }
 .wm-app .panel-title > a,
@@ -5876,7 +5877,7 @@ button.wm-app .list-group-item-danger.active:focus {
     margin-bottom: 0;
 }
 .wm-app .panel-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 .wm-app .panel-group .panel {
     margin-bottom: 0;
@@ -5899,22 +5900,22 @@ button.wm-app .list-group-item-danger.active:focus {
     border-bottom: 1px solid #333333;
 }
 .wm-app .panel-default {
-    border-color: #333333;
+    border-color: #272727;
 }
 .wm-app .panel-default > .panel-heading {
     color: #fff;
     background-color: #000;
-    border-color: #333333;
+    border-color: #272727;
 }
 .wm-app .panel-default > .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: #333333;
+    border-top-color: #272727;
 }
 .wm-app .panel-default > .panel-heading .badge {
     color: #000;
     background-color: #fff;
 }
 .wm-app .panel-default > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #333333;
+    border-bottom-color: #272727;
 }
 .wm-app .panel-primary {
     border-color: #19a8a6;
@@ -6061,7 +6062,7 @@ button.wm-app .list-group-item-danger.active:focus {
 }
 .wm-app .close {
     float: right;
-    font-size: 19.5px;
+    font-size: 21px;
     font-weight: bold;
     line-height: 1;
     color: #000;
@@ -6354,7 +6355,7 @@ button.wm-app .close {
     word-break: normal;
     word-spacing: normal;
     word-wrap: normal;
-    font-size: 13px;
+    font-size: 14px;
     background-color: #000;
     background-clip: padding-box;
     border: 1px solid #ccc;
@@ -6383,7 +6384,7 @@ button.wm-app .close {
 .wm-app .popover-title {
     margin: 0;
     padding: 8px 14px;
-    font-size: 13px;
+    font-size: 14px;
     background-color: #000000;
     border-bottom: 1px solid #000000;
     border-radius: 5px 5px 0 0;
@@ -7202,6 +7203,16 @@ button.wm-app .close {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+.wm-app .btn.btn-link {
+    padding-top: 0;
+}
+.wm-app .btn.btn-link:hover,
+.wm-app .btn.btn-link.active {
+    text-decoration: none;
+}
+.wm-app .btn.btn-link .app-icon {
+    font-size: 1em !important;
+}
 .wm-app .btn-group {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
@@ -7338,41 +7349,44 @@ button.wm-app .close {
 .wm-app .app-header .app-mobile-header,
 .wm-app .app-mobile-header .app-mobile-header {
     background-color: #127c7a;
-    color: #333333;
+    color: #fff;
 }
 .wm-app .app-header .app-mobile-header a,
 .wm-app .app-mobile-header .app-mobile-header a {
-    color: #333333;
+    color: #fff;
 }
 .wm-app .app-navbar {
     border-radius: 0;
-    color: #333333;
+    color: #fff;
     padding: 0 1.52em;
     border: 0;
 }
 .wm-app .app-navbar .navbar-nav li a {
     font-size: 1em;
-    padding: 1.2em;
+    padding: .5em 1.2em;
     font-weight: normal;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     box-shadow: inset 0px -3px 0 0px transparent;
-    color: #333333;
-    font-weight: bold;
+    color: #fff;
+    opacity: .5;
+    border-bottom: 4px solid transparent;
 }
 .wm-app .app-navbar .navbar-nav li a:hover,
 .wm-app .app-navbar .navbar-nav li a:focus,
-.wm-app .app-navbar .navbar-nav li a.active,
 .wm-app .app-navbar .navbar-nav li a.app-popover-open {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.05);
     -webkit-transition: color .3s ease;
     -o-transition: color .3s ease;
     transition: color .3s ease;
+    opacity: .7;
 }
 .wm-app .app-navbar .navbar-nav li a.active {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid #fff;
+    opacity: 1;
 }
 .wm-app .app-navbar .navbar-nav li > .dropdown .dropdown-menu {
     margin: 0;
@@ -8103,6 +8117,23 @@ button.wm-app .close {
 .wm-app .carousel-control.right {
     background-image: none;
 }
+.wm-app .app-panel.panel-secondary {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+.wm-app .app-panel.panel-secondary > .panel-heading {
+    background-color: #101010;
+}
+.wm-app .app-panel.panel-secondary > .panel-heading .panel-title {
+    border-color: transparent;
+}
+.wm-app .app-panel.panel-secondary > .panel-content > .panel-body {
+    background-color: #000;
+}
+.wm-app .app-panel.panel-secondary > .panel-content:not(.ng-hide) {
+    border-top: 1px solid rgba(168, 168, 168, 0.4);
+}
 .wm-app .app-accordion .app-accordion-panel {
     box-shadow: none;
     border-color: #333333;
@@ -8225,10 +8256,6 @@ button.wm-app .close {
     margin-bottom: 1em;
     border-color: #333333;
 }
-.wm-app .panel .panel-heading .panel-title,
-.wm-app .card .panel-heading .panel-title {
-    border-bottom: 1px solid #4d4d4d;
-}
 .wm-app .panel .panel-heading .panel-title .heading,
 .wm-app .card .panel-heading .panel-title .heading {
     font-size: 1.125em;
@@ -8280,9 +8307,9 @@ button.wm-app .close {
     background-color: #4d4d4d;
     border-bottom-color: #4d4d4d;
 }
-.wm-app .panel.panel-default .panel-heading,
-.wm-app .card.panel-default .panel-heading {
-    border-color: transparent;
+.wm-app .panel.panel-default > .panel-heading,
+.wm-app .card.panel-default > .panel-heading {
+    border-color: #4d4d4d;
 }
 .wm-app .app-livegrid .app-liveform.panel {
     border-color: #4d4d4d;
@@ -8298,7 +8325,7 @@ button.wm-app .close {
 }
 .wm-app .app-list .panel-heading,
 .wm-app .app-livelist .panel-heading {
-    background-color: #4d4d4d;
+    background-color: transparent;
 }
 .wm-app .app-list .app-list-item.active .app-panel,
 .wm-app .app-livelist .app-list-item.active .app-panel,
@@ -8306,6 +8333,10 @@ button.wm-app .close {
 .wm-app .app-livelist .app-list-item.active .app-card {
     color: #fff;
     border-color: #19a8a6;
+}
+.wm-app .app-list .app-list-item.active > .panel-secondary,
+.wm-app .app-livelist .app-list-item.active > .panel-secondary {
+    border: none;
 }
 .wm-app .app-list .app-list-item.active select option,
 .wm-app .app-livelist .app-list-item.active select option {

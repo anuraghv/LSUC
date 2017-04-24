@@ -10,7 +10,7 @@
                         iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Widgets.licenseStatusList.currentItem" on-beforeservicecall="licenseStatusFormBeforeservicecall1($event, $operation, $data, item, currentItemWidgets)"
                         class="panel-secondary" messagelayout="Inline" insertmessage="Licensee Status added successfully" updatemessage="Licensee Status updated successfully" deletemessage="Licensee Status deleted successfully">
                             <wm-button type="button" show="bind: !Widgets.licenseStatusForm.isUpdateMode" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link  btn-action-top" on-click="licenseStUpBtnClick($event, $scope)"
-                            margin="-3.75em unset unset unset"></wm-button>
+                            margin="-3.5em unset unset unset"></wm-button>
                             <wm-layoutgrid columns="2" name="layoutgrid2">
                                 <wm-gridrow name="gridrow20">
                                     <wm-gridcolumn columnwidth="6" name="gridcolumn32_2">
@@ -152,7 +152,7 @@
             <wm-gridcolumn columnwidth="6" name="gridcolumn23">
                 <wm-liveform novalidate="false" errormessage="License Details  save unsuccessful" title="Details" iconclass="" defaultmode="View" dataset="bind:Variables.LicenseeData.dataSet" captionalign="left" captionposition="top" name="licenseDetailsForm"
                 formdata="bind:Variables.LicenseeData.firstRecord" class="panel-default" messagelayout="Toaster" insertmessage="License Details added successfully" updatemessage="License Details updated successfully" deletemessage="License Details deleted successfully">
-                    <wm-button class="btn-link btn-action-top" type="button" name="licenseDetUpBtn" iconclass="wi wi-mode-edit fa-2x" show="bind:!Widgets.licenseDetailsForm.isUpdateMode" caption="Edit" on-click="licenseDetUpBtnClick($event, $scope)" margin="-3.75em unset unset unset"></wm-button>
+                    <wm-button class="btn-link btn-action-top" type="button" name="licenseDetUpBtn" iconclass="wi wi-mode-edit fa-2x" show="bind:!Widgets.licenseDetailsForm.isUpdateMode" caption="Edit" on-click="licenseDetUpBtnClick($event, $scope)" margin="-3.5em unset unset unset"></wm-button>
                     <wm-layoutgrid columns="2" name="layoutgrid1">
                         <wm-gridrow name="gridrow12_1">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn28_1">
