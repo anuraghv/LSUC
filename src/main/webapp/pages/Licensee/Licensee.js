@@ -14,24 +14,29 @@ Application.$controller("LicenseePageController", ["$scope", "$timeout", functio
          */
     };
 
-
-    $scope.liveform1Beforeservicecall = function($event, $operation, $data) {
-        if ($scope.Widgets.licenseeclasspracticegroupsForm.dataoutput.effectiveToDate == undefined) {
+    /*This method is called before save of add licensee form*/
+    $scope.addLicenseeBeforeservicecall = function($event, $operation, $data) {
+        /*if effective date is undefined, set default value*/
+        if ($scope.Widgets.licenseeclasspracticegroupsForm.dataoutput.effectiveToDate === undefined) {
             $scope.Widgets.licenseeclasspracticegroupsForm.dataoutput.effectiveToDate = "2999-12-31";
         }
+        /*Add data to licenseeclasspracticegroups from the inner liveform data*/
         $data['licenseeclasspracticegroups'] = [$scope.Widgets.licenseeclasspracticegroupsForm.dataoutput];
     };
 
+    /*This method is called before the variable call is made*/
     $scope.getAssociatedPracticeGroupsonBeforeUpdate = function(variable, inputData) {
-        if ($scope.Widgets.licenseeclasspracticegroupsForm.formWidgets.dummyClass.datavalue == undefined) {
+        /*If class is not selected, do not send the call for practice groups*/
+        if ($scope.Widgets.licenseeclasspracticegroupsForm.formWidgets.dummyClass.datavalue === undefined) {
             return false;
         }
 
     };
 
-
+    /*on click of add button, open add Licensee form*/
     $scope.addLicenseBtnClick = function($event, $isolateScope) {
         $scope.Widgets.addLicensee.new();
+        /*Focus the first field in the form*/
         $timeout(function() {
             $scope.Widgets.licenseeNumber.focus()
         });
@@ -39,102 +44,6 @@ Application.$controller("LicenseePageController", ["$scope", "$timeout", functio
     };
 
 }]);
-
-
-Application.$controller("licenseeFilterController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("addressGridController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("licenseeLiveFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("personInfoLiveFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("addressLiveFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("phoneGridController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("phoneLiveformController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("emailGridController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("emailLiveFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("socialGridController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("socialLiveFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-
-
-
-
-Application.$controller("roleGridController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("roleLiveFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
 
 Application.$controller("addLicenseeController", ["$scope",
     function($scope) {
