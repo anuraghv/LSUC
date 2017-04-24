@@ -15,7 +15,8 @@
             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
             <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
         </wm-grid>
-        <wm-liveform novalidate="false" errormessage="" title="Add/Edit Address" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCBusinessaddressData.dataSet" captionalign="left" captionposition="top" name="businessAddressForm" show="bind:Widgets.businessAddressForm.isUpdateMode">
+        <wm-liveform novalidate="false" errormessage="" title="Add/Edit Address" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCBusinessaddressData.dataSet" captionalign="left" captionposition="top" name="businessAddressForm" show="bind:Widgets.businessAddressForm.isUpdateMode"
+        on-beforeservicecall="businessAddressFormBeforeservicecall($event, $operation, $data)">
             <wm-layoutgrid columns="3" name="layoutgrid1">
                 <wm-gridrow name="gridrow1">
                     <wm-gridcolumn columnwidth="4" name="gridcolumn1">
@@ -66,9 +67,11 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn14">
                         <wm-form-field name="isDisplayedOnDirectory" displayname="Is Displayed On Directory" show="true" primary-key="false" generator="assigned" key="isDisplayedOnDirectory" type="character" readonly="false" required="false" widget="checkbox"
-                        maxchars="1" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        maxchars="1" placeholder="Enter value" checkedvalue="Y" uncheckedvalue="N" defaultvalue="N"></wm-form-field>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn14_1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="4">
+                        <wm-form-field name="businessFk" key="businessFk" displayname="Business Fk" show="false" type="integer" widget="number" defaultvalue="bind:pageParams.businessId"></wm-form-field>
+                    </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
             <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
