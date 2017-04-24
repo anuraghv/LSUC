@@ -1,5 +1,8 @@
-Application.$controller("PersonHistoryPageController", ["$scope", function($scope) {
+Application.$controller("PersonHistoryPageController", ["$scope", "Utils", function($scope, Utils) {
     "use strict";
+    var CHANGE_TYPE_STATUS = "status",
+        CHANGE_TYPE_ADDRESS = "address",
+        CHANGE_TYPE_PERSON_DETAILS = "person";
 
     /* perform any action on widgets/variables within this block */
     $scope.onPageReady = function() {
@@ -17,17 +20,16 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
 
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
         $scope.PersonAudData = data.length;
+        $scope.Variables.personHistoryData.dataSet = [];
         if (data.length == 0) {
             return;
         }
-        diffData(data, "Name Change", "wi wi-person fa-2x");
-
-
+        diffData(data, CHANGE_TYPE_PERSON_DETAILS, "Person Details Changed", "wi wi-person fa-2x");
     };
 
 
 
-    function diffData(data, type, iconType) {
+    function diffData(data, type, displayLabel, iconType) {
         var historyData = {
             "type": "edit",
             "entity": "status",
@@ -49,19 +51,21 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
                     types: "",
                     value: ""
                 }
-                if (!_.isEqual(latest[key], val) && !_.includes(["rev", "revinfo", "revtstmp"], key)) {
-                    historyData.type = type;
-                    newobj.types = key || "NULL";
+                if (!_.isEqual(latest[key], val) && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy"], key)) {
+                    historyData.type = displayLabel;
+                    newobj.types = Utils.prettifyLabel(key) || "NULL";
                     newobj.value = latest[key] || "NULL";
                     historyData.newPropertyValues.push(newobj);
-                    oldObj.types = key || "NULL";
+                    oldObj.types = Utils.prettifyLabel(key) || "NULL";
                     oldObj.value = val || "NULL";
                     historyData.oldPropertyValues.push(oldObj);
                     historyData.icon = iconType;
-                    if (type == "Status Change") {
+                    if (type == CHANGE_TYPE_STATUS) {
                         historyData.timestamp = latest.revtstmp;
+                        historyData.changedby = latest.changedBy;
                     } else {
-                        historyData.timestamp = latest.revinfo.revtstmp;
+                        historyData.timestamp = latest.usernameRev.timestamp;
+                        historyData.changedby = latest.usernameRev.username;
                     }
                 }
 
@@ -79,7 +83,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
             return;
         }
 
-        diffData(data, "Address Change", "wi wi-location-on fa-2x");
+        diffData(data, CHANGE_TYPE_ADDRESS, "Address Changed", "wi wi-location-on fa-2x");
     };
 
 
@@ -88,8 +92,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", function($scop
         if (data.length == 0) {
             return;
         }
-        $scope.Variables.personHistoryData.dataSet = [];
-        diffData(data.content, "Status Change", "wi wi-pencil fa-2x");
+        diffData(data.content, CHANGE_TYPE_STATUS, "License Status Changed", "wi wi-pencil fa-2x");
     };
 
 }]);

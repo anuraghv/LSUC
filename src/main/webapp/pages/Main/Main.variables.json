@@ -663,6 +663,24 @@
     } ],
     "pageTransitions" : "none"
   },
+  "goToPage_PersonHistory_Main" : {
+    "_id" : "wm-goToPage_PersonHistory_Main-wm.NavigationVariable-1493027919381",
+    "name" : "goToPage_PersonHistory_Main",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "PersonHistory",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "id",
+      "value" : "bind:Widgets.recentAcitivityLiveList.selecteditem.PersonID"
+    } ],
+    "pageTransitions" : "none"
+  },
   "Licensee" : {
     "_id" : "wm-Licensee-wm.LiveVariable-1491976399222",
     "name" : "Licensee",
@@ -3171,7 +3189,8 @@
       "username" : "Jerry",
       "timeStamp" : "24754342774",
       "shortcutName" : "",
-      "PersonID" : ""
+      "PersonID" : "",
+      "ChangedBy" : ""
     } ],
     "type" : "entry",
     "isList" : true,

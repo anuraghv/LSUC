@@ -113,7 +113,7 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn37" padding="unset 1em">
                         <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-info" dataset="bind:Variables.PersonHistoryData.dataSet"
-                        navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item" orderby="timeStamp:desc" pagesize="5">
+                        navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item" orderby="timeStamp:desc" pagesize="5" on-tap="recentAcitivityLiveListTap($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate1">
                                 <wm-container class="media-left" name="container2_1">
                                     <wm-container width="24" height="24" name="container3" class="btn-rounded btn btn-primary" padding="unset unset unset 2px">
@@ -122,11 +122,11 @@
                                 </wm-container>
                                 <wm-container class="media-body" name="container4">
                                     <wm-label caption="bind:Variables.PersonHistoryData.dataSet[$i].type" fontsize="1.143" fontunit="em" name="LabelType" padding="unset .5em unset unset" class="inline"></wm-label>
-                                    <wm-anchor name="UserNameAnchor" caption="bind:Variables.PersonHistoryData.dataSet[$i].username" class="bold inline" on-click="UserNameAnchorClick($event, $scope, item, currentItemWidgets)"></wm-anchor>
+                                    <wm-anchor name="UserNameAnchor" caption="bind:Variables.PersonHistoryData.dataSet[$i].username" class="bold inline" on-click="Variables.goToPage_PersonHistory_Main.invoke()"></wm-anchor>
                                     <wm-layoutgrid name="layoutgrid4">
                                         <wm-gridrow name="gridrow9" padding=".5em unset unset unset">
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn27">
-                                                <wm-label caption="By Gerald" class="text-muted small" textalign="right" name="ChangeBylabel"></wm-label>
+                                                <wm-label caption="bind:'By '+Variables.PersonHistoryData.dataSet[$i].ChangedBy" class="text-muted small" textalign="right" name="ChangeBylabel"></wm-label>
                                             </wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn28">
                                                 <wm-label caption="bind:Variables.PersonHistoryData.dataSet[$i].timeStamp   | timeFromNow" class="p text-muted small" name="TimeStampLabel" textalign="right"></wm-label>

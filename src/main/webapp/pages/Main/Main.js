@@ -62,13 +62,15 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
                 "type": "",
                 "username": "",
                 "timeStamp": "",
-                "PersonID": ""
+                "PersonID": "",
+                "ChangedBy": ""
             }
             HistoryData.type = type;
-            HistoryData.username = obj.licensee.person.commonlyReferredToName;
+            HistoryData.username = obj.licensee.person.firstName + " " + obj.licensee.person.lastName;
             HistoryData.shortcutName = obj.licensee.person.lastName[0];
             HistoryData.PersonID = obj.licensee.person.pk;
-            HistoryData.timeStamp = obj.revinfo.revtstmp;
+            HistoryData.timeStamp = obj.usernameRev.timestamp;
+            HistoryData.ChangedBy = obj.usernameRev.username;
             $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
         });
     }
@@ -82,13 +84,15 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
                 "type": "",
                 "username": "",
                 "timeStamp": "",
-                "PersonID": ""
+                "PersonID": "",
+                "ChangedBy": ""
             }
             HistoryData.type = type;
-            HistoryData.username = obj.person.commonlyReferredToName;
+            HistoryData.username = obj.person.firstName + " " + obj.person.lastName;
             HistoryData.shortcutName = obj.person.lastName[0];
             HistoryData.PersonID = obj.person.pk;
-            HistoryData.timeStamp = obj.revinfo.revtstmp;
+            HistoryData.timeStamp = obj.usernameRev.timestamp;
+            HistoryData.ChangedBy = obj.usernameRev.username;
             $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
         });
     }
@@ -104,25 +108,17 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
                 "type": "",
                 "username": "",
                 "timeStamp": "",
-                "PersonID": ""
+                "PersonID": "",
+                "ChangedBy": ""
             }
             HistoryData.type = type;
-            HistoryData.username = obj.commonlyReferredToName;
+            HistoryData.username = obj.firstName + " " + obj.lastName;
             HistoryData.PersonID = obj.pk;
             HistoryData.shortcutName = obj.lastName[0];
-            HistoryData.timeStamp = obj.revinfo.revtstmp;
+            HistoryData.timestamp = obj.usernameRev.timestamp;
+            HistoryData.ChangedBy = obj.usernameRev.username;
             $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
         });
-
     }
-
-
-
-
-
-
-    $scope.UserNameAnchorClick = function($event, $isolateScope, item, currentItemWidgets) {
-        debugger;
-    };
 
 }]);

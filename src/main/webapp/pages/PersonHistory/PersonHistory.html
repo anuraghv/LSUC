@@ -15,7 +15,8 @@
                                 <wm-gridrow name="gridrow4">
                                     <wm-gridcolumn columnwidth="1" name="gridcolumn8"></wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="10" name="gridcolumn12">
-                                        <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list  history-panel" dataset="bind:Variables.personHistoryData.dataSet" navigation="None" name="historyList" show="true" title="" orderby="timestamp:desc">
+                                        <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list  history-panel" dataset="bind:Variables.personHistoryData.dataSet" navigation="None" name="historyList" show="true"
+                                        title="" orderby="timestamp:desc">
                                             <wm-listtemplate layout="inline" name="listtemplate2">
                                                 <wm-container class="media timeline-media" name="container2_1">
                                                     <wm-container class="media-left timeline-container" name="container2" bordercolor="#ddd" borderstyle="solid" borderwidth="0px 1px 0px 0px" padding="unset 1em">
@@ -30,7 +31,7 @@
                                                             <wm-layoutgrid name="layoutgrid2">
                                                                 <wm-gridrow name="gridrow2" class="new-block">
                                                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">
-                                                                        <wm-container class="text-right">
+                                                                        <wm-container class="text-right" name="container6">
                                                                             <wm-label name="Newlabel" caption="NEW" class="label-success text-center" width="80"></wm-label>
                                                                         </wm-container>
                                                                         <wm-livelist name="NewPropertylivelist" dataset="bind:Variables.personHistoryData.dataSet[$i].newPropertyValues" listclass="list-inline" itemsperrow="xs-2 sm-2 md-2 lg-3">
@@ -41,9 +42,9 @@
                                                                         </wm-livelist>
                                                                     </wm-gridcolumn>
                                                                 </wm-gridrow>
-                                                                <wm-gridrow name="gridrow3" class="old-block">
+                                                                <wm-gridrow name="gridrow3" class="old-block gray">
                                                                     <wm-gridcolumn columnwidth="12" name="gridcolumn6">
-                                                                        <wm-container class="text-right">
+                                                                        <wm-container class="text-right" name="container7">
                                                                             <wm-label caption="OLD" class="label-default text-center" name="Oldlabel" width="80"></wm-label>
                                                                         </wm-container>
                                                                         <wm-livelist name="OldPropertylivelist" dataset="bind:Variables.personHistoryData.dataSet[$i].oldPropertyValues" listclass="list-inline" itemsperrow="xs-2 sm-2 md-2 lg-3">
@@ -61,12 +62,10 @@
                                             </wm-listtemplate>
                                         </wm-livelist>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="1" name="gridcolumn9_1"></wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
                         </wm-panel>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="2" name="gridcolumn6_1"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
         </wm-page-content>
