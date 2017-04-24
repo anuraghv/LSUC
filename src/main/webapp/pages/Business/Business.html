@@ -30,7 +30,7 @@
                                 </wm-gridrow>
                             </wm-layoutgrid>
                         </wm-container>
-                        <wm-grid editmode="inline" title="Address" dataset="bind:Variables.LSUCBusinessaddressData.dataSet" navigation="None" name="businessAddressGrid" iconclass="wi wi-location-on fa-2x">
+                        <wm-grid editmode="inline" title="Address" dataset="bind:Variables.LSUCBusinessaddressData.dataSet" navigation="None" name="businessAddressGrid" iconclass="wi wi-location-on fa-2x" class="panel-default" gridclass="table-striped">
                             <wm-grid-column binding="addressLine1" caption="Address Line1" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="city" caption="City" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="postalCode" caption="Postal Code" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
@@ -40,7 +40,7 @@
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
                             <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
                         </wm-grid>
-                        <wm-grid editmode="inline" title="Organizational Unit" dataset="bind:Variables.LSUCOrganizationalunitData.dataSet" navigation="None" name="businessOrgUnitGrid">
+                        <wm-grid editmode="inline" title="Organizational Unit" dataset="bind:Variables.LSUCOrganizationalunitData.dataSet" navigation="None" name="businessOrgUnitGrid" class="panel-default" gridclass="table-striped" iconclass="wi wi-business-center">
                             <wm-grid-column binding="organizationalunitName" caption="Unit" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="organizationalunittype.shortNameEnglish" caption="Type" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Organizationalunittype"></wm-grid-column>
                             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
@@ -54,7 +54,7 @@
                         <wm-container name="container2" content="BusinessPersonRelationship">
                             <wm-param name="businessId" value="bind:pageParams.businessId" type="integer"></wm-param>
                         </wm-container>
-                        <wm-grid editmode="inline" title="Phone" dataset="bind:Variables.LSUCBusinessphonecontactData.dataSet" navigation="None" name="businessPhoneGrid" iconclass="wi wi-phone fa-2x">
+                        <wm-grid editmode="inline" title="Phone" dataset="bind:Variables.LSUCBusinessphonecontactData.dataSet" navigation="None" name="businessPhoneGrid" iconclass="wi wi-phone fa-2x" class="panel-default" gridclass="table-striped">
                             <wm-grid-column binding="phonepurpose.shortNameEnglish" caption="Purpose" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Phonepurpose"></wm-grid-column>
                             <wm-grid-column binding="contactNumber" caption="Number" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="extension" caption="Extension" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
@@ -64,7 +64,7 @@
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
                             <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
                         </wm-grid>
-                        <wm-grid editmode="inline" title="Email" dataset="bind:Variables.LSUCBusinessemailcontactData.dataSet" navigation="None" name="businessEmailGrid" iconclass="wi wi-email fa-2x">
+                        <wm-grid editmode="inline" title="Email" dataset="bind:Variables.LSUCBusinessemailcontactData.dataSet" navigation="None" name="businessEmailGrid" iconclass="wi wi-email fa-2x" class="panel-default" gridclass="table-striped">
                             <wm-grid-column binding="emailpurpose.shortNameEnglish" caption="Purpose" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Emailpurpose"></wm-grid-column>
                             <wm-grid-column binding="emailAddress" caption="Email" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
@@ -73,7 +73,7 @@
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
                             <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
                         </wm-grid>
-                        <wm-grid editmode="inline" title="Social Media" dataset="bind:Variables.LSUCBusinesssocialmediacontactData.dataSet" navigation="None" name="businessSocialMediaGrid" iconclass="wi wi-share fa-2x">
+                        <wm-grid editmode="inline" title="Social Media" dataset="bind:Variables.LSUCBusinesssocialmediacontactData.dataSet" navigation="None" name="businessSocialMediaGrid" iconclass="wi wi-share fa-2x" class="panel-default" gridclass="table-striped">
                             <wm-grid-column binding="socialmediatype.shortNameEnglish" caption="Social Media" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Socialmediatype"></wm-grid-column>
                             <wm-grid-column binding="socialMedia" caption="Url" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="socialmediapurpose.shortNameEnglish" caption="Purpose" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Socialmediapurpose"></wm-grid-column>
