@@ -25,7 +25,7 @@ public class PersonPreProcessor extends PersonServiceImpl {
 
 
     @Override
-    // @Transactional
+    @Transactional
     public Person create(Person person) {
 
         LOGGER.info(person.getPersonaddresses()+"");

@@ -57,11 +57,12 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
             "licenseeName": data.firstName + " " + data.lastName,
             "personPk": data.pk
         });
-        $scope.Variables.goToLicensee.setData('id', data.pk);
-        debugger;
+        $scope.Variables.goToLicensee.setData({
+            "id": data.pk
+        });
         $scope.Variables.sendEmail.update();
+        $scope.Variables.goToLicensee.navigate();
     };
-
 
 }]);
 

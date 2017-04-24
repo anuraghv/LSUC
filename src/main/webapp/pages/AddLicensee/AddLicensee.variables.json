@@ -343,11 +343,7 @@
       "type" : "string"
     } ],
     "operation" : "gotoPage",
-    "dataSet" : [ {
-      "type" : "integer",
-      "target" : "id",
-      "value" : "bind:Variables.NewPerson.dataSet.dataValue"
-    } ],
+    "dataSet" : [ ],
     "pageTransitions" : "none"
   },
   "LSUC_ApprovalData" : {
@@ -363,6 +359,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
+    "onSuccess" : "LSUC_ApprovalDataonSuccess($event, $scope)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : false,
     "autoUpdate" : false,
@@ -1032,7 +1029,7 @@
     "designMaxResults" : 10,
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
-    "autoUpdate" : true,
+    "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "LSUC",
     "ignoreCase" : true,
@@ -4953,7 +4950,7 @@
     "dataSet" : [ ],
     "isList" : false,
     "maxResults" : 20,
-    "onSuccess" : "Variables.goToLicensee.invoke()",
+    "onSuccess" : "sendEmailonSuccess($event, $scope)",
     "startUpdate" : false,
     "autoUpdate" : false,
     "inFlightBehavior" : "executeLast",
