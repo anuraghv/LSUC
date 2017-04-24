@@ -4387,7 +4387,7 @@
       "tableType" : "TABLE",
       "primaryFields" : [ "pk" ]
     },
-    "bindCount" : 2,
+    "bindCount" : 3,
     "tableName" : "CLASS",
     "tableType" : "TABLE",
     "properties" : [ "practiceeligibility" ],

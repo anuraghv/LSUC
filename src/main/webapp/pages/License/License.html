@@ -5,9 +5,10 @@
                 <wm-button class="btn-link btn-action-top" caption="Add" type="button" name="addLicenseeStatusBtn" iconclass="wi wi-plus fa-2x" on-click="addLicenseeStatusBtnClick($event, $scope)"></wm-button>
                 <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.licenseStatusData.dataSet" navigation="None" name="licenseStatusList" title="LICENSEE STATUS">
                     <wm-listtemplate layout="inline" name="listtemplate2_1">
-                        <wm-liveform novalidate="false" errormessage="Licensee Status was not updated" title="" iconclass="bind:Widgets.licenseStatusList.currentItem.isPrimary === 'Y' ? 'wi wi-dot-circle text-success' : 'wi wi-dot-circle text-danger'" defaultmode="View"
-                        dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Widgets.licenseStatusList.currentItem" on-beforeservicecall="licenseStatusFormBeforeservicecall1($event, $operation, $data, item, currentItemWidgets)"
-                        class="panel-default" messagelayout="Inline" insertmessage="Licensee Status added successfully" updatemessage="Licensee Status updated successfully" deletemessage="Licensee Status deleted successfully">
+                        <wm-liveform novalidate="false" errormessage="Licensee Status was not updated" title="bind:Widgets.licenseStatusList.currentItem.classpraticegroup.classEntity.shortNameEnglish+' - '+Widgets.licenseStatusList.currentItem.classpraticegroup.practicegroup.shortNameEnglish"
+                        iconclass="bind:Widgets.licenseStatusList.currentItem.isPrimary === 'Y' ? 'wi wi-dot-circle text-success' : 'wi wi-dot-circle text-danger'" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left"
+                        captionposition="top" name="licenseStatusForm" formdata="bind:Widgets.licenseStatusList.currentItem" on-beforeservicecall="licenseStatusFormBeforeservicecall1($event, $operation, $data, item, currentItemWidgets)" class="panel-default"
+                        messagelayout="Inline" insertmessage="Licensee Status added successfully" updatemessage="Licensee Status updated successfully" deletemessage="Licensee Status deleted successfully">
                             <wm-container name="container1_2" horizontalalign="right" margin="-3.5em unset unset unset" show="bind: !Widgets.licenseStatusForm.isUpdateMode">
                                 <wm-button type="button" margin="unset 0.5em" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link" on-click="licenseStUpBtnClick($event, $scope)"></wm-button>
                             </wm-container>
@@ -15,7 +16,7 @@
                                 <wm-gridrow name="gridrow13">
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn30_2">
                                         <wm-form-field displayname="Class" widget="select" show="true" type="custom" name="form_field36" defaultvalue="bind:Widgets.licenseStatusList.currentItem.classpraticegroup.classEntity" datafield="All Fields" dataset="bind:Variables.LSUCClassData.dataSet"
-                                        displayfield="shortNameEnglish"></wm-form-field>
+                                        displayfield="shortNameEnglish" orderby="longNameFrench:asc"></wm-form-field>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn26">
                                         <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="true" widget="select"
