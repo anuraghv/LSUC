@@ -39,7 +39,7 @@ public class PersonPreProcessor extends PersonServiceImpl {
                 throw new WMRuntimeException("Person already exists with given Firstname, Lastname and Address");
             }
         }
-        return person;
+        return super.create(person);
 
     }
 
