@@ -51,7 +51,7 @@
                 <wm-filter-action key="clear" display-name="Clear" show="true" class="btn-secondary" iconclass="" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
                 <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="" title="Filter" action="filter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
-            <wm-grid title="" dataset="bind:Widgets.businessFilter.result" navigation="Basic" name="businessTable" show="bind:Widgets.viewSwitch.datavalue === 'list'">
+            <wm-grid title="" dataset="bind:Widgets.businessFilter.result" navigation="Basic" name="businessList" show="bind:Widgets.viewSwitch.datavalue === 'list'">
                 <wm-grid-column binding="businessNumber" caption="Business Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
                     <wm-anchor caption="{{row.getProperty('businessNumber')}}" on-click="Variables.goToPage_Business.invoke()" class="" data-ng-class=""></wm-anchor>
                 </wm-grid-column>
@@ -62,7 +62,8 @@
                     <wm-icon caption="{{row.getProperty('businessstatus.shortNameEnglish')}}" iconclass="wi wi-star-border" iconposition="left" class="" data-ng-class=""></wm-icon>
                 </wm-grid-column>
             </wm-grid>
-            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.businessFilter.result" navigation="Basic" name="livelist1" show="bind:Widgets.viewSwitch.datavalue === 'grid'" navigationalign="right">
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.businessFilter.result" navigation="Basic" name="businessCardList" show="bind:Widgets.viewSwitch.datavalue === 'grid'"
+            navigationalign="right" on-click="Variables.listgoToPage_Business.invoke()">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="Contact Card">
                         <wm-card-content horizontalalign="center" name="card_content1">

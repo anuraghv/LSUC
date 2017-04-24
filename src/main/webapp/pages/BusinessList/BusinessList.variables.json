@@ -13,7 +13,25 @@
     "dataSet" : [ {
       "type" : "string",
       "target" : "businessId",
-      "value" : "bind:Widgets.businessTable.selecteditem.pk"
+      "value" : "bind:Widgets.businessList.selecteditem.pk"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "listgoToPage_Business" : {
+    "_id" : "wm-listgoToPage_Business-wm.NavigationVariable-1493014811662",
+    "name" : "listgoToPage_Business",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Business",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "string",
+      "target" : "businessId",
+      "value" : "bind:Widgets.businessCardList.selecteditem.pk"
     } ],
     "pageTransitions" : "none"
   },
