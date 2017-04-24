@@ -44,6 +44,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         $scope.Variables.LSUC_ApprovalData.insertRecord({}, function() {
             /* On success, close the live form*/
             currentItemWidgets.licenseStatusForm.cancel();
+            $scope.Variables.LSUC_ApprovalData_Read.listRecords();
         });
         return false;
     };
@@ -61,12 +62,13 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             "newEffectiveFromDate": $data.effectiveFromDate,
             "newEffectiveToDate": $data.effectiveToDate,
             "newClassPracticeGroupFk": $data.classpraticegroup,
-            "status": "Updated"
+            "status": "Created"
         });
         /* Insert data in LSUC_ApprovalData*/
         $scope.Variables.LSUC_ApprovalData.insertRecord({}, function() {
             /* On success, close the live form*/
             $scope.Widgets.addLicenseeStatusForm.cancel();
+            $scope.Variables.LSUC_ApprovalData_Read.listRecords();
         });
         return false;
     };
@@ -113,6 +115,19 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             $scope.Widgets.insurancecoveragetype.focus();
         });
     };
+
+    $scope.LSUC_ApprovalData_ReadonBeforeUpdate = function(variable, inputData) {
+        /*If licenseeFk is not present, dont make the call*/
+        if (inputData && !inputData.licenseeFk) {
+            return false;
+        }
+        if (inputData) {
+            inputData.status = {
+                value: ['Updated', 'Created']
+            };
+        }
+    };
+
 }]);
 
 

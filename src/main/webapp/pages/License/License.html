@@ -3,31 +3,51 @@
         <wm-gridrow name="gridrow9">
             <wm-gridcolumn columnwidth="6" name="gridcolumn22" padding="unset 1em unset unset">
                 <wm-button class="btn-link btn-action-top" caption="Add" type="button" name="addLicenseeStatusBtn" iconclass="wi wi-plus fa-2x" on-click="addLicenseeStatusBtnClick($event, $scope)"></wm-button>
-                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel panel-default media-list" dataset="bind:Variables.licenseStatusData.dataSet" navigation="None" name="licenseStatusList" title="LICENSEE STATUS"
-                padding="1em 1em unset 1em">
+                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel panel-default media-list" dataset="bind:Variables.LSUC_ApprovalData_Read.dataSet" navigation="None" name="livelist3" title="LICENSEE STATUS"
+                padding="1em 1em unset 1em" nodatamessage="">
+                    <wm-listtemplate layout="inline" name="listtemplate3">
+                        <wm-panel autoclose="outsideClick" title="bind:Variables.LSUC_ApprovalData_Read.dataSet.data[$i].licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish + ' - ' + Variables.LSUC_ApprovalData_Read.dataSet.data[$i].licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish"
+                        name="panel2" badgevalue="Pending Approval" badgetype="warning">
+                            <wm-layoutgrid name="layoutgrid8_2" columns="3">
+                                <wm-gridrow name="gridrow24">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn46">
+                                        <wm-label name="label3" width="100%" caption="Effective From"></wm-label>
+                                        <wm-label name="Name" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newEffectiveFromDate" fontunit="em"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn47">
+                                        <wm-label name="label4" width="100%" caption="Effective To"></wm-label>
+                                        <wm-label name="Name" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newEffectiveToDate" fontunit="em"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn48">
+                                        <wm-label name="label5" width="100%" caption="Is Primary"></wm-label>
+                                        <wm-label name="JobTitle" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newIsPrimary"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                    </wm-listtemplate>
+                </wm-livelist>
+                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel panel-default media-list" dataset="bind:Variables.licenseStatusData.dataSet" navigation="None" name="licenseStatusList" title="" padding="1em 1em unset 1em">
                     <wm-listtemplate layout="inline" name="listtemplate2_1">
                         <wm-liveform novalidate="false" errormessage="Licensee Status was not updated" title="bind:Widgets.licenseStatusList.currentItem.classpraticegroup.classEntity.shortNameEnglish+' - '+Widgets.licenseStatusList.currentItem.classpraticegroup.practicegroup.shortNameEnglish"
                         iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Widgets.licenseStatusList.currentItem" on-beforeservicecall="licenseStatusFormBeforeservicecall1($event, $operation, $data, item, currentItemWidgets)"
                         class="panel-secondary" messagelayout="Inline" insertmessage="Licensee Status added successfully" updatemessage="Licensee Status updated successfully" deletemessage="Licensee Status deleted successfully">
                             <wm-button type="button" show="bind: !Widgets.licenseStatusForm.isUpdateMode" name="licenseStUpBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link  btn-action-top" on-click="licenseStUpBtnClick($event, $scope)"
                             margin="-3.5em unset unset unset"></wm-button>
-                            <wm-layoutgrid columns="2" name="layoutgrid2">
-                                <wm-gridrow name="gridrow20">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn32_2">
-                                        <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date"
+                            <wm-layoutgrid columns="3" name="layoutgrid2">
+                                <wm-gridrow name="gridrow18_1">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn30_2">
+                                        <wm-form-field name="effectiveFromDate" displayname="Effective From" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date"
                                         outputformat="yyyy-MM-dd" datepattern="dd MMM yyyy"></wm-form-field>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn33_2">
-                                        <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn31_2">
+                                        <wm-form-field name="effectiveToDate" displayname="Effective To" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
                                         outputformat="yyyy-MM-dd" datepattern="dd MMM yyyy"></wm-form-field>
                                     </wm-gridcolumn>
-                                </wm-gridrow>
-                                <wm-gridrow name="gridrow21">
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn34_2">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn32_3">
                                         <wm-form-field name="isPrimary" displayname="Is Primary" show="true" primary-key="false" generator="assigned" key="isPrimary" type="character" readonly="false" required="false" widget="checkbox" maxchars="1" placeholder="Enter value"
                                         checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="6" name="gridcolumn35"></wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
                             <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
@@ -38,32 +58,31 @@
                 </wm-livelist>
                 <wm-liveform novalidate="false" errormessage="" title="" iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="addLicenseeStatusForm" show="bind:Widgets.addLicenseeStatusForm.isUpdateMode"
                 on-success="Widgets.addLicenseeStatusForm.cancel()" on-beforeservicecall="addLicenseeStatusFormBeforeservicecall($event, $operation, $data)">
-                    <wm-layoutgrid columns="2" name="layoutgrid8_1">
-                        <wm-gridrow name="gridrow17">
-                            <wm-gridcolumn columnwidth="6" name="gridcolumn34">
+                    <wm-layoutgrid columns="3" name="layoutgrid8_1">
+                        <wm-gridrow name="gridrow20">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn36">
                                 <wm-form-field displayname="Class" widget="select" show="true" type="custom" name="dummyClass" dataset="bind:Variables.LSUCClassData.dataSet" datafield="All Fields" displayfield="shortNameEnglish" placeholder="Select Class"
                                 required="true"></wm-form-field>
                             </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="6" name="gridcolumn33">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn37">
                                 <wm-form-field name="classpraticegroup" displayname="Practice Group" show="true" primary-key="false" generator="assigned" key="classpraticegroup" type="list" is-related="true" readonly="false" required="true" widget="select"
                                 displayexpression="bind:$[practicegroup.shortNameEnglish]" placeholder="Select value" dataset="bind:Variables.getAssociatedPracticeGroups.dataSet" datafield="pk"></wm-form-field>
                             </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow name="gridrow18">
-                            <wm-gridcolumn columnwidth="6" name="gridcolumn30">
-                                <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
-                                outputformat="yyyy-MM-dd"></wm-form-field>
-                            </wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="6" name="gridcolumn31">
-                                <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn38">
+                                <wm-form-field name="effectiveFromDate" displayname="Effective From" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
                                 outputformat="yyyy-MM-dd"></wm-form-field>
                             </wm-gridcolumn>
                         </wm-gridrow>
-                        <wm-gridrow name="gridrow6">
-                            <wm-gridcolumn columnwidth="6" name="gridcolumn32">
+                        <wm-gridrow name="gridrow21">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn39">
+                                <wm-form-field name="effectiveToDate" displayname="Effective To" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                outputformat="yyyy-MM-dd"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn40">
                                 <wm-form-field name="isPrimary" displayname="Is Primary" show="true" primary-key="false" generator="assigned" key="isPrimary" type="character" readonly="false" required="false" widget="checkbox" maxchars="1" placeholder="Enter value"
                                 defaultvalue="N" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                             </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn41"></wm-gridcolumn>
                         </wm-gridrow>
                     </wm-layoutgrid>
                     <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
