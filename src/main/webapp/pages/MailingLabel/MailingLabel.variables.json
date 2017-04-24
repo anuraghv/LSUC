@@ -4,7 +4,11 @@
     "name" : "LSUCMailinglabelData",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ ],
+    "dataBinding" : [ {
+      "target" : "personFk",
+      "value" : "bind:pageParams.id",
+      "type" : "number"
+    } ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "Mailinglabel",
@@ -585,7 +589,7 @@
       "primaryFields" : [ "pk" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 4,
     "tableName" : "MAILINGLABEL",
     "tableType" : "TABLE",
     "properties" : [ "person", "country", "province" ],
@@ -608,6 +612,7 @@
       "watchOn" : "LSUCProvinceData",
       "package" : "com.lsuc.lsuc.Mailinglabel"
     } ],
+    "filterFields" : { },
     "package" : "com.lsuc.lsuc.Mailinglabel"
   }
 }
