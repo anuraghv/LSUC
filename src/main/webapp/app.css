@@ -58,7 +58,7 @@ a.app-header-action .badge {
 /******************************************************************/
 
 .app-header-action.user-badge {
-    padding: 11px 15px !important;
+    padding: 10px 15px !important;
     border-left: 1px rgba(0, 0, 0, 0.1) solid !important;
 }
 .user-badge .app-username,
@@ -67,6 +67,14 @@ a.app-header-action .badge {
 }
 .user-badge .user-pic {
     border: 2px rgba(192, 192, 192, 0.3);
+}
+@media only screen and (max-width: 480px) and (min-width: 299px) {
+    .app-header-action.user-badge {
+        border-left: 0 !important;
+    }
+    .app-header-action.user-badge .user-pic-container {
+        border-left: 1px rgba(0, 0, 0, 0.1) solid !important;
+    }
 }
 /******************************************************************/
 

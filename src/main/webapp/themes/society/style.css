@@ -7282,6 +7282,7 @@ button.wm-app .close {
     border-radius: 0;
     color: #fff;
     padding: 0 1.52em;
+    /******mobile responsive********/
 }
 .wm-app .app-navbar .navbar-nav li a {
     font-size: 1em;
@@ -7302,6 +7303,7 @@ button.wm-app .close {
 .wm-app .app-navbar .navbar-nav li a.active {
     color: #fff;
     border-bottom: 4px solid #fff;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 .wm-app .app-navbar .navbar-nav li > .dropdown .dropdown-menu {
     margin: 0;
@@ -7319,6 +7321,10 @@ button.wm-app .close {
 }
 .wm-app .app-navbar .navbar-nav .app-nav-item > .dropdown a.dropdown-toggle {
     padding: .5em 1.2em;
+}
+.wm-app .app-navbar .navbar-collapse.in .navbar-nav > li > a,
+.wm-app .app-navbar .navbar-collapse.in .navbar-nav > li > a.active {
+    border: 0;
 }
 .wm-app .popover {
     min-width: 16.667em;
@@ -7775,7 +7781,6 @@ button.wm-app .close {
 .wm-app .app-datanavigator .pagination.basic .pagination-first a,
 .wm-app .app-datanavigator .pagination.basic .pagination-last a {
     padding: 3px 7px;
-    margin: 0 10px;
 }
 .wm-app .app-datanavigator .pagination.basic li {
     font-size: 1.08em;
@@ -7794,6 +7799,9 @@ button.wm-app .close {
     font-size: 14px;
     font-weight: bold;
     background-color: transparent;
+}
+.wm-app .app-datanavigator .pagination.basic li.pagination-page:not(.active) a {
+    width: 15pt;
 }
 .wm-app .app-datanavigator .pagination.basic li.active a,
 .wm-app .app-datanavigator .pagination.basic li.active a:hover,

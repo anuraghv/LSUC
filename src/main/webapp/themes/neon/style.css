@@ -5463,7 +5463,7 @@ a.wm-app .thumbnail.active {
     padding: 10px 15px;
     margin-bottom: -1px;
     background-color: #000;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
 }
 .wm-app .list-group-item:first-child {
     border-top-right-radius: 0px;
@@ -6127,7 +6127,7 @@ button.wm-app .close {
 }
 .wm-app .modal-content {
     position: relative;
-    background-color: #fff;
+    background-color: #000;
     border: 1px solid #999;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 6px;
@@ -7945,7 +7945,6 @@ button.wm-app .close {
     border-color: rgba(0, 0, 0, 0.05);
 }
 .wm-app .app-search {
-    border: 1px solid #4d4d4d;
     background-color: #000;
 }
 .wm-app .app-search.input-group .app-textbox {
@@ -8323,8 +8322,8 @@ button.wm-app .close {
     box-shadow: none;
     border: 1px solid #333333;
 }
-.wm-app .app-list .panel-heading,
-.wm-app .app-livelist .panel-heading {
+.wm-app .app-list > .panel-heading,
+.wm-app .app-livelist > .panel-heading {
     background-color: transparent;
 }
 .wm-app .app-list .app-list-item.active .app-panel,
