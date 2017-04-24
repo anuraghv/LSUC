@@ -53,14 +53,14 @@
                                         <versionRange>[1.7,)</versionRange>
                                         <goals>
                                             <goal>run</goal>
-                    </goals>
-                  </pluginExecutionFilter>
+                                        </goals>
+                                    </pluginExecutionFilter>
                                     <action>
                                         <ignore/>
-                  </action>
-                </pluginExecution>
-              </pluginExecutions>
-            </lifecycleMappingMetadata>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
                     </configuration>
                 </plugin>
             </plugins>
@@ -72,7 +72,7 @@
                 <configuration>
                     <nonFilteredFileExtensions>
                         <nonFilteredFileExtension>jks</nonFilteredFileExtension>
-          </nonFilteredFileExtensions>
+                    </nonFilteredFileExtensions>
                 </configuration>
             </plugin>
             <plugin>
@@ -88,11 +88,11 @@
                     <filesets>
                         <fileset>
                             <directory>${basedir}/src/main/webapp/WEB-INF/lib</directory>
-            </fileset>
+                        </fileset>
                         <fileset>
                             <directory>${basedir}/src/main/webapp/WEB-INF/classes</directory>
-            </fileset>
-          </filesets>
+                        </fileset>
+                    </filesets>
                 </configuration>
             </plugin>
             <plugin>
@@ -129,7 +129,7 @@
                         <configuration>
                             <target>
                                 <ant antfile="${basedir}/build.xml" target="init"/>
-              </target>
+                            </target>
                         </configuration>
                     </execution>
                 </executions>
@@ -163,8 +163,8 @@
                                     <version>${wavemaker.studio.version}</version>
                                     <classifier>wmapp</classifier>
                                     <type>zip</type>
-                </artifactItem>
-              </artifactItems>
+                                </artifactItem>
+                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
@@ -278,6 +278,12 @@
         </pluginRepository>
     </pluginRepositories>
     <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache-core</artifactId>
