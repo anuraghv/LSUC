@@ -4703,7 +4703,7 @@ select[multiple].wm-app .input-group-sm > .input-group-btn > .btn {
     }
 }
 .wm-app .navbar-default {
-    background-color: #19a8a6;
+    background-color: #127c7a;
     border-color: transparent;
 }
 .wm-app .navbar-default .navbar-brand {
@@ -7307,7 +7307,7 @@ button.wm-app .close {
     background-color: #000;
     color: #fff;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
-    border-bottom: 3px solid #19a8a6;
+    border-bottom: 0;
     height: auto;
 }
 .wm-app .app-header a,
@@ -7337,7 +7337,7 @@ button.wm-app .close {
 }
 .wm-app .app-header .app-mobile-header,
 .wm-app .app-mobile-header .app-mobile-header {
-    background-color: #19a8a6;
+    background-color: #127c7a;
     color: #333333;
 }
 .wm-app .app-header .app-mobile-header a,
@@ -8647,7 +8647,7 @@ button.wm-app .close {
     padding: 1.2em;
     overflow: auto !important;
     background-color: transparent;
-    border-top: 1px solid #19a8a6;
+    border-top: 1px solid #127c7a;
 }
 .wm-app .app-date strong,
 .wm-app .app-datetime strong {

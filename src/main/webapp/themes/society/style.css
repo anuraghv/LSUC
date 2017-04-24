@@ -7877,15 +7877,21 @@ button.wm-app .close {
     opacity: .6;
 }
 .wm-app .app-panel.panel-secondary {
-    background-color: #eee;
+    background-color: transparent;
     border-color: transparent;
     box-shadow: none;
 }
+.wm-app .app-panel.panel-secondary > .panel-heading {
+    background-color: rgba(168, 168, 168, 0.2);
+}
+.wm-app .app-panel.panel-secondary > .panel-heading .panel-title {
+    border-color: transparent;
+}
 .wm-app .app-panel.panel-secondary > .panel-content > .panel-body {
-    background-color: inherit;
+    background-color: rgba(168, 168, 168, 0.2);
 }
 .wm-app .app-panel.panel-secondary > .panel-content:not(.ng-hide) {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(168, 168, 168, 0.3);
 }
 .wm-app .app-accordion .app-accordion-panel.panel {
     box-shadow: none;
@@ -8577,3 +8583,5 @@ button.wm-app .close {
 }
 .wm-app .app-files-upload-status.multiple {
     padding-top: 0.333em;
+    font-size: 1.2em;
+}
