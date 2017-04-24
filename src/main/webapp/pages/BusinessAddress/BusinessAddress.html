@@ -1,6 +1,6 @@
 <wm-partial data-ng-controller="BusinessAddressPageController" name="partial1">
     <wm-livegrid name="livegrid1">
-        <wm-grid gridfirstrowselect="true" editmode="form" title="Address" dataset="bind:Variables.LSUCBusinessaddressData.dataSet" navigation="None" name="businessAddressTable">
+        <wm-grid gridfirstrowselect="true" editmode="form" title="Address" dataset="bind:Variables.LSUCBusinessaddressData.dataSet" navigation="None" name="businessAddressTable" gridclass="table-striped">
             <wm-grid-column binding="addressLine1" caption="Address" type="string" widget-type="label" width="40%" generator="assigned" edit-widget-type="text" show="true" readonly="false">{{row.getProperty('addressLine1')}} {{row.getProperty('addressLine2')}} {{row.getProperty('addressLine3')}} {{row.getProperty('addressLine4')}} {{row.getProperty('addressLine5')}} {{row.getProperty('addressLine6')}} {{row.getProperty('city')}}
                 , {{row.province.shortNameEnglish}} , {{row.country.shortNameEnglish}} , {{row.getProperty('postalCode')}}</wm-grid-column>
             <wm-grid-column binding="addresstype.pk" caption="Type" type="integer" widget-type="label" width="25%" primary-key="true"

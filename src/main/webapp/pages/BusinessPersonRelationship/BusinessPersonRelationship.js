@@ -24,9 +24,20 @@ Application.$controller("BusinessPersonRelationshipPageController", ["$scope", f
 
 
     $scope.deleteBusinessPersonRelBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
-        debugger;
         $scope.Variables.LSUCBusinesspersonrelationshipData1.setInput('pk', item.pk);
         $scope.Variables.LSUCBusinesspersonrelationshipData1.deleteRecord();
+    };
+
+
+    $scope.businessPersonRelEditBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
+        $scope.Widgets.businessPersonRelForm.isUpdateMode = true;
+    };
+
+
+    $scope.addBusinessPersonRelonBeforeUpdate = function(variable, inputData) {
+        inputData['businessperson.businessFk'] = {
+            'value': $scope.pageParams.businessId
+        };
     };
 
 }]);
@@ -39,6 +50,13 @@ Application.$controller("businessPersonRelTableController", ["$scope",
 ]);
 
 Application.$controller("liveform1Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("businessPersonRelFormController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
