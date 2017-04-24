@@ -85,12 +85,7 @@ Application.$controller("orgUnitsFormController", ["$scope",
 
 
 
-Application.$controller("businessAddressGridController", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
+
 
 Application.$controller("businessSocialMediaGridController", ["$scope",
 	function($scope) {

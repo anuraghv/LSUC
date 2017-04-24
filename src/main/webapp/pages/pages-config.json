@@ -28,6 +28,13 @@
     "type" : "string"
   } ]
 }, {
+  "name" : "BusinessAddress",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "businessId",
+    "type" : "integer"
+  } ]
+}, {
   "name" : "BusinessList",
   "type" : "PAGE",
   "params" : [ ]
