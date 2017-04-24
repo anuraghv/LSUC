@@ -1,4 +1,9 @@
 [ {
+  "urlPattern" : "/pages/Approvals/**",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : null
+}, {
   "urlPattern" : "/**",
   "permission" : "Authenticated",
   "roles" : null,

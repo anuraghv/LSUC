@@ -1,18 +1,20 @@
 <wm-partial data-ng-controller="AddressesPageController" name="partial1">
     <wm-livegrid name="address">
         <wm-grid gridfirstrowselect="true" editmode="form" title="Address" dataset="bind:Variables.LSUCPersonaddressData.dataSet" navigation="None" name="addressGrid" gridclass="table-striped" iconclass="wi wi-location-on" class="panel-default">
-            <wm-grid-column binding="customField" caption="Address" type="string" edit-widget-type="text" searchable="false" show="true" readonly="false">{{row.getProperty('addressLine1')}} {{row.getProperty('addressLine2')}} {{row.getProperty('addressLine3')}} {{row.getProperty('addressLine4')}} {{row.getProperty('addressLine5')}} {{row.getProperty('addressLine6')}}</wm-grid-column>
-            <wm-grid-column
-            binding="city" caption="City" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="postalCode" caption="Postal Code" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false">
-                    <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory ==='Y'}"></wm-icon>
-                </wm-grid-column>
-                <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
-                <wm-grid-action key="addNewRow" display-name="Add Address" show="true" class="btn-transparent btn-link" iconclass="wi wi-plus" title="Add Address" action="addNewRow()" shortcutkey="" disabled="false" icon="wi wi-add-location"
-                position="header"></wm-grid-action>
-                <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
-                <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
+            <wm-grid-column binding="customField" caption="Address" type="string" edit-widget-type="text" searchable="false" show="true" readonly="false">{{row.getProperty('addressLine1')}} {{row.getProperty('addressLine2')}} {{row.getProperty('addressLine3')}} {{row.getProperty('addressLine4')}} {{row.getProperty('addressLine5')}} {{row.getProperty('addressLine6')}}, {{row.getProperty('city')}},
+                {{row.province.shortNameEnglish}}, {{row.country.shortNameEnglish}}, {{row.getProperty('postalCode')}}
+            </wm-grid-column>
+            <wm-grid-column binding="addresstype.shortNameEnglish" caption="Type" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Addresstype"></wm-grid-column>
+            <wm-grid-column binding="city" caption="City" type="string" generator="assigned" edit-widget-type="text" show="false" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="postalCode" caption="Postal Code" type="string" generator="assigned" edit-widget-type="text" show="false" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+                <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':rowData.isDisplayedOnDirectory ==='Y'}"></wm-icon>
+            </wm-grid-column>
+            <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
+            <wm-grid-action key="addNewRow" display-name="Add Address" show="true" class="btn-transparent btn-link" iconclass="wi wi-plus" title="Add Address" action="addNewRow()" shortcutkey="" disabled="false" icon="wi wi-add-location"
+            position="header"></wm-grid-action>
+            <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
+            <wm-grid-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-grid-row-action>
         </wm-grid>
         <wm-liveform novalidate="false" errormessage="" title="Add/Edit Address" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Variables.LSUCPersonaddressData.dataSet" captionalign="left" captionposition="top" name="addressLiveForm" show="bind:Widgets.addressLiveForm.isUpdateMode">
             <wm-layoutgrid columns="3" name="layoutgrid1">
