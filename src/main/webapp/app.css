@@ -1,20 +1,14 @@
 @media only screen and (max-width: 480px) and (min-width: 299px) {
-    .app-header-actions .app-header-action .app-icon {
-        font-size: 1em;
-    }
-    .app-header-action {
-        padding: 0 !important;
+    .wm-app .app-header .app-nav .app-nav-item>.dropdown {
+        height: 32pt;
     }
     .app-logo {
         height: 30px !important;
     }
 }
 @media only screen and (max-width: 800px) and (min-width: 481px) {
-    .app-header-actions .app-header-action .app-icon {
-        font-size: 1em;
-    }
-    .app-header-action {
-        padding: 0 !important;
+    .app-logo {
+        height: 30px !important;
     }
 }
 .gray {
@@ -23,13 +17,13 @@
 /***text size specific function***/
 
 .text-style-S {
-    font-size: 1em;
+    font-size: 0.8em;
 }
 .text-style-M {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .text-style-L {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 /******header special classes*****/
 

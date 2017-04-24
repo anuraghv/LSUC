@@ -1,5 +1,5 @@
 <wm-partial data-ng-controller="BusinessPersonRelationshipPageController" name="partial1">
-    <wm-panel subheading="subheading" iconclass="wi wi-account-circle" autoclose="outsideClick" title="Business - Person Relationship" name="panel2" class="panel-default">
+    <wm-panel iconclass="wi wi-account-circle" autoclose="outsideClick" title="Business - Person Relationship" name="panel2" class="panel-default">
         <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCBusinesspersonData.dataSet" navigation="None" name="businessPersonList" backgroundcolor="#fff">
             <wm-listtemplate layout="inline" name="listtemplate2">
                 <wm-panel subheading="bind:'DOB: ' +Variables.LSUCBusinesspersonData.dataSet.data[$i].person.birthDate" iconclass="" autoclose="outsideClick" title="bind:Variables.LSUCBusinesspersonData.dataSet.data[$i].person.firstName" name="panel1" expanded="true"

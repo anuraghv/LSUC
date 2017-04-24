@@ -3,13 +3,13 @@
         <wm-button type="button" name="editBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link  btn-action-top" margin="-3.75em unset unset unset" show="bind:Variables.LSUCMailinglabelData.dataSet.data.length !== 0" on-click="editBtnClick($event, $scope)"></wm-button>
         <wm-button type="button" name="addBtn" iconclass="wi wi-plus fa-2x" caption="Add" class="btn-link  btn-action-top" margin="-3.75em unset unset unset" show="bind:Variables.LSUCMailinglabelData.dataSet.data.length === 0" on-click="addBtnClick($event, $scope)"></wm-button>
         <wm-container name="container1" show="bind:Variables.LSUCMailinglabelData.dataSet.data.length !== 0">
-            <wm-label padding="unset 0.5em" name="label2" width="100%" caption="bind:Variables.LSUCMailinglabelData.firstRecord.line1 || ''"></wm-label>
-            <wm-label padding="unset 0.5em" name="label1" width="100%" caption="bind:Variables.LSUCMailinglabelData.dataSet.data[$i].line2 || ''"></wm-label>
-            <wm-label padding="unset 0.5em" name="label3" width="100%" caption="bind:(Variables.LSUCMailinglabelData.dataSet.data[$i].line3 || '') + ' ' + (Variables.LSUCMailinglabelData.dataSet.data[$i].line4 || '')"></wm-label>
-            <wm-label padding="unset 0.5em" name="label4" width="100%" caption="bind:(Variables.LSUCMailinglabelData.firstRecord.line5 || '') + ' ' + (Variables.LSUCMailinglabelData.firstRecord.line6 || '') + ' ' + (Variables.LSUCMailinglabelData.firstRecord.city || '') + ' ' + (Variables.LSUCMailinglabelData.firstRecord.postalCode || '')"></wm-label>
+            <wm-label padding="unset 0.5em" name="Address1" width="100%" caption="bind:Variables.LSUCMailinglabelData.firstRecord.line1 || ''"></wm-label>
+            <wm-label padding="unset 0.5em" name="Address2" width="100%" caption="bind:Variables.LSUCMailinglabelData.dataSet.data[$i].line2 || ''"></wm-label>
+            <wm-label padding="unset 0.5em" name="Address3" width="100%" caption="bind:(Variables.LSUCMailinglabelData.dataSet.data[$i].line3 || '') + ' ' + (Variables.LSUCMailinglabelData.dataSet.data[$i].line4 || '')"></wm-label>
+            <wm-label padding="unset 0.5em" name="cityAddress" width="100%" caption="bind:(Variables.LSUCMailinglabelData.firstRecord.line5 || '') + ' ' + (Variables.LSUCMailinglabelData.firstRecord.line6 || '') + ' ' + (Variables.LSUCMailinglabelData.firstRecord.city || '') + ' ' + (Variables.LSUCMailinglabelData.firstRecord.postalCode || '')"></wm-label>
         </wm-container>
         <wm-container name="container2" show="bind:Variables.LSUCMailinglabelData.dataSet.data.length === 0">
-            <wm-label padding="unset 0.5em" name="label5" caption="No Mailing Label found" show="bind:Variables.LSUCMailinglabelData.dataSet.data.length === 0"></wm-label>
+            <wm-label padding="unset 0.5em" name="message" caption="No Mailing Label found for the person" show="bind:Variables.LSUCMailinglabelData.dataSet.data.length === 0" class="h4  text-muted"></wm-label>
         </wm-container>
     </wm-panel>
     <wm-liveform novalidate="false" errormessage="" title="" formlayout="inline" iconclass="" dataset="bind:Variables.LSUCMailinglabelData.dataSet" captionalign="left" captionposition="top" name="mailingLabelLiveForm" show="bind:Widgets.mailingLabelLiveForm.isUpdateMode"

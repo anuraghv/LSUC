@@ -5,12 +5,11 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-layoutgrid name="layoutgrid2">
                 <wm-gridrow name="gridrow4" padding="unset unset 1em unset">
-                    <wm-gridcolumn columnwidth="4" name="gridcolumn12">
-                        <wm-label padding="unset 0.5em" name="label8" class="h2" caption="bind:appLocale.LABEL_LICENSEES"></wm-label>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn12" class="col-xs-6">
+                        <wm-label name="label8" class="h2" caption="bind:appLocale.LABEL_LICENSEES"></wm-label>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right" padding="unset unset 1px unset">
-                        <wm-button class="btn-primary" caption="Add Licensee" type="button" margin="unset 0.5em" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus fa-lg"></wm-button>
-                        <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;"></wm-switch>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right" padding="unset unset 1px unset" class="col-xs-6">
+                        <wm-button class="btn-primary" caption="Add Licensee" type="button" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus fa-lg"></wm-button>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
@@ -52,6 +51,9 @@
                 <wm-filter-action key="clear" display-name="Reset" show="true" class="btn-secondary" iconclass="" title="Clear" action="clearFilter()" disabled="false" type="button"></wm-filter-action>
                 <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="" title="Filter" action="filter()" disabled="false" type="button"></wm-filter-action>
             </wm-livefilter>
+            <wm-container name="container1" horizontalalign="right" padding="1em unset">
+                <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;" class="swtich-mobile-responsive"></wm-switch>
+            </wm-container>
             <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="bind:Widgets.viewSwitch.datavalue === 'grid'"
             on-click="Variables.listgoToPage_LicenseeInfo.invoke()" navigationalign="right">
                 <wm-listtemplate layout="media" name="listtemplate1">

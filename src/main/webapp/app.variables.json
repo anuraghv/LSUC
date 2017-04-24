@@ -1020,7 +1020,7 @@
     "category" : "wm.Variable",
     "dataBinding" : [ ],
     "dataSet" : {
-      "textsize" : "S",
+      "textsize" : "M",
       "contrast" : "Light"
     },
     "type" : "entry",
