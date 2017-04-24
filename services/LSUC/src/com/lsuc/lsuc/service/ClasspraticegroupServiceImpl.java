@@ -26,6 +26,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
+import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 
 
 /**
@@ -43,6 +44,10 @@ public class ClasspraticegroupServiceImpl implements ClasspraticegroupService {
 	private LicenseeclasspracticegroupService licenseeclasspracticegroupService;
 
     @Autowired
+	@Qualifier("LSUC.LicenseeclasspracticegroupAudService")
+	private LicenseeclasspracticegroupAudService licenseeclasspracticegroupAudService;
+
+    @Autowired
     @Qualifier("LSUC.ClasspraticegroupDao")
     private WMGenericDao<Classpraticegroup, Integer> wmGenericDao;
 
@@ -55,6 +60,14 @@ public class ClasspraticegroupServiceImpl implements ClasspraticegroupService {
 	public Classpraticegroup create(Classpraticegroup classpraticegroup) {
         LOGGER.debug("Creating a new Classpraticegroup with information: {}", classpraticegroup);
         Classpraticegroup classpraticegroupCreated = this.wmGenericDao.create(classpraticegroup);
+        if(classpraticegroupCreated.getLicenseeclasspracticegroupAuds() != null) {
+            for(LicenseeclasspracticegroupAud licenseeclasspracticegroupAud : classpraticegroupCreated.getLicenseeclasspracticegroupAuds()) {
+                licenseeclasspracticegroupAud.setClasspraticegroup(classpraticegroupCreated);
+                LOGGER.debug("Creating a new child LicenseeclasspracticegroupAud with information: {}", licenseeclasspracticegroupAud);
+                licenseeclasspracticegroupAudService.create(licenseeclasspracticegroupAud);
+            }
+        }
+
         if(classpraticegroupCreated.getLicenseeclasspracticegroups() != null) {
             for(Licenseeclasspracticegroup licenseeclasspracticegroup : classpraticegroupCreated.getLicenseeclasspracticegroups()) {
                 licenseeclasspracticegroup.setClasspraticegroup(classpraticegroupCreated);
@@ -161,6 +174,17 @@ public class ClasspraticegroupServiceImpl implements ClasspraticegroupService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("classpraticegroup.pk = '" + pk + "'");
+
+        return licenseeclasspracticegroupAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<Licenseeclasspracticegroup> findAssociatedLicenseeclasspracticegroups(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated licenseeclasspracticegroups");
 
@@ -177,6 +201,15 @@ public class ClasspraticegroupServiceImpl implements ClasspraticegroupService {
 	 */
 	protected void setLicenseeclasspracticegroupService(LicenseeclasspracticegroupService service) {
         this.licenseeclasspracticegroupService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service LicenseeclasspracticegroupAudService instance
+	 */
+	protected void setLicenseeclasspracticegroupAudService(LicenseeclasspracticegroupAudService service) {
+        this.licenseeclasspracticegroupAudService = service;
     }
 
 }

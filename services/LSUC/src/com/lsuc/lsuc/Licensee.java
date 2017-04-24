@@ -65,6 +65,7 @@ public class Licensee implements Serializable {
     private List<LicenseeclasspracticegroupApprovals> licenseeclasspracticegroupApprovalses;
     private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFkCertified;
     private List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFk;
+    private List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds;
     private Paralegal paralegal;
     private List<Licenseepersonlanguagepurpose> licenseepersonlanguagepurposes;
     private List<Licenseeinsurance> licenseeinsurances;
@@ -326,6 +327,16 @@ public class Licensee implements Serializable {
 
     public void setLicenseephotoidcardsForLicenseeFk(List<Licenseephotoidcard> licenseephotoidcardsForLicenseeFk) {
         this.licenseephotoidcardsForLicenseeFk = licenseephotoidcardsForLicenseeFk;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licensee")
+    public List<LicenseeclasspracticegroupAud> getLicenseeclasspracticegroupAuds() {
+        return this.licenseeclasspracticegroupAuds;
+    }
+
+    public void setLicenseeclasspracticegroupAuds(List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds) {
+        this.licenseeclasspracticegroupAuds = licenseeclasspracticegroupAuds;
     }
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, mappedBy = "licensee")

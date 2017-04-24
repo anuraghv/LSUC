@@ -30,7 +30,8 @@ public class LicenseeAud implements Serializable {
     private Integer rev;
     private Short revtype;
     private Date licenseDate;
-    private Revinfo revinfo;
+    private String licenseeNumber;
+    private UsernameRev usernameRev;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -70,18 +71,27 @@ public class LicenseeAud implements Serializable {
         this.licenseDate = licenseDate;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`REV`", referencedColumnName = "`REV`", insertable = false, updatable = false)
-    public Revinfo getRevinfo() {
-        return this.revinfo;
+    @Column(name = "`LICENSEE_NUMBER`", nullable = true, length = 20)
+    public String getLicenseeNumber() {
+        return this.licenseeNumber;
     }
 
-    public void setRevinfo(Revinfo revinfo) {
-        if(revinfo != null) {
-            this.rev = revinfo.getRev();
+    public void setLicenseeNumber(String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`REV`", referencedColumnName = "`ID`", insertable = false, updatable = false)
+    public UsernameRev getUsernameRev() {
+        return this.usernameRev;
+    }
+
+    public void setUsernameRev(UsernameRev usernameRev) {
+        if(usernameRev != null) {
+            this.rev = usernameRev.getId();
         }
 
-        this.revinfo = revinfo;
+        this.usernameRev = usernameRev;
     }
 
     @Override

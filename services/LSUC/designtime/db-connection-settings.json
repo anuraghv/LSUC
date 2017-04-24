@@ -255,6 +255,9 @@
     "table" : "USER",
     "schema" : "RMS"
   }, {
+    "table" : "USERNAME_REV",
+    "schema" : "RMS"
+  }, {
     "table" : "USERPREFERENCE",
     "schema" : "RMS"
   }, {

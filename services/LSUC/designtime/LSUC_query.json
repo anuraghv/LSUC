@@ -139,9 +139,9 @@
     "description" : "Approve the edit LicenseeClassPracticeGroup based on the request PK",
     "version" : "V2",
     "queryString" : "update Licenseeclasspracticegroup a\n\nset a.effectiveFromDate = (select b.newEffectiveFromDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\n\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
-    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),\n\na.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)\n\nwhere a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)",
+    "countQueryString" : null,
     "nativeSql" : false,
-    "fetchCount" : true,
+    "fetchCount" : false,
     "type" : "UPDATE",
     "parameters" : [ {
       "name" : "approvalPk",
@@ -297,7 +297,7 @@
     "name" : "getStatusChangeDetails",
     "description" : "get Status Change Details Based on PersonID",
     "version" : "V2",
-    "queryString" : "select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )",
+    "queryString" : "select classpraticegroup.classEntity.shortNameEnglish as Type, effectiveFromDate as EffectiveDate, effectiveToDate as EffectiveTo, CONCAT(classpraticegroup.practicegroup.code,' - ', classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup, isPrimary as isPrimary, usernameRev.timestamp as revtstmp,\nusernameRev.username as changedBy from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )",
     "countQueryString" : "select count(*)  from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )",
     "nativeSql" : false,
     "fetchCount" : true,
@@ -308,7 +308,7 @@
       "list" : false,
       "variableType" : "PROMPT",
       "testValue" : "1",
-      "required" : false
+      "required" : true
     } ],
     "request" : {
       "wrapped" : false,
@@ -371,6 +371,15 @@
         "fieldType" : {
           "type" : "PRIMITIVE",
           "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      }, {
+        "name" : "changedBy",
+        "fieldName" : "changedBy",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
           "list" : false
         }
       } ]

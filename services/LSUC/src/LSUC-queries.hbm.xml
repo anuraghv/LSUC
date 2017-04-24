@@ -27,21 +27,6 @@ where a.pk=(select b.licenseeclasspracticegroupPk from Licenseeclasspracticegrou
     <query-param name="approvalPk" type="java.lang.Integer"/>
     </query>
 
-    <query name="approveEditRecord__count">
-        <![CDATA[
-        select count(*)  from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
-
-a.effectiveToDate = (select b.newEffectiveToDate from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
-
-a.isPrimary = (select b.newIsPrimary from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk),
-
-a.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
-
-where a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
-        ]]>
-    <query-param name="approvalPk" type="java.lang.Integer"/>
-    </query>
-
     <query name="PendingLicenseeStatusReports">
         <![CDATA[
         select licensee.person.firstName as name, licensee.licenseeNumber as licNum , licensee.licencetype.shortNameEnglish as LicType,licensee.licenseDate as LicDate,licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,newEffectiveFromDate as New_Effective_from_Date,newEffectiveToDate as New_Effective_to_Date ,oldEffectiveFromDate as Old_Effective_From_Date, oldEffectiveToDate as Old_Effective_to_Date, createdDate as Created_Date from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate
@@ -69,7 +54,8 @@ select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassP
 
     <query name="getStatusChangeDetails">
         <![CDATA[
-        select classpraticegroup.classEntity.shortNameEnglish as Type,effectiveFromDate as EffectiveDate,effectiveToDate as EffectiveTo,CONCAT(classpraticegroup.practicegroup.code,' - ',classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup,isPrimary as isPrimary,revinfo.revtstmp as revtstmp from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
+        select classpraticegroup.classEntity.shortNameEnglish as Type, effectiveFromDate as EffectiveDate, effectiveToDate as EffectiveTo, CONCAT(classpraticegroup.practicegroup.code,' - ', classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup, isPrimary as isPrimary, usernameRev.timestamp as revtstmp,
+usernameRev.username as changedBy from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
         ]]>
     <query-param name="personID" type="java.lang.Integer"/>
     </query>

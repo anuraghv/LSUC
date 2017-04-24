@@ -34,9 +34,9 @@ public class LicenseeclasspracticegroupAud implements Serializable {
     private Date effectiveToDate;
     private String isPrimary;
     private Integer licenseeFk;
-    private Revinfo revinfo;
-    private Licensee licensee;
     private Classpraticegroup classpraticegroup;
+    private Licensee licensee;
+    private UsernameRev usernameRev;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -113,17 +113,17 @@ public class LicenseeclasspracticegroupAud implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`REV`", referencedColumnName = "`REV`", insertable = false, updatable = false)
-    public Revinfo getRevinfo() {
-        return this.revinfo;
+    @JoinColumn(name = "`CLASS_PRACTICE_GROUP_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Classpraticegroup getClasspraticegroup() {
+        return this.classpraticegroup;
     }
 
-    public void setRevinfo(Revinfo revinfo) {
-        if(revinfo != null) {
-            this.rev = revinfo.getRev();
+    public void setClasspraticegroup(Classpraticegroup classpraticegroup) {
+        if(classpraticegroup != null) {
+            this.classPracticeGroupFk = classpraticegroup.getPk();
         }
 
-        this.revinfo = revinfo;
+        this.classpraticegroup = classpraticegroup;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -141,17 +141,17 @@ public class LicenseeclasspracticegroupAud implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`CLASS_PRACTICE_GROUP_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
-    public Classpraticegroup getClasspraticegroup() {
-        return this.classpraticegroup;
+    @JoinColumn(name = "`REV`", referencedColumnName = "`ID`", insertable = false, updatable = false)
+    public UsernameRev getUsernameRev() {
+        return this.usernameRev;
     }
 
-    public void setClasspraticegroup(Classpraticegroup classpraticegroup) {
-        if(classpraticegroup != null) {
-            this.classPracticeGroupFk = classpraticegroup.getPk();
+    public void setUsernameRev(UsernameRev usernameRev) {
+        if(usernameRev != null) {
+            this.rev = usernameRev.getId();
         }
 
-        this.classpraticegroup = classpraticegroup;
+        this.usernameRev = usernameRev;
     }
 
     @Override

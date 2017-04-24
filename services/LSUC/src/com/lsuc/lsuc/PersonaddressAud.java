@@ -42,8 +42,8 @@ public class PersonaddressAud implements Serializable {
     private Integer personFk;
     private String postalCode;
     private Integer provinceFk;
-    private Revinfo revinfo;
     private Person person;
+    private UsernameRev usernameRev;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -201,20 +201,6 @@ public class PersonaddressAud implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`REV`", referencedColumnName = "`REV`", insertable = false, updatable = false)
-    public Revinfo getRevinfo() {
-        return this.revinfo;
-    }
-
-    public void setRevinfo(Revinfo revinfo) {
-        if(revinfo != null) {
-            this.rev = revinfo.getRev();
-        }
-
-        this.revinfo = revinfo;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "`PERSON_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
     public Person getPerson() {
         return this.person;
@@ -226,6 +212,20 @@ public class PersonaddressAud implements Serializable {
         }
 
         this.person = person;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`REV`", referencedColumnName = "`ID`", insertable = false, updatable = false)
+    public UsernameRev getUsernameRev() {
+        return this.usernameRev;
+    }
+
+    public void setUsernameRev(UsernameRev usernameRev) {
+        if(usernameRev != null) {
+            this.rev = usernameRev.getId();
+        }
+
+        this.usernameRev = usernameRev;
     }
 
     @Override

@@ -101,7 +101,7 @@ public class QueryExecutionController {
     @RequestMapping(value = "/queries/getStatusChangeDetails", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "get Status Change Details Based on PersonID")
-    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(@RequestParam(value = "personID", required = false) Integer personId, Pageable pageable) {
+    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(@RequestParam(value = "personID") Integer personId, Pageable pageable) {
         LOGGER.debug("Executing named query: getStatusChangeDetails");
         Page<GetStatusChangeDetailsResponse> _result = queryService.executeGetStatusChangeDetails(personId, pageable);
         LOGGER.debug("got the result for named query: getStatusChangeDetails, result:{}", _result);
@@ -111,7 +111,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file for query getStatusChangeDetails")
     @RequestMapping(value = "/queries/getStatusChangeDetails/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Downloadable exportGetStatusChangeDetails(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "personID", required = false) Integer personId, Pageable pageable) {
+    public Downloadable exportGetStatusChangeDetails(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "personID") Integer personId, Pageable pageable) {
         LOGGER.debug("Exporting named query: getStatusChangeDetails");
 
         return queryService.exportGetStatusChangeDetails(exportType, personId, pageable);

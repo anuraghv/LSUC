@@ -29,6 +29,7 @@ import com.lsuc.lsuc.Licenseephotoidcard;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Person;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Personemailcontact;
 import com.lsuc.lsuc.Personlanguage;
 import com.lsuc.lsuc.Personnameotherlanguage;
@@ -63,6 +64,10 @@ public class PersonServiceImpl implements PersonService {
 	private PersonlanguageService personlanguageService;
 
     @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
+
+    @Autowired
 	@Qualifier("LSUC.PersonsocialmediacontactService")
 	private PersonsocialmediacontactService personsocialmediacontactService;
 
@@ -95,16 +100,16 @@ public class PersonServiceImpl implements PersonService {
 	private LicenseephotoidcardService licenseephotoidcardService;
 
     @Autowired
+	@Qualifier("LSUC.PersonroleService")
+	private PersonroleService personroleService;
+
+    @Autowired
 	@Qualifier("LSUC.PersonemailcontactService")
 	private PersonemailcontactService personemailcontactService;
 
     @Autowired
 	@Qualifier("LSUC.MailinglabelService")
 	private MailinglabelService mailinglabelService;
-
-    @Autowired
-	@Qualifier("LSUC.PersonroleService")
-	private PersonroleService personroleService;
 
     @Autowired
     @Qualifier("LSUC.PersonDao")
@@ -163,6 +168,14 @@ public class PersonServiceImpl implements PersonService {
                 personsocialmediacontact.setPerson(personCreated);
                 LOGGER.debug("Creating a new child Personsocialmediacontact with information: {}", personsocialmediacontact);
                 personsocialmediacontactService.create(personsocialmediacontact);
+            }
+        }
+
+        if(personCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : personCreated.getPersonaddressAuds()) {
+                personaddressAud.setPerson(personCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
             }
         }
 
@@ -382,6 +395,17 @@ public class PersonServiceImpl implements PersonService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("person.pk = '" + pk + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<Personperson> findAssociatedPersonpersonsForPersonFkParent(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated personpersonsForPersonFkParent");
 
@@ -520,6 +544,15 @@ public class PersonServiceImpl implements PersonService {
     /**
 	 * This setter method should only be used by unit tests
 	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
 	 * @param service PersonsocialmediacontactService instance
 	 */
 	protected void setPersonsocialmediacontactService(PersonsocialmediacontactService service) {
@@ -592,6 +625,15 @@ public class PersonServiceImpl implements PersonService {
     /**
 	 * This setter method should only be used by unit tests
 	 *
+	 * @param service PersonroleService instance
+	 */
+	protected void setPersonroleService(PersonroleService service) {
+        this.personroleService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
 	 * @param service PersonemailcontactService instance
 	 */
 	protected void setPersonemailcontactService(PersonemailcontactService service) {
@@ -605,15 +647,6 @@ public class PersonServiceImpl implements PersonService {
 	 */
 	protected void setMailinglabelService(MailinglabelService service) {
         this.mailinglabelService = service;
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service PersonroleService instance
-	 */
-	protected void setPersonroleService(PersonroleService service) {
-        this.personroleService = service;
     }
 
 }

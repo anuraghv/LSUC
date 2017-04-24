@@ -26,6 +26,8 @@ public class GetStatusChangeDetailsResponse implements Serializable {
     private String isPrimary;
     @ColumnAlias("revtstmp")
     private BigInteger revtstmp;
+    @ColumnAlias("changedBy")
+    private String changedBy;
 
     public String getType() {
         return this.type;
@@ -75,6 +77,14 @@ public class GetStatusChangeDetailsResponse implements Serializable {
         this.revtstmp = revtstmp;
     }
 
+    public String getChangedBy() {
+        return this.changedBy;
+    }
+
+    public void setChangedBy(String changedBy) {
+        this.changedBy = changedBy;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -85,7 +95,8 @@ public class GetStatusChangeDetailsResponse implements Serializable {
                 Objects.equals(getEffectiveTo(), getStatusChangeDetailsResponse.getEffectiveTo()) &&
                 Objects.equals(getPracticeGroup(), getStatusChangeDetailsResponse.getPracticeGroup()) &&
                 Objects.equals(getIsPrimary(), getStatusChangeDetailsResponse.getIsPrimary()) &&
-                Objects.equals(getRevtstmp(), getStatusChangeDetailsResponse.getRevtstmp());
+                Objects.equals(getRevtstmp(), getStatusChangeDetailsResponse.getRevtstmp()) &&
+                Objects.equals(getChangedBy(), getStatusChangeDetailsResponse.getChangedBy());
     }
 
     @Override
@@ -95,6 +106,7 @@ public class GetStatusChangeDetailsResponse implements Serializable {
                 getEffectiveTo(),
                 getPracticeGroup(),
                 getIsPrimary(),
-                getRevtstmp());
+                getRevtstmp(),
+                getChangedBy());
     }
 }

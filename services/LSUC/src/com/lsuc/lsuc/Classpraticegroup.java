@@ -37,6 +37,7 @@ public class Classpraticegroup implements Serializable {
     private Integer classFk;
     private Integer practiceGroupFk;
     private Character isRequiredToPayFees;
+    private List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds;
     private ClassEntity classEntity;
     private Practicegroup practicegroup;
     private List<Licenseeclasspracticegroup> licenseeclasspracticegroups;
@@ -77,6 +78,16 @@ public class Classpraticegroup implements Serializable {
 
     public void setIsRequiredToPayFees(Character isRequiredToPayFees) {
         this.isRequiredToPayFees = isRequiredToPayFees;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "classpraticegroup")
+    public List<LicenseeclasspracticegroupAud> getLicenseeclasspracticegroupAuds() {
+        return this.licenseeclasspracticegroupAuds;
+    }
+
+    public void setLicenseeclasspracticegroupAuds(List<LicenseeclasspracticegroupAud> licenseeclasspracticegroupAuds) {
+        this.licenseeclasspracticegroupAuds = licenseeclasspracticegroupAuds;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)

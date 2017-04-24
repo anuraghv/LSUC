@@ -34,6 +34,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
+import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 import com.lsuc.lsuc.service.ClasspraticegroupService;
 
 
@@ -157,6 +158,15 @@ public class ClasspraticegroupController {
 	public Page<Map<String, Object>> getClasspraticegroupAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return classpraticegroupService.getAggregatedValues(aggregationInfo, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/licenseeclasspracticegroupAuds", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the licenseeclasspracticegroupAuds instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupAuds");
+        return classpraticegroupService.findAssociatedLicenseeclasspracticegroupAuds(id, pageable);
     }
 
     @RequestMapping(value="/{id:.+}/licenseeclasspracticegroups", method=RequestMethod.GET)

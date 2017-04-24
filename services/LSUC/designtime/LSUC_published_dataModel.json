@@ -3604,25 +3604,25 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170420090249020",
+      "name" : "SQL170423120733000",
       "virtual" : false
     },
     "relations" : [ {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
-      "fieldName" : "revinfo",
+      "fieldName" : "classpraticegroup",
       "mappings" : [ {
-        "sourceColumn" : "REV",
-        "targetColumn" : "REV"
+        "sourceColumn" : "CLASS_PRACTICE_GROUP_FK",
+        "targetColumn" : "PK"
       } ],
-      "name" : "FK_H5K29N8G9JEKBRLNVFROG5RFM",
+      "name" : "FK_9K1JS42IFB3VM9WLFRR7MY3XI",
       "primary" : true,
       "selfRelation" : false,
       "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
       "targetColumnsUniqueKey" : false,
-      "targetTable" : "REVINFO",
+      "targetTable" : "CLASSPRATICEGROUP",
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
@@ -3633,31 +3633,31 @@
         "sourceColumn" : "LICENSEE_FK",
         "targetColumn" : "PK"
       } ],
-      "name" : "FK_LICENSEECLASSPRACTICEzWkGE",
+      "name" : "FK_9YROF0T3WCYQRJ5A1LI941JLS",
       "primary" : true,
       "selfRelation" : false,
       "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEE",
-      "virtual" : true
+      "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
-      "fieldName" : "classpraticegroup",
+      "fieldName" : "usernameRev",
       "mappings" : [ {
-        "sourceColumn" : "CLASS_PRACTICE_GROUP_FK",
-        "targetColumn" : "PK"
+        "sourceColumn" : "REV",
+        "targetColumn" : "ID"
       } ],
-      "name" : "FK_LICENSEECLASSPRACTICExYyo6",
+      "name" : "FK_H5K29N8G9JEKBRLNVFROG5RFM",
       "primary" : true,
       "selfRelation" : false,
       "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
       "targetColumnsUniqueKey" : false,
-      "targetTable" : "CLASSPRATICEGROUP",
-      "virtual" : true
+      "targetTable" : "USERNAME_REV",
+      "virtual" : false
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -11090,17 +11090,17 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170414082951720",
+      "name" : "SQL170423120733260",
       "virtual" : false
     },
     "relations" : [ {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
-      "fieldName" : "revinfo",
+      "fieldName" : "usernameRev",
       "mappings" : [ {
         "sourceColumn" : "REV",
-        "targetColumn" : "REV"
+        "targetColumn" : "ID"
       } ],
       "name" : "FK_5P4RUT470HDL6C8V4X2X72EHV",
       "primary" : true,
@@ -11108,7 +11108,7 @@
       "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "PERSON_AUD",
       "targetColumnsUniqueKey" : false,
-      "targetTable" : "REVINFO",
+      "targetTable" : "USERNAME_REV",
       "virtual" : false
     } ],
     "schema" : "RMS",
@@ -12606,6 +12606,23 @@
       "virtual" : false
     },
     "relations" : [ {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeclasspracticegroupAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "CLASS_PRACTICE_GROUP_FK"
+      } ],
+      "name" : "FK_9K1JS42IFB3VM9WLFRR7MY3XI",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "CLASSPRATICEGROUP",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
+      "virtual" : false
+    }, {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
@@ -13449,27 +13466,10 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170420090249190",
+      "name" : "SQL170423120733180",
       "virtual" : false
     },
     "relations" : [ {
-      "cardinality" : "ManyToOne",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "revinfo",
-      "mappings" : [ {
-        "sourceColumn" : "REV",
-        "targetColumn" : "REV"
-      } ],
-      "name" : "FK_NOH58DB0S36QX89PO31SFBAJG",
-      "primary" : true,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PERSONADDRESS_AUD",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "REVINFO",
-      "virtual" : false
-    }, {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
@@ -13478,14 +13478,31 @@
         "sourceColumn" : "PERSON_FK",
         "targetColumn" : "PK"
       } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_uApCQ",
+      "name" : "FK_JDRD1LQGF3F9L18VM9H0FVFW9",
       "primary" : true,
       "selfRelation" : false,
       "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "PERSONADDRESS_AUD",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSON",
-      "virtual" : true
+      "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "usernameRev",
+      "mappings" : [ {
+        "sourceColumn" : "REV",
+        "targetColumn" : "ID"
+      } ],
+      "name" : "FK_NOH58DB0S36QX89PO31SFBAJG",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "USERNAME_REV",
+      "virtual" : false
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -13821,6 +13838,174 @@
         "updatable" : true,
         "defaultValue" : null
       },
+      "fieldName" : "id",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "ID",
+      "nullable" : false,
+      "oldName" : "ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "precision" : 10,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "timestamp",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "big_integer",
+      "length" : 255,
+      "name" : "TIMESTAMP",
+      "nullable" : false,
+      "oldName" : "TIMESTAMP",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 20,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "username",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "USERNAME",
+      "nullable" : true,
+      "oldName" : "USERNAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    } ],
+    "constraints" : [ ],
+    "entityName" : "UsernameRev",
+    "fullyQualifiedName" : "com.lsuc.lsuc.UsernameRev",
+    "name" : "USERNAME_REV",
+    "oldName" : "USERNAME_REV",
+    "primaryKey" : {
+      "columns" : [ "ID" ],
+      "composite" : false,
+      "generator" : {
+        "generatorType" : "assigned",
+        "generatorValue" : null,
+        "schemaName" : null
+      },
+      "name" : "SQL170423120733390",
+      "virtual" : false
+    },
+    "relations" : [ {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeclasspracticegroupAuds",
+      "mappings" : [ {
+        "sourceColumn" : "ID",
+        "targetColumn" : "REV"
+      } ],
+      "name" : "FK_H5K29N8G9JEKBRLNVFROG5RFM",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "USERNAME_REV",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
+      "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personAuds",
+      "mappings" : [ {
+        "sourceColumn" : "ID",
+        "targetColumn" : "REV"
+      } ],
+      "name" : "FK_5P4RUT470HDL6C8V4X2X72EHV",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "USERNAME_REV",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSON_AUD",
+      "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "ID",
+        "targetColumn" : "REV"
+      } ],
+      "name" : "FK_NOH58DB0S36QX89PO31SFBAJG",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "USERNAME_REV",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeAuds",
+      "mappings" : [ {
+        "sourceColumn" : "ID",
+        "targetColumn" : "REV"
+      } ],
+      "name" : "FK_MY4KTLIQM1KMRYL1423XWX5VS",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "USERNAME_REV",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEE_AUD",
+      "virtual" : false
+    } ],
+    "schema" : "RMS",
+    "type" : "TABLE"
+  }, {
+    "catalog" : null,
+    "columns" : [ {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
       "fieldName" : "pk",
       "foreignKey" : false,
       "generatorType" : "identity",
@@ -13997,7 +14182,7 @@
       "name" : "REV",
       "nullable" : false,
       "oldName" : "REV",
-      "partOfAnyRelation" : true,
+      "partOfAnyRelation" : false,
       "partOfForeignKey" : false,
       "partOfPrimaryKey" : true,
       "partOfUniqueKey" : true,
@@ -14047,78 +14232,10 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170414082951900",
+      "name" : "SQL170423120733530",
       "virtual" : false
     },
-    "relations" : [ {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "licenseeclasspracticegroupAuds",
-      "mappings" : [ {
-        "sourceColumn" : "REV",
-        "targetColumn" : "REV"
-      } ],
-      "name" : "FK_H5K29N8G9JEKBRLNVFROG5RFM",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "REVINFO",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
-      "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personAuds",
-      "mappings" : [ {
-        "sourceColumn" : "REV",
-        "targetColumn" : "REV"
-      } ],
-      "name" : "FK_5P4RUT470HDL6C8V4X2X72EHV",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "REVINFO",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSON_AUD",
-      "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personaddressAuds",
-      "mappings" : [ {
-        "sourceColumn" : "REV",
-        "targetColumn" : "REV"
-      } ],
-      "name" : "FK_NOH58DB0S36QX89PO31SFBAJG",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "REVINFO",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSONADDRESS_AUD",
-      "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "licenseeAuds",
-      "mappings" : [ {
-        "sourceColumn" : "REV",
-        "targetColumn" : "REV"
-      } ],
-      "name" : "FK_MY4KTLIQM1KMRYL1423XWX5VS",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "REVINFO",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "LICENSEE_AUD",
-      "virtual" : false
-    } ],
+    "relations" : [ ],
     "schema" : "RMS",
     "type" : "TABLE"
   }, {
@@ -17049,6 +17166,23 @@
       "targetTable" : "LICENSEEPHOTOIDCARD",
       "virtual" : false
     }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licenseeclasspracticegroupAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "LICENSEE_FK"
+      } ],
+      "name" : "FK_9YROF0T3WCYQRJ5A1LI941JLS",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENSEE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENSEECLASSPRACTICEGROUP_AUD",
+      "virtual" : false
+    }, {
       "cardinality" : "OneToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
@@ -17361,6 +17495,32 @@
       "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "licenseeNumber",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 20,
+      "name" : "LICENSEE_NUMBER",
+      "nullable" : true,
+      "oldName" : "LICENSEE_NUMBER",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
     } ],
     "constraints" : [ ],
     "entityName" : "LicenseeAud",
@@ -17375,17 +17535,17 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170414082951550",
+      "name" : "SQL170423120733090",
       "virtual" : false
     },
     "relations" : [ {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
-      "fieldName" : "revinfo",
+      "fieldName" : "usernameRev",
       "mappings" : [ {
         "sourceColumn" : "REV",
-        "targetColumn" : "REV"
+        "targetColumn" : "ID"
       } ],
       "name" : "FK_MY4KTLIQM1KMRYL1423XWX5VS",
       "primary" : true,
@@ -17393,7 +17553,7 @@
       "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "LICENSEE_AUD",
       "targetColumnsUniqueKey" : false,
-      "targetTable" : "REVINFO",
+      "targetTable" : "USERNAME_REV",
       "virtual" : false
     } ],
     "schema" : "RMS",
@@ -18772,6 +18932,23 @@
       "sourceTable" : "PERSON",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONSOCIALMEDIACONTACT",
+      "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "PERSON_FK"
+      } ],
+      "name" : "FK_JDRD1LQGF3F9L18VM9H0FVFW9",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSON",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
       "virtual" : false
     }, {
       "cardinality" : "OneToMany",

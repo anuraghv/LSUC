@@ -51,6 +51,7 @@ public class Person implements Serializable {
     private Mailinglabel mailinglabel;
     private List<Personphonecontact> personphonecontacts;
     private List<Personsocialmediacontact> personsocialmediacontacts;
+    private List<PersonaddressAud> personaddressAuds;
     private List<Personperson> personpersonsForPersonFkParent;
     private List<Personperson> personpersonsForPersonFkChild;
     private List<Licensee> licensees;
@@ -64,7 +65,6 @@ public class Person implements Serializable {
     private List<Personrole> personroles;
     private List<Personlanguage> personlanguages;
     private List<Personaddress> personaddresses;
-    private List<PersonaddressAud> personaddressAuds;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,6 +76,7 @@ public class Person implements Serializable {
     public void setPk(Integer pk) {
         this.pk = pk;
     }
+
     @Audited
     @Column(name = "`FIRST_NAME`", nullable = true, length = 100)
     public String getFirstName() {
@@ -85,6 +86,7 @@ public class Person implements Serializable {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     @Audited
     @Column(name = "`LAST_NAME`", nullable = true, length = 100)
     public String getLastName() {
@@ -94,6 +96,7 @@ public class Person implements Serializable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
     @Audited
     @Column(name = "`MIDDLE_NAMES`", nullable = true, length = 100)
     public String getMiddleNames() {
@@ -103,6 +106,7 @@ public class Person implements Serializable {
     public void setMiddleNames(String middleNames) {
         this.middleNames = middleNames;
     }
+
     @Audited
     @Column(name = "`COMMONLY_REFERRED_TO_NAME`", nullable = true, length = 100)
     public String getCommonlyReferredToName() {
@@ -112,6 +116,7 @@ public class Person implements Serializable {
     public void setCommonlyReferredToName(String commonlyReferredToName) {
         this.commonlyReferredToName = commonlyReferredToName;
     }
+
     @Audited
     @Column(name = "`MAILING_NAME_`", nullable = true, length = 100)
     public String getMailingName() {
@@ -215,6 +220,16 @@ public class Person implements Serializable {
 
     public void setPersonsocialmediacontacts(List<Personsocialmediacontact> personsocialmediacontacts) {
         this.personsocialmediacontacts = personsocialmediacontacts;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "person")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
     }
 
     @JsonInclude(Include.NON_EMPTY)
@@ -359,16 +374,6 @@ public class Person implements Serializable {
         this.personaddresses = personaddresses;
     }
 
-    @JsonInclude(Include.NON_EMPTY)
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "person")
-    public List<PersonaddressAud> getPersonaddressAuds() {
-        return this.personaddressAuds;
-    }
-
-    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
-        this.personaddressAuds = personaddressAuds;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -382,3 +387,4 @@ public class Person implements Serializable {
         return Objects.hash(getPk());
     }
 }
+

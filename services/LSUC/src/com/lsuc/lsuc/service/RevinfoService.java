@@ -16,10 +16,6 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
-import com.lsuc.lsuc.LicenseeAud;
-import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
-import com.lsuc.lsuc.PersonAud;
-import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Revinfo;
 
 /**
@@ -144,53 +140,6 @@ public interface RevinfoService {
 	 */
 	Page<Map<String, Object>> getAggregatedValues(AggregationInfo aggregationInfo, Pageable pageable);
 
-    /*
-     * Returns the associated licenseeclasspracticegroupAuds for given Revinfo id.
-     *
-     * @param rev value of rev; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated LicenseeclasspracticegroupAud instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(Integer rev, Pageable pageable);
-
-    /*
-     * Returns the associated personAuds for given Revinfo id.
-     *
-     * @param rev value of rev; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated PersonAud instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<PersonAud> findAssociatedPersonAuds(Integer rev, Pageable pageable);
-
-    /*
-     * Returns the associated personaddressAuds for given Revinfo id.
-     *
-     * @param rev value of rev; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated PersonaddressAud instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer rev, Pageable pageable);
-
-    /*
-     * Returns the associated licenseeAuds for given Revinfo id.
-     *
-     * @param rev value of rev; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated LicenseeAud instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<LicenseeAud> findAssociatedLicenseeAuds(Integer rev, Pageable pageable);
 
 }
 

@@ -35,6 +35,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Licenseeclasspracticegroup;
 import com.lsuc.lsuc.LicenseeclasspracticegroupApprovals;
+import com.lsuc.lsuc.LicenseeclasspracticegroupAud;
 import com.lsuc.lsuc.Licenseeinsurance;
 import com.lsuc.lsuc.Licenseepersonlanguagepurpose;
 import com.lsuc.lsuc.Licenseephotoidcard;
@@ -195,6 +196,15 @@ public class LicenseeController {
 
         LOGGER.debug("Fetching all associated licenseephotoidcardsForLicenseeFk");
         return licenseeService.findAssociatedLicenseephotoidcardsForLicenseeFk(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/licenseeclasspracticegroupAuds", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the licenseeclasspracticegroupAuds instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<LicenseeclasspracticegroupAud> findAssociatedLicenseeclasspracticegroupAuds(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated licenseeclasspracticegroupAuds");
+        return licenseeService.findAssociatedLicenseeclasspracticegroupAuds(id, pageable);
     }
 
     @RequestMapping(value="/{id:.+}/licenseepersonlanguagepurposes", method=RequestMethod.GET)
