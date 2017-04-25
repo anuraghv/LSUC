@@ -1,9 +1,9 @@
 <wm-partial data-ng-controller="PersonalRelationShipPageController" name="partial1">
     <wm-grid editmode="inline" title="Personal Relationship" dataset="bind:Variables.LSUCPersonpersonData.dataSet" navigation="None" name="personRelationshipGrid" showheader="true" gridclass="table-striped" iconclass="wi wi-open-with" class="panel-default">
         <wm-grid-column binding="personByPersonFkParent.pk" caption="Parent Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" defaultvalue="bind:pageParams.id" show="false" related-entity-name="Person" readonly="false"></wm-grid-column>
-        <wm-grid-column binding="personByPersonFkChild.pk" caption="Name" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="autocomplete" datafield="pk" displayfield="firstName" displaylabel="firstName"
-        searchkey="firstName,lastName" show="true" related-entity-name="Person" readonly="false">
-            <wm-label caption="{{row.personByPersonFkChild.firstName}}" class="" data-ng-class=""></wm-label>
+        <wm-grid-column binding="personByPersonFkChild.pk" caption="Name" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="autocomplete" datafield="pk" displayfield="firstName" displaylabel="prefix.shortNameEnglish + ' '+ firstName + ' ' + lastName"
+        searchkey="firstName,lastName,prefix.shortNameEnglish" show="true" related-entity-name="Person" readonly="false">
+            <wm-label caption="{{(row.personByPersonFkChild.prefix.shortNameEnglish || '') + ' ' + (row.personByPersonFkChild.firstName || '') + ' ' + (row.personByPersonFkChild.lastName || '')}}" class="" data-ng-class=""></wm-label>
         </wm-grid-column>
         <wm-grid-column binding="personrelationshiptype.pk" caption="Relation" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish" show="true" related-entity-name="Personrelationshiptype"
         readonly="false">
