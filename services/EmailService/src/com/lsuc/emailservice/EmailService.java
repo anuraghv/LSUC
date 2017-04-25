@@ -34,9 +34,9 @@ import com.wavemaker.runtime.service.annotations.ExposeToClient;
 public class EmailService {
 
     private static final Logger logger = LoggerFactory.getLogger(EmailService.class);
-    private static final String NO_REPLY_MAIL_ID = "pramati.wave@gmail.com";
-    private static final String NO_REPLY_MAIL_PASSWORD = "Pr@m@t!123";
-    private static final String SUPERVISOR_MAIL_ID = "tribhuvan.durgam@wavemaker.com";
+    private static final String NO_REPLY_MAIL_ID = "noreply.lsuc@gmail.com";
+    private static final String NO_REPLY_MAIL_PASSWORD = "pramati123";
+    private static final String SUPERVISOR_MAIL_ID = "mary.wavemaker@gmail.com";
     //private static final String FORM_URL = "http://e12561a71473b.cloud.wavemakeronline.com/CivicXpress/#/Forms?
 
     @Autowired
@@ -66,16 +66,16 @@ public class EmailService {
             props.put("mail.smtp.starttls.required", "true");
             Session session = Session.getDefaultInstance(props, null);
 
-            String emailSubject = "Licensee Status Change for " + licenseeNumber;
-            String emailMessage = "Hi <br><br>";
-            String approveUrl = "https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Approvals?id=" + personPk;
+            String emailSubject = "Status Change for Licensee: " + licenseeNumber;
+            String emailMessage = "<div style='background-color: #eee;padding: 1em;'><table width='100%' style='border: none;'><tr><td><img height='50' src='http://www.lsuc.on.ca/images/imgLSUCLogo.png' alt='The Law Society of Upper Canada'></td><td ><h2 style='border-bottom:1px solid #eee;margin-top:0px;margin-bottom: 5px;position: relative;text-align:right;'>The Law Society of Upper Canada </h2></td></tr></table></div><br/> <p>Hi, </p><br/>";
+             String approveUrl = "https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Approvals?id=" + personPk;
             logger.info("*********************Approve URL****************" + approveUrl);
 
-            emailMessage = emailMessage + "The Licensee Status for <b>" + licenseeName + "</b>";
-            emailMessage = emailMessage + " with Licensee Number: <b>" + licenseeNumber + "</b> has been changed. Please review and provide your approval.<br><br>";
-            emailMessage = emailMessage + "Click <a href = '" + approveUrl + "'>here</a> to review changes.<br><br>";
-            emailMessage = emailMessage + "Regards<br>" + securityService.getLoggedInUser().getUserName() + "<br><br>";
-            emailMessage = emailMessage + "Note: This is a system generated email. Kindly do not reply.";
+            emailMessage = emailMessage + "<p>The Licensee Status for <b>" + licenseeName + "</b>";
+            emailMessage = emailMessage + " with Licensee Number: <b>" + licenseeNumber + "</b> has been changed. </p><p>Please review and provide your approval.</p><br/>";
+            emailMessage = emailMessage + "<p><a style='background-color:#0c62d1;color: #fff;padding:.8em 1.2em;text-decoration: none;font-weight: bold;' href = '" + approveUrl + "'>Click to review changes</a></p><br/><br/>";
+            emailMessage = emailMessage + "<p>Regards " + securityService.getLoggedInUser().getUserName() + "</p><hr/>";
+            emailMessage = emailMessage + "<p>Note: This is a system generated email. Kindly do not reply.</p>";
 
             // Create email message
             MimeMessage message = new MimeMessage(session);
