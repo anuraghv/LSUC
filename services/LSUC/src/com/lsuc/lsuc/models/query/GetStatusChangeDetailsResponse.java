@@ -16,8 +16,8 @@ public class GetStatusChangeDetailsResponse implements Serializable {
 
     @ColumnAlias("LicenseeClass")
     private String licenseeClass;
-    @ColumnAlias("EffectiveDate")
-    private Date effectiveDate;
+    @ColumnAlias("EffectiveFrom")
+    private Date effectiveFrom;
     @ColumnAlias("EffectiveTo")
     private Date effectiveTo;
     @ColumnAlias("PracticeGroup")
@@ -37,12 +37,12 @@ public class GetStatusChangeDetailsResponse implements Serializable {
         this.licenseeClass = licenseeClass;
     }
 
-    public Date getEffectiveDate() {
-        return this.effectiveDate;
+    public Date getEffectiveFrom() {
+        return this.effectiveFrom;
     }
 
-    public void setEffectiveDate(Date effectiveDate) {
-        this.effectiveDate = effectiveDate;
+    public void setEffectiveFrom(Date effectiveFrom) {
+        this.effectiveFrom = effectiveFrom;
     }
 
     public Date getEffectiveTo() {
@@ -91,7 +91,7 @@ public class GetStatusChangeDetailsResponse implements Serializable {
         if (!(o instanceof GetStatusChangeDetailsResponse)) return false;
         final GetStatusChangeDetailsResponse getStatusChangeDetailsResponse = (GetStatusChangeDetailsResponse) o;
         return Objects.equals(getLicenseeClass(), getStatusChangeDetailsResponse.getLicenseeClass()) &&
-                Objects.equals(getEffectiveDate(), getStatusChangeDetailsResponse.getEffectiveDate()) &&
+                Objects.equals(getEffectiveFrom(), getStatusChangeDetailsResponse.getEffectiveFrom()) &&
                 Objects.equals(getEffectiveTo(), getStatusChangeDetailsResponse.getEffectiveTo()) &&
                 Objects.equals(getPracticeGroup(), getStatusChangeDetailsResponse.getPracticeGroup()) &&
                 Objects.equals(getIsPrimary(), getStatusChangeDetailsResponse.getIsPrimary()) &&
@@ -102,7 +102,7 @@ public class GetStatusChangeDetailsResponse implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(getLicenseeClass(),
-                getEffectiveDate(),
+                getEffectiveFrom(),
                 getEffectiveTo(),
                 getPracticeGroup(),
                 getIsPrimary(),

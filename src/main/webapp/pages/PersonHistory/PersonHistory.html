@@ -26,8 +26,7 @@
                                                         <wm-label padding="1em 0.5em unset unset" name="Datelabel" caption="bind:Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'dd MMM, yyyy'" class="text-muted small hidden-xs" whitespace="nowrap"></wm-label>
                                                     </wm-container>
                                                     <wm-container class="media-body" name="container3" padding="unset unset unset .5em">
-                                                        <wm-panel name="HistoryPanel" title="bind:Variables.personHistoryData.dataSet[$i].type" subheading="bind:&quot;Changed by:  &quot;+ (Variables.personHistoryData.dataSet[$i].changedby)+&quot; On &quot;+(Variables.personHistoryData.dataSet[$i].timestamp | toDate: 'MMM dd, yyyy')"
-                                                        class="no-border">
+                                                        <wm-panel name="HistoryPanel" title="bind:Variables.personHistoryData.dataSet[$i].type" subheading="bind:&quot;Changed by  &quot;+ (Variables.personHistoryData.dataSet[$i].changedby)" class="no-border">
                                                             <wm-layoutgrid name="layoutgrid2">
                                                                 <wm-gridrow name="gridrow2" class="new-block">
                                                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">

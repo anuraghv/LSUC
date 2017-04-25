@@ -55,11 +55,11 @@ Application.$controller("PersonHistoryPageController", ["$scope", "Utils", funct
                 // Compare conditions if type is CHANGE_TYPE_PERSON_DETAILS .
                 if ((type == CHANGE_TYPE_PERSON_DETAILS) && !_.isEqual(latest[key], val) && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy"], key)) {
                     historyData.type = displayLabel;
-                    newobj.types = Utils.prettifyLabel(key) || "NULL";
-                    newobj.value = latest[key] || "NULL";
+                    newobj.types = Utils.prettifyLabel(key) || "-";
+                    newobj.value = latest[key] || "-";
                     historyData.newPropertyValues.push(newobj);
-                    oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                    oldObj.value = val || "NULL";
+                    oldObj.types = Utils.prettifyLabel(key) || "-";
+                    oldObj.value = val || "-";
                     historyData.oldPropertyValues.push(oldObj);
                     historyData.icon = iconType;
                     historyData.timestamp = latest.usernameRev.timestamp;
@@ -67,56 +67,72 @@ Application.$controller("PersonHistoryPageController", ["$scope", "Utils", funct
                     // Compare conditions if type is CHANGE_TYPE_STATUS .
                 } else if ((type == (CHANGE_TYPE_STATUS)) && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy"], key)) {
                     historyData.type = displayLabel;
-                    newobj.types = Utils.prettifyLabel(key) || "NULL";
-                    newobj.value = latest[key] || "NULL";
+                    newobj.types = Utils.prettifyLabel(key) || "-";
+                    newobj.value = latest[key] || "-";
+                    if (key == "effectiveFrom") {
+                        newobj.types = Utils.prettifyLabel(key) || "-";
+                        newobj.value = moment(latest[key]).format('DD MMM YYYY') || "-";
+                    }
+                    if (key == "effectiveTo") {
+                        newobj.types = Utils.prettifyLabel(key) || "-";
+                        newobj.value = moment(latest[key]).format('DD MMM YYYY') || "-";
+                    }
                     historyData.newPropertyValues.push(newobj);
-                    oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                    oldObj.value = val || "NULL";
+                    oldObj.types = Utils.prettifyLabel(key) || "-";
+                    oldObj.value = val || "-";
+                    if (key == "effectiveFrom") {
+                        oldObj.types = Utils.prettifyLabel(key) || "-";
+                        oldObj.value = moment(latest[key]).format('DD MMM YYYY') || "-";
+                    }
+                    if (key == "effectiveTo") {
+                        oldObj.types = Utils.prettifyLabel(key) || "-";
+                        oldObj.value = moment(latest[key]).format('DD MMM YYYY') || "-";
+                    }
                     historyData.oldPropertyValues.push(oldObj);
                     historyData.icon = iconType;
                     historyData.timestamp = latest.revtstmp;
                     historyData.changedby = latest.changedBy;
                     // Compare conditions if type is CHANGE_TYPE_ADDRESS .
-                } else if (type == CHANGE_TYPE_ADDRESS && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy", "person", "countryFk", "geographicAreaFk", "personFk", "person", "pk", "addresstypeFk", "isDisplayedOnDirectory"], key)) {
+                } else if (type == CHANGE_TYPE_ADDRESS && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy", "person", "countryFk", "geographicAreaFk", "personFk", "person", "pk", "addresstypeFk", "isDisplayedOnDirectory", "provinceFk"], key)) {
                     historyData.type = displayLabel;
                     historyData.timestamp = latest.usernameRev.timestamp;
                     historyData.changedby = latest.usernameRev.username;
-                    newobj.types = Utils.prettifyLabel(key) || "NULL";
-                    newobj.value = latest[key] || "NULL";
+                    newobj.types = Utils.prettifyLabel(key) || "-";
+                    newobj.value = latest[key] || "-";
                     if (key == "addresstype") {
-                        newobj.types = Utils.prettifyLabel(key) || "NULL";
-                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                        newobj.types = Utils.prettifyLabel(key) || "-";
+                        newobj.value = latest[key].shortNameEnglish || "-";
                     }
                     if (key == "province") {
-                        newobj.types = Utils.prettifyLabel(key) || "NULL";
-                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                        newobj.types = Utils.prettifyLabel(key) || "-";
+                        newobj.value = latest[key].shortNameEnglish || "-";
                     }
                     if (key == "country") {
-                        newobj.types = Utils.prettifyLabel(key) || "NULL";
-                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                        newobj.types = Utils.prettifyLabel(key) || "-";
+                        newobj.value = latest[key].shortNameEnglish || "-";
                     }
                     if (key == "geographicarea") {
-                        newobj.types = Utils.prettifyLabel(key) || "NULL";
-                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                        newobj.types = Utils.prettifyLabel(key) || "-";
+                        newobj.value = latest[key].shortNameEnglish || "-";
                     }
                     historyData.newPropertyValues.push(newobj);
-                    oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                    oldObj.value = val || "NULL";
+                    oldObj.types = Utils.prettifyLabel(key) || "-";
+                    oldObj.value = val || "-";
                     if (key == "addresstype") {
-                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                        oldObj.types = "Address Type" || "-";
+                        oldObj.value = latest[key].shortNameEnglish || "-";
                     }
                     if (key == "province") {
-                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                        oldObj.types = Utils.prettifyLabel(key) || "-";
+                        oldObj.value = latest[key].shortNameEnglish || "-";
                     }
                     if (key == "country") {
-                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                        oldObj.types = Utils.prettifyLabel(key) || "-";
+                        oldObj.value = latest[key].shortNameEnglish || "-";
                     }
                     if (key == "geographicarea") {
-                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
-                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                        oldObj.types = "Geographic Area" || "-";
+                        oldObj.value = latest[key].shortNameEnglish || "-";
                     }
                     historyData.oldPropertyValues.push(oldObj);
                     historyData.icon = iconType;
@@ -146,7 +162,7 @@ Application.$controller("PersonHistoryPageController", ["$scope", "Utils", funct
 
         $scope.Variables.personHistoryData.dataSet = [];
         // Prepares dataSet based on comparing Old and New Objects.
-        diffData(data.content, CHANGE_TYPE_STATUS, "License Status Changed", "wi wi-pencil fa-2x");
+        diffData(data.content, CHANGE_TYPE_STATUS, "Licensee Status Changed", "wi wi-pencil fa-2x");
     };
 
 }]);
