@@ -67,8 +67,8 @@
                 <wm-layoutgrid name="layoutgrid2" columns="3">
                     <wm-gridrow name="gridrow3_1">
                         <wm-gridcolumn columnwidth="4" name="gridcolumn7">
-                            <wm-form-field name="businessperson" displayname="Person" show="true" primary-key="false" generator="assigned" key="businessperson" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
-                            displayexpression="person.firstName"></wm-form-field>
+                            <wm-form-field name="businessperson" displayname="Person" show="true" primary-key="false" generator="assigned" key="businessperson" type="list" is-related="true" readonly="false" required="true" widget="autocomplete" placeholder="Select value"
+                            displayexpression="person.firstName" displaylabel="person.firstName + ' ' + person.lastName" searchkey="person.firstName,person.lastName"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="4" name="gridcolumn8">
                             <wm-form-field name="businesspersonrelationshiptype" displayname="Relationship Type" show="true" primary-key="false" generator="assigned" key="businesspersonrelationshiptype" type="list" is-related="true" readonly="false" required="true"

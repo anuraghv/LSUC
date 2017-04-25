@@ -53,18 +53,7 @@ public class EmailService {
      * caller's request/response objects respectively. These parameters will be injected when request is made (during
      * API invocation).
      */
-    // public String sampleJavaOperation(String name, HttpServletRequest request) {
-    //     logger.debug("Starting sample operation with request url " + request.getRequestURL().toString());
-
-    //     String result = null;
-    //     if (securityService.isAuthenticated()) {
-    //         result = "Hello " + name + ", You are logged in as "+  securityService.getLoggedInUser().getUserName();
-    //     } else {
-    //         result = "Hello " + name + ", You are not authenticated yet!";
-    //     }
-    //     logger.debug("Returning {}", result);
-    //     return result;
-    // }
+    
     public String sendEmail(String licenseeNumber, String licenseeName, String personPk) {
         try {
             // Use javamail api, set parameters from registration.properties file
@@ -101,6 +90,7 @@ public class EmailService {
             message.setRecipients(Message.RecipientType.TO, recipientAddress);
             message.setSubject(emailSubject);
             message.setContent(emailMessage, "text/html");
+            
             // Send smtp message
             Transport tr = session.getTransport("smtp");
             tr.connect("smtp.gmail.com", 587, NO_REPLY_MAIL_ID, NO_REPLY_MAIL_PASSWORD);
