@@ -29,15 +29,15 @@ Application.$controller("BusinessPersonRelationshipPageController", ["$scope", f
     };
 
 
-    $scope.businessPersonRelEditBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
-        $scope.Widgets.businessPersonRelForm.isUpdateMode = true;
-    };
-
-
     $scope.addBusinessPersonRelonBeforeUpdate = function(variable, inputData) {
         inputData['businessperson.businessFk'] = {
             'value': $scope.pageParams.businessId
         };
+    };
+
+
+    $scope.addBusinessPersonFormBeforeservicecall = function($event, $operation, $data) {
+        $data['businesspersonrelationships'] = [$scope.Widgets.businessPersonRelForm.dataoutput];
     };
 
 }]);
@@ -57,6 +57,13 @@ Application.$controller("liveform1Controller", ["$scope",
 ]);
 
 Application.$controller("businessPersonRelFormController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("addBusinessPersonFormController", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;

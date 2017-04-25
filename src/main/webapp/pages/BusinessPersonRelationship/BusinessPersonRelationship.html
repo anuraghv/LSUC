@@ -1,8 +1,6 @@
 <wm-partial data-ng-controller="BusinessPersonRelationshipPageController" name="partial1">
     <wm-container name="container3">
         <wm-panel iconclass="wi wi-account-circle" autoclose="outsideClick" title="Business - Person Relationship" name="panel2" class="panel-default">
-            <!--<wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCBusinesspersonData.dataSet" navigation="None" name="businessPersonList" backgroundcolor="#fff"><wm-listtemplate layout="inline" name="listtemplate2"><wm-panel subheading="bind:'DOB: ' +Variables.LSUCBusinesspersonData.dataSet.data[$i].person.birthDate" iconclass="" autoclose="outsideClick" title="bind:Variables.LSUCBusinesspersonData.dataSet.data[$i].person.firstName" name="panel1" expanded="true"
-                collapsible="true"><wm-container name="container1" content="businessPersonRelation"><wm-param name="businessPersonId" value="bind:Widgets.businessPersonList.currentItem.pk" type="integer"></wm-param></wm-container></wm-panel></wm-listtemplate></wm-livelist>-->
             <wm-livegrid name="livegrid1" show="false">
                 <wm-grid gridfirstrowselect="true" editmode="form" title="Businesspersonrelationship List" dataset="bind:Variables.LSUCBusinesspersonrelationshipData1.dataSet" navigation="None" name="businessPersonRelTable">
                     <wm-grid-column binding="pk" caption="Pk" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
@@ -46,7 +44,7 @@
                 </wm-liveform>
             </wm-livegrid>
             <wm-container name="container4">
-                <wm-button class="btn-link pull-right btn-action-top" caption="Add" type="button" margin="-4.5em -1.5em unset 0.5em" name="addBusinessPersonRelBtn" iconclass="wi wi-plus" on-click="Widgets.businessPersonRelForm.new()"></wm-button>
+                <wm-button class="btn-link pull-right btn-action-top" caption="Add" type="button" margin="-4.5em -1.5em unset 0.5em" name="addBusinessPersonRelBtn" iconclass="wi wi-plus" on-click="Widgets.addBusinessPersonForm.new()"></wm-button>
                 <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.LSUCBusinesspersonrelationshipData1.dataSet" navigation="None" name="businessPersonRelList"
                 show="true" enablereorder="false" groupby="businesspersonrelationshiptype.shortNameEnglish">
                     <wm-listtemplate layout="inline" name="listtemplate1">
@@ -62,27 +60,42 @@
                     </wm-listtemplate>
                 </wm-livelist>
             </wm-container>
-            <wm-liveform novalidate="false" errormessage="" title="Add Business Relation" iconclass="wi wi-edit" defaultmode="View" dataset="bind:Variables.addBusinessPersonRel.dataSet" captionalign="left" captionposition="top" name="businessPersonRelForm"
-            show="bind:Widgets.businessPersonRelForm.isUpdateMode">
-                <wm-layoutgrid name="layoutgrid2" columns="3">
-                    <wm-gridrow name="gridrow3_1">
-                        <wm-gridcolumn columnwidth="4" name="gridcolumn7">
-                            <wm-form-field name="businessperson" displayname="Person" show="true" primary-key="false" generator="assigned" key="businessperson" type="list" is-related="true" readonly="false" required="true" widget="autocomplete" placeholder="Select value"
-                            displayexpression="person.firstName" displaylabel="person.firstName + ' ' + person.lastName" searchkey="person.firstName,person.lastName"></wm-form-field>
+            <wm-liveform novalidate="false" errormessage="" title="Add Business Relationship" iconclass="wi wi-edit" defaultmode="View" dataset="bind:Variables.LSUCBusinesspersonData.dataSet" captionalign="left" captionposition="top" name="addBusinessPersonForm"
+            on-success="Widgets.businessPersonRelForm.cancel();Variables.LSUCBusinesspersonrelationshipData1.listRecords()" show="bind:Widgets.addBusinessPersonForm.isUpdateMode" on-beforeservicecall="addBusinessPersonFormBeforeservicecall($event, $operation, $data)">
+                <wm-layoutgrid columns="2" name="layoutgrid3">
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                            <wm-form-field name="person" displayname="Person" show="true" primary-key="false" generator="assigned" key="person" type="list" is-related="true" readonly="false" required="false" widget="select" displayexpression="prefix.shortNameEnglish + '  ' + firstName + '  ' + lastName"
+                            orderby="firstName:desc,lastName:desc,prefix.shortNameEnglish:desc" placeholder="Select value"></wm-form-field>
                         </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="4" name="gridcolumn8">
-                            <wm-form-field name="businesspersonrelationshiptype" displayname="Relationship Type" show="true" primary-key="false" generator="assigned" key="businesspersonrelationshiptype" type="list" is-related="true" readonly="false" required="true"
-                            widget="select" placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                            <wm-form-field name="isBusinessPrimary" displayname="Is Business Primary" show="true" primary-key="false" generator="assigned" key="isBusinessPrimary" type="character" readonly="false" required="false" widget="checkbox" maxchars="1"
+                            placeholder="Enter value" defaultvalue="N" checkedvalue="Y" uncheckedvalue="N"></wm-form-field>
                         </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="4" name="gridcolumn9">
-                            <wm-form-field name="userReportedStartDate" displayname="Start Date" show="true" primary-key="false" generator="assigned" key="userReportedStartDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
-                            outputformat="yyyy-MM-dd"></wm-form-field>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                            <wm-liveform novalidate="false" errormessage="" title="" iconclass="" defaultmode="Edit" dataset="bind:Variables.addBusinessPersonRel.dataSet" captionalign="left" captionposition="left" name="businessPersonRelForm" show="true">
+                                <wm-layoutgrid name="layoutgrid2" columns="2">
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn10">
+                                            <wm-form-field name="businesspersonrelationshiptype" displayname="Relationship Type" show="true" primary-key="false" generator="assigned" key="businesspersonrelationshiptype" type="list" is-related="true" readonly="false"
+                                            required="true" widget="select" placeholder="Select value" displayexpression="shortNameEnglish"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn11">
+                                            <wm-form-field name="userReportedStartDate" displayname="Start Date" show="true" primary-key="false" generator="assigned" key="userReportedStartDate" type="date" readonly="false" required="false" widget="date" placeholder="Select date"
+                                            outputformat="yyyy-MM-dd"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-liveform>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
+                <wm-form-field name="businessFk" key="businessFk" displayname="Business Fk" show="false" type="integer" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                 <wm-form-field name="pk" displayname="Pk" show="false" primary-key="true" generator="identity" key="pk" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder=""></wm-form-field>
                 <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" shortcutkey="" disabled="false" type="button" update-mode="true"></wm-form-action>
-                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="" shortcutkey="" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
             </wm-liveform>
         </wm-panel>
     </wm-container>
