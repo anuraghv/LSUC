@@ -16,10 +16,10 @@ public class ExpirationStatusResponse implements Serializable {
 
     @ColumnAlias("LICENSEE_NUMBER")
     private String licenseeNumber;
-    @ColumnAlias("2")
-    private String col2;
-    @ColumnAlias("3")
-    private String col3;
+    @ColumnAlias("NAME")
+    private String name;
+    @ColumnAlias("ADDRESS")
+    private String address;
     @ColumnAlias("SHORT_NAME_ENGLISH")
     private String shortNameEnglish;
     @ColumnAlias("LICENSE_DATE")
@@ -41,20 +41,20 @@ public class ExpirationStatusResponse implements Serializable {
         this.licenseeNumber = licenseeNumber;
     }
 
-    public String getCol2() {
-        return this.col2;
+    public String getName() {
+        return this.name;
     }
 
-    public void setCol2(String col2) {
-        this.col2 = col2;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCol3() {
-        return this.col3;
+    public String getAddress() {
+        return this.address;
     }
 
-    public void setCol3(String col3) {
-        this.col3 = col3;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getShortNameEnglish() {
@@ -111,8 +111,8 @@ public class ExpirationStatusResponse implements Serializable {
         if (!(o instanceof ExpirationStatusResponse)) return false;
         final ExpirationStatusResponse expirationStatusResponse = (ExpirationStatusResponse) o;
         return Objects.equals(getLicenseeNumber(), expirationStatusResponse.getLicenseeNumber()) &&
-                Objects.equals(getCol2(), expirationStatusResponse.getCol2()) &&
-                Objects.equals(getCol3(), expirationStatusResponse.getCol3()) &&
+                Objects.equals(getName(), expirationStatusResponse.getName()) &&
+                Objects.equals(getAddress(), expirationStatusResponse.getAddress()) &&
                 Objects.equals(getShortNameEnglish(), expirationStatusResponse.getShortNameEnglish()) &&
                 Objects.equals(getLicenseDate(), expirationStatusResponse.getLicenseDate()) &&
                 Objects.equals(getClass_(), expirationStatusResponse.getClass_()) &&
@@ -124,8 +124,8 @@ public class ExpirationStatusResponse implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(getLicenseeNumber(),
-                getCol2(),
-                getCol3(),
+                getName(),
+                getAddress(),
                 getShortNameEnglish(),
                 getLicenseDate(),
                 getClass_(),

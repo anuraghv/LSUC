@@ -30,6 +30,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         if ($data.effectiveToDate == undefined) {
             $data.effectiveToDate = '9999-12-31';
         }
+        debugger;
         /* Set the inputs for LSUC_ApprovalData variable*/
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licenseeFk,
@@ -138,6 +139,7 @@ Application.$controller("licenseStatusFormController", ["$scope",
 
         $scope.licenseStUpBtnClick = function($event, $isolateScope) {
             /*Edit the licenseStatusForm on click of edit button*/
+            /*Capture Old data here*/
             $scope.edit();
         };
 

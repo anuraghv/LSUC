@@ -74,8 +74,8 @@ usernameRev.username as changedBy from LicenseeclasspracticegroupAud where (:per
     <sql-query name="expirationStatus">
         <![CDATA[
         select DISTINCT l.LICENSEE_NUMBER,
-    p.FIRST_NAME||' '||p.LAST_NAME,
-    pa.ADDRESS_LINE_1||' '||pa.ADDRESS_LINE_2||' '||pa.CITY,
+    p.FIRST_NAME||' '||p.LAST_NAME as Name,
+    pa.ADDRESS_LINE_1||' '||pa.ADDRESS_LINE_2||' '||pa.CITY as Address,
     lt.SHORT_NAME_ENGLISH,l.LICENSE_DATE,
     c.SHORT_NAME_ENGLISH as Class,
     pg.SHORT_NAME_ENGLISH as PracticeGroup ,
@@ -102,8 +102,8 @@ where p.PK = pa.PERSON_FK and
     <sql-query name="expirationStatus__count">
         <![CDATA[
         select count(*) from (select DISTINCT l.LICENSEE_NUMBER,
-    p.FIRST_NAME||' '||p.LAST_NAME,
-    pa.ADDRESS_LINE_1||' '||pa.ADDRESS_LINE_2||' '||pa.CITY,
+    p.FIRST_NAME||' '||p.LAST_NAME as Name,
+    pa.ADDRESS_LINE_1||' '||pa.ADDRESS_LINE_2||' '||pa.CITY as Address,
     lt.SHORT_NAME_ENGLISH,l.LICENSE_DATE,
     c.SHORT_NAME_ENGLISH as Class,
     pg.SHORT_NAME_ENGLISH as PracticeGroup ,
