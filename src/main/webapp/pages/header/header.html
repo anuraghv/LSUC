@@ -2,7 +2,8 @@
     <wm-layoutgrid name="headerlayout">
         <wm-gridrow name="headerrow">
             <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="6" padding="unset unset unset 1em">
-                <wm-picture picturesource="resources/images/imagelists/logo.png" name="AppLogo" margin="1em unset unset unset" height="40" class="app-logo"></wm-picture>
+                <wm-picture picturesource="resources/images/imagelists/logo.png" name="AppLogo" margin="1em unset unset unset" height="40" class="app-logo app-logo-black"></wm-picture>
+                <wm-picture picturesource="resources/images/imagelists/logo-white.png" margin="1em unset unset unset" height="40" class="app-logo app-logo-white" name="picture3"></wm-picture>
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="6" name="gridcolumn3">
                 <wm-nav type="pills" name="nav1" class="app-header-actions pull-right">
@@ -22,7 +23,8 @@
                                 <wm-label caption="bind:Variables.loggedInUser.dataSet.roles[0]" class="app-userrole p small text-uppercase" name="userrole"></wm-label>
                             </wm-container>
                             <wm-container class="media-right user-pic-container" name="container2">
-                                <wm-picture name="picture2" pictureplaceholder="resources/images/imagelists/user.png" width="30pt" height="30pt" class="user-pic" picturesource="bind:&quot;resources/images/user/&quot;+Variables.loggedInUser.dataSet.name+&quot;.png&quot;" shape="circle"></wm-picture>
+                                <wm-picture name="picture2" pictureplaceholder="resources/images/imagelists/user.png" width="30pt" height="30pt" class="user-pic" picturesource="bind:&quot;resources/images/user/&quot;+Variables.loggedInUser.dataSet.name+&quot;.png&quot;"
+                                shape="circle"></wm-picture>
                             </wm-container>
                         </wm-menu>
                     </wm-nav-item>

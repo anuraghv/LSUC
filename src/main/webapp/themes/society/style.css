@@ -44,6 +44,9 @@
     /***popover class: removing the radius*******/
     /***Slider widget styling*******************/
 }
+.wm-app .app-logo-white {
+    display: none;
+}
 .wm-app html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;

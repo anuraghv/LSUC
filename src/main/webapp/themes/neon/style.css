@@ -47,6 +47,12 @@
     /***fileuploader widget styling*******************/
     /***Slider widget styling*******************/
 }
+.wm-app .app-logo-black {
+    display: none !important;
+}
+.wm-app .app-logo-white {
+    display: block !important;
+}
 .wm-app html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
