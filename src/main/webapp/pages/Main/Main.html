@@ -129,20 +129,19 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow3" padding="1em unset unset unset">
                     <wm-gridcolumn columnwidth="12" name="gridcolumn6" padding="unset 1em">
-                        <wm-panel iconclass="wi wi-show-chart" autoclose="outsideClick" title="Statistcs" name="panel2">
+                        <wm-panel iconclass="wi wi-show-chart" autoclose="outsideClick" title="Statistcs" name="panel2" accessroles="supervisor">
                             <wm-layoutgrid name="layoutgrid5">
                                 <wm-gridrow name="gridrow9_1">
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn25">
-                                        <wm-chart type="Bar" title="Licensee Changes" height="250px" iconclass="" name="licenseeChanges" class="small btn-transparent" accessroles="supervisor" theme="Annabelle" dataset="bind:Variables.getLicenseeChangesChart.dataSet"
-                                        xaxisdatakey="createdBy" yaxisdatakey="changesCount"></wm-chart>
+                                        <wm-chart type="Bar" title="Licensee Changes" height="250px" iconclass="" name="licenseeChanges" class="small btn-transparent" theme="Annabelle" dataset="bind:Variables.getLicenseeChangesChart.dataSet" xaxisdatakey="createdBy"
+                                        yaxisdatakey="changesCount"></wm-chart>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn26">
-                                        <wm-chart type="Line" title="Change Request" height="250px" iconclass="" name="chart4" class="btn-transparent  small" accessroles="supervisor" theme="Orient"></wm-chart>
+                                        <wm-chart type="Line" title="Change Request" height="250px" iconclass="" name="chart4" class="btn-transparent  small" theme="Orient"></wm-chart>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn29">
                                         <wm-chart type="Column" title="Top 5 Business By Employee Number" height="250" iconclass="" name="chart3" dataset="bind:Variables.BusinessData.dataSet" xaxisdatakey="businessName" yaxisdatakey="numberOfEmployees" orderby="numberOfEmployees:desc"
-                                        class="btn-transparent small" showyaxis="true" offsetleft="25" offsetright="0" offsettop="5" accessroles="supervisor" theme="Flyer" xaxislabel="Business" reducexticks="false" barspacing="0.3" staggerlabels="true"
-                                        xdomain="Min" showlegend="hide"></wm-chart>
+                                        class="btn-transparent small" showyaxis="true" offsetleft="25" offsetright="0" offsettop="5" theme="Flyer" xaxislabel="Business" reducexticks="false" barspacing="0.3" staggerlabels="true" xdomain="Min" showlegend="hide"></wm-chart>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
