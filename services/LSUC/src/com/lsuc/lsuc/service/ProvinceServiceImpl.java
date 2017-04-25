@@ -28,7 +28,6 @@ import com.lsuc.lsuc.Businessaddress;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
-import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Province;
 
 
@@ -53,10 +52,6 @@ public class ProvinceServiceImpl implements ProvinceService {
     @Autowired
 	@Qualifier("LSUC.BusinessaddressService")
 	private BusinessaddressService businessaddressService;
-
-    @Autowired
-	@Qualifier("LSUC.PersonaddressAudService")
-	private PersonaddressAudService personaddressAudService;
 
     @Autowired
 	@Qualifier("LSUC.MailinglabelService")
@@ -104,14 +99,6 @@ public class ProvinceServiceImpl implements ProvinceService {
                 personaddresse.setProvince(provinceCreated);
                 LOGGER.debug("Creating a new child Personaddress with information: {}", personaddresse);
                 personaddressService.create(personaddresse);
-            }
-        }
-
-        if(provinceCreated.getPersonaddressAuds() != null) {
-            for(PersonaddressAud personaddressAud : provinceCreated.getPersonaddressAuds()) {
-                personaddressAud.setProvince(provinceCreated);
-                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
-                personaddressAudService.create(personaddressAud);
             }
         }
         return provinceCreated;
@@ -254,17 +241,6 @@ public class ProvinceServiceImpl implements ProvinceService {
         return personaddressService.findAll(queryBuilder.toString(), pageable);
     }
 
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
-        LOGGER.debug("Fetching all associated personaddressAuds");
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("province.pk = '" + pk + "'");
-
-        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -290,15 +266,6 @@ public class ProvinceServiceImpl implements ProvinceService {
 	 */
 	protected void setBusinessaddressService(BusinessaddressService service) {
         this.businessaddressService = service;
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service PersonaddressAudService instance
-	 */
-	protected void setPersonaddressAudService(PersonaddressAudService service) {
-        this.personaddressAudService = service;
     }
 
     /**

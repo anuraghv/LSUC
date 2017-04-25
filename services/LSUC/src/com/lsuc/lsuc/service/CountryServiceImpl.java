@@ -29,7 +29,6 @@ import com.lsuc.lsuc.Country;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
-import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Province;
 
 
@@ -54,10 +53,6 @@ public class CountryServiceImpl implements CountryService {
     @Autowired
 	@Qualifier("LSUC.BusinessaddressService")
 	private BusinessaddressService businessaddressService;
-
-    @Autowired
-	@Qualifier("LSUC.PersonaddressAudService")
-	private PersonaddressAudService personaddressAudService;
 
     @Autowired
 	@Qualifier("LSUC.ProvinceService")
@@ -117,14 +112,6 @@ public class CountryServiceImpl implements CountryService {
                 personaddresse.setCountry(countryCreated);
                 LOGGER.debug("Creating a new child Personaddress with information: {}", personaddresse);
                 personaddressService.create(personaddresse);
-            }
-        }
-
-        if(countryCreated.getPersonaddressAuds() != null) {
-            for(PersonaddressAud personaddressAud : countryCreated.getPersonaddressAuds()) {
-                personaddressAud.setCountry(countryCreated);
-                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
-                personaddressAudService.create(personaddressAud);
             }
         }
         return countryCreated;
@@ -278,17 +265,6 @@ public class CountryServiceImpl implements CountryService {
         return personaddressService.findAll(queryBuilder.toString(), pageable);
     }
 
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
-        LOGGER.debug("Fetching all associated personaddressAuds");
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("country.pk = '" + pk + "'");
-
-        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -314,15 +290,6 @@ public class CountryServiceImpl implements CountryService {
 	 */
 	protected void setBusinessaddressService(BusinessaddressService service) {
         this.businessaddressService = service;
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service PersonaddressAudService instance
-	 */
-	protected void setPersonaddressAudService(PersonaddressAudService service) {
-        this.personaddressAudService = service;
     }
 
     /**

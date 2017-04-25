@@ -104,7 +104,5 @@ public class EmailService {
         }
     }
 
-    public String helloWorld(String user) {
-        return "Hello " + user;
-    }
+    
 }

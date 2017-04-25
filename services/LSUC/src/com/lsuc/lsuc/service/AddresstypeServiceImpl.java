@@ -28,7 +28,6 @@ import com.lsuc.lsuc.Addresstype;
 import com.lsuc.lsuc.Businessaddress;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
-import com.lsuc.lsuc.PersonaddressAud;
 
 
 /**
@@ -52,10 +51,6 @@ public class AddresstypeServiceImpl implements AddresstypeService {
     @Autowired
 	@Qualifier("LSUC.BusinessaddressService")
 	private BusinessaddressService businessaddressService;
-
-    @Autowired
-	@Qualifier("LSUC.PersonaddressAudService")
-	private PersonaddressAudService personaddressAudService;
 
     @Autowired
     @Qualifier("LSUC.AddresstypeDao")
@@ -91,14 +86,6 @@ public class AddresstypeServiceImpl implements AddresstypeService {
                 personaddresse.setAddresstype(addresstypeCreated);
                 LOGGER.debug("Creating a new child Personaddress with information: {}", personaddresse);
                 personaddressService.create(personaddresse);
-            }
-        }
-
-        if(addresstypeCreated.getPersonaddressAuds() != null) {
-            for(PersonaddressAud personaddressAud : addresstypeCreated.getPersonaddressAuds()) {
-                personaddressAud.setAddresstype(addresstypeCreated);
-                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
-                personaddressAudService.create(personaddressAud);
             }
         }
         return addresstypeCreated;
@@ -230,17 +217,6 @@ public class AddresstypeServiceImpl implements AddresstypeService {
         return personaddressService.findAll(queryBuilder.toString(), pageable);
     }
 
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
-        LOGGER.debug("Fetching all associated personaddressAuds");
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("addresstype.pk = '" + pk + "'");
-
-        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -266,15 +242,6 @@ public class AddresstypeServiceImpl implements AddresstypeService {
 	 */
 	protected void setBusinessaddressService(BusinessaddressService service) {
         this.businessaddressService = service;
-    }
-
-    /**
-	 * This setter method should only be used by unit tests
-	 *
-	 * @param service PersonaddressAudService instance
-	 */
-	protected void setPersonaddressAudService(PersonaddressAudService service) {
-        this.personaddressAudService = service;
     }
 
 }

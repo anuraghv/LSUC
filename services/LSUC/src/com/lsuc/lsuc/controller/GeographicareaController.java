@@ -37,7 +37,6 @@ import com.lsuc.lsuc.Geographicarea;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
-import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.service.GeographicareaService;
 
 
@@ -197,15 +196,6 @@ public class GeographicareaController {
 
         LOGGER.debug("Fetching all associated personaddresses");
         return geographicareaService.findAssociatedPersonaddresses(id, pageable);
-    }
-
-    @RequestMapping(value="/{id:.+}/personaddressAuds", method=RequestMethod.GET)
-    @ApiOperation(value = "Gets the personaddressAuds instance associated with the given id.")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(@PathVariable("id") Integer id, Pageable pageable) {
-
-        LOGGER.debug("Fetching all associated personaddressAuds");
-        return geographicareaService.findAssociatedPersonaddressAuds(id, pageable);
     }
 
     /**

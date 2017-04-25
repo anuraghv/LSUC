@@ -49,7 +49,6 @@ public class Geographicarea implements Serializable {
     private List<Organizationalunitaddress> organizationalunitaddresses;
     private Region region;
     private List<Personaddress> personaddresses;
-    private List<PersonaddressAud> personaddressAuds;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -204,16 +203,6 @@ public class Geographicarea implements Serializable {
 
     public void setPersonaddresses(List<Personaddress> personaddresses) {
         this.personaddresses = personaddresses;
-    }
-
-    @JsonInclude(Include.NON_EMPTY)
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "geographicarea")
-    public List<PersonaddressAud> getPersonaddressAuds() {
-        return this.personaddressAuds;
-    }
-
-    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
-        this.personaddressAuds = personaddressAuds;
     }
 
     @Override

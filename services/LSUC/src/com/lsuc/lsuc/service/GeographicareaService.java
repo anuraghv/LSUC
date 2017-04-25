@@ -21,7 +21,6 @@ import com.lsuc.lsuc.Geographicarea;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
-import com.lsuc.lsuc.PersonaddressAud;
 
 /**
  * Service object for domain model class {@link Geographicarea}.
@@ -200,18 +199,6 @@ public interface GeographicareaService {
      * @see Page
      */
     Page<Personaddress> findAssociatedPersonaddresses(Integer pk, Pageable pageable);
-
-    /*
-     * Returns the associated personaddressAuds for given Geographicarea id.
-     *
-     * @param pk value of pk; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated PersonaddressAud instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable);
 
 }
 

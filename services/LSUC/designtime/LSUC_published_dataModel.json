@@ -10679,23 +10679,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personaddressAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "ADDRESSTYPE_FK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_obSBZ",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "ADDRESSTYPE",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSONADDRESS_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -11501,23 +11484,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personaddressAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "COUNTRY_FK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_RfA5a",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "COUNTRY",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSONADDRESS_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -15777,23 +15743,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personaddressAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "PROVINCE_FK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_Jyfze",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PROVINCE",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSONADDRESS_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -23471,23 +23420,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
-    }, {
-      "cardinality" : "OneToMany",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "personaddressAuds",
-      "mappings" : [ {
-        "sourceColumn" : "PK",
-        "targetColumn" : "GEOGRAPHIC_AREA_FK_"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_BP6yT",
-      "primary" : false,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "GEOGRAPHICAREA",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PERSONADDRESS_AUD",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
