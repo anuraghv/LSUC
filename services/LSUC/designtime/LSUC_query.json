@@ -392,6 +392,46 @@
       } ]
     }
   },
+  "licenseeChangesChart" : {
+    "name" : "licenseeChangesChart",
+    "description" : "Get licensee changes count by Request Created Persons",
+    "version" : "V2",
+    "queryString" : "select CREATED_BY,count(*) as Changes_Count from RMS.LICENSEECLASSPRACTICEGROUP_APPROVALS   group by CREATED_BY",
+    "countQueryString" : "select count(*) from (select CREATED_BY,count(*) as Changes_Count from RMS.LICENSEECLASSPRACTICEGROUP_APPROVALS   group by CREATED_BY) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.lsuc.lsuc.models.query.LicenseeChangesChartResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "CREATED_BY",
+        "fieldName" : "createdBy",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "CHANGES_COUNT",
+        "fieldName" : "changesCount",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      } ]
+    }
+  },
   "updateStatus" : {
     "name" : "updateStatus",
     "description" : "Update the Status after approving/rejecting a request",

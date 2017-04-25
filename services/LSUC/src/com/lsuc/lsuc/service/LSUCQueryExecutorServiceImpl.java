@@ -111,6 +111,24 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<LicenseeChangesChartResponse> executeLicenseeChangesChart(Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.executeNamedQuery("licenseeChangesChart", params, LicenseeChangesChartResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Downloadable exportLicenseeChangesChart(ExportType exportType, Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.exportNamedQueryData("licenseeChangesChart", params, exportType, LicenseeChangesChartResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable) {
         Map params = new HashMap(0);
 

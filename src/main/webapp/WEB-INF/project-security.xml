@@ -70,6 +70,9 @@
         <security:intercept-url pattern="/services/LSUC/Personlanguagecommunicationchannel" access="hasAnyRole('ROLE_supervisor')" method="POST"/>
         <security:intercept-url pattern="/services/LSUC/Personlanguagecommunicationchannel/*" access="hasAnyRole('ROLE_supervisor')" method="PUT"/>
         <security:intercept-url pattern="/services/LSUC/Personlanguagecommunicationchannel/*" access="hasAnyRole('ROLE_supervisor')" method="DELETE"/>
+        <security:intercept-url pattern="/services/LSUC/queryExecutor/queries/approveEditRecord" access="hasAnyRole('ROLE_supervisor')" method="PUT"/>
+        <security:intercept-url pattern="/services/LSUC/queryExecutor/queries/approvedNewRecord" access="hasAnyRole('ROLE_supervisor')" method="POST"/>
+        <security:intercept-url pattern="/services/LSUC/queryExecutor/queries/updateStatus" access="hasAnyRole('ROLE_supervisor')" method="PUT"/>
         <security:intercept-url pattern="/services/prefabs/**/servicedefs" access="permitAll"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
         <security:intercept-url pattern="/services/servicedefs" access="permitAll"/>

@@ -608,6 +608,28 @@
     "filterFields" : { },
     "package" : "com.lsuc.lsuc.Business"
   },
+  "getLicenseeChangesChart" : {
+    "_id" : "wm-getLicenseeChangesChart-wm.ServiceVariable-1493094667723",
+    "name" : "getLicenseeChangesChart",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.lsuc.lsuc.models.query.LicenseeChangesChartResponse",
+    "service" : "LSUC",
+    "operation" : "executeLicenseeChangesChart",
+    "operationId" : "QueryExecutionController_executeLicenseeChangesChart",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
   "goToPage_Approval" : {
     "_id" : "wm-goToPage_Approval-wm.NavigationVariable-1492607139461",
     "name" : "goToPage_Approval",

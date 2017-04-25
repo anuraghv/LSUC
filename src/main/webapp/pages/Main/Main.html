@@ -131,7 +131,8 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow3" padding="1em unset unset unset">
                     <wm-gridcolumn columnwidth="4" name="gridcolumn6" padding="unset 1em">
-                        <wm-chart type="Bar" title="MSR Activity" height="250px" iconclass="" name="chart1" class="small btn-transparent" accessroles="supervisor" theme="Annabelle"></wm-chart>
+                        <wm-chart type="Bar" title="Licensee Changes" height="250px" iconclass="" name="licenseeChanges" class="small btn-transparent" accessroles="supervisor" theme="Annabelle" dataset="bind:Variables.getLicenseeChangesChart.dataSet" xaxisdatakey="createdBy"
+                        yaxisdatakey="changesCount"></wm-chart>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="4" name="gridcolumn7" padding="unset 1em">
                         <wm-chart type="Line" title="Change Request" height="250px" iconclass="" name="chart4" class="btn-transparent  small" accessroles="supervisor" theme="Orient"></wm-chart>

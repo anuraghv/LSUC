@@ -32,6 +32,10 @@ public interface LSUCQueryExecutorService {
 
     Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable);
 
+    Page<LicenseeChangesChartResponse> executeLicenseeChangesChart(Pageable pageable);
+
+    Downloadable exportLicenseeChangesChart(ExportType exportType, Pageable pageable);
+
     Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable);
 
     Downloadable exportExpirationStatus(ExportType exportType, Pageable pageable);

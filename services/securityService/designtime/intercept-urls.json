@@ -28,4 +28,19 @@
   "permission" : "Role",
   "roles" : [ "supervisor" ],
   "httpMethod" : "DELETE"
+}, {
+  "urlPattern" : "/services/LSUC/queryExecutor/queries/approvedNewRecord",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "POST"
+}, {
+  "urlPattern" : "/services/LSUC/queryExecutor/queries/approveEditRecord",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "PUT"
+}, {
+  "urlPattern" : "/services/LSUC/queryExecutor/queries/updateStatus",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "PUT"
 } ]

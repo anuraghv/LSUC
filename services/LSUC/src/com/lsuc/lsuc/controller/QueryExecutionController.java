@@ -117,6 +117,25 @@ public class QueryExecutionController {
         return queryService.exportGetStatusChangeDetails(exportType, personId, pageable);
     }
 
+    @RequestMapping(value = "/queries/licenseeChangesChart", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Get licensee changes count by Request Created Persons")
+    public Page<LicenseeChangesChartResponse> executeLicenseeChangesChart(Pageable pageable) {
+        LOGGER.debug("Executing named query: licenseeChangesChart");
+        Page<LicenseeChangesChartResponse> _result = queryService.executeLicenseeChangesChart(pageable);
+        LOGGER.debug("got the result for named query: licenseeChangesChart, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query licenseeChangesChart")
+    @RequestMapping(value = "/queries/licenseeChangesChart/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportLicenseeChangesChart(@PathVariable("exportType") ExportType exportType, Pageable pageable) {
+        LOGGER.debug("Exporting named query: licenseeChangesChart");
+
+        return queryService.exportLicenseeChangesChart(exportType, pageable);
+    }
+
     @RequestMapping(value = "/queries/expirationStatus", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Shows details of all Licensees which have LicenseeClassPracticeGroup(s) with Effective_To in the Input date range")
