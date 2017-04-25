@@ -3,24 +3,24 @@
         <wm-gridrow name="gridrow9">
             <wm-gridcolumn columnwidth="6" name="gridcolumn22" padding="unset 1em unset unset">
                 <wm-button class="btn-link btn-action-top" caption="Add" type="button" name="addLicenseeStatusBtn" iconclass="wi wi-plus fa-2x" on-click="addLicenseeStatusBtnClick($event, $scope)"></wm-button>
-                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel panel-default media-list" dataset="bind:Variables.LSUC_ApprovalData_Read.dataSet" navigation="None" name="livelist3" title="LICENSEE STATUS"
+                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel" dataset="bind:Variables.LSUC_ApprovalData_Read.dataSet" navigation="None" name="livelist3" title="LICENSEE STATUS"
                 padding="1em 1em unset 1em" nodatamessage="">
                     <wm-listtemplate layout="inline" name="listtemplate3">
                         <wm-panel autoclose="outsideClick" title="bind:Variables.LSUC_ApprovalData_Read.dataSet.data[$i].licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish + ' - ' + Variables.LSUC_ApprovalData_Read.dataSet.data[$i].licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish"
                         name="panel2" badgevalue="Pending Approval" badgetype="warning">
-                            <wm-layoutgrid name="layoutgrid8_2" columns="3">
+                            <wm-layoutgrid name="layoutgrid8_2" columns="3" class="app-form">
                                 <wm-gridrow name="gridrow24">
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn46">
-                                        <wm-label name="label3" width="100%" caption="Effective From"></wm-label>
-                                        <wm-label name="Name" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newEffectiveFromDate" fontunit="em"></wm-label>
+                                        <wm-label name="label3" width="100%" caption="Effective From" class="control-label"></wm-label>
+                                        <wm-label name="Name" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.data[$i].newEffectiveFromDate | toDate: 'dd MMM yyyy'" fontunit="em" class="form-control-static"></wm-label>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn47">
-                                        <wm-label name="label4" width="100%" caption="Effective To"></wm-label>
-                                        <wm-label name="Name" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newEffectiveToDate" fontunit="em"></wm-label>
+                                        <wm-label name="label4" width="100%" caption="Effective To" class="control-label"></wm-label>
+                                        <wm-label name="Name" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.data[$i].newEffectiveToDate | toDate: 'dd MMM yyyy'" fontunit="em" class="form-control-static"></wm-label>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn columnwidth="4" name="gridcolumn48">
-                                        <wm-label name="label5" width="100%" caption="Is Primary"></wm-label>
-                                        <wm-label name="JobTitle" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newIsPrimary"></wm-label>
+                                        <wm-label name="label5" width="100%" caption="Is Primary" class="control-label"></wm-label>
+                                        <wm-label name="JobTitle" caption="bind:Variables.LSUC_ApprovalData_Read.dataSet.newIsPrimary" class="form-control-static"></wm-label>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
@@ -186,7 +186,7 @@
                         <wm-gridrow name="gridrow13_1">
                             <wm-gridcolumn columnwidth="6" name="gridcolumn30_1">
                                 <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="Select
-                                date" outputformat="yyyy-MM-dd" datepattern="dd MMMM, yyyy" maxdate="CURRENT_DATE"></wm-form-field>
+                                date" outputformat="yyyy-MM-dd" datepattern="dd MMM yyyy" maxdate="CURRENT_DATE"></wm-form-field>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="6" name="gridcolumn31_1">
                                 <wm-form-field name="legacyclassstatus" displayname="Legacy Status" show="true" primary-key="false" generator="assigned" key="legacyclassstatus" type="list" is-related="true" readonly="false" required="false" widget="select"
