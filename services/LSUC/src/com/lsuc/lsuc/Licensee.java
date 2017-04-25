@@ -499,3 +499,4 @@ public class Licensee implements Serializable {
         return Objects.hash(getPk());
     }
 }
+

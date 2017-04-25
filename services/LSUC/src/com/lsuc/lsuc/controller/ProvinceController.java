@@ -36,6 +36,7 @@ import com.lsuc.lsuc.Businessaddress;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Province;
 import com.lsuc.lsuc.service.ProvinceService;
 
@@ -196,6 +197,15 @@ public class ProvinceController {
 
         LOGGER.debug("Fetching all associated personaddresses");
         return provinceService.findAssociatedPersonaddresses(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/personaddressAuds", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the personaddressAuds instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated personaddressAuds");
+        return provinceService.findAssociatedPersonaddressAuds(id, pageable);
     }
 
     /**

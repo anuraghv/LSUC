@@ -14,8 +14,8 @@ import com.wavemaker.runtime.data.annotations.ColumnAlias;
 
 public class GetStatusChangeDetailsResponse implements Serializable {
 
-    @ColumnAlias("Type")
-    private String type;
+    @ColumnAlias("LicenseeClass")
+    private String licenseeClass;
     @ColumnAlias("EffectiveDate")
     private Date effectiveDate;
     @ColumnAlias("EffectiveTo")
@@ -29,12 +29,12 @@ public class GetStatusChangeDetailsResponse implements Serializable {
     @ColumnAlias("changedBy")
     private String changedBy;
 
-    public String getType() {
-        return this.type;
+    public String getLicenseeClass() {
+        return this.licenseeClass;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setLicenseeClass(String licenseeClass) {
+        this.licenseeClass = licenseeClass;
     }
 
     public Date getEffectiveDate() {
@@ -90,7 +90,7 @@ public class GetStatusChangeDetailsResponse implements Serializable {
         if (this == o) return true;
         if (!(o instanceof GetStatusChangeDetailsResponse)) return false;
         final GetStatusChangeDetailsResponse getStatusChangeDetailsResponse = (GetStatusChangeDetailsResponse) o;
-        return Objects.equals(getType(), getStatusChangeDetailsResponse.getType()) &&
+        return Objects.equals(getLicenseeClass(), getStatusChangeDetailsResponse.getLicenseeClass()) &&
                 Objects.equals(getEffectiveDate(), getStatusChangeDetailsResponse.getEffectiveDate()) &&
                 Objects.equals(getEffectiveTo(), getStatusChangeDetailsResponse.getEffectiveTo()) &&
                 Objects.equals(getPracticeGroup(), getStatusChangeDetailsResponse.getPracticeGroup()) &&
@@ -101,7 +101,7 @@ public class GetStatusChangeDetailsResponse implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getType(),
+        return Objects.hash(getLicenseeClass(),
                 getEffectiveDate(),
                 getEffectiveTo(),
                 getPracticeGroup(),

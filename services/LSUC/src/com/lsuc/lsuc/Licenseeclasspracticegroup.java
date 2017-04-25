@@ -170,3 +170,4 @@ public class Licenseeclasspracticegroup implements Serializable {
         return Objects.hash(getPk());
     }
 }
+

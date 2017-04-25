@@ -19,39 +19,41 @@ Application.$controller("PersonHistoryPageController", ["$scope", "Utils", funct
 
 
     $scope.LSUCPersonAudDataonSuccess = function(variable, data) {
-        $scope.PersonAudData = data.length;
-        $scope.Variables.personHistoryData.dataSet = [];
         if (data.length == 0) {
             return;
         }
+        // Preparing dataSet based on comparing Latest two Objects.
         diffData(data, CHANGE_TYPE_PERSON_DETAILS, "Person Details Changed", "wi wi-person fa-2x");
     };
 
 
 
     function diffData(data, type, displayLabel, iconType) {
-        var historyData = {
-            "type": "edit",
-            "entity": "status",
-            "newPropertyValues": [],
-            "oldPropertyValues": [],
-            "changedby": "Gerald",
-            "timestamp": "",
-            "icon": ""
-        };
+        // Looping based througth data objects 
         for (var i = 0; i < data.length - 1; i++) {
             var original = data[i],
                 latest = data[i + 1];
+            var historyData = {
+                "type": "edit",
+                "entity": "status",
+                "newPropertyValues": [],
+                "oldPropertyValues": [],
+                "changedby": "Gerald",
+                "timestamp": "",
+                "icon": ""
+            };
+            // Compare the two Objects and Filtering change Data.
             _.reduce(original, function(result, val, key) {
                 var newobj = {
-                    types: "",
-                    value: ""
-                }
-                var oldObj = {
-                    types: "",
-                    value: ""
-                }
-                if (!_.isEqual(latest[key], val) && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy"], key)) {
+                        types: "",
+                        value: ""
+                    },
+                    oldObj = {
+                        types: "",
+                        value: ""
+                    };
+                // Compare conditions if type is CHANGE_TYPE_PERSON_DETAILS .
+                if ((type == CHANGE_TYPE_PERSON_DETAILS) && !_.isEqual(latest[key], val) && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy"], key)) {
                     historyData.type = displayLabel;
                     newobj.types = Utils.prettifyLabel(key) || "NULL";
                     newobj.value = latest[key] || "NULL";
@@ -60,38 +62,90 @@ Application.$controller("PersonHistoryPageController", ["$scope", "Utils", funct
                     oldObj.value = val || "NULL";
                     historyData.oldPropertyValues.push(oldObj);
                     historyData.icon = iconType;
-                    if (type == CHANGE_TYPE_STATUS) {
-                        historyData.timestamp = latest.revtstmp;
-                        historyData.changedby = latest.changedBy;
-                    } else {
-                        historyData.timestamp = latest.usernameRev.timestamp;
-                        historyData.changedby = latest.usernameRev.username;
+                    historyData.timestamp = latest.usernameRev.timestamp;
+                    historyData.changedby = latest.usernameRev.username;
+                    // Compare conditions if type is CHANGE_TYPE_STATUS .
+                } else if ((type == (CHANGE_TYPE_STATUS)) && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy"], key)) {
+                    historyData.type = displayLabel;
+                    newobj.types = Utils.prettifyLabel(key) || "NULL";
+                    newobj.value = latest[key] || "NULL";
+                    historyData.newPropertyValues.push(newobj);
+                    oldObj.types = Utils.prettifyLabel(key) || "NULL";
+                    oldObj.value = val || "NULL";
+                    historyData.oldPropertyValues.push(oldObj);
+                    historyData.icon = iconType;
+                    historyData.timestamp = latest.revtstmp;
+                    historyData.changedby = latest.changedBy;
+                    // Compare conditions if type is CHANGE_TYPE_ADDRESS .
+                } else if (type == CHANGE_TYPE_ADDRESS && !_.includes(["usernameRev", "rev", "revtype", "revtstmp", "changedBy", "person", "countryFk", "geographicAreaFk", "personFk", "person", "pk", "addresstypeFk", "isDisplayedOnDirectory"], key)) {
+                    historyData.type = displayLabel;
+                    historyData.timestamp = latest.usernameRev.timestamp;
+                    historyData.changedby = latest.usernameRev.username;
+                    newobj.types = Utils.prettifyLabel(key) || "NULL";
+                    newobj.value = latest[key] || "NULL";
+                    if (key == "addresstype") {
+                        newobj.types = Utils.prettifyLabel(key) || "NULL";
+                        newobj.value = latest[key].shortNameEnglish || "NULL";
                     }
-                }
+                    if (key == "province") {
+                        newobj.types = Utils.prettifyLabel(key) || "NULL";
+                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    if (key == "country") {
+                        newobj.types = Utils.prettifyLabel(key) || "NULL";
+                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    if (key == "geographicarea") {
+                        newobj.types = Utils.prettifyLabel(key) || "NULL";
+                        newobj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    historyData.newPropertyValues.push(newobj);
+                    oldObj.types = Utils.prettifyLabel(key) || "NULL";
+                    oldObj.value = val || "NULL";
+                    if (key == "addresstype") {
+                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
+                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    if (key == "province") {
+                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
+                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    if (key == "country") {
+                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
+                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    if (key == "geographicarea") {
+                        oldObj.types = Utils.prettifyLabel(key) || "NULL";
+                        oldObj.value = latest[key].shortNameEnglish || "NULL";
+                    }
+                    historyData.oldPropertyValues.push(oldObj);
+                    historyData.icon = iconType;
 
-            });
+
+                }
+            }, {});
             $scope.Variables.personHistoryData.dataSet.push(historyData);
         }
     }
 
 
 
-
     $scope.LSUCPersonaddresDataonSuccess = function(variable, data) {
-        $scope.Personaddres = data.length;
         if (data.length == 0) {
             return;
         }
-
+        // Prepares dataSet based on comparing Old and New Objects.
         diffData(data, CHANGE_TYPE_ADDRESS, "Address Changed", "wi wi-location-on fa-2x");
     };
 
 
     $scope.LicenseeClassPracticegrouponSuccess = function(variable, data) {
-        $scope.Classpracticegroup = data.length;
         if (data.length == 0) {
             return;
         }
+
+        $scope.Variables.personHistoryData.dataSet = [];
+        // Prepares dataSet based on comparing Old and New Objects.
         diffData(data.content, CHANGE_TYPE_STATUS, "License Status Changed", "wi wi-pencil fa-2x");
     };
 

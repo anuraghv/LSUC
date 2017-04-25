@@ -44,6 +44,10 @@ public class PersonaddressAud implements Serializable {
     private Integer provinceFk;
     private Person person;
     private UsernameRev usernameRev;
+    private Country country;
+    private Province province;
+    private Addresstype addresstype;
+    private Geographicarea geographicarea;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -226,6 +230,62 @@ public class PersonaddressAud implements Serializable {
         }
 
         this.usernameRev = usernameRev;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`COUNTRY_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Country getCountry() {
+        return this.country;
+    }
+
+    public void setCountry(Country country) {
+        if(country != null) {
+            this.countryFk = country.getPk();
+        }
+
+        this.country = country;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`PROVINCE_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Province getProvince() {
+        return this.province;
+    }
+
+    public void setProvince(Province province) {
+        if(province != null) {
+            this.provinceFk = province.getPk();
+        }
+
+        this.province = province;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`ADDRESSTYPE_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Addresstype getAddresstype() {
+        return this.addresstype;
+    }
+
+    public void setAddresstype(Addresstype addresstype) {
+        if(addresstype != null) {
+            this.addresstypeFk = addresstype.getPk();
+        }
+
+        this.addresstype = addresstype;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`GEOGRAPHIC_AREA_FK_`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Geographicarea getGeographicarea() {
+        return this.geographicarea;
+    }
+
+    public void setGeographicarea(Geographicarea geographicarea) {
+        if(geographicarea != null) {
+            this.geographicAreaFk = geographicarea.getPk();
+        }
+
+        this.geographicarea = geographicarea;
     }
 
     @Override

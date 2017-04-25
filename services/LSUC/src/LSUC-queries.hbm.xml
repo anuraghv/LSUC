@@ -58,7 +58,7 @@ select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassP
 
     <query name="getStatusChangeDetails">
         <![CDATA[
-        select classpraticegroup.classEntity.shortNameEnglish as Type, effectiveFromDate as EffectiveDate, effectiveToDate as EffectiveTo, CONCAT(classpraticegroup.practicegroup.code,' - ', classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup, isPrimary as isPrimary, usernameRev.timestamp as revtstmp,
+        select classpraticegroup.classEntity.shortNameEnglish as LicenseeClass, effectiveFromDate as EffectiveDate, effectiveToDate as EffectiveTo, CONCAT(classpraticegroup.practicegroup.code,' - ', classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup, isPrimary as isPrimary, usernameRev.timestamp as revtstmp,
 usernameRev.username as changedBy from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
         ]]>
     <query-param name="personID" type="java.lang.Integer"/>

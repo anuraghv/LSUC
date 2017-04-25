@@ -44,6 +44,7 @@ public class Addresstype implements Serializable {
     private List<Businessaddress> businessaddresses;
     private List<Organizationalunitaddress> organizationalunitaddresses;
     private List<Personaddress> personaddresses;
+    private List<PersonaddressAud> personaddressAuds;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -165,6 +166,16 @@ public class Addresstype implements Serializable {
 
     public void setPersonaddresses(List<Personaddress> personaddresses) {
         this.personaddresses = personaddresses;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "addresstype")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
     }
 
     @Override

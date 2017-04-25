@@ -29,6 +29,7 @@ import com.lsuc.lsuc.Geographicarea;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 
 
 /**
@@ -52,6 +53,10 @@ public class GeographicareaServiceImpl implements GeographicareaService {
     @Autowired
 	@Qualifier("LSUC.BusinessaddressService")
 	private BusinessaddressService businessaddressService;
+
+    @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
 
     @Autowired
 	@Qualifier("LSUC.LicenseeService")
@@ -99,6 +104,14 @@ public class GeographicareaServiceImpl implements GeographicareaService {
                 personaddresse.setGeographicarea(geographicareaCreated);
                 LOGGER.debug("Creating a new child Personaddress with information: {}", personaddresse);
                 personaddressService.create(personaddresse);
+            }
+        }
+
+        if(geographicareaCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : geographicareaCreated.getPersonaddressAuds()) {
+                personaddressAud.setGeographicarea(geographicareaCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
             }
         }
         return geographicareaCreated;
@@ -241,6 +254,17 @@ public class GeographicareaServiceImpl implements GeographicareaService {
         return personaddressService.findAll(queryBuilder.toString(), pageable);
     }
 
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("geographicarea.pk = '" + pk + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -266,6 +290,15 @@ public class GeographicareaServiceImpl implements GeographicareaService {
 	 */
 	protected void setBusinessaddressService(BusinessaddressService service) {
         this.businessaddressService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
     }
 
     /**

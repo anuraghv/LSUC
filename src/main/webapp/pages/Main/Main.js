@@ -53,7 +53,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
 
     $scope.LicenseePracticegroupAudonSuccess = function(variable, data) {
-        LicenseePracticegroup(data, "Status Change");
+        LicenseePracticegroup(data, "Status changed for");
     };
 
     function LicenseePracticegroup(data, type) {
@@ -75,7 +75,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
         });
     }
     $scope.PersonaddressAudonSuccess = function(variable, data) {
-        PersonAddress(data, "Address Change");
+        PersonAddress(data, "Address changed for");
     };
 
     function PersonAddress(data, type) {
@@ -99,7 +99,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
     $scope.PersonAudonSuccess = function(variable, data) {
         $scope.Variables.PersonHistoryData.dataSet = []
-        PersonHistory(data, "Peson Details changed for");
+        PersonHistory(data, "Personal Details changed for");
     };
 
     function PersonHistory(data, type) {

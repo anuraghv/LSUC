@@ -10679,6 +10679,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "ADDRESSTYPE_FK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_obSBZ",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "ADDRESSTYPE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -11484,6 +11501,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "COUNTRY_FK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_RfA5a",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "COUNTRY",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -13252,7 +13286,7 @@
         "defaultValue" : null
       },
       "fieldName" : "addresstypeFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -13260,8 +13294,8 @@
       "name" : "ADDRESSTYPE_FK",
       "nullable" : true,
       "oldName" : "ADDRESSTYPE_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : false,
       "precision" : 10,
@@ -13304,7 +13338,7 @@
         "defaultValue" : null
       },
       "fieldName" : "countryFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -13312,8 +13346,8 @@
       "name" : "COUNTRY_FK",
       "nullable" : true,
       "oldName" : "COUNTRY_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : false,
       "precision" : 10,
@@ -13330,7 +13364,7 @@
         "defaultValue" : null
       },
       "fieldName" : "geographicAreaFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -13338,8 +13372,8 @@
       "name" : "GEOGRAPHIC_AREA_FK_",
       "nullable" : true,
       "oldName" : "GEOGRAPHIC_AREA_FK_",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : false,
       "precision" : 10,
@@ -13434,7 +13468,7 @@
         "defaultValue" : null
       },
       "fieldName" : "provinceFk",
-      "foreignKey" : false,
+      "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
       "javaType" : "integer",
@@ -13442,8 +13476,8 @@
       "name" : "PROVINCE_FK",
       "nullable" : true,
       "oldName" : "PROVINCE_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
       "partOfPrimaryKey" : false,
       "partOfUniqueKey" : false,
       "precision" : 10,
@@ -13503,6 +13537,74 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "USERNAME_REV",
       "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "country",
+      "mappings" : [ {
+        "sourceColumn" : "COUNTRY_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_RfA5a",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "COUNTRY",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "province",
+      "mappings" : [ {
+        "sourceColumn" : "PROVINCE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_Jyfze",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PROVINCE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "addresstype",
+      "mappings" : [ {
+        "sourceColumn" : "ADDRESSTYPE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_obSBZ",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "ADDRESSTYPE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "geographicarea",
+      "mappings" : [ {
+        "sourceColumn" : "GEOGRAPHIC_AREA_FK_",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_BP6yT",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "GEOGRAPHICAREA",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -15675,6 +15777,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "PROVINCE_FK"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_Jyfze",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PROVINCE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -23352,6 +23471,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "GEOGRAPHIC_AREA_FK_"
+      } ],
+      "name" : "FK_PERSONADDRESS_AUD_TO_BP6yT",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "GEOGRAPHICAREA",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
