@@ -117,8 +117,8 @@
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn27">
                                                 <wm-label caption="bind:'By '+Variables.PersonHistoryData.dataSet[$i].ChangedBy" class="text-muted small" textalign="right" name="ChangeBylabel"></wm-label>
                                             </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn28">
-                                                <wm-label caption="bind:Variables.PersonHistoryData.dataSet[$i].timeStamp | timeFromNow" class="p text-muted small" name="TimeStampLabel" textalign="right"></wm-label>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn28" horizontalalign="center">
+                                                <wm-label caption="bind:(Variables.PersonHistoryData.dataSet[$i].timestamp) | toDate: 'dd MMM yyyy hh:mm'" class="p text-muted small" name="TimeStampLabel" textalign="right"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>

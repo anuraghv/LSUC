@@ -60,7 +60,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             var HistoryData = {
                 "type": "",
                 "username": "",
-                "timeStamp": "",
+                "timestamp": "",
                 "PersonID": "",
                 "ChangedBy": ""
             }
@@ -68,9 +68,10 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             HistoryData.username = obj.licensee.person.firstName + " " + obj.licensee.person.lastName;
             HistoryData.shortcutName = obj.licensee.person.lastName[0];
             HistoryData.PersonID = obj.licensee.person.pk;
-            HistoryData.timeStamp = obj.usernameRev.timestamp;
+            HistoryData.timestamp = obj.usernameRev.timestamp;
             HistoryData.ChangedBy = obj.usernameRev.username;
-            $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
+            $scope.Variables.PersonHistoryData.addItem(HistoryData);
+            $scope.$root.$safeApply($scope);
         });
     }
     $scope.PersonaddressAudonSuccess = function(variable, data) {
@@ -82,7 +83,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             var HistoryData = {
                 "type": "",
                 "username": "",
-                "timeStamp": "",
+                "timestamp": "",
                 "PersonID": "",
                 "ChangedBy": ""
             };
@@ -90,9 +91,10 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             HistoryData.username = obj.person.firstName + " " + obj.person.lastName;
             HistoryData.shortcutName = obj.person.lastName[0];
             HistoryData.PersonID = obj.person.pk;
-            HistoryData.timeStamp = obj.usernameRev.timestamp;
+            HistoryData.timestamp = obj.usernameRev.timestamp;
             HistoryData.ChangedBy = obj.usernameRev.username;
-            $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
+            $scope.Variables.PersonHistoryData.addItem(HistoryData);
+            $scope.$root.$safeApply($scope);
         });
     }
 
@@ -106,7 +108,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             var HistoryData = {
                 "type": "",
                 "username": "",
-                "timeStamp": "",
+                "timestamp": "",
                 "PersonID": "",
                 "ChangedBy": ""
             }
@@ -116,7 +118,8 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             HistoryData.shortcutName = obj.lastName[0];
             HistoryData.timestamp = obj.usernameRev.timestamp;
             HistoryData.ChangedBy = obj.usernameRev.username;
-            $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
+            $scope.Variables.PersonHistoryData.addItem(HistoryData);
+            $scope.$root.$safeApply($scope);
         });
     }
 
