@@ -35,8 +35,14 @@
                             <wm-param name="businessId" value="bind:pageParams.businessId" type="integer"></wm-param>
                         </wm-container>
                         <wm-grid editmode="inline" title="Organizational Unit" dataset="bind:Variables.LSUCOrganizationalunitData.dataSet" navigation="None" name="businessOrgUnitGrid" class="panel-default" gridclass="table-striped" iconclass="wi wi-business-center">
-                            <wm-grid-column binding="organizationalunitName" caption="Unit" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                            <wm-grid-column binding="organizationalunittype.shortNameEnglish" caption="Type" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Organizationalunittype"></wm-grid-column>
+                            <wm-grid-column binding="organizationalunitName" caption="Name" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                            <wm-grid-column binding="organizationalunitNumber" caption="Number" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                            <wm-grid-column binding="organizationalunittype.pk" caption="Type" type="integer" widget-type="label" primary-key="true" generator="identity" edit-widget-type="select" datafield="pk" displayfield="shortNameEnglish"
+                            show="true" related-entity-name="Organizationalunittype" readonly="false">
+                                <wm-label caption="{{row.organizationalunittype.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
+                            </wm-grid-column>
+                            <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"
+                            related-entity-name="Business" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="15%" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
                             <wm-grid-action key="addNewRow" display-name="Add Organisational Unit" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Organisational Unit" action="addNewRow()" shortcutkey="" disabled="false"
                             position="header"></wm-grid-action>
@@ -58,6 +64,8 @@
                             <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
                                 <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.getProperty('isDisplayedOnDirectory') === 'Y'}"></wm-icon>
                             </wm-grid-column>
+                            <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"
+                            related-entity-name="Business" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
                             <wm-grid-action key="addNewRow" display-name="Add Phone" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Phone" action="addNewRow()" shortcutkey="" disabled="false" position="header"></wm-grid-action>
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
@@ -72,6 +80,8 @@
                             <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
                                 <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.getProperty('isDisplayedOnDirectory') === 'Y'}"></wm-icon>
                             </wm-grid-column>
+                            <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"
+                            related-entity-name="Business" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
                             <wm-grid-action key="addNewRow" display-name="Add Email" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Email" action="addNewRow()" shortcutkey="" disabled="false" position="header"></wm-grid-action>
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
@@ -90,6 +100,8 @@
                             <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
                                 <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.getProperty('isDisplayedOnDirectory') === 'Y'}"></wm-icon>
                             </wm-grid-column>
+                            <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"
+                            related-entity-name="Business" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
                             <wm-grid-action key="addNewRow" display-name="Add Social Media Account" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Social Media Account" action="addNewRow()" shortcutkey="" disabled="false"
                             position="header"></wm-grid-action>
