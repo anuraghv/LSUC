@@ -139,9 +139,9 @@ public class QueryExecutionController {
     @RequestMapping(value = "/queries/expirationStatus", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Shows details of all Licensees which have LicenseeClassPracticeGroup(s) with Effective_To in the Input date range")
-    public Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable) {
+    public Page<ExpirationStatusResponse> executeExpirationStatus(@RequestParam(value = "fromDate") Date fromDate, @RequestParam(value = "toDate") Date toDate, Pageable pageable) {
         LOGGER.debug("Executing named query: expirationStatus");
-        Page<ExpirationStatusResponse> _result = queryService.executeExpirationStatus(pageable);
+        Page<ExpirationStatusResponse> _result = queryService.executeExpirationStatus(fromDate, toDate, pageable);
         LOGGER.debug("got the result for named query: expirationStatus, result:{}", _result);
         return _result;
     }
@@ -149,10 +149,10 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file for query expirationStatus")
     @RequestMapping(value = "/queries/expirationStatus/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Downloadable exportExpirationStatus(@PathVariable("exportType") ExportType exportType, Pageable pageable) {
+    public Downloadable exportExpirationStatus(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "fromDate") Date fromDate, @RequestParam(value = "toDate") Date toDate, Pageable pageable) {
         LOGGER.debug("Exporting named query: expirationStatus");
 
-        return queryService.exportExpirationStatus(exportType, pageable);
+        return queryService.exportExpirationStatus(exportType, fromDate, toDate, pageable);
     }
 
 }

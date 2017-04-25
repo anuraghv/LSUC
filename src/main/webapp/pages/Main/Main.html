@@ -30,7 +30,7 @@
                         navigation="On-Demand" name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)" padding="1em 1em unset 1em">
                             <wm-listtemplate layout="inline" name="listtemplate2">
                                 <wm-panel name="panel3" collapsible="true" expanded="false" subheading="bind:'License Number: '+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber + ' on '+(Variables.pendingApprovals.dataSet[$i].createdDate | toDate: 'dd MMM yyyy') +' by '+Variables.pendingApprovals.dataSet[$i].createdBy"
-                                title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" iconclass="" class="panel-secondary" badgetype="success">
+                                title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" iconclass="" class="panel-secondary" badgetype="success" closable="false">
                                     <wm-layoutgrid class="new-block app-form panel" name="newlayoutgrid">
                                         <wm-gridrow name="gridrow6">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn17_1">

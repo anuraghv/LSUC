@@ -129,18 +129,22 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
-    public Page<ExpirationStatusResponse> executeExpirationStatus(Pageable pageable) {
-        Map params = new HashMap(0);
+    public Page<ExpirationStatusResponse> executeExpirationStatus(Date fromDate, Date toDate, Pageable pageable) {
+        Map params = new HashMap(2);
 
+        params.put("fromDate", fromDate);
+        params.put("toDate", toDate);
 
         return queryExecutor.executeNamedQuery("expirationStatus", params, ExpirationStatusResponse.class, pageable);
     }
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
-    public Downloadable exportExpirationStatus(ExportType exportType, Pageable pageable) {
-        Map params = new HashMap(0);
+    public Downloadable exportExpirationStatus(ExportType exportType, Date fromDate, Date toDate, Pageable pageable) {
+        Map params = new HashMap(2);
 
+        params.put("fromDate", fromDate);
+        params.put("toDate", toDate);
 
         return queryExecutor.exportNamedQueryData("expirationStatus", params, exportType, ExpirationStatusResponse.class, pageable);
     }

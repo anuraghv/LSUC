@@ -107,8 +107,10 @@ where p.PK = pa.PERSON_FK and
     lcpg.LICENSEE_FK = l.PK and 
     lcpg.CLASS_PRACTICE_GROUP_FK = cpg.PK and 
     cpg.CLASS_FK = c.PK and 
-    cpg.PRACTICE_GROUP_FK = pg.PK
+    cpg.PRACTICE_GROUP_FK = pg.PK and lcpg.EFFECTIVE_TO_DATE BETWEEN :fromDate and :toDate
         ]]>
+    <query-param name="fromDate" type="java.sql.Date"/>
+    <query-param name="toDate" type="java.sql.Date"/>
     </sql-query>
 
     <sql-query name="expirationStatus__count">
@@ -135,7 +137,9 @@ where p.PK = pa.PERSON_FK and
     lcpg.LICENSEE_FK = l.PK and 
     lcpg.CLASS_PRACTICE_GROUP_FK = cpg.PK and 
     cpg.CLASS_FK = c.PK and 
-    cpg.PRACTICE_GROUP_FK = pg.PK) wmTempTable
+    cpg.PRACTICE_GROUP_FK = pg.PK and lcpg.EFFECTIVE_TO_DATE BETWEEN :fromDate and :toDate) wmTempTable
         ]]>
+    <query-param name="fromDate" type="java.sql.Date"/>
+    <query-param name="toDate" type="java.sql.Date"/>
     </sql-query>
 </hibernate-mapping>

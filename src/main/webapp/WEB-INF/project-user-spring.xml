@@ -9,5 +9,4 @@ and is an ideal location for end-users to put any code they need.
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name = "LSUC.PersonService" class = "com.lsuc.lsuc.PersonPreProcessor" />
     
-    
 </beans>

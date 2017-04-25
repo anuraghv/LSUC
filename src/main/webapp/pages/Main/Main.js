@@ -15,10 +15,8 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
     };
 
 
-
-
-
     $scope.approveBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
+        $scope.Variables.onAppproveReject.setMessage("Request Approved Successfully");
         if (item.status == "Created") {
             $scope.Variables.approveNewRequest.update();
         } else if (item.status == "Updated") {
@@ -46,6 +44,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
 
     $scope.rejectBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
+        $scope.Variables.onAppproveReject.setMessage("Request Rejected Successfully");
         $scope.Variables.updateStatus.setInput("status", "Rejected");
         $scope.Variables.updateStatus.setInput("pk", item.pk);
         $scope.Variables.updateStatus.update();
@@ -86,7 +85,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
                 "timeStamp": "",
                 "PersonID": "",
                 "ChangedBy": ""
-            }
+            };
             HistoryData.type = type;
             HistoryData.username = obj.person.firstName + " " + obj.person.lastName;
             HistoryData.shortcutName = obj.person.lastName[0];
@@ -120,5 +119,11 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
             $scope.Variables.PersonHistoryData.dataSet.push(HistoryData);
         });
     }
+
+
+    $scope.updateStatusonSuccess = function(variable, data) {
+        /* Need to collapse the expanded panel  */
+
+    };
 
 }]);

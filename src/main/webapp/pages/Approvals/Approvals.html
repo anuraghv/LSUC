@@ -7,10 +7,11 @@
             <wm-breadcrumb dataset="bind:Variables.sitemap.dataSet" name="breadcrumb1" itemchildren="children" itemid="id"></wm-breadcrumb>
             <wm-label padding="unset 0.5em" name="label1" caption="Approvals" class="h2"></wm-label>
             <wm-container name="container1" content="personProfile"></wm-container>
-            <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Licensee Status" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.pendingApprovals.dataSet"
+            <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Licensee Status" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet"
             navigation="On-Demand" on-click="pendingApprovalLiveListClick($event, $scope)" name="pendingApprovalLiveList">
                 <wm-listtemplate layout="inline" name="listtemplate1">
-                    <wm-panel name="panel3" collapsible="false" expanded="true" subheading="time" title="bind:Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber" badgevalue="bind:Variables.pendingApprovals.dataSet[$i].status">
+                    <wm-panel name="panel3" collapsible="false" expanded="true" subheading="bind:'License Number: '+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber + ' on '+(Variables.pendingApprovals.dataSet[$i].createdDate | toDate: 'dd MMM yyyy') +' by '+Variables.pendingApprovals.dataSet[$i].createdBy"
+                    title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" class="panel-secondary">
                         <wm-layoutgrid class="new-block app-form panel" name="layoutgrid2">
                             <wm-gridrow name="gridrow4">
                                 <wm-gridcolumn columnwidth="3" name="gridcolumn12">
@@ -74,8 +75,8 @@
                             </wm-gridrow>
                         </wm-layoutgrid>
                         <wm-buttongroup name="buttongroup1" accessroles="supervisor">
-                            <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn" on-click="approveBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
-                            <wm-button class="btn btn-danger" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
+                            <wm-button class="btn btn-primary" type="button" caption="Approve" name="approveBtn" on-click="approveBtnClick($event, $scope, item, currentItemWidgets)" margin="unset .5em"></wm-button>
+                            <wm-button class="btn btn-secondary" type="button" caption="Reject" name="rejectBtn" on-click="rejectBtnClick($event, $scope, item, currentItemWidgets)"></wm-button>
                         </wm-buttongroup>
                     </wm-panel>
                 </wm-listtemplate>
