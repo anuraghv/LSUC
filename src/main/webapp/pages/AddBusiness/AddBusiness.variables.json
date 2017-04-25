@@ -1,4 +1,18 @@
 {
+  "goToPage_Business" : {
+    "_id" : "wm-goToPage_Business-wm.NavigationVariable-1493123496110",
+    "name" : "goToPage_Business",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Business",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "LSUCBusinessaddressData" : {
     "_id" : "wm-LSUCBusinessaddressData-wm.LiveVariable-1492692675324",
     "name" : "LSUCBusinessaddressData",

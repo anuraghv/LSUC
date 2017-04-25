@@ -18,17 +18,19 @@ Application.$controller("AddBusinessPageController", ["$scope", function($scope)
         $data.businessaddresses = [$scope.Widgets.addressForm.dataoutput];
     };
 
+
+    $scope.businessFormSuccess = function($event, $operation, $data) {
+        $scope.Variables.goToPage_Business.invoke({
+            'data': {
+                'businessId': $data.pk
+            }
+        });
+    };
+
 }]);
 
 
 Application.$controller("businessFormController", ["$scope",
-    function($scope) {
-        "use strict";
-        $scope.ctrlScope = $scope;
-    }
-]);
-
-Application.$controller("liveform2Controller", ["$scope",
     function($scope) {
         "use strict";
         $scope.ctrlScope = $scope;
