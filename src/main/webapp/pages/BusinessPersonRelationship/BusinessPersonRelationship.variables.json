@@ -1525,5 +1525,28 @@
     } ],
     "filterFields" : { },
     "package" : "com.lsuc.lsuc.Businesspersonrelationship"
+  },
+  "personData" : {
+    "_id" : "wm-personData-wm.LiveVariable-1493125426727",
+    "name" : "personData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Person",
+    "isList" : false,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "transformationRequired" : false,
+    "liveSource" : "LSUC",
+    "ignoreCase" : true,
+    "matchMode" : "start",
+    "filterFields" : { },
+    "package" : "com.lsuc.lsuc.Person"
   }
 }

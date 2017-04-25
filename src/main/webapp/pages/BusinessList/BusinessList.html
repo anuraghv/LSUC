@@ -21,16 +21,16 @@
                             placeholder="Type  Business Number" matchmode="start"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="3" name="gridcolumn9">
-                            <wm-filter-field name="businesstype" field="businesstype" displayname="Business Type" widget="select" lookup-type="Businesstype" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Businesstype" is-range="false"
-                            type="integer" is-primary-key="false" generator="assigned" show="true" key="businesstype" placeholder="Select Business Type" matchmode="start" datafield="key" displayfield="value"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="3" name="gridcolumn7">
-                            <wm-filter-field name="businesslegaltype" field="businesslegaltype" related-field="Businesslegaltype" widget="select" is-range="false" lookup-type="Businesslegaltype" lookup-field="shortNameEnglish" show="true" is-related="true"
-                            related-entity-name="Businesslegaltype" type="integer" is-primary-key="false" generator="assigned" matchmode="start" displayname="Business Legal Type" key="businesslegaltype" placeholder="Select Business Legal Type"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="3" name="gridcolumn11">
                             <wm-filter-field name="businessName" field="businessName" displayname="Name" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="businessName" placeholder="Type Business Name"
                             matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn7">
+                            <wm-filter-field name="businesstype" field="businesstype" displayname="Business Type" widget="select" lookup-type="Businesstype" lookup-field="shortNameEnglish" is-related="true" related-entity-name="Businesstype" is-range="false"
+                            type="string" is-primary-key="false" generator="assigned" show="true" key="businesstype" placeholder="Select Business Type" matchmode="start" datafield="key" displayfield="value"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn11">
+                            <wm-filter-field name="businesslegaltype" field="businesslegaltype" related-field="Businesslegaltype" widget="select" is-range="false" lookup-type="Businesslegaltype" lookup-field="shortNameEnglish" show="true" is-related="true"
+                            related-entity-name="Businesslegaltype" type="string" is-primary-key="false" generator="assigned" matchmode="start" displayname="Business Legal Type" key="businesslegaltype" placeholder="Select Business Legal Type"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow6">
@@ -39,11 +39,8 @@
                             displayname="Number of Employees" key="numberOfEmployees" placeholder="Enter Min" max-placeholder="Enter Max" width="110"></wm-filter-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn name="gridcolumn2" columnwidth="3">
-                            <wm-filter-field name="custom" field="custom" displayname="City" show="true" type="string" widget="text" is-range="false" key="custom" placeholder="Type City" disabled="false" matchmode="start" inputtype="text"></wm-filter-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="3" name="gridcolumn9_1">
                             <wm-filter-field name="businessstatus" field="businessstatus" related-field="Businessstatus" widget="select" is-range="false" lookup-type="Businessstatus" lookup-field="shortNameEnglish" show="true" is-related="true" related-entity-name="Businessstatus"
-                            type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="number" displayname="Businessstatus" key="businessstatus" placeholder="Select Business Status"></wm-filter-field>
+                            type="integer" is-primary-key="false" generator="assigned" matchmode="start" displayname="Business Status" key="businessstatus" placeholder="Select Business Status"></wm-filter-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
@@ -61,7 +58,7 @@
                 <wm-grid-column binding="businesstype.shortNameEnglish" caption="Business Type" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Businesstype"></wm-grid-column>
                 <wm-grid-column binding="numberOfEmployees" caption="No. of Employees" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-grid-column>
                 <wm-grid-column binding="businessstatus.shortNameEnglish" caption="Status" type="string" widget-type="icon" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Businessstatus">
-                    <wm-icon caption="{{row.getProperty('businessstatus.shortNameEnglish')}}" iconclass="wi wi-star-border" iconposition="left" class="" data-ng-class=""></wm-icon>
+                    <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.businessstatus.shortNameEnglish  == 'Active'}"></wm-icon>
                 </wm-grid-column>
             </wm-grid>
             <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.businessFilter.result" navigation="Basic" name="businessCardList" show="bind:Widgets.viewSwitch.datavalue === 'grid'"

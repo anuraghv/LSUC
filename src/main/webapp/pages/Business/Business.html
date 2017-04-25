@@ -10,22 +10,23 @@
                         <wm-container name="container1" margin="unset unset 1em unset" padding="1em" class="panel">
                             <wm-layoutgrid name="layoutgrid2">
                                 <wm-gridrow name="gridrow2">
-                                    <wm-gridcolumn columnwidth="8" name="gridcolumn3">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn3">
                                         <wm-label padding="unset 1em" name="isActive" caption="bind:Variables.Business.firstRecord.isActive === 'Y' ? &quot;ACTIVE&quot; : &quot;&quot;" class="label-success"></wm-label>
-                                        <wm-label padding="unset 0.5em" name="businessName" caption="bind:Variables.Business.firstRecord.businessName + ' (' + Variables.Business.firstRecord.alsoKnownAs + ')'" class="h3" margin="4px unset 0px unset"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="businessName" caption="bind:Variables.Business.firstRecord.businessName" class="h3" margin="4px unset 0px unset"></wm-label>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="4" name="gridcolumn4" horizontalalign="left">
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn4" horizontalalign="left">
                                         <wm-label padding="unset 0.5em" name="label3" class="p text-muted" caption="Business Type"></wm-label>
-                                        <wm-label padding="unset 0.5em" name="businessType" caption="bind:Variables.Business.firstRecord.businesstype.code + ' - ' + Variables.Business.firstRecord.businesstype.shortNameEnglish"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="businessType" caption="bind:Variables.Business.firstRecord.businesstype.shortNameEnglish"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.Business.firstRecord.businesstype.longNameEnglish" class="p" margin="4px unset 0px unset" name="label9"></wm-label>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
-                                <wm-gridrow name="gridrow3">
-                                    <wm-gridcolumn columnwidth="8" name="gridcolumn5">
+                                <wm-gridrow name="gridrow3" padding="1em unset unset unset">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn5">
                                         <wm-label padding="unset 0.5em" name="label6" caption="bind:Variables.Business.firstRecord.businessNumber" class="p text-muted"></wm-label>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="4" name="gridcolumn6">
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn6">
                                         <wm-label padding="unset 0.5em" class="p text-muted" caption="Business Legal Type" name="label7"></wm-label>
-                                        <wm-label padding="unset 0.5em" caption="bind:Variables.Business.firstRecord.businesslegaltype.code + ' - ' + Variables.Business.firstRecord.businesslegaltype.shortNameEnglish" name="businessLegalType"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.Business.firstRecord.businesslegaltype.shortNameEnglish" name="businessLegalType"></wm-label>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
@@ -36,7 +37,7 @@
                         <wm-grid editmode="inline" title="Organizational Unit" dataset="bind:Variables.LSUCOrganizationalunitData.dataSet" navigation="None" name="businessOrgUnitGrid" class="panel-default" gridclass="table-striped" iconclass="wi wi-business-center">
                             <wm-grid-column binding="organizationalunitName" caption="Unit" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="organizationalunittype.shortNameEnglish" caption="Type" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Organizationalunittype"></wm-grid-column>
-                            <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="15%" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
                             <wm-grid-action key="addNewRow" display-name="Add Organisational Unit" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Organisational Unit" action="addNewRow()" shortcutkey="" disabled="false"
                             position="header"></wm-grid-action>
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
