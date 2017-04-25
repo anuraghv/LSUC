@@ -5,10 +5,10 @@
         <wm-page-content columnwidth="12" name="mainContent" padding="0px 0px unset 0px">
             <wm-layoutgrid name="layoutgrid12">
                 <wm-gridrow name="gridrow2" class="bg-primary" padding="unset 1em">
-                    <wm-gridcolumn columnwidth="2" name="gridcolumn5" padding="1em unset unset unset">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn5" padding="1em unset unset unset" class="col-md-2">
                         <wm-composite name="composite1">
-                            <wm-label class="col-md-3 control-label" name="label3" caption="Search" fontunit="em" padding="0.5em .5em unset unset" textalign="left"></wm-label>
-                            <wm-container class="col-md-9" name="container2">
+                            <wm-label class="col-md-3 col-sm-5" name="label3" caption="Search" fontunit="em" padding="0.5em .2em unset unset" textalign="left" fontweight="bold"></wm-label>
+                            <wm-container class="col-md-9 col-sm-7" name="container2">
                                 <wm-select name="filterOption" dataset="Licensee, Business" datavalue="Licensee"></wm-select>
                             </wm-container>
                         </wm-composite>
@@ -24,14 +24,19 @@
                         <wm-button class="btn-secondary" caption="Add Business" type="button" margin="unset unset unset 0.5em" name="button1" iconclass="wi wi-business" on-click="Variables.goToPage_AddBusiness.invoke()"></wm-button>
                     </wm-gridcolumn>
                 </wm-gridrow>
-                <wm-gridrow name="gridrow14" padding="1em unset unset unset">
-                    <wm-gridcolumn columnwidth="9" name="gridcolumn36" padding="unset 1em">
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn36" padding="1em 1em unset 1em">
                         <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet"
                         navigation="On-Demand" name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)" padding="1em 1em unset 1em">
                             <wm-listtemplate layout="inline" name="listtemplate2">
                                 <wm-panel name="panel3" collapsible="true" expanded="false" subheading="bind:'License Number: '+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber + ' on '+(Variables.pendingApprovals.dataSet[$i].createdDate | toDate: 'dd MMM yyyy') +' by '+Variables.pendingApprovals.dataSet[$i].createdBy"
                                 title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" iconclass="" class="panel-secondary" badgetype="success" closable="false">
                                     <wm-layoutgrid class="new-block app-form panel" name="newlayoutgrid">
+                                        <wm-gridrow name="gridrow9_1">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn28_1" horizontalalign="right">
+                                                <wm-label padding="unset 0.5em" name="label23" caption="NEW" class="label-success small"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
                                         <wm-gridrow name="gridrow6">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn17_1">
                                                 <wm-label caption="Class" class="control-label" width="100%" name="label12_1"></wm-label>
@@ -47,9 +52,7 @@
                                                 <wm-label caption="Effective From" class="control-label" width="100%" name="label16_1"></wm-label>
                                                 <wm-label caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveFromDate | toDate: 'dd MMM yyyy'" class="form-control-static" name="label17_2"></wm-label>
                                             </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="3" name="gridcolumn20_1" horizontalalign="right">
-                                                <wm-label padding="unset 0.5em" name="label23" caption="NEW" class="label-success small"></wm-label>
-                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn20_1" horizontalalign="right"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow7_1">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn21_1">
@@ -63,6 +66,11 @@
                                         </wm-gridrow>
                                     </wm-layoutgrid>
                                     <wm-layoutgrid name="oldlayoutgrid" class="old-block app-form  gray" show="bind:Variables.pendingApprovals.dataSet[$i].status == 'Updated'">
+                                        <wm-gridrow name="gridrow10">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn32" horizontalalign="right">
+                                                <wm-label padding="unset 0.5em" name="label22" caption="OLD" class="label-default small"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
                                         <wm-gridrow name="gridrow7">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn16">
                                                 <wm-label name="label9_1" caption="Class" class="control-label" width="100%"></wm-label>
@@ -78,9 +86,7 @@
                                                 <wm-label caption="Effective From" class="control-label" width="100%" name="label13"></wm-label>
                                                 <wm-label name="label14" caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveFromDate | toDate: 'dd MMM yyyy'" class="form-control-static"></wm-label>
                                             </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="3" name="gridcolumn17" horizontalalign="right">
-                                                <wm-label padding="unset 0.5em" name="label22" caption="OLD" class="label-default small"></wm-label>
-                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn17" horizontalalign="right"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow8">
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn20">
@@ -102,7 +108,7 @@
                             </wm-listtemplate>
                         </wm-livelist>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="3" name="gridcolumn37" padding="unset 1em">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn37" padding="1em 1em unset 1em">
                         <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-info" dataset="bind:Variables.PersonHistoryData.dataSet"
                         navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item" orderby="timeStamp:desc" pagesize="5" on-tap="recentAcitivityLiveListTap($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate1">

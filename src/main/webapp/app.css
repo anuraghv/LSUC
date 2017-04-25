@@ -5,10 +5,25 @@
     .app-logo {
         height: 30px !important;
     }
+    .wm-app .app-page-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .wm-app .app-content {
+        height: calc(100% - 152px);
+    }
 }
 @media only screen and (max-width: 800px) and (min-width: 481px) {
     .app-logo {
         height: 30px !important;
+    }
+    .wm-app .app-header+.app-content,
+    .wm-app .app-header+.app-top-nav {
+        margin-top: 50pt;
+    }
+    .wm-app .app-top-nav+.app-content {
+        Ignore: a;
+        height: calc(100% - 11.5em);
     }
 }
 .gray {
@@ -66,6 +81,15 @@
     position: absolute;
     top: 1em;
     z-index: 1;
+}
+{} @media only screen and (max-width: 480px) and (min-width: 299px) {
+    .btn-action-top .btn-caption,
+    .panel-actions .app-button .btn-caption {
+        display: none;
+    }
+    .btn-action-top {
+        padding: 0 !important;
+    }
 }
 /***************************History page styles****************************************/
 
