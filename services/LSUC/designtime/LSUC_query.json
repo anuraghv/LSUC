@@ -3,10 +3,10 @@
     "name" : "PendingLicenseeStatusReports",
     "description" : "Get Excel reports for Pending Licensee Status Reports",
     "version" : "V2",
-    "queryString" : "select licensee.person.firstName as name,\n    licensee.licenseeNumber as licNum ,\n    licensee.licencetype.shortNameEnglish as LicType,\n    licensee.licenseDate as LicDate,\n    licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,\n    licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,\n    newEffectiveFromDate as New_Effective_from_Date,\n    newEffectiveToDate as New_Effective_to_Date ,\n    oldEffectiveFromDate as Old_Effective_From_Date, \n    oldEffectiveToDate as Old_Effective_to_Date,\n    createdDate as Created_Date\nfrom LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status",
-    "countQueryString" : null,
+    "queryString" : "select licensee.person.firstName as name,\n    licensee.licenseeNumber as licNum ,\n    licensee.licencetype.shortNameEnglish as LicType,\n    licensee.licenseDate as LicDate,\n    licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,\n    licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,\n    newEffectiveFromDate as New_Effective_from_Date,\n    newEffectiveToDate as New_Effective_to_Date ,\n    oldEffectiveFromDate as Old_Effective_From_Date, \n    oldEffectiveToDate as Old_Effective_to_Date,\n    createdDate as Created_Date from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status",
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status",
     "nativeSql" : false,
-    "fetchCount" : false,
+    "fetchCount" : true,
     "type" : "SELECT",
     "parameters" : [ {
       "name" : "startDate",
