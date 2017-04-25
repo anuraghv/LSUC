@@ -6,33 +6,33 @@
         <wm-page-content columnwidth="10" name="page_content1" padding="0px 0px unset 0px">
             <wm-layoutgrid name="layoutgrid12">
                 <wm-gridrow name="gridrow2" class="bg-primary" padding=".5em 1em">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn6" padding="1em unset .5em unset" horizontalalign="left" class="col-md-1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn6" padding="1em unset .5em unset" horizontalalign="left">
                         <wm-label padding="unset 0.5em" name="label3" caption="Select" margin="unset unset 0px unset" fontweight="bold"></wm-label>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="9" name="gridcolumn5" padding=".5em unset" horizontalalign="left" class="col-xs-12 col-md-4">
-                        <wm-container name="container1" display="inline-block" class="col-xs-6" horizontalalign="left">
-                            <wm-date name="fromDate" placeholder="From Date"></wm-date>
-                        </wm-container>
-                        <wm-container name="container2" display="inline-block" class="col-xs-6">
-                            <wm-date name="toDate" placeholder="To Date"></wm-date>
-                        </wm-container>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn4" padding=".5em unset unset unset">
+                        <wm-date name="fromDate" placeholder="From Date" class="report-date"></wm-date>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="2" name="gridcolumn5_1" padding=".5em unset unset unset" horizontalalign="left" class="col-xs-12 col-md-7">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn5" padding=".5em unset" horizontalalign="left">
+                        <wm-date name="toDate" placeholder="To Date" class="report-date"></wm-date>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn5_1" padding=".5em unset unset unset" horizontalalign="left">
                         <wm-button class="btn-secondary" caption="View Report" type="button" name="getExpirationReportBtn" on-click="Variables.LSUCExecuteExpirationStatus.invoke()"></wm-button>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
-            <wm-grid title="" dataset="bind:Variables.LSUCExecuteExpirationStatus.dataSet" navigation="Basic" name="expirationReportGrid" exportformat="EXCEL,CSV" navigationalign="right" exportdatasize="500">
-                <wm-grid-column binding="licenseDate" caption="License Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="address" caption="Address" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="name" caption="Name" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="effectiveToDate" caption="Effective To Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="licenseType" caption="License Type" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="class_" caption="Class" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="practiceGroup" caption="Practice Group" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="effectiveFromDate" caption="Effective From Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-            </wm-grid>
+            <wm-container name="container3" padding="1em 1em unset 1em">
+                <wm-grid title="Licensee Expiry Report" dataset="bind:Variables.LSUCExecuteExpirationStatus.dataSet" navigation="Basic" name="expirationReportGrid" exportformat="EXCEL,CSV" navigationalign="right" exportdatasize="500" iconclass="wi wi-trending-down fa-2x">
+                    <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="licenseType" caption="License Type" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="class_" caption="Class" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="practiceGroup" caption="Practice Group" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="name" caption="Name" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="address" caption="Address" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="licenseDate" caption="License Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="effectiveFromDate" caption="Effective From Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="effectiveToDate" caption="Effective To Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                </wm-grid>
+            </wm-container>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

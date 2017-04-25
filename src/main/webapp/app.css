@@ -12,6 +12,9 @@
     .wm-app .app-content {
         height: calc(100% - 152px);
     }
+    .wm-app .app-date.report-date {
+        max-width: 100%;
+    }
 }
 @media only screen and (max-width: 800px) and (min-width: 481px) {
     .app-logo {

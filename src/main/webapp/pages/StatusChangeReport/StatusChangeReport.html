@@ -18,32 +18,34 @@
                         <wm-label padding="unset 0.5em" name="label3" caption="From Date"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="2" name="gridcolumn5">
-                        <wm-date name="fromDate" placeholder="dd MMM yyyy"></wm-date>
+                        <wm-date name="fromDate" placeholder="dd MMM yyyy" class="report-date"></wm-date>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn5_1">
                         <wm-label padding="unset 0.5em" name="label4" caption="To Date"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="2" name="gridcolumn22_1">
-                        <wm-date name="toDate" datavalue="CURRENT_DATE" placeholder="dd MMM yyyy"></wm-date>
+                        <wm-date name="toDate" datavalue="CURRENT_DATE" placeholder="dd MMM yyyy" class="report-date"></wm-date>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn4" horizontalalign="left">
                         <wm-button class="btn-secondary" caption="View Report" type="button" margin="unset 0.5em" name="button1" on-click="Variables.LSUCExecutePendingLicenseeStatusReports.invoke()"></wm-button>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
-            <wm-grid title="" dataset="bind:Variables.LSUCExecutePendingLicenseeStatusReports.dataSet" navigation="Basic" name="pendingStatusGrid" exportdatasize="1000" exportformat="EXCEL,CSV">
-                <wm-grid-column binding="licNum" caption="License Number" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="newEffectiveFromDate" caption="New Effective From Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="newPracticeGroup" caption="New Practice Group" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="name" caption="Name" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="licType" caption="License Type" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="oldEffectiveToDate" caption="Old Effective To Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="licDate" caption="License Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="newEffectiveToDate" caption="New Effective To Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="oldEffectiveFromDate" caption="Old Effective From Date" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="newClass" caption="New Class" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                <wm-grid-column binding="createdDate" caption="Created Date" show="true" readonly="undefined"></wm-grid-column>
-            </wm-grid>
+            <wm-container name="container2" padding="1em 1em unset 1em">
+                <wm-grid title="License Change Report" dataset="bind:Variables.LSUCExecutePendingLicenseeStatusReports.dataSet" navigation="Basic" name="pendingStatusGrid" exportdatasize="1000" exportformat="EXCEL,CSV" iconclass="wi wi-file-text">
+                    <wm-grid-column binding="licNum" caption="License Number" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="licType" caption="License Type" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="name" caption="Name" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="newPracticeGroup" caption="New Practice Group" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="newEffectiveFromDate" caption="New Effective From Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="newEffectiveToDate" caption="New Effective To Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="oldEffectiveFromDate" caption="Old Effective From Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="oldEffectiveToDate" caption="Old Effective To Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="licDate" caption="License Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="newClass" caption="New Class" type="string" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                    <wm-grid-column binding="createdDate" caption="Created Date" type="string" datepattern="dd MMM yyyy" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                </wm-grid>
+            </wm-container>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>

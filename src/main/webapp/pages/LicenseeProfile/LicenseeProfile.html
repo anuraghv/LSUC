@@ -9,7 +9,7 @@
                 <wm-gridrow name="gridrow39_3">
                     <wm-gridcolumn columnwidth="7" name="gridcolumn67_2" padding="unset 1em">
                         <wm-liveform novalidate="false" errormessage="" title="BASIC INFORMATION" iconclass="wi wi-person" defaultmode="View" dataset="bind:Variables.LSUCPersonData.dataSet" captionalign="left" captionposition="top" name="editPersonForm" formdata="bind:Variables.LSUCPersonData.firstRecord"
-                        on-success="Widgets.editPersonForm.cancel()">
+                        on-success="Widgets.editPersonForm.cancel()" class="panel-default">
                             <wm-container name="container1_2" horizontalalign="right" margin="-3.5em unset unset unset" show="bind: !Widgets.editPersonForm.isUpdateMode">
                                 <wm-button type="button" margin="unset 0.5em" name="editPersonBtn" iconclass="wi wi-mode-edit fa-2x" caption="Edit" class="btn-link" on-click="editPersonBtnClick($event, $scope)"></wm-button>
                             </wm-container>
