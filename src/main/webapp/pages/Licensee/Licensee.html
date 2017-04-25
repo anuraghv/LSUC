@@ -25,7 +25,7 @@
                 </wm-listtemplate>
             </wm-livelist>
             <wm-liveform novalidate="false" errormessage="" title="Licensee Details" iconclass="" defaultmode="View" dataset="bind:Variables.LSUCLicenseeData.dataSet" captionalign="left" captionposition="top" name="addLicensee" on-beforeservicecall="addLicenseeBeforeservicecall($event, $operation, $data)"
-            show="bind:Widgets.addLicensee.isUpdateMode" on-success="Widgets.addLicensee.cancel()" class="panel-default">
+            show="bind:Widgets.addLicensee.isUpdateMode" on-success="Widgets.addLicensee.cancel();addLicenseeSuccess($event, $operation, $data)" class="panel-default">
                 <wm-layoutgrid columns="3" name="layoutgrid2">
                     <wm-gridrow name="gridrow2">
                         <wm-gridcolumn columnwidth="4" name="gridcolumn3">
@@ -33,7 +33,8 @@
                             placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="4" name="gridcolumn4">
-                            <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
+                            <wm-form-field name="licenseDate" displayname="License Date" show="true" primary-key="false" generator="assigned" key="licenseDate" type="date" readonly="false" required="true" widget="date" placeholder="Select date" outputformat="yyyy-MM-dd"
+                            datepattern="dd MMM yyyy"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="4" name="gridcolumn5">
                             <wm-form-field name="citizenship" displayname="Citizenship" show="true" primary-key="false" generator="assigned" key="citizenship" type="list" is-related="true" readonly="false" required="true" widget="select" placeholder="Select value"
@@ -52,12 +53,12 @@
                                 <wm-layoutgrid columns="3" name="layoutgrid4" class="gray">
                                     <wm-gridrow name="gridrow14">
                                         <wm-gridcolumn columnwidth="3" name="gridcolumn31_1" padding="unset unset unset 1em">
-                                            <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="yyyy-MM-dd"
-                                            outputformat="yyyy-MM-dd" datepattern="yyyy-MM-dd"></wm-form-field>
+                                            <wm-form-field name="effectiveFromDate" displayname="Effective From Date" show="true" primary-key="false" generator="assigned" key="effectiveFromDate" type="date" readonly="false" required="true" widget="date" placeholder="dd MMM yyyy"
+                                            outputformat="yyyy-MM-dd" datepattern="dd MMM yyyy"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="3" name="gridcolumn27">
-                                            <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="yyyy-MM-dd"
-                                            outputformat="yyyy-MM-dd" mindate="bind:Widgets.effectiveFromDate.datavalue"></wm-form-field>
+                                            <wm-form-field name="effectiveToDate" displayname="Effective To Date" show="true" primary-key="false" generator="assigned" key="effectiveToDate" type="date" readonly="false" required="false" widget="date" placeholder="dd MMM yyyy"
+                                            outputformat="yyyy-MM-dd" mindate="bind:Widgets.effectiveFromDate.datavalue" datepattern="dd MMM yyyy"></wm-form-field>
                                         </wm-gridcolumn>
                                         <!--  <wm-gridcolumn columnwidth="2" name="gridcolumn28_1"><wm-label padding="unset 0.5em" name="label3" caption="Class"></wm-label><wm-select name="dummyClass" dataset="bind:Variables.LSUCClassData.dataSet" datafield="All Fields" displayfield="shortNameEnglish" placeholder="Select Class" required="true"></wm-select></wm-gridcolumn>-->
                                         <wm-gridcolumn columnwidth="2" name="gridcolumn34">

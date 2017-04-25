@@ -27,7 +27,8 @@
                         </wm-panel>
                     </wm-listtemplate>
                 </wm-livelist>
-                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel panel-default media-list" dataset="bind:Variables.licenseStatusData.dataSet" navigation="None" name="licenseStatusList" title="" padding="1em 1em unset 1em">
+                <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel panel-default media-list" dataset="bind:Variables.licenseStatusData.dataSet" navigation="None" name="licenseStatusList" title="" padding="1em 1em unset 1em"
+                nodatamessage="No Approved Licensee status found for the licensee.">
                     <wm-listtemplate layout="inline" name="listtemplate2_1">
                         <wm-liveform novalidate="false" errormessage="Licensee Status was not updated" title="bind:Widgets.licenseStatusList.currentItem.classpraticegroup.classEntity.shortNameEnglish+' - '+Widgets.licenseStatusList.currentItem.classpraticegroup.practicegroup.shortNameEnglish"
                         iconclass="" defaultmode="View" dataset="bind:Variables.licenseStatusData.dataSet" captionalign="left" captionposition="top" name="licenseStatusForm" formdata="bind:Widgets.licenseStatusList.currentItem" on-beforeservicecall="licenseStatusFormBeforeservicecall1($event, $operation, $data, item, currentItemWidgets)"
