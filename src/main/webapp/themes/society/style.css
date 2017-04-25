@@ -44,9 +44,6 @@
     /***popover class: removing the radius*******/
     /***Slider widget styling*******************/
 }
-.wm-app .app-logo-white {
-    display: none;
-}
 .wm-app html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -7251,6 +7248,11 @@ button.wm-app .close {
 .wm-app .app-mobile-header a {
     color: #3b616c;
 }
+.wm-app .app-header a.app-header-action .badge,
+.wm-app .app-mobile-header a.app-header-action .badge {
+    font-size: 10px;
+    background-color: red;
+}
 .wm-app .app-header .input-group-addon,
 .wm-app .app-mobile-header .input-group-addon {
     color: #777;
@@ -7819,12 +7821,12 @@ button.wm-app .close {
     background-color: #3b616c;
     color: #fff;
 }
-.wm-app .app-datanavigator .pagination.basic li:hover a,
-.wm-app .app-datanavigator .pagination.basic li:focus a,
-.wm-app .app-datanavigator .pagination.basic li:hover a:hover,
-.wm-app .app-datanavigator .pagination.basic li:focus a:hover,
-.wm-app .app-datanavigator .pagination.basic li:hover a:focus,
-.wm-app .app-datanavigator .pagination.basic li:focus a:focus {
+.wm-app .app-datanavigator .pagination.basic li:hover:not(.pagination-page) a,
+.wm-app .app-datanavigator .pagination.basic li:focus:not(.pagination-page) a,
+.wm-app .app-datanavigator .pagination.basic li:hover:not(.pagination-page) a:hover,
+.wm-app .app-datanavigator .pagination.basic li:focus:not(.pagination-page) a:hover,
+.wm-app .app-datanavigator .pagination.basic li:hover:not(.pagination-page) a:focus,
+.wm-app .app-datanavigator .pagination.basic li:focus:not(.pagination-page) a:focus {
     color: inherit;
     background-color: rgba(0, 0, 0, 0.3);
     border: 0;
@@ -8363,6 +8365,10 @@ button.wm-app .close {
     padding: 1.2em;
     overflow: auto !important;
 }
+.wm-app .app-date .btn-date .app-icon,
+.wm-app .app-datetime .btn-date .app-icon {
+    font-size: 1.6em;
+}
 .wm-app .app-date strong,
 .wm-app .app-datetime strong {
     font-weight: normal;
@@ -8598,4 +8604,19 @@ button.wm-app .close {
 }
 .wm-app input[type='range'] {
     color: #3b616c;
+}
+.wm-app .app-logo-white {
+    display: none;
+}
+.wm-app .text-style-S {
+    font-size: 0.8em;
+}
+.wm-app .text-style-M {
+    font-size: 1em;
+}
+.wm-app .text-style-L {
+    font-size: 1.2em;
+}
+.wm-app .h2 {
+    margin-top: 0 !important;
 }

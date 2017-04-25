@@ -47,12 +47,6 @@
     /***fileuploader widget styling*******************/
     /***Slider widget styling*******************/
 }
-.wm-app .app-logo-black {
-    display: none !important;
-}
-.wm-app .app-logo-white {
-    display: block !important;
-}
 .wm-app html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -7018,7 +7012,7 @@ button.wm-app .close {
 .wm-app .label-info,
 .wm-app .label-warning,
 .wm-app .label-danger {
-    color: #fff;
+    color: #000;
 }
 .wm-app .text-danger {
     color: #ef6262;
@@ -7589,6 +7583,7 @@ button.wm-app .close {
     color: #fff;
     text-shadow: none;
     font-family: 'Robotomedium', Arial, sans-serif;
+    background-color: #000;
 }
 .wm-app .app-left-panel .nav li.app-nav-item a:hover,
 .wm-app .app-right-panel .nav li.app-nav-item a:hover,
@@ -8084,12 +8079,12 @@ button.wm-app .close {
     background-color: #0f6564;
     color: #000;
 }
-.wm-app .app-datanavigator .pagination.basic li:hover a,
-.wm-app .app-datanavigator .pagination.basic li:focus a,
-.wm-app .app-datanavigator .pagination.basic li:hover a:hover,
-.wm-app .app-datanavigator .pagination.basic li:focus a:hover,
-.wm-app .app-datanavigator .pagination.basic li:hover a:focus,
-.wm-app .app-datanavigator .pagination.basic li:focus a:focus {
+.wm-app .app-datanavigator .pagination.basic li:hover:not(.pagination-page) a,
+.wm-app .app-datanavigator .pagination.basic li:focus:not(.pagination-page) a,
+.wm-app .app-datanavigator .pagination.basic li:hover:not(.pagination-page) a:hover,
+.wm-app .app-datanavigator .pagination.basic li:focus:not(.pagination-page) a:hover,
+.wm-app .app-datanavigator .pagination.basic li:hover:not(.pagination-page) a:focus,
+.wm-app .app-datanavigator .pagination.basic li:focus:not(.pagination-page) a:focus {
     color: inherit;
     background-color: rgba(214, 214, 214, 0.5);
     border: 0;
@@ -9018,4 +9013,10 @@ button.wm-app .close {
 }
 .wm-app input[type='range'] {
     color: #19a8a6;
+}
+.wm-app .app-logo-black {
+    display: none !important;
+}
+.wm-app .app-logo-white {
+    display: block !important;
 }

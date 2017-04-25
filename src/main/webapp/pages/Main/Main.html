@@ -7,7 +7,7 @@
                 <wm-gridrow name="gridrow2" class="bg-primary" padding="unset 1em">
                     <wm-gridcolumn columnwidth="2" name="gridcolumn5" padding="1em unset unset unset">
                         <wm-composite name="composite1">
-                            <wm-label class="col-md-3 control-label" name="label3" caption="Search" fontunit="em" padding="0.5em .5em unset unset" textalign="left"></wm-label>
+                            <wm-label class="col-md-3" name="label3" caption="Search" fontunit="em" padding="0.5em .5em unset unset" textalign="left"></wm-label>
                             <wm-container class="col-md-9" name="container2">
                                 <wm-select name="filterOption" dataset="Licensee, Business" datavalue="Licensee"></wm-select>
                             </wm-container>
@@ -48,7 +48,7 @@
                                                 <wm-label caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveFromDate | toDate: 'dd MMM yyyy'" class="form-control-static" name="label17_2"></wm-label>
                                             </wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn20_1" horizontalalign="right">
-                                                <wm-label padding="unset 0.5em" name="label23" caption="NEW" class="label-success small"></wm-label>
+                                                <wm-label padding=".2em 0.5em" name="label23" caption="NEW" class="label-success small"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow7_1">
@@ -79,7 +79,7 @@
                                                 <wm-label name="label14" caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveFromDate | toDate: 'dd MMM yyyy'" class="form-control-static"></wm-label>
                                             </wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="3" name="gridcolumn17" horizontalalign="right">
-                                                <wm-label padding="unset 0.5em" name="label22" caption="OLD" class="label-default small"></wm-label>
+                                                <wm-label padding=".2em 0.5em" name="label22" caption="OLD" class="label-default small"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow8">
@@ -107,7 +107,7 @@
                         navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item" orderby="timeStamp:desc" pagesize="5" on-tap="recentAcitivityLiveListTap($event, $scope)">
                             <wm-listtemplate layout="inline" name="listtemplate1">
                                 <wm-container class="media-left" name="container2_1">
-                                    <wm-container width="24" height="24" name="container3" class="btn-rounded btn btn-primary" padding="unset unset unset 2px">
+                                    <wm-container width="24" height="24" name="container3" class="btn-rounded btn btn-primary" padding="1px">
                                         <wm-label caption="bind:Variables.PersonHistoryData.dataSet[$i].shortcutName" class="label" name="labelShortCutName" fontsize="10" color="#ffffff"></wm-label>
                                     </wm-container>
                                 </wm-container>

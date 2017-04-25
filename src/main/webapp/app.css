@@ -14,23 +14,6 @@
 .gray {
     background-color: rgba(0, 0, 0, 0.05);
 }
-/***text size specific function***/
-
-.text-style-S {
-    font-size: 0.8em;
-}
-.text-style-M {
-    font-size: 1em;
-}
-.text-style-L {
-    font-size: 1.2em;
-}
-/******header special classes*****/
-
-a.app-header-action .badge {
-    font-size: 10px;
-    background-color: red;
-}
 .icon-fixed {
     float: right;
     position: absolute;
@@ -83,9 +66,6 @@ a.app-header-action .badge {
     position: absolute;
     top: 1em;
     z-index: 1;
-}
-.wm-app .h2 {
-    margin-top: 0 !important;
 }
 /***************************History page styles****************************************/
 
