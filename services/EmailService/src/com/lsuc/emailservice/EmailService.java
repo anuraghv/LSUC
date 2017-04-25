@@ -97,7 +97,6 @@ public class EmailService {
             message.saveChanges();
             tr.sendMessage(message, message.getAllRecipients());
             tr.close();
-
             return "Mail sent successfully.";
 
         } catch (MessagingException e) {
