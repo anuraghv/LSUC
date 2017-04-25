@@ -93,7 +93,7 @@
                 <wm-container name="container2_1" margin="1em unset unset unset">
                     <wm-button class="btn-link btn-action-top" caption="Add" type="button" name="addInsBtn" iconclass="wi wi-plus fa-2x" on-click="addInsBtnClick($event, $scope)"></wm-button>
                     <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.LicenseeInsurance.dataSet" navigation="None" name="insuranceList" class="panel panel-default media-list" title="Insurance"
-                    padding="1em 1em unset 1em">
+                    padding="1em 1em unset 1em" nodatamessage="No Insurance Information found for the licensee.">
                         <wm-listtemplate layout="inline" name="listtemplate2">
                             <wm-panel iconclass="" autoclose="outsideClick" title="bind:Variables.LicenseeInsurance.dataSet.data[$i].insurancecoveragetype.code+&quot;-&quot;+Variables.LicenseeInsurance.dataSet.data[$i].insurancecoveragetype.shortNameEnglish"
                             name="panel1" content="insurancePolicy" expanded="false" collapsible="true" class="panel-secondary">
