@@ -61,11 +61,12 @@
                             </wm-grid-column>
                             <wm-grid-column binding="contactNumber" caption="Number" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
                             <wm-grid-column binding="extension" caption="Extension" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+                            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" width="20%" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N"
+                            readonly="false">
                                 <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.getProperty('isDisplayedOnDirectory') === 'Y'}"></wm-icon>
                             </wm-grid-column>
-                            <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"
-                            related-entity-name="Business" readonly="false"></wm-grid-column>
+                            <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" defaultvalue="bind:pageParams.businessId" show="false" related-entity-name="Business"
+                            readonly="false"></wm-grid-column>
                             <wm-grid-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
                             <wm-grid-action key="addNewRow" display-name="Add Phone" show="true" class="btn-link" iconclass="wi wi-plus" title="Add Phone" action="addNewRow()" shortcutkey="" disabled="false" position="header"></wm-grid-action>
                             <wm-grid-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-grid-row-action>
@@ -77,7 +78,8 @@
                                 <wm-label caption="{{row.emailpurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
                             </wm-grid-column>
                             <wm-grid-column binding="emailAddress" caption="Email" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
-                            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+                            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" width="20%" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N"
+                            readonly="false">
                                 <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.getProperty('isDisplayedOnDirectory') === 'Y'}"></wm-icon>
                             </wm-grid-column>
                             <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"
@@ -97,7 +99,7 @@
                             show="true" related-entity-name="Socialmediapurpose" readonly="false">
                                 <wm-label caption="{{row.socialmediapurpose.shortNameEnglish}}" class="" data-ng-class=""></wm-label>
                             </wm-grid-column>
-                            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
+                            <wm-grid-column binding="isDisplayedOnDirectory" caption="On Directory" type="character" widget-type="icon" width="20%" generator="assigned" edit-widget-type="checkbox" show="true" checkedvalue="Y" uncheckedvalue="N" readonly="false">
                                 <wm-icon iconclass="" iconposition="left" class="" data-ng-class="{'wi wi-done fa-2x text-success':row.getProperty('isDisplayedOnDirectory') === 'Y'}"></wm-icon>
                             </wm-grid-column>
                             <wm-grid-column binding="business.pk" caption="Business Pk" type="integer" primary-key="true" generator="identity" edit-widget-type="text" datafield="pk" displayfield="pk" defaultvalue="bind:pageParams.businessId" show="false"

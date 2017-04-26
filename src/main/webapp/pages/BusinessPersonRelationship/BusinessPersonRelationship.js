@@ -1,4 +1,4 @@
-Application.$controller("BusinessPersonRelationshipPageController", ["$scope", function($scope) {
+Application.$controller("BusinessPersonRelationshipPageController", ["$scope", "$timeout", function($scope, $timeout) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -38,6 +38,13 @@ Application.$controller("BusinessPersonRelationshipPageController", ["$scope", f
 
     $scope.addBusinessPersonFormBeforeservicecall = function($event, $operation, $data) {
         $data['businesspersonrelationships'] = [$scope.Widgets.businessPersonRelForm.dataoutput];
+    };
+
+
+    $scope.addBusinessPersonRelBtnClick = function($event, $isolateScope) {
+        $timeout(function() {
+            $scope.Widgets.person.focus();
+        });
     };
 
 }]);
