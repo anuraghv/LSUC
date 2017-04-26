@@ -36,6 +36,7 @@ import com.lsuc.lsuc.Addresstype;
 import com.lsuc.lsuc.Businessaddress;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.service.AddresstypeService;
 
 
@@ -159,6 +160,15 @@ public class AddresstypeController {
 	public Page<Map<String, Object>> getAddresstypeAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return addresstypeService.getAggregatedValues(aggregationInfo, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/personaddressAuds", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the personaddressAuds instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated personaddressAuds");
+        return addresstypeService.findAssociatedPersonaddressAuds(id, pageable);
     }
 
     @RequestMapping(value="/{id:.+}/businessaddresses", method=RequestMethod.GET)

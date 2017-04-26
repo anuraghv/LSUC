@@ -45,10 +45,12 @@ public class Province implements Serializable {
     private Integer displaySequenceFrench;
     private Integer countryFk;
     private List<Mailinglabel> mailinglabels;
+    private List<PersonaddressAud> personaddressAuds;
     private Country country;
     private List<Businessaddress> businessaddresses;
     private List<Organizationalunitaddress> organizationalunitaddresses;
     private List<Personaddress> personaddresses;
+    private List<VwLicenseeFilter> vwLicenseeFilters;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -161,6 +163,16 @@ public class Province implements Serializable {
         this.mailinglabels = mailinglabels;
     }
 
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "province")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "`COUNTRY_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
     public Country getCountry() {
@@ -203,6 +215,16 @@ public class Province implements Serializable {
 
     public void setPersonaddresses(List<Personaddress> personaddresses) {
         this.personaddresses = personaddresses;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "province")
+    public List<VwLicenseeFilter> getVwLicenseeFilters() {
+        return this.vwLicenseeFilters;
+    }
+
+    public void setVwLicenseeFilters(List<VwLicenseeFilter> vwLicenseeFilters) {
+        this.vwLicenseeFilters = vwLicenseeFilters;
     }
 
     @Override

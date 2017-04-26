@@ -18,6 +18,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Licencetype;
 import com.lsuc.lsuc.Licensee;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 /**
  * Service object for domain model class {@link Licencetype}.
@@ -160,6 +161,18 @@ public interface LicencetypeService {
      * @see Page
      */
     Page<Licensee> findAssociatedLicensees(Integer pk, Pageable pageable);
+
+    /*
+     * Returns the associated vwLicenseeFilters for given Licencetype id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated VwLicenseeFilter instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable);
 
 }
 

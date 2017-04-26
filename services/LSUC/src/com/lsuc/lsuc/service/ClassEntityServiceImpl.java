@@ -27,6 +27,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 import com.lsuc.lsuc.ClassEntity;
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Practiceinelgibilityreason;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 
 /**
@@ -38,6 +39,10 @@ import com.lsuc.lsuc.Practiceinelgibilityreason;
 public class ClassEntityServiceImpl implements ClassEntityService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClassEntityServiceImpl.class);
+
+    @Autowired
+	@Qualifier("LSUC.VwLicenseeFilterService")
+	private VwLicenseeFilterService vwLicenseeFilterService;
 
     @Autowired
 	@Qualifier("LSUC.PracticeinelgibilityreasonService")
@@ -73,6 +78,14 @@ public class ClassEntityServiceImpl implements ClassEntityService {
                 practiceinelgibilityreason.setClassEntity(classEntityCreated);
                 LOGGER.debug("Creating a new child Practiceinelgibilityreason with information: {}", practiceinelgibilityreason);
                 practiceinelgibilityreasonService.create(practiceinelgibilityreason);
+            }
+        }
+
+        if(classEntityCreated.getVwLicenseeFilters() != null) {
+            for(VwLicenseeFilter vwLicenseeFilter : classEntityCreated.getVwLicenseeFilters()) {
+                vwLicenseeFilter.setClassEntity(classEntityCreated);
+                LOGGER.debug("Creating a new child VwLicenseeFilter with information: {}", vwLicenseeFilter);
+                vwLicenseeFilterService.create(vwLicenseeFilter);
             }
         }
         return classEntityCreated;
@@ -192,6 +205,26 @@ public class ClassEntityServiceImpl implements ClassEntityService {
         queryBuilder.append("classEntity.pk = '" + pk + "'");
 
         return practiceinelgibilityreasonService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("classEntity.pk = '" + pk + "'");
+
+        return vwLicenseeFilterService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service VwLicenseeFilterService instance
+	 */
+	protected void setVwLicenseeFilterService(VwLicenseeFilterService service) {
+        this.vwLicenseeFilterService = service;
     }
 
     /**

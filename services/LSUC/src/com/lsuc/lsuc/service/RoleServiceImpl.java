@@ -26,6 +26,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Personrole;
 import com.lsuc.lsuc.Role;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 
 /**
@@ -41,6 +42,10 @@ public class RoleServiceImpl implements RoleService {
     @Autowired
 	@Qualifier("LSUC.PersonroleService")
 	private PersonroleService personroleService;
+
+    @Autowired
+	@Qualifier("LSUC.VwLicenseeFilterService")
+	private VwLicenseeFilterService vwLicenseeFilterService;
 
     @Autowired
     @Qualifier("LSUC.RoleDao")
@@ -60,6 +65,14 @@ public class RoleServiceImpl implements RoleService {
                 personrole.setRole(roleCreated);
                 LOGGER.debug("Creating a new child Personrole with information: {}", personrole);
                 personroleService.create(personrole);
+            }
+        }
+
+        if(roleCreated.getVwLicenseeFilters() != null) {
+            for(VwLicenseeFilter vwLicenseeFilter : roleCreated.getVwLicenseeFilters()) {
+                vwLicenseeFilter.setRole(roleCreated);
+                LOGGER.debug("Creating a new child VwLicenseeFilter with information: {}", vwLicenseeFilter);
+                vwLicenseeFilterService.create(vwLicenseeFilter);
             }
         }
         return roleCreated;
@@ -169,6 +182,17 @@ public class RoleServiceImpl implements RoleService {
         return personroleService.findAll(queryBuilder.toString(), pageable);
     }
 
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("role.pk = '" + pk + "'");
+
+        return vwLicenseeFilterService.findAll(queryBuilder.toString(), pageable);
+    }
+
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -176,6 +200,15 @@ public class RoleServiceImpl implements RoleService {
 	 */
 	protected void setPersonroleService(PersonroleService service) {
         this.personroleService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service VwLicenseeFilterService instance
+	 */
+	protected void setVwLicenseeFilterService(VwLicenseeFilterService service) {
+        this.vwLicenseeFilterService = service;
     }
 
 }

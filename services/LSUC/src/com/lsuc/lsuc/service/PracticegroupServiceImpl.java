@@ -26,6 +26,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Practicegroup;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 
 /**
@@ -37,6 +38,10 @@ import com.lsuc.lsuc.Practicegroup;
 public class PracticegroupServiceImpl implements PracticegroupService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PracticegroupServiceImpl.class);
+
+    @Autowired
+	@Qualifier("LSUC.VwLicenseeFilterService")
+	private VwLicenseeFilterService vwLicenseeFilterService;
 
     @Autowired
 	@Qualifier("LSUC.ClasspraticegroupService")
@@ -60,6 +65,14 @@ public class PracticegroupServiceImpl implements PracticegroupService {
                 classpraticegroup.setPracticegroup(practicegroupCreated);
                 LOGGER.debug("Creating a new child Classpraticegroup with information: {}", classpraticegroup);
                 classpraticegroupService.create(classpraticegroup);
+            }
+        }
+
+        if(practicegroupCreated.getVwLicenseeFilters() != null) {
+            for(VwLicenseeFilter vwLicenseeFilter : practicegroupCreated.getVwLicenseeFilters()) {
+                vwLicenseeFilter.setPracticegroup(practicegroupCreated);
+                LOGGER.debug("Creating a new child VwLicenseeFilter with information: {}", vwLicenseeFilter);
+                vwLicenseeFilterService.create(vwLicenseeFilter);
             }
         }
         return practicegroupCreated;
@@ -168,6 +181,26 @@ public class PracticegroupServiceImpl implements PracticegroupService {
         queryBuilder.append("practicegroup.pk = '" + pk + "'");
 
         return classpraticegroupService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("practicegroup.pk = '" + pk + "'");
+
+        return vwLicenseeFilterService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service VwLicenseeFilterService instance
+	 */
+	protected void setVwLicenseeFilterService(VwLicenseeFilterService service) {
+        this.vwLicenseeFilterService = service;
     }
 
     /**

@@ -29,6 +29,7 @@ import com.lsuc.lsuc.Geographicarea;
 import com.lsuc.lsuc.Licensee;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 
 
 /**
@@ -54,6 +55,10 @@ public class GeographicareaServiceImpl implements GeographicareaService {
 	private BusinessaddressService businessaddressService;
 
     @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
+
+    @Autowired
 	@Qualifier("LSUC.LicenseeService")
 	private LicenseeService licenseeService;
 
@@ -70,6 +75,14 @@ public class GeographicareaServiceImpl implements GeographicareaService {
 	public Geographicarea create(Geographicarea geographicarea) {
         LOGGER.debug("Creating a new Geographicarea with information: {}", geographicarea);
         Geographicarea geographicareaCreated = this.wmGenericDao.create(geographicarea);
+        if(geographicareaCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : geographicareaCreated.getPersonaddressAuds()) {
+                personaddressAud.setGeographicarea(geographicareaCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
+            }
+        }
+
         if(geographicareaCreated.getLicensees() != null) {
             for(Licensee licensee : geographicareaCreated.getLicensees()) {
                 licensee.setGeographicarea(geographicareaCreated);
@@ -199,6 +212,17 @@ public class GeographicareaServiceImpl implements GeographicareaService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("geographicarea.pk = '" + pk + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<Licensee> findAssociatedLicensees(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated licensees");
 
@@ -266,6 +290,15 @@ public class GeographicareaServiceImpl implements GeographicareaService {
 	 */
 	protected void setBusinessaddressService(BusinessaddressService service) {
         this.businessaddressService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
     }
 
     /**

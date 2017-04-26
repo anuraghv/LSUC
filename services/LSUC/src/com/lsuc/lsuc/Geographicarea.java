@@ -44,6 +44,7 @@ public class Geographicarea implements Serializable {
     private Integer displaySequenceEnglish;
     private Integer displaySequenceFrench;
     private Integer regionFk;
+    private List<PersonaddressAud> personaddressAuds;
     private List<Licensee> licensees;
     private List<Businessaddress> businessaddresses;
     private List<Organizationalunitaddress> organizationalunitaddresses;
@@ -149,6 +150,16 @@ public class Geographicarea implements Serializable {
 
     public void setRegionFk(Integer regionFk) {
         this.regionFk = regionFk;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "geographicarea")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
     }
 
     @JsonInclude(Include.NON_EMPTY)

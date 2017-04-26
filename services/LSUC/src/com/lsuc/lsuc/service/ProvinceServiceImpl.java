@@ -28,7 +28,9 @@ import com.lsuc.lsuc.Businessaddress;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Province;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 
 /**
@@ -54,8 +56,16 @@ public class ProvinceServiceImpl implements ProvinceService {
 	private BusinessaddressService businessaddressService;
 
     @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
+
+    @Autowired
 	@Qualifier("LSUC.MailinglabelService")
 	private MailinglabelService mailinglabelService;
+
+    @Autowired
+	@Qualifier("LSUC.VwLicenseeFilterService")
+	private VwLicenseeFilterService vwLicenseeFilterService;
 
     @Autowired
     @Qualifier("LSUC.ProvinceDao")
@@ -75,6 +85,14 @@ public class ProvinceServiceImpl implements ProvinceService {
                 mailinglabel.setProvince(provinceCreated);
                 LOGGER.debug("Creating a new child Mailinglabel with information: {}", mailinglabel);
                 mailinglabelService.create(mailinglabel);
+            }
+        }
+
+        if(provinceCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : provinceCreated.getPersonaddressAuds()) {
+                personaddressAud.setProvince(provinceCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
             }
         }
 
@@ -99,6 +117,14 @@ public class ProvinceServiceImpl implements ProvinceService {
                 personaddresse.setProvince(provinceCreated);
                 LOGGER.debug("Creating a new child Personaddress with information: {}", personaddresse);
                 personaddressService.create(personaddresse);
+            }
+        }
+
+        if(provinceCreated.getVwLicenseeFilters() != null) {
+            for(VwLicenseeFilter vwLicenseeFilter : provinceCreated.getVwLicenseeFilters()) {
+                vwLicenseeFilter.setProvince(provinceCreated);
+                LOGGER.debug("Creating a new child VwLicenseeFilter with information: {}", vwLicenseeFilter);
+                vwLicenseeFilterService.create(vwLicenseeFilter);
             }
         }
         return provinceCreated;
@@ -210,6 +236,17 @@ public class ProvinceServiceImpl implements ProvinceService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("province.pk = '" + pk + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<Businessaddress> findAssociatedBusinessaddresses(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated businessaddresses");
 
@@ -239,6 +276,17 @@ public class ProvinceServiceImpl implements ProvinceService {
         queryBuilder.append("province.pk = '" + pk + "'");
 
         return personaddressService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("province.pk = '" + pk + "'");
+
+        return vwLicenseeFilterService.findAll(queryBuilder.toString(), pageable);
     }
 
     /**
@@ -271,10 +319,28 @@ public class ProvinceServiceImpl implements ProvinceService {
     /**
 	 * This setter method should only be used by unit tests
 	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
 	 * @param service MailinglabelService instance
 	 */
 	protected void setMailinglabelService(MailinglabelService service) {
         this.mailinglabelService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service VwLicenseeFilterService instance
+	 */
+	protected void setVwLicenseeFilterService(VwLicenseeFilterService service) {
+        this.vwLicenseeFilterService = service;
     }
 
 }

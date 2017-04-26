@@ -35,6 +35,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 import com.lsuc.lsuc.ClassEntity;
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Practiceinelgibilityreason;
+import com.lsuc.lsuc.VwLicenseeFilter;
 import com.lsuc.lsuc.service.ClassEntityService;
 
 
@@ -176,6 +177,15 @@ public class ClassEntityController {
 
         LOGGER.debug("Fetching all associated practiceinelgibilityreasons");
         return classEntityService.findAssociatedPracticeinelgibilityreasons(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/vwLicenseeFilters", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the vwLicenseeFilters instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+        return classEntityService.findAssociatedVwLicenseeFilters(id, pageable);
     }
 
     /**

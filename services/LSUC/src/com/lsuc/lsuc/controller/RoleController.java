@@ -34,6 +34,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.Personrole;
 import com.lsuc.lsuc.Role;
+import com.lsuc.lsuc.VwLicenseeFilter;
 import com.lsuc.lsuc.service.RoleService;
 
 
@@ -166,6 +167,15 @@ public class RoleController {
 
         LOGGER.debug("Fetching all associated personroles");
         return roleService.findAssociatedPersonroles(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/vwLicenseeFilters", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the vwLicenseeFilters instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+        return roleService.findAssociatedVwLicenseeFilters(id, pageable);
     }
 
     /**

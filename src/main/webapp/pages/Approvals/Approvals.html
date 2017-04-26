@@ -56,7 +56,7 @@
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="3" name="gridcolumn21_1">
                                     <wm-label caption="Effective From" class="control-label" width="100%" name="label26"></wm-label>
-                                    <wm-label caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveFromDate | toDate: 'dd MMM yyyy'" class="form-control-static" name="label27"></wm-label>
+                                    <wm-label caption="bind:Variables.pendingApprovals.dataSet.data[$i].oldEffectiveFromDate | toDate: 'dd MMM yyyy'" class="form-control-static" name="label27"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="3" horizontalalign="right" name="gridcolumn22_1">
                                     <wm-label padding="unset 0.5em" caption="OLD" class="label-default small" name="label28"></wm-label>
@@ -65,7 +65,7 @@
                             <wm-gridrow name="gridrow7_1">
                                 <wm-gridcolumn columnwidth="3" name="gridcolumn23_1">
                                     <wm-label caption="Effective To" class="control-label" width="100%" name="label29"></wm-label>
-                                    <wm-label caption="bind:Variables.pendingApprovals.dataSet.data[$i].newEffectiveToDate | toDate: 'dd MMM yyyy'" class="form-control-static" name="label30"></wm-label>
+                                    <wm-label caption="bind:Variables.pendingApprovals.dataSet.data[$i].oldEffectiveToDate | toDate: 'dd MMM yyyy'" class="form-control-static" name="label30"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="3" horizontalalign="left" name="gridcolumn24">
                                     <wm-checkbox caption="Is Primary" checkedvalue="Y" uncheckedvalue="N" disabled="true" datavalue="bind:Variables.pendingApprovals.dataSet.data[$i].newIsPrimary" name="checkbox3"></wm-checkbox>

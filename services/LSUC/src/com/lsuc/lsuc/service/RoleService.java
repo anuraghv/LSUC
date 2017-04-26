@@ -18,6 +18,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Personrole;
 import com.lsuc.lsuc.Role;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 /**
  * Service object for domain model class {@link Role}.
@@ -160,6 +161,18 @@ public interface RoleService {
      * @see Page
      */
     Page<Personrole> findAssociatedPersonroles(Integer pk, Pageable pageable);
+
+    /*
+     * Returns the associated vwLicenseeFilters for given Role id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated VwLicenseeFilter instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable);
 
 }
 

@@ -56,6 +56,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
         if ($data.effectiveToDate == undefined) {
             $data.effectiveToDate = '9999-12-31';
         }
+
         /* Set the inputs for LSUC_ApprovalData variable*/
         $scope.Variables.LSUC_ApprovalData.setInput({
             "licenseeFk": $data.licenseeFk,
@@ -65,6 +66,7 @@ Application.$controller("LicensePageController", ["$scope", "$timeout", function
             "newClassPracticeGroupFk": $data.classpraticegroup,
             "status": "Created"
         });
+        debugger;
         /* Insert data in LSUC_ApprovalData*/
         $scope.Variables.LSUC_ApprovalData.insertRecord({}, function() {
             /* On success, close the live form*/
@@ -138,8 +140,13 @@ Application.$controller("licenseStatusFormController", ["$scope",
         $scope.ctrlScope = $scope;
 
         $scope.licenseStUpBtnClick = function($event, $isolateScope) {
-            /*Edit the licenseStatusForm on click of edit button*/
             /*Capture Old data here*/
+            $scope.Variables.LSUC_ApprovalData.setInput({
+                "oldEffectiveToDate": $scope.dataoutput.effectiveToDate,
+                "oldEffectiveFromDate": $scope.dataoutput.effectiveFromDate
+            });
+
+            /*Edit the licenseStatusForm on click of edit button*/
             $scope.edit();
         };
 

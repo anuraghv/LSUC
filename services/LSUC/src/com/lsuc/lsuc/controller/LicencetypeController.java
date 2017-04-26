@@ -34,6 +34,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.Licencetype;
 import com.lsuc.lsuc.Licensee;
+import com.lsuc.lsuc.VwLicenseeFilter;
 import com.lsuc.lsuc.service.LicencetypeService;
 
 
@@ -166,6 +167,15 @@ public class LicencetypeController {
 
         LOGGER.debug("Fetching all associated licensees");
         return licencetypeService.findAssociatedLicensees(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/vwLicenseeFilters", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the vwLicenseeFilters instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+        return licencetypeService.findAssociatedVwLicenseeFilters(id, pageable);
     }
 
     /**

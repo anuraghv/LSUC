@@ -174,9 +174,9 @@
     "description" : "Query to Insert a New record into LicenseeClassPracticeGroup on approval",
     "version" : "V2",
     "queryString" : "INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk)\n\nselect licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey",
-    "countQueryString" : null,
+    "countQueryString" : "select count(*)  from LicenseeclasspracticegroupApprovals where pk =:primaryKey",
     "nativeSql" : false,
-    "fetchCount" : false,
+    "fetchCount" : true,
     "type" : "INSERT",
     "parameters" : [ {
       "name" : "primaryKey",
@@ -195,6 +195,55 @@
       "typeRef" : "java.lang.Integer",
       "returns" : "ENTITY",
       "responseType" : "SINGLE"
+    }
+  },
+  "changeRequestTrendGraph" : {
+    "name" : "changeRequestTrendGraph",
+    "description" : "Change request trend graph",
+    "version" : "V2",
+    "queryString" : "select varchar_format(( date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) AS DATE_COUNT,1 AS TYPE\nfrom RMS.USERNAME_REV UR INNER JOIN RMS.PERSON_AUD P\nON UR.ID=P.REV\nGROUP BY (date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )\n  \n  UNION \n  \n  select varchar_format(( date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) AS DATE_COUNT,2 AS TYPE\nfrom RMS.USERNAME_REV UR INNER JOIN RMS.PERSONADDRESS_AUD PA\nON UR.ID=PA.REV\nGROUP BY (date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )\n  \n  UNION\n  \n  select varchar_format(( date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) AS DATE_COUNT,3 AS TYPE\nfrom RMS.USERNAME_REV UR INNER JOIN RMS.LICENSEECLASSPRACTICEGROUP_AUD LA\nON UR.ID=LA.REV\nGROUP BY (date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )",
+    "countQueryString" : "select count(*) from (select varchar_format(( date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) AS DATE_COUNT,1 AS TYPE\nfrom RMS.USERNAME_REV UR INNER JOIN RMS.PERSON_AUD P\nON UR.ID=P.REV\nGROUP BY (date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )\n  \n  UNION \n  \n  select varchar_format(( date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) AS DATE_COUNT,2 AS TYPE\nfrom RMS.USERNAME_REV UR INNER JOIN RMS.PERSONADDRESS_AUD PA\nON UR.ID=PA.REV\nGROUP BY (date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )\n  \n  UNION\n  \n  select varchar_format(( date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) AS DATE_COUNT,3 AS TYPE\nfrom RMS.USERNAME_REV UR INNER JOIN RMS.LICENSEECLASSPRACTICEGROUP_AUD LA\nON UR.ID=LA.REV\nGROUP BY (date('1970-01-01')  +\n    (TIMESTAMP / 86400000) days\n  )) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.lsuc.lsuc.models.query.ChangeRequestTrendGraphResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "CALCULATED_DATE",
+        "fieldName" : "calculatedDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "DATE_COUNT",
+        "fieldName" : "dateCount",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "TYPE",
+        "fieldName" : "type",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      } ]
     }
   },
   "expirationStatus" : {

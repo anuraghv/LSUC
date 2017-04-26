@@ -109,6 +109,10 @@
     "type" : "integer"
   } ]
 }, {
+  "name" : "LicenseeFilter",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "LicenseeList",
   "type" : "PAGE",
   "params" : [ ]

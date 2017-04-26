@@ -18,19 +18,7 @@ import com.lsuc.lsuc.models.query.*;
 
 public interface LSUCQueryExecutorService {
 
-    Integer executeUpdateStatus(UpdateStatusRequest updateStatusRequest);
-
     Integer executeApproveEditRecord(ApproveEditRecordRequest approveEditRecordRequest);
-
-    Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, String status, Pageable pageable);
-
-    Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, String status, Pageable pageable);
-
-    Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest);
-
-    Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable);
-
-    Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable);
 
     Page<LicenseeChangesChartResponse> executeLicenseeChangesChart(Pageable pageable);
 
@@ -39,6 +27,22 @@ public interface LSUCQueryExecutorService {
     Page<ExpirationStatusResponse> executeExpirationStatus(Date fromDate, Date toDate, Pageable pageable);
 
     Downloadable exportExpirationStatus(ExportType exportType, Date fromDate, Date toDate, Pageable pageable);
+
+    Integer executeUpdateStatus(UpdateStatusRequest updateStatusRequest);
+
+    Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, String status, Pageable pageable);
+
+    Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, String status, Pageable pageable);
+
+    Page<ChangeRequestTrendGraphResponse> executeChangeRequestTrendGraph(Pageable pageable);
+
+    Downloadable exportChangeRequestTrendGraph(ExportType exportType, Pageable pageable);
+
+    Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest);
+
+    Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable);
+
+    Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable);
 
 }
 

@@ -46,6 +46,7 @@ public class Licencetype implements Serializable {
     private Integer licenseeTypeFk;
     private Licenseetype licenseetype;
     private List<Licensee> licensees;
+    private List<VwLicenseeFilter> vwLicenseeFilters;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -170,6 +171,16 @@ public class Licencetype implements Serializable {
 
     public void setLicensees(List<Licensee> licensees) {
         this.licensees = licensees;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "licencetype")
+    public List<VwLicenseeFilter> getVwLicenseeFilters() {
+        return this.vwLicenseeFilters;
+    }
+
+    public void setVwLicenseeFilters(List<VwLicenseeFilter> vwLicenseeFilters) {
+        this.vwLicenseeFilters = vwLicenseeFilters;
     }
 
     @Override

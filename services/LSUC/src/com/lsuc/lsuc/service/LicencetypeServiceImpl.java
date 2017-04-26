@@ -26,6 +26,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.lsuc.lsuc.Licencetype;
 import com.lsuc.lsuc.Licensee;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 
 /**
@@ -41,6 +42,10 @@ public class LicencetypeServiceImpl implements LicencetypeService {
     @Autowired
 	@Qualifier("LSUC.LicenseeService")
 	private LicenseeService licenseeService;
+
+    @Autowired
+	@Qualifier("LSUC.VwLicenseeFilterService")
+	private VwLicenseeFilterService vwLicenseeFilterService;
 
     @Autowired
     @Qualifier("LSUC.LicencetypeDao")
@@ -60,6 +65,14 @@ public class LicencetypeServiceImpl implements LicencetypeService {
                 licensee.setLicencetype(licencetypeCreated);
                 LOGGER.debug("Creating a new child Licensee with information: {}", licensee);
                 licenseeService.create(licensee);
+            }
+        }
+
+        if(licencetypeCreated.getVwLicenseeFilters() != null) {
+            for(VwLicenseeFilter vwLicenseeFilter : licencetypeCreated.getVwLicenseeFilters()) {
+                vwLicenseeFilter.setLicencetype(licencetypeCreated);
+                LOGGER.debug("Creating a new child VwLicenseeFilter with information: {}", vwLicenseeFilter);
+                vwLicenseeFilterService.create(vwLicenseeFilter);
             }
         }
         return licencetypeCreated;
@@ -169,6 +182,17 @@ public class LicencetypeServiceImpl implements LicencetypeService {
         return licenseeService.findAll(queryBuilder.toString(), pageable);
     }
 
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("licencetype.pk = '" + pk + "'");
+
+        return vwLicenseeFilterService.findAll(queryBuilder.toString(), pageable);
+    }
+
     /**
 	 * This setter method should only be used by unit tests
 	 *
@@ -176,6 +200,15 @@ public class LicencetypeServiceImpl implements LicencetypeService {
 	 */
 	protected void setLicenseeService(LicenseeService service) {
         this.licenseeService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service VwLicenseeFilterService instance
+	 */
+	protected void setVwLicenseeFilterService(VwLicenseeFilterService service) {
+        this.vwLicenseeFilterService = service;
     }
 
 }

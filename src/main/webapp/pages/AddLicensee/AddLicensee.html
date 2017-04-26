@@ -5,7 +5,7 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-label padding="unset 0.5em" name="label1" caption="Add Licensee" class="h2"></wm-label>
             <wm-liveform novalidate="false" errormessage="" title="Personal Details" iconclass="wi wi-account-circle" defaultmode="Edit" dataset="bind:Variables.LSUCInsertPersonData.dataSet" captionalign="left" captionposition="top" name="personLiveForm"
-            on-beforeservicecall="personLiveFormBeforeservicecall($event, $operation, $data)" on-success="personLiveFormSuccess($event, $operation, $data)">
+            on-beforeservicecall="personLiveFormBeforeservicecall($event, $operation, $data)" on-success="personLiveFormSuccess($event, $operation, $data)" on-error="personLiveFormError($event, $operation, $data)">
                 <wm-layoutgrid columns="3" name="layoutgrid2">
                     <wm-gridrow name="gridrow10">
                         <wm-gridcolumn columnwidth="4" name="gridcolumn13">
@@ -36,7 +36,7 @@
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn7">
                                             <wm-form-field name="addressLine1" displayname="Address Line 1" show="true" primary-key="false" generator="assigned" key="addressLine1" type="string" readonly="false" required="true" widget="text" maxchars="50"
-                                            inputtype="text" placeholder="Enter value" regexp="^[a-zA-Z0-9/()\s,'-]{5,}$" validationmessage="Minimum 5 characters" updateon="default"></wm-form-field>
+                                            inputtype="text" placeholder="Enter value" regexp="^[a-zA-Z0-9/()\s.,'-]{5,}$" validationmessage="Minimum 5 characters" updateon="default"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn8">
                                             <wm-form-field name="addressLine2" displayname="Address Line 2" show="true" primary-key="false" generator="assigned" key="addressLine2" type="string" readonly="false" required="false" widget="text" maxchars="50"

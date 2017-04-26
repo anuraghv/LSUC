@@ -36,77 +36,12 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
 
     @Transactional(value = "LSUCTransactionManager")
     @Override
-    public Integer executeUpdateStatus(UpdateStatusRequest updateStatusRequest) {
-        Map params = new HashMap(2);
-
-        params.put("status", updateStatusRequest.getStatus());
-        params.put("pk", updateStatusRequest.getPk());
-
-        return queryExecutor.executeNamedQueryForUpdate("updateStatus", params);
-    }
-
-    @Transactional(value = "LSUCTransactionManager")
-    @Override
     public Integer executeApproveEditRecord(ApproveEditRecordRequest approveEditRecordRequest) {
         Map params = new HashMap(1);
 
         params.put("approvalPk", approveEditRecordRequest.getApprovalPk());
 
         return queryExecutor.executeNamedQueryForUpdate("approveEditRecord", params);
-    }
-
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, String status, Pageable pageable) {
-        Map params = new HashMap(3);
-
-        params.put("startDate", startDate);
-        params.put("endDate", endDate);
-        params.put("status", status);
-
-        return queryExecutor.executeNamedQuery("PendingLicenseeStatusReports", params, PendingLicenseeStatusReportsResponse.class, pageable);
-    }
-
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, String status, Pageable pageable) {
-        Map params = new HashMap(3);
-
-        params.put("startDate", startDate);
-        params.put("endDate", endDate);
-        params.put("status", status);
-
-        return queryExecutor.exportNamedQueryData("PendingLicenseeStatusReports", params, exportType, PendingLicenseeStatusReportsResponse.class, pageable);
-    }
-
-    @Transactional(value = "LSUCTransactionManager")
-    @Override
-    public Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest) {
-        Map params = new HashMap(1);
-
-        params.put("primaryKey", approvedNewRecordRequest.getPrimaryKey());
-
-        return queryExecutor.executeNamedQueryForUpdate("approvedNewRecord", params);
-    }
-
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable) {
-        Map params = new HashMap(1);
-
-        params.put("personID", personId);
-
-        return queryExecutor.executeNamedQuery("getStatusChangeDetails", params, GetStatusChangeDetailsResponse.class, pageable);
-    }
-
-    @Transactional(readOnly = true, value = "LSUCTransactionManager")
-    @Override
-    public Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable) {
-        Map params = new HashMap(1);
-
-        params.put("personID", personId);
-
-        return queryExecutor.exportNamedQueryData("getStatusChangeDetails", params, exportType, GetStatusChangeDetailsResponse.class, pageable);
     }
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
@@ -147,6 +82,89 @@ public class LSUCQueryExecutorServiceImpl implements LSUCQueryExecutorService {
         params.put("toDate", toDate);
 
         return queryExecutor.exportNamedQueryData("expirationStatus", params, exportType, ExpirationStatusResponse.class, pageable);
+    }
+
+    @Transactional(value = "LSUCTransactionManager")
+    @Override
+    public Integer executeUpdateStatus(UpdateStatusRequest updateStatusRequest) {
+        Map params = new HashMap(2);
+
+        params.put("status", updateStatusRequest.getStatus());
+        params.put("pk", updateStatusRequest.getPk());
+
+        return queryExecutor.executeNamedQueryForUpdate("updateStatus", params);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(Date startDate, Date endDate, String status, Pageable pageable) {
+        Map params = new HashMap(3);
+
+        params.put("startDate", startDate);
+        params.put("endDate", endDate);
+        params.put("status", status);
+
+        return queryExecutor.executeNamedQuery("PendingLicenseeStatusReports", params, PendingLicenseeStatusReportsResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Downloadable exportPendingLicenseeStatusReports(ExportType exportType, Date startDate, Date endDate, String status, Pageable pageable) {
+        Map params = new HashMap(3);
+
+        params.put("startDate", startDate);
+        params.put("endDate", endDate);
+        params.put("status", status);
+
+        return queryExecutor.exportNamedQueryData("PendingLicenseeStatusReports", params, exportType, PendingLicenseeStatusReportsResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<ChangeRequestTrendGraphResponse> executeChangeRequestTrendGraph(Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.executeNamedQuery("changeRequestTrendGraph", params, ChangeRequestTrendGraphResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Downloadable exportChangeRequestTrendGraph(ExportType exportType, Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.exportNamedQueryData("changeRequestTrendGraph", params, exportType, ChangeRequestTrendGraphResponse.class, pageable);
+    }
+
+    @Transactional(value = "LSUCTransactionManager")
+    @Override
+    public Integer executeApprovedNewRecord(ApprovedNewRecordRequest approvedNewRecordRequest) {
+        Map params = new HashMap(1);
+
+        params.put("primaryKey", approvedNewRecordRequest.getPrimaryKey());
+
+        return queryExecutor.executeNamedQueryForUpdate("approvedNewRecord", params);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(Integer personId, Pageable pageable) {
+        Map params = new HashMap(1);
+
+        params.put("personID", personId);
+
+        return queryExecutor.executeNamedQuery("getStatusChangeDetails", params, GetStatusChangeDetailsResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
+    public Downloadable exportGetStatusChangeDetails(ExportType exportType, Integer personId, Pageable pageable) {
+        Map params = new HashMap(1);
+
+        params.put("personID", personId);
+
+        return queryExecutor.exportNamedQueryData("getStatusChangeDetails", params, exportType, GetStatusChangeDetailsResponse.class, pageable);
     }
 
 }

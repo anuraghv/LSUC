@@ -339,318 +339,6 @@
       "unique" : true
     }, {
       "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "licenseeclasspracticegroupPk",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "integer",
-      "length" : 255,
-      "name" : "LICENSEECLASSPRACTICEGROUP_PK",
-      "nullable" : false,
-      "oldName" : "LICENSEECLASSPRACTICEGROUP_PK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 10,
-      "primaryKey" : false,
-      "scale" : 0,
-      "sequenceSchema" : null,
-      "sqlType" : "number",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "licenseeFk",
-      "foreignKey" : true,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "integer",
-      "length" : 255,
-      "name" : "LICENSEE_FK",
-      "nullable" : true,
-      "oldName" : "LICENSEE_FK",
-      "partOfAnyRelation" : true,
-      "partOfForeignKey" : true,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : true,
-      "precision" : 10,
-      "primaryKey" : false,
-      "scale" : 0,
-      "sequenceSchema" : null,
-      "sqlType" : "number",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "oldIsPrimary",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "character",
-      "length" : 1,
-      "name" : "OLD_IS_PRIMARY",
-      "nullable" : true,
-      "oldName" : "OLD_IS_PRIMARY",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "string",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "oldEffectiveFromDate",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "date",
-      "length" : 10,
-      "name" : "OLD_EFFECTIVE_FROM_DATE",
-      "nullable" : true,
-      "oldName" : "OLD_EFFECTIVE_FROM_DATE",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "date",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "oldEffectiveToDate",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "date",
-      "length" : 10,
-      "name" : "OLD_EFFECTIVE_TO_DATE",
-      "nullable" : true,
-      "oldName" : "OLD_EFFECTIVE_TO_DATE",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "date",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "oldClassPracticeGroupFk",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "integer",
-      "length" : 255,
-      "name" : "OLD_CLASS_PRACTICE_GROUP_FK",
-      "nullable" : true,
-      "oldName" : "OLD_CLASS_PRACTICE_GROUP_FK",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 10,
-      "primaryKey" : false,
-      "scale" : 0,
-      "sequenceSchema" : null,
-      "sqlType" : "number",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "newIsPrimary",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "character",
-      "length" : 1,
-      "name" : "NEW_IS_PRIMARY",
-      "nullable" : true,
-      "oldName" : "NEW_IS_PRIMARY",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "string",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "newEffectiveFromDate",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "date",
-      "length" : 10,
-      "name" : "NEW_EFFECTIVE_FROM_DATE",
-      "nullable" : true,
-      "oldName" : "NEW_EFFECTIVE_FROM_DATE",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : true,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "date",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "newEffectiveToDate",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "date",
-      "length" : 10,
-      "name" : "NEW_EFFECTIVE_TO_DATE",
-      "nullable" : true,
-      "oldName" : "NEW_EFFECTIVE_TO_DATE",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : true,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "date",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "newClassPracticeGroupFk",
-      "foreignKey" : true,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "integer",
-      "length" : 255,
-      "name" : "NEW_CLASS_PRACTICE_GROUP_FK",
-      "nullable" : true,
-      "oldName" : "NEW_CLASS_PRACTICE_GROUP_FK",
-      "partOfAnyRelation" : true,
-      "partOfForeignKey" : true,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : true,
-      "precision" : 10,
-      "primaryKey" : false,
-      "scale" : 0,
-      "sequenceSchema" : null,
-      "sqlType" : "number",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "user-defined",
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null
-      },
-      "fieldName" : "status",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "string",
-      "length" : 10,
-      "name" : "STATUS",
-      "nullable" : true,
-      "oldName" : "STATUS",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "string",
-      "unique" : false
-    }, {
-      "columnValue" : {
-        "type" : "server-defined",
-        "insertable" : false,
-        "updatable" : true,
-        "variableType" : "USER_NAME"
-      },
-      "fieldName" : "modifiedBy",
-      "foreignKey" : false,
-      "generatorType" : "assigned",
-      "generatorValue" : null,
-      "javaType" : "string",
-      "length" : 10,
-      "name" : "MODIFIED_BY",
-      "nullable" : true,
-      "oldName" : "MODIFIED_BY",
-      "partOfAnyRelation" : false,
-      "partOfForeignKey" : false,
-      "partOfPrimaryKey" : false,
-      "partOfUniqueKey" : false,
-      "precision" : 19,
-      "primaryKey" : false,
-      "scale" : 2,
-      "sequenceSchema" : null,
-      "sqlType" : "string",
-      "unique" : false
-    }, {
-      "columnValue" : {
         "type" : "server-defined",
         "insertable" : true,
         "updatable" : false,
@@ -729,20 +417,72 @@
       "unique" : false
     }, {
       "columnValue" : {
-        "type" : "server-defined",
-        "insertable" : false,
+        "type" : "user-defined",
+        "insertable" : true,
         "updatable" : true,
-        "variableType" : "TIME"
+        "defaultValue" : null
       },
-      "fieldName" : "modifiedTime",
+      "fieldName" : "licenseeFk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "LICENSEE_FK",
+      "nullable" : true,
+      "oldName" : "LICENSEE_FK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "licenseeclasspracticegroupPk",
       "foreignKey" : false,
       "generatorType" : "assigned",
       "generatorValue" : null,
-      "javaType" : "time",
-      "length" : 8,
-      "name" : "MODIFIED_TIME",
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "LICENSEECLASSPRACTICEGROUP_PK",
+      "nullable" : false,
+      "oldName" : "LICENSEECLASSPRACTICEGROUP_PK",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "server-defined",
+        "insertable" : false,
+        "updatable" : true,
+        "variableType" : "USER_NAME"
+      },
+      "fieldName" : "modifiedBy",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 10,
+      "name" : "MODIFIED_BY",
       "nullable" : true,
-      "oldName" : "MODIFIED_TIME",
+      "oldName" : "MODIFIED_BY",
       "partOfAnyRelation" : false,
       "partOfForeignKey" : false,
       "partOfPrimaryKey" : false,
@@ -751,7 +491,7 @@
       "primaryKey" : false,
       "scale" : 2,
       "sequenceSchema" : null,
-      "sqlType" : "time",
+      "sqlType" : "string",
       "unique" : false
     }, {
       "columnValue" : {
@@ -779,15 +519,268 @@
       "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "server-defined",
+        "insertable" : false,
+        "updatable" : true,
+        "variableType" : "TIME"
+      },
+      "fieldName" : "modifiedTime",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "time",
+      "length" : 8,
+      "name" : "MODIFIED_TIME",
+      "nullable" : true,
+      "oldName" : "MODIFIED_TIME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "time",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "newClassPracticeGroupFk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "NEW_CLASS_PRACTICE_GROUP_FK",
+      "nullable" : true,
+      "oldName" : "NEW_CLASS_PRACTICE_GROUP_FK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "newEffectiveFromDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "date",
+      "length" : 10,
+      "name" : "NEW_EFFECTIVE_FROM_DATE",
+      "nullable" : true,
+      "oldName" : "NEW_EFFECTIVE_FROM_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "newEffectiveToDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "date",
+      "length" : 10,
+      "name" : "NEW_EFFECTIVE_TO_DATE",
+      "nullable" : true,
+      "oldName" : "NEW_EFFECTIVE_TO_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "newIsPrimary",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "character",
+      "length" : 1,
+      "name" : "NEW_IS_PRIMARY",
+      "nullable" : true,
+      "oldName" : "NEW_IS_PRIMARY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "oldClassPracticeGroupFk",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "OLD_CLASS_PRACTICE_GROUP_FK",
+      "nullable" : true,
+      "oldName" : "OLD_CLASS_PRACTICE_GROUP_FK",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "oldEffectiveFromDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "date",
+      "length" : 10,
+      "name" : "OLD_EFFECTIVE_FROM_DATE",
+      "nullable" : true,
+      "oldName" : "OLD_EFFECTIVE_FROM_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "oldEffectiveToDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "date",
+      "length" : 10,
+      "name" : "OLD_EFFECTIVE_TO_DATE",
+      "nullable" : true,
+      "oldName" : "OLD_EFFECTIVE_TO_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "oldIsPrimary",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "character",
+      "length" : 1,
+      "name" : "OLD_IS_PRIMARY",
+      "nullable" : true,
+      "oldName" : "OLD_IS_PRIMARY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "status",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 10,
+      "name" : "STATUS",
+      "nullable" : true,
+      "oldName" : "STATUS",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
     } ],
-    "constraints" : [ {
-      "columns" : [ "LICENSEE_FK", "NEW_CLASS_PRACTICE_GROUP_FK", "NEW_EFFECTIVE_FROM_DATE", "NEW_EFFECTIVE_TO_DATE" ],
-      "composite" : true,
-      "name" : "XAK1LICENSEECLASSPRACTICEGROUP_APPROVALS",
-      "schemaName" : null,
-      "type" : "UNIQUE",
-      "virtual" : false
-    } ],
+    "constraints" : [ ],
     "entityName" : "LicenseeclasspracticegroupApprovals",
     "fullyQualifiedName" : "com.lsuc.lsuc.LicenseeclasspracticegroupApprovals",
     "name" : "LICENSEECLASSPRACTICEGROUP_APPROVALS",
@@ -800,7 +793,7 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "XPKLICENSEECLASSPRACTICEGROUP_APPROVALS",
+      "name" : "SQL170425095251640",
       "virtual" : false
     },
     "relations" : [ {
@@ -3604,7 +3597,7 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170423120733000",
+      "name" : "SQL170425095249730",
       "virtual" : false
     },
     "relations" : [ {
@@ -4007,6 +4000,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "CLASSPRATICEGROUP",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "vwLicenseeFilters",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "PRACTICE_GROUP_PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOoTDeL",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PRACTICEGROUP",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "VW_LICENSEE_FILTER",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -7158,6 +7168,425 @@
         "type" : "user-defined",
         "insertable" : true,
         "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "rowNum",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : "",
+      "javaType" : "big_integer",
+      "length" : 255,
+      "name" : "ROW_NUM",
+      "nullable" : false,
+      "oldName" : "ROW_NUM",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : false,
+      "precision" : 20,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : "",
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "personFk",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "PERSON_FK",
+      "nullable" : false,
+      "oldName" : "PERSON_FK",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "name",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 201,
+      "name" : "NAME",
+      "nullable" : true,
+      "oldName" : "NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "addressLine1",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 50,
+      "name" : "ADDRESS_LINE_1",
+      "nullable" : true,
+      "oldName" : "ADDRESS_LINE_1",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "licenseeNumber",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 20,
+      "name" : "LICENSEE_NUMBER",
+      "nullable" : true,
+      "oldName" : "LICENSEE_NUMBER",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "licenceTypeFk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "LICENCE_TYPE_FK",
+      "nullable" : true,
+      "oldName" : "LICENCE_TYPE_FK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "city",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 50,
+      "name" : "CITY",
+      "nullable" : true,
+      "oldName" : "CITY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "provinceFk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "PROVINCE_FK",
+      "nullable" : true,
+      "oldName" : "PROVINCE_FK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "postalCode",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 10,
+      "name" : "POSTAL_CODE",
+      "nullable" : true,
+      "oldName" : "POSTAL_CODE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "roleFk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "ROLE_FK",
+      "nullable" : true,
+      "oldName" : "ROLE_FK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "classPk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "CLASS_PK",
+      "nullable" : true,
+      "oldName" : "CLASS_PK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "practiceGroupPk",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "PRACTICE_GROUP_PK",
+      "nullable" : true,
+      "oldName" : "PRACTICE_GROUP_PK",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    } ],
+    "constraints" : [ ],
+    "entityName" : "VwLicenseeFilter",
+    "fullyQualifiedName" : "com.lsuc.lsuc.VwLicenseeFilter",
+    "name" : "VW_LICENSEE_FILTER",
+    "oldName" : "VW_LICENSEE_FILTER",
+    "primaryKey" : {
+      "columns" : [ "ROW_NUM" ],
+      "composite" : false,
+      "generator" : {
+        "generatorType" : "assigned",
+        "generatorValue" : "",
+        "schemaName" : ""
+      },
+      "name" : "PK_VW_LICENSEE_FILTER",
+      "virtual" : true
+    },
+    "relations" : [ {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "licencetype",
+      "mappings" : [ {
+        "sourceColumn" : "LICENCE_TYPE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOqLpgH",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "VW_LICENSEE_FILTER",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LICENCETYPE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "province",
+      "mappings" : [ {
+        "sourceColumn" : "PROVINCE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOrKyt7",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "VW_LICENSEE_FILTER",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PROVINCE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "role",
+      "mappings" : [ {
+        "sourceColumn" : "ROLE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOohQxR",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "VW_LICENSEE_FILTER",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "ROLE",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "classEntity",
+      "mappings" : [ {
+        "sourceColumn" : "CLASS_PK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TO1luqh",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "VW_LICENSEE_FILTER",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "CLASS",
+      "virtual" : true
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "practicegroup",
+      "mappings" : [ {
+        "sourceColumn" : "PRACTICE_GROUP_PK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOoTDeL",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "VW_LICENSEE_FILTER",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PRACTICEGROUP",
+      "virtual" : true
+    } ],
+    "schema" : "RMS",
+    "type" : "VIEW"
+  }, {
+    "catalog" : null,
+    "columns" : [ {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
         "defaultValue" : null
       },
       "fieldName" : "pk",
@@ -8905,6 +9334,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LICENSEE",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "vwLicenseeFilters",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "LICENCE_TYPE_FK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOqLpgH",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LICENCETYPE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "VW_LICENSEE_FILTER",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -10632,6 +11078,23 @@
       "cardinality" : "OneToMany",
       "columnsUniqueKey" : false,
       "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "ADDRESSTYPE_FK"
+      } ],
+      "name" : "FK_B28T3OOEMUQ13UCLKQWU0NP6M",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "ADDRESSTYPE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
       "fieldName" : "businessaddresses",
       "mappings" : [ {
         "sourceColumn" : "PK",
@@ -11090,7 +11553,7 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170423120733260",
+      "name" : "SQL170425095250550",
       "virtual" : false
     },
     "relations" : [ {
@@ -11415,6 +11878,23 @@
       "sourceTable" : "COUNTRY",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "MAILINGLABEL",
+      "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "COUNTRY_FK"
+      } ],
+      "name" : "FK_T74OKSGKW3AWSMFFQON14ALKU",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "COUNTRY",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
       "virtual" : false
     }, {
       "cardinality" : "OneToMany",
@@ -13466,10 +13946,61 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170423120733180",
+      "name" : "SQL170425095250280",
       "virtual" : false
     },
     "relations" : [ {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "addresstype",
+      "mappings" : [ {
+        "sourceColumn" : "ADDRESSTYPE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_B28T3OOEMUQ13UCLKQWU0NP6M",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "ADDRESSTYPE",
+      "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "country",
+      "mappings" : [ {
+        "sourceColumn" : "COUNTRY_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_T74OKSGKW3AWSMFFQON14ALKU",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "COUNTRY",
+      "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "geographicarea",
+      "mappings" : [ {
+        "sourceColumn" : "GEOGRAPHIC_AREA_FK_",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_HPSYWOEHIUM153EC4LM5D2QTB",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "GEOGRAPHICAREA",
+      "virtual" : false
+    }, {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
@@ -13490,6 +14021,23 @@
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
+      "fieldName" : "province",
+      "mappings" : [ {
+        "sourceColumn" : "PROVINCE_FK",
+        "targetColumn" : "PK"
+      } ],
+      "name" : "FK_R88PPTST6DGK2NM7087WVPU68",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PERSONADDRESS_AUD",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PROVINCE",
+      "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
       "fieldName" : "usernameRev",
       "mappings" : [ {
         "sourceColumn" : "REV",
@@ -13503,74 +14051,6 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "USERNAME_REV",
       "virtual" : false
-    }, {
-      "cardinality" : "ManyToOne",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "country",
-      "mappings" : [ {
-        "sourceColumn" : "COUNTRY_FK",
-        "targetColumn" : "PK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_RfA5a",
-      "primary" : true,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PERSONADDRESS_AUD",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "COUNTRY",
-      "virtual" : true
-    }, {
-      "cardinality" : "ManyToOne",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "province",
-      "mappings" : [ {
-        "sourceColumn" : "PROVINCE_FK",
-        "targetColumn" : "PK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_Jyfze",
-      "primary" : true,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PERSONADDRESS_AUD",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "PROVINCE",
-      "virtual" : true
-    }, {
-      "cardinality" : "ManyToOne",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "addresstype",
-      "mappings" : [ {
-        "sourceColumn" : "ADDRESSTYPE_FK",
-        "targetColumn" : "PK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_obSBZ",
-      "primary" : true,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PERSONADDRESS_AUD",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "ADDRESSTYPE",
-      "virtual" : true
-    }, {
-      "cardinality" : "ManyToOne",
-      "columnsUniqueKey" : false,
-      "composite" : false,
-      "fieldName" : "geographicarea",
-      "mappings" : [ {
-        "sourceColumn" : "GEOGRAPHIC_AREA_FK_",
-        "targetColumn" : "PK"
-      } ],
-      "name" : "FK_PERSONADDRESS_AUD_TO_BP6yT",
-      "primary" : true,
-      "selfRelation" : false,
-      "sourceColumnsNotUniqueKey" : true,
-      "sourceTable" : "PERSONADDRESS_AUD",
-      "targetColumnsUniqueKey" : false,
-      "targetTable" : "GEOGRAPHICAREA",
-      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -13991,7 +14471,7 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170423120733390",
+      "name" : "SQL170425095250780",
       "virtual" : false
     },
     "relations" : [ {
@@ -14300,7 +14780,7 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170423120733530",
+      "name" : "SQL170425095251830",
       "virtual" : false
     },
     "relations" : [ ],
@@ -14975,6 +15455,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PRACTICEINELGIBILITYREASON",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "vwLicenseeFilters",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "CLASS_PK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TO1luqh",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "CLASS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "VW_LICENSEE_FILTER",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -15676,6 +16173,23 @@
       "targetTable" : "MAILINGLABEL",
       "virtual" : false
     }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "PROVINCE_FK"
+      } ],
+      "name" : "FK_R88PPTST6DGK2NM7087WVPU68",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PROVINCE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : false
+    }, {
       "cardinality" : "ManyToOne",
       "columnsUniqueKey" : false,
       "composite" : false,
@@ -15743,6 +16257,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONADDRESS",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "vwLicenseeFilters",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "PROVINCE_FK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOrKyt7",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "PROVINCE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "VW_LICENSEE_FILTER",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -17603,7 +18134,7 @@
         "generatorValue" : null,
         "schemaName" : null
       },
-      "name" : "SQL170423120733090",
+      "name" : "SQL170425095250030",
       "virtual" : false
     },
     "relations" : [ {
@@ -22689,6 +23220,23 @@
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PERSONROLE",
       "virtual" : false
+    }, {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "vwLicenseeFilters",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "ROLE_FK"
+      } ],
+      "name" : "FK_VW_LICENSEE_FILTER_TOohQxR",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "ROLE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "VW_LICENSEE_FILTER",
+      "virtual" : true
     } ],
     "schema" : "RMS",
     "type" : "TABLE"
@@ -23336,6 +23884,23 @@
       "virtual" : false
     },
     "relations" : [ {
+      "cardinality" : "OneToMany",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "personaddressAuds",
+      "mappings" : [ {
+        "sourceColumn" : "PK",
+        "targetColumn" : "GEOGRAPHIC_AREA_FK_"
+      } ],
+      "name" : "FK_HPSYWOEHIUM153EC4LM5D2QTB",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "GEOGRAPHICAREA",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PERSONADDRESS_AUD",
+      "virtual" : false
+    }, {
       "cardinality" : "OneToMany",
       "columnsUniqueKey" : false,
       "composite" : false,

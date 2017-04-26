@@ -7,7 +7,7 @@ package com.lsuc.lsuc.models.query;
 
 import java.io.Serializable;
 import java.math.BigInteger;
-import java.util.Date;
+import java.sql.Date;
 import java.util.Objects;
 
 import com.wavemaker.runtime.data.annotations.ColumnAlias;
@@ -17,9 +17,9 @@ public class GetStatusChangeDetailsResponse implements Serializable {
     @ColumnAlias("LicenseeClass")
     private String licenseeClass;
     @ColumnAlias("EffectiveFrom")
-    private Date effectiveFrom;
+    private java.util.Date effectiveFrom;
     @ColumnAlias("EffectiveTo")
-    private Date effectiveTo;
+    private java.util.Date effectiveTo;
     @ColumnAlias("PracticeGroup")
     private String practiceGroup;
     @ColumnAlias("isPrimary")
@@ -37,19 +37,19 @@ public class GetStatusChangeDetailsResponse implements Serializable {
         this.licenseeClass = licenseeClass;
     }
 
-    public Date getEffectiveFrom() {
+    public java.util.Date getEffectiveFrom() {
         return this.effectiveFrom;
     }
 
-    public void setEffectiveFrom(Date effectiveFrom) {
+    public void setEffectiveFrom(java.util.Date effectiveFrom) {
         this.effectiveFrom = effectiveFrom;
     }
 
-    public Date getEffectiveTo() {
+    public java.util.Date getEffectiveTo() {
         return this.effectiveTo;
     }
 
-    public void setEffectiveTo(Date effectiveTo) {
+    public void setEffectiveTo(java.util.Date effectiveTo) {
         this.effectiveTo = effectiveTo;
     }
 

@@ -34,6 +34,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Practicegroup;
+import com.lsuc.lsuc.VwLicenseeFilter;
 import com.lsuc.lsuc.service.PracticegroupService;
 
 
@@ -166,6 +167,15 @@ public class PracticegroupController {
 
         LOGGER.debug("Fetching all associated classpraticegroups");
         return practicegroupService.findAssociatedClasspraticegroups(id, pageable);
+    }
+
+    @RequestMapping(value="/{id:.+}/vwLicenseeFilters", method=RequestMethod.GET)
+    @ApiOperation(value = "Gets the vwLicenseeFilters instance associated with the given id.")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(@PathVariable("id") Integer id, Pageable pageable) {
+
+        LOGGER.debug("Fetching all associated vwLicenseeFilters");
+        return practicegroupService.findAssociatedVwLicenseeFilters(id, pageable);
     }
 
     /**

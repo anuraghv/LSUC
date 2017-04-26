@@ -46,6 +46,7 @@ public class Role implements Serializable {
     private Integer roleCategoryFk;
     private Category category;
     private List<Personrole> personroles;
+    private List<VwLicenseeFilter> vwLicenseeFilters;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -170,6 +171,16 @@ public class Role implements Serializable {
 
     public void setPersonroles(List<Personrole> personroles) {
         this.personroles = personroles;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "role")
+    public List<VwLicenseeFilter> getVwLicenseeFilters() {
+        return this.vwLicenseeFilters;
+    }
+
+    public void setVwLicenseeFilters(List<VwLicenseeFilter> vwLicenseeFilters) {
+        this.vwLicenseeFilters = vwLicenseeFilters;
     }
 
     @Override

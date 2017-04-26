@@ -2,14 +2,6 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <sql-query name="updateStatus">
-        <![CDATA[
-        update RMS.LICENSEECLASSPRACTICEGROUP_APPROVALS set STATUS=:status where PK=:pk
-        ]]>
-    <query-param name="status" type="java.lang.String"/>
-    <query-param name="pk" type="java.lang.String"/>
-    </sql-query>
-
     <query name="approveEditRecord">
         <![CDATA[
         update Licenseeclasspracticegroup a
@@ -25,58 +17,6 @@ a.classPracticeGroupFk  = (select b.newClassPracticeGroupFk from Licenseeclasspr
 where a.pk=(select b.licenseeclasspracticegroupPk from LicenseeclasspracticegroupApprovals b where b.pk=:approvalPk)
         ]]>
     <query-param name="approvalPk" type="java.lang.Integer"/>
-    </query>
-
-    <query name="PendingLicenseeStatusReports">
-        <![CDATA[
-        select licensee.person.firstName as name,
-    licensee.licenseeNumber as licNum ,
-    licensee.licencetype.shortNameEnglish as LicType,
-    licensee.licenseDate as LicDate,
-    licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,
-    licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,
-    newEffectiveFromDate as New_Effective_from_Date,
-    newEffectiveToDate as New_Effective_to_Date ,
-    oldEffectiveFromDate as Old_Effective_From_Date, 
-    oldEffectiveToDate as Old_Effective_to_Date,
-    createdDate as Created_Date from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status
-        ]]>
-    <query-param name="startDate" type="java.sql.Date"/>
-    <query-param name="endDate" type="java.sql.Date"/>
-    <query-param name="status" type="java.lang.String"/>
-    </query>
-
-    <query name="PendingLicenseeStatusReports__count">
-        <![CDATA[
-        select count(*)  from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status
-        ]]>
-    <query-param name="startDate" type="java.sql.Date"/>
-    <query-param name="endDate" type="java.sql.Date"/>
-    <query-param name="status" type="java.lang.String"/>
-    </query>
-
-    <query name="approvedNewRecord">
-        <![CDATA[
-        INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk)
-
-select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey
-        ]]>
-    <query-param name="primaryKey" type="java.lang.Integer"/>
-    </query>
-
-    <query name="getStatusChangeDetails">
-        <![CDATA[
-        select classpraticegroup.classEntity.shortNameEnglish as LicenseeClass, effectiveFromDate as EffectiveFrom, effectiveToDate as EffectiveTo, CONCAT(classpraticegroup.practicegroup.code,' - ', classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup, isPrimary as isPrimary, usernameRev.timestamp as revtstmp,
-usernameRev.username as changedBy from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
-        ]]>
-    <query-param name="personID" type="java.lang.Integer"/>
-    </query>
-
-    <query name="getStatusChangeDetails__count">
-        <![CDATA[
-        select count(*)  from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
-        ]]>
-    <query-param name="personID" type="java.lang.Integer"/>
     </query>
 
     <sql-query name="licenseeChangesChart">
@@ -150,4 +90,153 @@ where p.PK = pa.PERSON_FK and
     <query-param name="fromDate" type="java.sql.Date"/>
     <query-param name="toDate" type="java.sql.Date"/>
     </sql-query>
+
+    <sql-query name="updateStatus">
+        <![CDATA[
+        update RMS.LICENSEECLASSPRACTICEGROUP_APPROVALS set STATUS=:status where PK=:pk
+        ]]>
+    <query-param name="status" type="java.lang.String"/>
+    <query-param name="pk" type="java.lang.String"/>
+    </sql-query>
+
+    <query name="PendingLicenseeStatusReports">
+        <![CDATA[
+        select licensee.person.firstName as name,
+    licensee.licenseeNumber as licNum ,
+    licensee.licencetype.shortNameEnglish as LicType,
+    licensee.licenseDate as LicDate,
+    licenseeclasspracticegroup.classpraticegroup.classEntity.shortNameEnglish as NewClass,
+    licenseeclasspracticegroup.classpraticegroup.practicegroup.shortNameEnglish as NewPracticeGroup,
+    newEffectiveFromDate as New_Effective_from_Date,
+    newEffectiveToDate as New_Effective_to_Date ,
+    oldEffectiveFromDate as Old_Effective_From_Date, 
+    oldEffectiveToDate as Old_Effective_to_Date,
+    createdDate as Created_Date from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status
+        ]]>
+    <query-param name="startDate" type="java.sql.Date"/>
+    <query-param name="endDate" type="java.sql.Date"/>
+    <query-param name="status" type="java.lang.String"/>
+    </query>
+
+    <query name="PendingLicenseeStatusReports__count">
+        <![CDATA[
+        select count(*)  from LicenseeclasspracticegroupApprovals where createdDate BETWEEN :startDate and :endDate and status = :status
+        ]]>
+    <query-param name="startDate" type="java.sql.Date"/>
+    <query-param name="endDate" type="java.sql.Date"/>
+    <query-param name="status" type="java.lang.String"/>
+    </query>
+
+    <sql-query name="changeRequestTrendGraph">
+        <![CDATA[
+        select varchar_format(( date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) AS DATE_COUNT,1 AS TYPE
+from RMS.USERNAME_REV UR INNER JOIN RMS.PERSON_AUD P
+ON UR.ID=P.REV
+GROUP BY (date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )
+  
+  UNION 
+  
+  select varchar_format(( date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) AS DATE_COUNT,2 AS TYPE
+from RMS.USERNAME_REV UR INNER JOIN RMS.PERSONADDRESS_AUD PA
+ON UR.ID=PA.REV
+GROUP BY (date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )
+  
+  UNION
+  
+  select varchar_format(( date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) AS DATE_COUNT,3 AS TYPE
+from RMS.USERNAME_REV UR INNER JOIN RMS.LICENSEECLASSPRACTICEGROUP_AUD LA
+ON UR.ID=LA.REV
+GROUP BY (date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )
+        ]]>
+    </sql-query>
+
+    <sql-query name="changeRequestTrendGraph__count">
+        <![CDATA[
+        select count(*) from (select varchar_format(( date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) AS DATE_COUNT,1 AS TYPE
+from RMS.USERNAME_REV UR INNER JOIN RMS.PERSON_AUD P
+ON UR.ID=P.REV
+GROUP BY (date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )
+  
+  UNION 
+  
+  select varchar_format(( date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) AS DATE_COUNT,2 AS TYPE
+from RMS.USERNAME_REV UR INNER JOIN RMS.PERSONADDRESS_AUD PA
+ON UR.ID=PA.REV
+GROUP BY (date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )
+  
+  UNION
+  
+  select varchar_format(( date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  ),'mm/dd/yyyy') as calculated_date,COUNT((date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) AS DATE_COUNT,3 AS TYPE
+from RMS.USERNAME_REV UR INNER JOIN RMS.LICENSEECLASSPRACTICEGROUP_AUD LA
+ON UR.ID=LA.REV
+GROUP BY (date('1970-01-01')  +
+    (TIMESTAMP / 86400000) days
+  )) wmTempTable
+        ]]>
+    </sql-query>
+
+    <query name="approvedNewRecord">
+        <![CDATA[
+        INSERT INTO Licenseeclasspracticegroup (licenseeFk,isPrimary,effectiveFromDate,effectiveToDate,classPracticeGroupFk)
+
+select licenseeFk,newIsPrimary,newEffectiveFromDate,newEffectiveToDate,newClassPracticeGroupFk from LicenseeclasspracticegroupApprovals where pk =:primaryKey
+        ]]>
+    <query-param name="primaryKey" type="java.lang.Integer"/>
+    </query>
+
+    <query name="approvedNewRecord__count">
+        <![CDATA[
+        select count(*)  from LicenseeclasspracticegroupApprovals where pk =:primaryKey
+        ]]>
+    <query-param name="primaryKey" type="java.lang.Integer"/>
+    </query>
+
+    <query name="getStatusChangeDetails">
+        <![CDATA[
+        select classpraticegroup.classEntity.shortNameEnglish as LicenseeClass, effectiveFromDate as EffectiveFrom, effectiveToDate as EffectiveTo, CONCAT(classpraticegroup.practicegroup.code,' - ', classpraticegroup.practicegroup.shortNameEnglish) as PracticeGroup, isPrimary as isPrimary, usernameRev.timestamp as revtstmp,
+usernameRev.username as changedBy from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
+        ]]>
+    <query-param name="personID" type="java.lang.Integer"/>
+    </query>
+
+    <query name="getStatusChangeDetails__count">
+        <![CDATA[
+        select count(*)  from LicenseeclasspracticegroupAud where (:personID is null or licensee.personFk=:personID )
+        ]]>
+    <query-param name="personID" type="java.lang.Integer"/>
+    </query>
 </hibernate-mapping>

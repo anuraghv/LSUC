@@ -46,6 +46,7 @@ public class Practicegroup implements Serializable {
     private Integer practiceEligibilityFk;
     private Practiceeligibility practiceeligibility;
     private List<Classpraticegroup> classpraticegroups;
+    private List<VwLicenseeFilter> vwLicenseeFilters;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -170,6 +171,16 @@ public class Practicegroup implements Serializable {
 
     public void setClasspraticegroups(List<Classpraticegroup> classpraticegroups) {
         this.classpraticegroups = classpraticegroups;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "practicegroup")
+    public List<VwLicenseeFilter> getVwLicenseeFilters() {
+        return this.vwLicenseeFilters;
+    }
+
+    public void setVwLicenseeFilters(List<VwLicenseeFilter> vwLicenseeFilters) {
+        this.vwLicenseeFilters = vwLicenseeFilters;
     }
 
     @Override

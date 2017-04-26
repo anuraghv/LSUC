@@ -42,12 +42,12 @@ public class PersonaddressAud implements Serializable {
     private Integer personFk;
     private String postalCode;
     private Integer provinceFk;
-    private Person person;
-    private UsernameRev usernameRev;
-    private Country country;
-    private Province province;
     private Addresstype addresstype;
+    private Country country;
     private Geographicarea geographicarea;
+    private Person person;
+    private Province province;
+    private UsernameRev usernameRev;
 
     @Id
     @Column(name = "`PK`", nullable = false, scale = 0, precision = 10)
@@ -205,31 +205,17 @@ public class PersonaddressAud implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`PERSON_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
-    public Person getPerson() {
-        return this.person;
+    @JoinColumn(name = "`ADDRESSTYPE_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Addresstype getAddresstype() {
+        return this.addresstype;
     }
 
-    public void setPerson(Person person) {
-        if(person != null) {
-            this.personFk = person.getPk();
+    public void setAddresstype(Addresstype addresstype) {
+        if(addresstype != null) {
+            this.addresstypeFk = addresstype.getPk();
         }
 
-        this.person = person;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`REV`", referencedColumnName = "`ID`", insertable = false, updatable = false)
-    public UsernameRev getUsernameRev() {
-        return this.usernameRev;
-    }
-
-    public void setUsernameRev(UsernameRev usernameRev) {
-        if(usernameRev != null) {
-            this.rev = usernameRev.getId();
-        }
-
-        this.usernameRev = usernameRev;
+        this.addresstype = addresstype;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -247,6 +233,34 @@ public class PersonaddressAud implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`GEOGRAPHIC_AREA_FK_`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Geographicarea getGeographicarea() {
+        return this.geographicarea;
+    }
+
+    public void setGeographicarea(Geographicarea geographicarea) {
+        if(geographicarea != null) {
+            this.geographicAreaFk = geographicarea.getPk();
+        }
+
+        this.geographicarea = geographicarea;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "`PERSON_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
+    public Person getPerson() {
+        return this.person;
+    }
+
+    public void setPerson(Person person) {
+        if(person != null) {
+            this.personFk = person.getPk();
+        }
+
+        this.person = person;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "`PROVINCE_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
     public Province getProvince() {
         return this.province;
@@ -261,31 +275,17 @@ public class PersonaddressAud implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`ADDRESSTYPE_FK`", referencedColumnName = "`PK`", insertable = false, updatable = false)
-    public Addresstype getAddresstype() {
-        return this.addresstype;
+    @JoinColumn(name = "`REV`", referencedColumnName = "`ID`", insertable = false, updatable = false)
+    public UsernameRev getUsernameRev() {
+        return this.usernameRev;
     }
 
-    public void setAddresstype(Addresstype addresstype) {
-        if(addresstype != null) {
-            this.addresstypeFk = addresstype.getPk();
+    public void setUsernameRev(UsernameRev usernameRev) {
+        if(usernameRev != null) {
+            this.rev = usernameRev.getId();
         }
 
-        this.addresstype = addresstype;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`GEOGRAPHIC_AREA_FK_`", referencedColumnName = "`PK`", insertable = false, updatable = false)
-    public Geographicarea getGeographicarea() {
-        return this.geographicarea;
-    }
-
-    public void setGeographicarea(Geographicarea geographicarea) {
-        if(geographicarea != null) {
-            this.geographicAreaFk = geographicarea.getPk();
-        }
-
-        this.geographicarea = geographicarea;
+        this.usernameRev = usernameRev;
     }
 
     @Override

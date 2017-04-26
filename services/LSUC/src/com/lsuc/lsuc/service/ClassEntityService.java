@@ -19,6 +19,7 @@ import com.wavemaker.runtime.file.model.Downloadable;
 import com.lsuc.lsuc.ClassEntity;
 import com.lsuc.lsuc.Classpraticegroup;
 import com.lsuc.lsuc.Practiceinelgibilityreason;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 /**
  * Service object for domain model class {@link ClassEntity}.
@@ -174,6 +175,18 @@ public interface ClassEntityService {
      * @see Page
      */
     Page<Practiceinelgibilityreason> findAssociatedPracticeinelgibilityreasons(Integer pk, Pageable pageable);
+
+    /*
+     * Returns the associated vwLicenseeFilters for given ClassEntity id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated VwLicenseeFilter instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable);
 
 }
 

@@ -41,6 +41,7 @@ public class Addresstype implements Serializable {
     private Character isDefault;
     private Integer displaySequenceEnglish;
     private Integer displaySequenceFrench;
+    private List<PersonaddressAud> personaddressAuds;
     private List<Businessaddress> businessaddresses;
     private List<Organizationalunitaddress> organizationalunitaddresses;
     private List<Personaddress> personaddresses;
@@ -135,6 +136,16 @@ public class Addresstype implements Serializable {
 
     public void setDisplaySequenceFrench(Integer displaySequenceFrench) {
         this.displaySequenceFrench = displaySequenceFrench;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "addresstype")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
     }
 
     @JsonInclude(Include.NON_EMPTY)

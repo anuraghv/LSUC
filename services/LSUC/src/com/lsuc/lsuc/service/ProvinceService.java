@@ -20,7 +20,9 @@ import com.lsuc.lsuc.Businessaddress;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Province;
+import com.lsuc.lsuc.VwLicenseeFilter;
 
 /**
  * Service object for domain model class {@link Province}.
@@ -165,6 +167,18 @@ public interface ProvinceService {
     Page<Mailinglabel> findAssociatedMailinglabels(Integer pk, Pageable pageable);
 
     /*
+     * Returns the associated personaddressAuds for given Province id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated PersonaddressAud instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable);
+
+    /*
      * Returns the associated businessaddresses for given Province id.
      *
      * @param pk value of pk; value cannot be null
@@ -199,6 +213,18 @@ public interface ProvinceService {
      * @see Page
      */
     Page<Personaddress> findAssociatedPersonaddresses(Integer pk, Pageable pageable);
+
+    /*
+     * Returns the associated vwLicenseeFilters for given Province id.
+     *
+     * @param pk value of pk; value cannot be null
+     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
+     * @return Paginated list of associated VwLicenseeFilter instances.
+     *
+     * @see Pageable
+     * @see Page
+     */
+    Page<VwLicenseeFilter> findAssociatedVwLicenseeFilters(Integer pk, Pageable pageable);
 
 }
 

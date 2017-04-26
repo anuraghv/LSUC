@@ -49,16 +49,6 @@ public class QueryExecutionController {
     @Autowired
     private LSUCQueryExecutorService queryService;
 
-    @RequestMapping(value = "/queries/updateStatus", method = RequestMethod.PUT)
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "Update the Status after approving/rejecting a request")
-    public IntegerWrapper executeUpdateStatus(@Valid @RequestBody UpdateStatusRequest updateStatusRequest) {
-        LOGGER.debug("Executing named query: updateStatus");
-        Integer _result = queryService.executeUpdateStatus(updateStatusRequest);
-        LOGGER.debug("got the result for named query: updateStatus, result:{}", _result);
-        return new IntegerWrapper(_result);
-    }
-
     @RequestMapping(value = "/queries/approveEditRecord", method = RequestMethod.PUT)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Approve the edit LicenseeClassPracticeGroup based on the request PK")
@@ -67,54 +57,6 @@ public class QueryExecutionController {
         Integer _result = queryService.executeApproveEditRecord(approveEditRecordRequest);
         LOGGER.debug("got the result for named query: approveEditRecord, result:{}", _result);
         return new IntegerWrapper(_result);
-    }
-
-    @RequestMapping(value = "/queries/PendingLicenseeStatusReports", method = RequestMethod.GET)
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "Get Excel reports for Pending Licensee Status Reports")
-    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(@RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, @RequestParam(value = "status") String status, Pageable pageable) {
-        LOGGER.debug("Executing named query: PendingLicenseeStatusReports");
-        Page<PendingLicenseeStatusReportsResponse> _result = queryService.executePendingLicenseeStatusReports(startDate, endDate, status, pageable);
-        LOGGER.debug("got the result for named query: PendingLicenseeStatusReports, result:{}", _result);
-        return _result;
-    }
-
-    @ApiOperation(value = "Returns downloadable file for query PendingLicenseeStatusReports")
-    @RequestMapping(value = "/queries/PendingLicenseeStatusReports/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Downloadable exportPendingLicenseeStatusReports(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, @RequestParam(value = "status") String status, Pageable pageable) {
-        LOGGER.debug("Exporting named query: PendingLicenseeStatusReports");
-
-        return queryService.exportPendingLicenseeStatusReports(exportType, startDate, endDate, status, pageable);
-    }
-
-    @RequestMapping(value = "/queries/approvedNewRecord", method = RequestMethod.POST)
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "Query to Insert a New record into LicenseeClassPracticeGroup on approval")
-    public IntegerWrapper executeApprovedNewRecord(@Valid @RequestBody ApprovedNewRecordRequest approvedNewRecordRequest) {
-        LOGGER.debug("Executing named query: approvedNewRecord");
-        Integer _result = queryService.executeApprovedNewRecord(approvedNewRecordRequest);
-        LOGGER.debug("got the result for named query: approvedNewRecord, result:{}", _result);
-        return new IntegerWrapper(_result);
-    }
-
-    @RequestMapping(value = "/queries/getStatusChangeDetails", method = RequestMethod.GET)
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "get Status Change Details Based on PersonID")
-    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(@RequestParam(value = "personID") Integer personId, Pageable pageable) {
-        LOGGER.debug("Executing named query: getStatusChangeDetails");
-        Page<GetStatusChangeDetailsResponse> _result = queryService.executeGetStatusChangeDetails(personId, pageable);
-        LOGGER.debug("got the result for named query: getStatusChangeDetails, result:{}", _result);
-        return _result;
-    }
-
-    @ApiOperation(value = "Returns downloadable file for query getStatusChangeDetails")
-    @RequestMapping(value = "/queries/getStatusChangeDetails/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Downloadable exportGetStatusChangeDetails(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "personID") Integer personId, Pageable pageable) {
-        LOGGER.debug("Exporting named query: getStatusChangeDetails");
-
-        return queryService.exportGetStatusChangeDetails(exportType, personId, pageable);
     }
 
     @RequestMapping(value = "/queries/licenseeChangesChart", method = RequestMethod.GET)
@@ -153,6 +95,83 @@ public class QueryExecutionController {
         LOGGER.debug("Exporting named query: expirationStatus");
 
         return queryService.exportExpirationStatus(exportType, fromDate, toDate, pageable);
+    }
+
+    @RequestMapping(value = "/queries/updateStatus", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Update the Status after approving/rejecting a request")
+    public IntegerWrapper executeUpdateStatus(@Valid @RequestBody UpdateStatusRequest updateStatusRequest) {
+        LOGGER.debug("Executing named query: updateStatus");
+        Integer _result = queryService.executeUpdateStatus(updateStatusRequest);
+        LOGGER.debug("got the result for named query: updateStatus, result:{}", _result);
+        return new IntegerWrapper(_result);
+    }
+
+    @RequestMapping(value = "/queries/PendingLicenseeStatusReports", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Get Excel reports for Pending Licensee Status Reports")
+    public Page<PendingLicenseeStatusReportsResponse> executePendingLicenseeStatusReports(@RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, @RequestParam(value = "status") String status, Pageable pageable) {
+        LOGGER.debug("Executing named query: PendingLicenseeStatusReports");
+        Page<PendingLicenseeStatusReportsResponse> _result = queryService.executePendingLicenseeStatusReports(startDate, endDate, status, pageable);
+        LOGGER.debug("got the result for named query: PendingLicenseeStatusReports, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query PendingLicenseeStatusReports")
+    @RequestMapping(value = "/queries/PendingLicenseeStatusReports/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportPendingLicenseeStatusReports(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "startDate") Date startDate, @RequestParam(value = "endDate") Date endDate, @RequestParam(value = "status") String status, Pageable pageable) {
+        LOGGER.debug("Exporting named query: PendingLicenseeStatusReports");
+
+        return queryService.exportPendingLicenseeStatusReports(exportType, startDate, endDate, status, pageable);
+    }
+
+    @RequestMapping(value = "/queries/changeRequestTrendGraph", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Change request trend graph")
+    public Page<ChangeRequestTrendGraphResponse> executeChangeRequestTrendGraph(Pageable pageable) {
+        LOGGER.debug("Executing named query: changeRequestTrendGraph");
+        Page<ChangeRequestTrendGraphResponse> _result = queryService.executeChangeRequestTrendGraph(pageable);
+        LOGGER.debug("got the result for named query: changeRequestTrendGraph, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query changeRequestTrendGraph")
+    @RequestMapping(value = "/queries/changeRequestTrendGraph/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportChangeRequestTrendGraph(@PathVariable("exportType") ExportType exportType, Pageable pageable) {
+        LOGGER.debug("Exporting named query: changeRequestTrendGraph");
+
+        return queryService.exportChangeRequestTrendGraph(exportType, pageable);
+    }
+
+    @RequestMapping(value = "/queries/approvedNewRecord", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Query to Insert a New record into LicenseeClassPracticeGroup on approval")
+    public IntegerWrapper executeApprovedNewRecord(@Valid @RequestBody ApprovedNewRecordRequest approvedNewRecordRequest) {
+        LOGGER.debug("Executing named query: approvedNewRecord");
+        Integer _result = queryService.executeApprovedNewRecord(approvedNewRecordRequest);
+        LOGGER.debug("got the result for named query: approvedNewRecord, result:{}", _result);
+        return new IntegerWrapper(_result);
+    }
+
+    @RequestMapping(value = "/queries/getStatusChangeDetails", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "get Status Change Details Based on PersonID")
+    public Page<GetStatusChangeDetailsResponse> executeGetStatusChangeDetails(@RequestParam(value = "personID") Integer personId, Pageable pageable) {
+        LOGGER.debug("Executing named query: getStatusChangeDetails");
+        Page<GetStatusChangeDetailsResponse> _result = queryService.executeGetStatusChangeDetails(personId, pageable);
+        LOGGER.debug("got the result for named query: getStatusChangeDetails, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query getStatusChangeDetails")
+    @RequestMapping(value = "/queries/getStatusChangeDetails/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportGetStatusChangeDetails(@PathVariable("exportType") ExportType exportType, @RequestParam(value = "personID") Integer personId, Pageable pageable) {
+        LOGGER.debug("Exporting named query: getStatusChangeDetails");
+
+        return queryService.exportGetStatusChangeDetails(exportType, personId, pageable);
     }
 
 }

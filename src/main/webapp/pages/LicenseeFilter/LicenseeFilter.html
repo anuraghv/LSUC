@@ -1,0 +1,112 @@
+<wm-page data-ng-controller="LicenseeFilterPageController" pagetitle="Licensee Filter" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow4" padding="unset unset 1em unset">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn12" class="col-xs-6">
+                        <wm-label name="label8" class="h2" caption="bind:appLocale.LABEL_LICENSEES"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn15" horizontalalign="right" padding="unset unset 1px unset" class="col-xs-6">
+                        <wm-button class="btn-primary" caption="Add Licensee" type="button" name="addLicenseeBtn" on-click="Variables.goToPage_AddLicensee.invoke()" iconclass="fa fa-user-plus fa-lg"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-livefilter title="Filters" captionalign="left" captionposition="top" name="licenseeFilter" collapsible="true" expanded="true" subheading="Filter licensee from the records" class="panel-default" dataset="bind:Variables.LicenseeFilterData.dataSet">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn18">
+                            <wm-filter-field name="licenseeNumber" field="licenseeNumber" related-field="Licensee Number" widget="text" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="text"
+                            displayname="Licensee Number" key="licenseeNumber" placeholder="Enter value"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn17">
+                            <wm-filter-field name="name" display-name="Name" field="name" related-field="Name" widget="text" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" displayname="Licensee Name"
+                            inputtype="text" key="name" placeholder="Enter value"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn16">
+                            <wm-filter-field name="licencetype" field="licencetype" displayname="License Type" widget="number" is-range="false" lookup-type="Licencetype" lookup-field="shortNameEnglish" placeholder="" required="false" multiple="multiple" type="integer"
+                            step="0" is-primary-key="false" generator="assigned" show="true" is-related="true" related-entity-name="Licencetype" inputtype="number" key="licencetype" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn21">
+                            <wm-filter-field name="addressLine1" field="addressLine1" related-field="Address Line1" widget="text" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="text" displayname="Address Line1"
+                            key="addressLine1" placeholder="Enter value"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn20">
+                            <wm-filter-field name="city" field="city" related-field="City" widget="text" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="text" displayname="City" key="city"
+                            placeholder="Enter value"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn19">
+                            <wm-filter-field name="province" field="province" displayname="Province" widget="number" is-range="false" lookup-type="Province" lookup-field="shortNameEnglish" placeholder="" required="false" multiple="multiple" type="integer"
+                            step="0" is-primary-key="false" generator="assigned" show="true" is-related="true" related-entity-name="Province" inputtype="number" key="province" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn2" columnwidth="3">
+                            <wm-filter-field name="postalCode" field="postalCode" related-field="Postal Code" widget="text" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="text" displayname="Postal Code"
+                            key="postalCode" placeholder="Enter value"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn24">
+                            <wm-filter-field name="role" field="role" displayname="Licensee Role" widget="number" is-range="false" lookup-type="Role" lookup-field="shortNameEnglish" placeholder="" required="false" multiple="multiple" type="integer" step="0"
+                            is-primary-key="false" generator="assigned" show="true" is-related="true" related-entity-name="Role" inputtype="number" key="role" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn23">
+                            <wm-filter-field name="classEntity" field="classEntity" displayname="Class" widget="select" is-range="false" lookup-type="ClassEntity" lookup-field="shortNameEnglish" placeholder="" required="false" multiple="multiple" type="string"
+                            step="0" is-primary-key="false" generator="assigned" show="true" is-related="true" related-entity-name="ClassEntity" inputtype="number" key="classEntity" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn22">
+                            <wm-filter-field name="practicegroup" field="practicegroup" displayname="Practice Group" widget="select" is-range="false" lookup-type="Practicegroup" lookup-field="shortNameEnglish" placeholder="" required="false" multiple="multiple"
+                            type="string" step="0" is-primary-key="false" generator="assigned" show="true" is-related="true" related-entity-name="Practicegroup" inputtype="number" key="practicegroup" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" title="Filter" action="filter()" shortcutkey="" disabled="false" type="button"></wm-filter-action>
+                <wm-filter-action key="clear" display-name="Clear" show="true" class="btn-secondary" iconclass="wi wi-trash" title="Clear" action="clearFilter()" shortcutkey="" disabled="false" type="button"></wm-filter-action>
+            </wm-livefilter>
+            <wm-container name="container1" horizontalalign="right" padding="1em unset">
+                <wm-switch datavalue="grid" name="viewSwitch" dataset="bind:Variables.dataViews.dataSet" displayfield="label" iconclass="icon" datafield="id" width="180" style="vertical-align: middle;" class="swtich-mobile-responsive"></wm-switch>
+            </wm-container>
+            <wm-livelist listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" class="list-card" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeLiveList" show="bind:Widgets.viewSwitch.datavalue === 'grid'"
+            on-click="Variables.listgoToPage_LicenseeInfo.invoke()" navigationalign="right">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-card name="Contact Card" class="gray">
+                        <wm-card-content horizontalalign="center" name="card_content1">
+                            <wm-icon name="icon1" class="pull-left" iconclass="bind:(item.licencetype.code === &quot;P1&quot; )?&quot;wi wi-user fa-3x&quot;:&quot;wi wi-account-circle fa-3x&quot;"></wm-icon>
+                            <wm-label class="h2 text-muted" caption="bind:Widgets.licenseeFilter.result[$i].licenseeNumber" whitespace="nowrap" name="label5" textalign="center" margin="0px unset unset unset"></wm-label>
+                            <wm-label name="Name" class="h4 text-center" margin="unset unset 0em unset" caption="bind:Widgets.licenseeFilter.result[$i].name" whitespace="nowrap"></wm-label>
+                            <wm-label name="licenseType" class="p text-muted  text-center" caption="bind:Widgets.licenseeFilter.result[$i].licencetype.code+' '+Widgets.licenseeFilter.result[$i].licencetype.licenseetype.shortNameEnglish" whitespace="nowrap"></wm-label>
+                        </wm-card-content>
+                        <wm-card-footer name="card_footer1">
+                            <wm-layoutgrid name="layoutgrid3">
+                                <wm-gridrow name="gridrow4_1">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn11" horizontalalign="right" padding="unset 1em unset unset" class="col-xs-6">
+                                        <wm-label name="label10" caption="City" width="100%"></wm-label>
+                                        <wm-label name="label11" caption="bind:Widgets.licenseeFilter.result[$i].addressLine1+' '+Widgets.licenseeFilter.result[$i].city+' '+Widgets.licenseeFilter.result[$i].postalCode" textalign="right"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn12_1" padding="unset unset unset 1em" class="col-xs-6">
+                                        <wm-label name="label12" caption="Status" width="100%"></wm-label>
+                                        <wm-label name="label13" caption="bind:Widgets.licenseeFilter.result[$i].classEntity.shortNameEnglish+' '+Widgets.licenseeFilter.result[$i].practicegroup.shortNameEnglish" textalign="left"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
+            <wm-grid title="" dataset="bind:Widgets.licenseeFilter.result" navigation="Basic" name="licenseeTable" navigationalign="right" show="bind:Widgets.viewSwitch.datavalue === 'list'" spacing="normal">
+                <wm-grid-column binding="licenseeNumber" caption="Licensee Number" type="string" widget-type="anchor" generator="assigned" edit-widget-type="text" show="true" readonly="false">
+                    <wm-anchor caption="{{row.getProperty('licenseeNumber')}}" on-click="Variables.gridgoToPage_LicenseeInfo.invoke()" class="" data-ng-class=""></wm-anchor>
+                </wm-grid-column>
+                <wm-grid-column binding="name" caption="Name" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="licencetype.shortNameEnglish" caption="License Type" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="false" related-entity-name="Licencetype"></wm-grid-column>
+                <wm-grid-column binding="addressLine1" caption="Address" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-grid-column>
+                <wm-grid-column binding="role.shortNameEnglish" caption="License Role" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Role"></wm-grid-column>
+                <wm-grid-column binding="classEntity.shortNameEnglish" caption="Class" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="ClassEntity"></wm-grid-column>
+                <wm-grid-column binding="practicegroup.shortNameEnglish" caption="Practice Group" type="string" primary-key="false" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="Practicegroup"></wm-grid-column>
+            </wm-grid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

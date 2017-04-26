@@ -42,6 +42,7 @@ public class Country implements Serializable {
     private Integer displaySequenceEnglish;
     private Integer displaySequenceFrench;
     private List<Mailinglabel> mailinglabels;
+    private List<PersonaddressAud> personaddressAuds;
     private List<Province> provinces;
     private List<Businessaddress> businessaddresses;
     private List<Organizationalunitaddress> organizationalunitaddresses;
@@ -147,6 +148,16 @@ public class Country implements Serializable {
 
     public void setMailinglabels(List<Mailinglabel> mailinglabels) {
         this.mailinglabels = mailinglabels;
+    }
+
+    @JsonInclude(Include.NON_EMPTY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "country")
+    public List<PersonaddressAud> getPersonaddressAuds() {
+        return this.personaddressAuds;
+    }
+
+    public void setPersonaddressAuds(List<PersonaddressAud> personaddressAuds) {
+        this.personaddressAuds = personaddressAuds;
     }
 
     @JsonInclude(Include.NON_EMPTY)

@@ -8,5 +8,5 @@ and is an ideal location for end-users to put any code they need.
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name = "LSUC.PersonService" class = "com.lsuc.lsuc.PersonPreProcessor" />
-    
+    <bean name = "LSUC.BusinessService" class = "com.lsuc.lsuc.BusinessPreProcessor" />
 </beans>

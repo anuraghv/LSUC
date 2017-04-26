@@ -263,6 +263,9 @@
   }, {
     "table" : "USERPREFERENCETYPE",
     "schema" : "RMS"
+  }, {
+    "table" : "VW_LICENSEE_FILTER",
+    "schema" : "RMS"
   } ],
   "schemaFilter" : [ "RMS" ],
   "impersonateUser" : false,

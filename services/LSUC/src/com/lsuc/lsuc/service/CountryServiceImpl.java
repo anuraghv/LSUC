@@ -29,6 +29,7 @@ import com.lsuc.lsuc.Country;
 import com.lsuc.lsuc.Mailinglabel;
 import com.lsuc.lsuc.Organizationalunitaddress;
 import com.lsuc.lsuc.Personaddress;
+import com.lsuc.lsuc.PersonaddressAud;
 import com.lsuc.lsuc.Province;
 
 
@@ -53,6 +54,10 @@ public class CountryServiceImpl implements CountryService {
     @Autowired
 	@Qualifier("LSUC.BusinessaddressService")
 	private BusinessaddressService businessaddressService;
+
+    @Autowired
+	@Qualifier("LSUC.PersonaddressAudService")
+	private PersonaddressAudService personaddressAudService;
 
     @Autowired
 	@Qualifier("LSUC.ProvinceService")
@@ -80,6 +85,14 @@ public class CountryServiceImpl implements CountryService {
                 mailinglabel.setCountry(countryCreated);
                 LOGGER.debug("Creating a new child Mailinglabel with information: {}", mailinglabel);
                 mailinglabelService.create(mailinglabel);
+            }
+        }
+
+        if(countryCreated.getPersonaddressAuds() != null) {
+            for(PersonaddressAud personaddressAud : countryCreated.getPersonaddressAuds()) {
+                personaddressAud.setCountry(countryCreated);
+                LOGGER.debug("Creating a new child PersonaddressAud with information: {}", personaddressAud);
+                personaddressAudService.create(personaddressAud);
             }
         }
 
@@ -223,6 +236,17 @@ public class CountryServiceImpl implements CountryService {
 
     @Transactional(readOnly = true, value = "LSUCTransactionManager")
     @Override
+    public Page<PersonaddressAud> findAssociatedPersonaddressAuds(Integer pk, Pageable pageable) {
+        LOGGER.debug("Fetching all associated personaddressAuds");
+
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("country.pk = '" + pk + "'");
+
+        return personaddressAudService.findAll(queryBuilder.toString(), pageable);
+    }
+
+    @Transactional(readOnly = true, value = "LSUCTransactionManager")
+    @Override
     public Page<Province> findAssociatedProvinces(Integer pk, Pageable pageable) {
         LOGGER.debug("Fetching all associated provinces");
 
@@ -290,6 +314,15 @@ public class CountryServiceImpl implements CountryService {
 	 */
 	protected void setBusinessaddressService(BusinessaddressService service) {
         this.businessaddressService = service;
+    }
+
+    /**
+	 * This setter method should only be used by unit tests
+	 *
+	 * @param service PersonaddressAudService instance
+	 */
+	protected void setPersonaddressAudService(PersonaddressAudService service) {
+        this.personaddressAudService = service;
     }
 
     /**
