@@ -6,8 +6,8 @@
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-label padding="unset 0.5em" name="label1" caption="Approvals" class="h2"></wm-label>
             <wm-container name="container1" content="personProfile"></wm-container>
-            <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Licensee Status" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet"
-            navigation="On-Demand" on-click="pendingApprovalLiveListClick($event, $scope)" name="pendingApprovalLiveList">
+            <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Licensee Status" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet" navigation="On-Demand"
+            on-click="pendingApprovalLiveListClick($event, $scope)" name="pendingApprovalLiveList">
                 <wm-listtemplate layout="inline" name="listtemplate1">
                     <wm-panel name="panel3" collapsible="false" expanded="true" subheading="bind:'License Number: '+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber + ' on '+(Variables.pendingApprovals.dataSet[$i].createdDate | toDate: 'dd MMM yyyy') +' by '+Variables.pendingApprovals.dataSet[$i].createdBy"
                     title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" class="panel-secondary">
@@ -83,4 +83,8 @@
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view name="notificationAlertDialogView" class="dialog-view">
+        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+        on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
 </wm-page>

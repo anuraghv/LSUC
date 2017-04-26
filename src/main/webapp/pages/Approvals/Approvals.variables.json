@@ -53,6 +53,30 @@
     "saveInPhonegap" : false,
     "controller" : "QueryExecution"
   },
+  "onApproveReject" : {
+    "_id" : "wm-onApproveReject-wm.NotificationVariable-1493212785055",
+    "name" : "onApproveReject",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "3000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
   "pendingApprovals" : {
     "_id" : "wm-serviceVariable1-wm.ServiceVariable-1492604251823",
     "name" : "pendingApprovals",
@@ -94,7 +118,7 @@
     "dataSet" : [ ],
     "isList" : false,
     "maxResults" : 20,
-    "onSuccess" : "Variables.pendingApprovals.invoke()",
+    "onSuccess" : "Variables.pendingApprovals.invoke();Variables.onApproveReject.invoke()",
     "startUpdate" : false,
     "autoUpdate" : false,
     "inFlightBehavior" : "executeLast",

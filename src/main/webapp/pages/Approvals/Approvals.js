@@ -16,7 +16,7 @@ Application.$controller("ApprovalsPageController", ["$scope", function($scope) {
 
 
     $scope.approveBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
-        debugger
+        $scope.Variables.onApproveReject.setMessage("Request Approved Successfully");
         if (item.status == "Created") {
             $scope.Variables.approveNewRequest.update();
         } else if (item.status == "Updated") {
@@ -44,6 +44,7 @@ Application.$controller("ApprovalsPageController", ["$scope", function($scope) {
 
 
     $scope.rejectBtnClick = function($event, $isolateScope, item, currentItemWidgets) {
+        $scope.Variables.onApproveReject.setMessage("Request Rejected");
         $scope.Variables.updateStatus.setInput("status", "Rejected");
         $scope.Variables.updateStatus.setInput("pk", item.pk);
         $scope.Variables.updateStatus.update();
