@@ -26,8 +26,8 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14">
                     <wm-gridcolumn columnwidth="9" name="gridcolumn36" padding="1em .5em unset .5em">
-                        <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default" dataset="bind:Variables.pendingApprovals.dataSet"
-                        navigation="On-Demand" name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)" padding="1em 1em unset 1em">
+                        <wm-livelist iconclass="wi wi-done" autoclose="outsideClick" title="Pending Approvals" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-default min-panel-height" dataset="bind:Variables.pendingApprovals.dataSet"
+                        navigation="On-Demand" name="pendingApprovalLiveList" on-click="pendingApprovalLiveListClick($event, $scope)" padding="1em 1em unset 1em" nodatamessage="No Pending Approvals found">
                             <wm-listtemplate layout="inline" name="listtemplate2">
                                 <wm-panel name="panel3" collapsible="true" expanded="false" subheading="bind:'License Number: '+Variables.pendingApprovals.dataSet[$i].licensee.licenseeNumber + ' on '+(Variables.pendingApprovals.dataSet[$i].createdDate | toDate: 'dd MMM yyyy') +' by '+Variables.pendingApprovals.dataSet[$i].createdBy"
                                 title="bind:Variables.pendingApprovals.dataSet.data[$i].licensee.person.firstName +' '+ Variables.pendingApprovals.dataSet.data[$i].licensee.person.lastName" iconclass="" class="panel-secondary" badgetype="success" closable="false">
@@ -109,8 +109,8 @@
                         </wm-livelist>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn37" padding="1em .5em unset .5em">
-                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-info" dataset="bind:Variables.PersonHistoryData.dataSet"
-                        navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item" orderby="timeStamp:desc" pagesize="5" on-tap="recentAcitivityLiveListTap($event, $scope)">
+                        <wm-livelist iconclass="wi wi-format-list-bulleted" title="Recent Activity" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list panel panel-info min-panel-height" dataset="bind:Variables.PersonHistoryData.dataSet"
+                        navigation="On-Demand" name="recentAcitivityLiveList" padding="1em 1em unset 1em" itemclass="list-group-item" orderby="timeStamp:desc" pagesize="5" on-tap="recentAcitivityLiveListTap($event, $scope)" nodatamessage="No activities are found">
                             <wm-listtemplate layout="inline" name="listtemplate1">
                                 <wm-container class="media-left" name="container2_1">
                                     <wm-button caption="bind:Variables.PersonHistoryData.dataSet[$i].shortcutName" width="24" height="24" name="container3" class="btn-rounded btn btn-primary" padding="0px 2px 2px 2px" fontsize="1" fontunit="em"></wm-button>
