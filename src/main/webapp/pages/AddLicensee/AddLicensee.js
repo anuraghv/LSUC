@@ -19,7 +19,7 @@ Application.$controller("AddLicenseePageController", ["$scope", function($scope)
     $scope.personLiveFormBeforeservicecall = function($event, $operation, $data) {
 
         if ($scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate == undefined) {
-            $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate = "2999-12-31";
+            $scope.Widgets.licenseeclasprctcegrpLiveForm.dataoutput.effectiveToDate = "9999-12-31";
         }
         $data.personaddresses = [$scope.Widgets.addresses.dataoutput];
         $data.licensees = [$scope.Widgets.licensees.dataoutput];
