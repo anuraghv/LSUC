@@ -68,7 +68,7 @@ public class EmailService {
 
             String emailSubject = "Status Change for Licensee: " + licenseeNumber;
             String emailMessage = "<div style='background-color: #eee;padding: 1em;'><table width='100%' style='border: none;'><tr><td><img height='50' src='http://www.lsuc.on.ca/images/imgLSUCLogo.png' alt='The Law Society of Upper Canada'></td><td ><h2 style='border-bottom:1px solid #eee;margin-top:0px;margin-bottom: 5px;position: relative;text-align:right;'>The Law Society of Upper Canada </h2></td></tr></table></div><br/> <p>Hi, </p><br/>";
-             String approveUrl = "https://www.wavemakeronline.com/run-53t562sphl/LSUC/#/Approvals?id=" + personPk;
+             String approveUrl = "https://e1d52cdd85d3.cloud.wavemakeronline.com/LSUC/#/Approvals?id=" + personPk;
             logger.info("*********************Approve URL****************" + approveUrl);
 
             emailMessage = emailMessage + "<p>The Licensee Status for <b>" + licenseeName + "</b>";

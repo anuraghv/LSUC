@@ -20,6 +20,8 @@ public class EmailController {
     private EmailService emailService;
 
     @RequestMapping(value = "/sendEmail", produces = "application/json", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public String sendEmail(@RequestParam(value = "licenseeNumber", required = false) String licenseeNumber, @RequestParam(value = "licenseeName", required = false) String licenseeName, @RequestParam(value = "personPk", required = false) String personPk) {
         return emailService.sendEmail(licenseeNumber, licenseeName, personPk);
     }
