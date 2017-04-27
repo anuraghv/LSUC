@@ -43,4 +43,9 @@
   "permission" : "Role",
   "roles" : [ "supervisor" ],
   "httpMethod" : "PUT"
+}, {
+  "urlPattern" : "/services/LSUC/queryExecutor/queries/PendingLicenseeStatusReports",
+  "permission" : "Role",
+  "roles" : [ "supervisor" ],
+  "httpMethod" : "GET"
 } ]
